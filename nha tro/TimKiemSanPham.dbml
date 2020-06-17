@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DTDD" Class="TimKiemSanPhamDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-KMNS09Q\SQLEXPRESS;Initial Catalog=DTDD;Persist Security Info=True;User ID=sa" SettingsObjectName="nha_tro.Properties.Settings" SettingsPropertyName="DTDDConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.KHUYENMAI" Member="KHUYENMAIs">
+    <Type Name="KHUYENMAI">
+      <Column Name="MAKHUYENMAI" Type="System.String" DbType="Char(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MASP" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MALINHKIEN" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TENKHUYENMAI" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="NGAYBD" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NGAYKT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GIATRI" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SANPHAM" Member="SANPHAMs">
+    <Type Name="SANPHAM">
+      <Column Name="MASP" Type="System.String" DbType="Char(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MALOAI" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MAKHO" Type="System.String" DbType="Char(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENSP" Type="System.String" DbType="Char(51)" CanBeNull="true" />
+      <Column Name="TINHTRANG" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
