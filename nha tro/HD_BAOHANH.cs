@@ -1,4 +1,5 @@
 ﻿using Microsoft.Reporting.WinForms;
+using ReportParameter = Microsoft.Reporting.WinForms.ReportParameter;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ReportParameter = Microsoft.Reporting.WinForms.ReportParameter;
+
 
 namespace nha_tro
 {
@@ -23,14 +24,14 @@ namespace nha_tro
         {
 
         }
-        //====nhan data tu form bAO HANH
-        private string mahd, mabaohanh, tongtien, ngay,mahdbaohanh;
+
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
 
         }
-
+        //====nhan data tu form bAO HANH
+        private string mahd, mabaohanh, tongtien, ngay, mahdbaohanh;
         public HD_BAOHANH(string mahd, string mabaohanh, string tongtien, string ngay, string mahdbaohanh)
             : this()
         {

@@ -58,7 +58,7 @@ namespace nha_tro
 
                     try
                     {
-                        this.dataTable1TableAdapter.FillBy_matragop(this.tt.DataTable1, textBox3.Text);
+                        this.traGop1TableAdapter.Fill_dk(this.tt.TraGop1, matragop);
                     }
                     catch (System.Exception ex)
                     {
@@ -66,6 +66,10 @@ namespace nha_tro
                     }
 
                     /*ThongKe.xuatfile_HD_TraGop(traGop1DataGridView, traGopComboBox.SelectedValue.ToString(), textBox1.Text, ngay, "HD_TraGop_TT");*/
+                    hd_tragop hD_Tragop = new hd_tragop(dataTable1DataGridView.CurrentRow.Cells[0].Value.ToString(), textBox3.Text, DateTime.Today.ToString("dd/MM/yyyy"));
+                    hD_Tragop.ShowDialog();
+
+
                 }
                 else
                 {

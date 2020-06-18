@@ -185,6 +185,12 @@
     <Compile Include="HD_BAOHANH.Designer.cs">
       <DependentUpon>HD_BAOHANH.cs</DependentUpon>
     </Compile>
+    <Compile Include="hd_tragop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hd_tragop.Designer.cs">
+      <DependentUpon>hd_tragop.cs</DependentUpon>
+    </Compile>
     <Compile Include="HoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -438,6 +444,9 @@
     <EmbeddedResource Include="HD_BAOHANH.resx">
       <DependentUpon>HD_BAOHANH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="hd_tragop.resx">
+      <DependentUpon>hd_tragop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -485,6 +494,7 @@
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report2_baohanh.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Reporttklsp.rdlc" />
     <EmbeddedResource Include="Report_banhang.rdlc" />
     <EmbeddedResource Include="Report_TinhDT_TheoNgay.rdlc" />
