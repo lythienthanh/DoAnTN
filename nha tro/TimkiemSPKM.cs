@@ -30,6 +30,18 @@ namespace nha_tro
             // TODO: This line of code loads data into the 'nghiepVu.KHUYENMAI' table. You can move, or remove it, as needed.
             this.kHUYENMAITableAdapter.Fill(this.nghiepVu.KHUYENMAI);
 
+
+            kHUYENMAIDataGridView.BorderStyle = BorderStyle.None;
+            kHUYENMAIDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            kHUYENMAIDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            kHUYENMAIDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            kHUYENMAIDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            kHUYENMAIDataGridView.BackgroundColor = Color.White;
+
+            kHUYENMAIDataGridView.EnableHeadersVisualStyles = false;
+            kHUYENMAIDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            kHUYENMAIDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            kHUYENMAIDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void button1_Click(object sender, EventArgs e)

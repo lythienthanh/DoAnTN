@@ -35,6 +35,19 @@ namespace nha_tro
             }
         }
 
-        
+        private void TimKiem_Load(object sender, EventArgs e)
+        {
+            timKiemChuaNhanhDataGridView.BorderStyle = BorderStyle.None;
+            timKiemChuaNhanhDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            timKiemChuaNhanhDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            timKiemChuaNhanhDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            timKiemChuaNhanhDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            timKiemChuaNhanhDataGridView.BackgroundColor = Color.White;
+
+            timKiemChuaNhanhDataGridView.EnableHeadersVisualStyles = false;
+            timKiemChuaNhanhDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            timKiemChuaNhanhDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            timKiemChuaNhanhDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+        }
     }
 }

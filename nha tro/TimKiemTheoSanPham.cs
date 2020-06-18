@@ -30,6 +30,18 @@ namespace nha_tro
             // TODO: This line of code loads data into the 'nghiepVu.SANPHAM' table. You can move, or remove it, as needed.
             this.sANPHAMTableAdapter.Fill(this.nghiepVu.SANPHAM);
 
+            sANPHAMDataGridView.BorderStyle = BorderStyle.None;
+            sANPHAMDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            sANPHAMDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            sANPHAMDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            sANPHAMDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            sANPHAMDataGridView.BackgroundColor = Color.White;
+
+            sANPHAMDataGridView.EnableHeadersVisualStyles = false;
+            sANPHAMDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            sANPHAMDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            sANPHAMDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -54,6 +66,11 @@ namespace nha_tro
             
             }
                   
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

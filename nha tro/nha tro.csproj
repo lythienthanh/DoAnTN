@@ -644,6 +644,7 @@
     <None Include="Resources\contact-icon.png" />
     <None Include="Resources\mobile-2-icon.png" />
     <None Include="Resources\Lock-Unlock-icon.png" />
+    <None Include="Resources\Gakuseisean-Aire-Search.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
