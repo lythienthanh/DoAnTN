@@ -29,7 +29,18 @@ namespace nha_tro
         {
             // TODO: This line of code loads data into the 'nghiepVu.KHACHHANG' table. You can move, or remove it, as needed.
             this.kHACHHANGTableAdapter.Fill(this.nghiepVu.KHACHHANG);
-            
+
+            kHACHHANGDataGridView.BorderStyle = BorderStyle.None;
+            kHACHHANGDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            kHACHHANGDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            kHACHHANGDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            kHACHHANGDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            kHACHHANGDataGridView.BackgroundColor = Color.White;
+
+            kHACHHANGDataGridView.EnableHeadersVisualStyles = false;
+            kHACHHANGDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            kHACHHANGDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            kHACHHANGDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
         }
 

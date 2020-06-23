@@ -645,6 +645,24 @@
     <None Include="Resources\mobile-2-icon.png" />
     <None Include="Resources\Lock-Unlock-icon.png" />
     <None Include="Resources\Gakuseisean-Aire-Search.ico" />
+    <None Include="Resources\Custom-Icon-Design-Mono-General-1-Add.ico" />
+    <None Include="Resources\Custom-Icon-Design-Mono-General-1-Add1.ico" />
+    <None Include="Resources\Awicons-Vista-Artistic-Add.ico" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-edit-delete.ico" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-document-edit.ico" />
+    <None Include="Resources\control-skip-icon.png" />
+    <None Include="Resources\control-skip-icon1.png" />
+    <None Include="Resources\control-skip-180-icon.png" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-document-save.ico" />
+    <None Include="Resources\Database-Backup-icon.png" />
+    <None Include="Resources\sync-icon.png" />
+    <None Include="Resources\Folder-URL-History-icon.png" />
+    <None Include="Resources\User-Group-icon.png" />
+    <None Include="Resources\Pay-Per-Click-icon.png" />
+    <None Include="Resources\Pay-Per-Click-icon1.png" />
+    <None Include="Resources\Designcontest-Ecommerce-Business-Dollar.ico" />
+    <None Include="Resources\Avosoft-Warm-Toolbar-Print %281%29.ico" />
+    <None Include="Resources\Rockettheme-Ecommerce-Sale.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

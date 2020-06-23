@@ -75,13 +75,13 @@ namespace nha_tro
         }
         private void themToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TaoPhieuNhap TaoPhieuNhap = new TaoPhieuNhap(tendn);
+            MH000000000000000024 TaoPhieuNhap = new MH000000000000000024(tendn);
             TaoPhieuNhap.ShowDialog();
         }
 
         private void themToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            TaoPhieuNhap TaoPhieuNhap = new TaoPhieuNhap(tendn);
+            MH000000000000000024 TaoPhieuNhap = new MH000000000000000024(tendn);
             TaoPhieuNhap.ShowDialog();
         }
 

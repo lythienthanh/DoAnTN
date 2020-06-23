@@ -38,6 +38,31 @@ namespace nha_tro
             //// TODO: This line of code loads data into the 'dataSet1.PhanQuyen' table. You can move, or remove it, as needed.
             //this.phanQuyenTableAdapter.Fill(this.dataSet1.PhanQuyen);
 
+
+            nhomNguoiDungDataGridView.BorderStyle = BorderStyle.None;
+            nhomNguoiDungDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            nhomNguoiDungDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            nhomNguoiDungDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            nhomNguoiDungDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            nhomNguoiDungDataGridView.BackgroundColor = Color.White;
+
+            nhomNguoiDungDataGridView.EnableHeadersVisualStyles = false;
+            nhomNguoiDungDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            nhomNguoiDungDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            nhomNguoiDungDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            phanQuyenDKDataGridView.BorderStyle = BorderStyle.None;
+            phanQuyenDKDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            phanQuyenDKDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            phanQuyenDKDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            phanQuyenDKDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            phanQuyenDKDataGridView.BackgroundColor = Color.White;
+
+            phanQuyenDKDataGridView.EnableHeadersVisualStyles = false;
+            phanQuyenDKDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            phanQuyenDKDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            phanQuyenDKDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
         }
 
         private void button1_Click(object sender, EventArgs e)

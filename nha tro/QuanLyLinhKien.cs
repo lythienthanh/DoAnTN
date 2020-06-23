@@ -31,6 +31,18 @@ namespace nha_tro
             this.kHOTableAdapter.Fill(this.nghiepVu.KHO);
             // TODO: This line of code loads data into the 'nghiepVu.LINHKIEN' table. You can move, or remove it, as needed.
             this.lINHKIENTableAdapter.Fill(this.nghiepVu.LINHKIEN);
+
+            lINHKIENDataGridView.BorderStyle = BorderStyle.None;
+            lINHKIENDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            lINHKIENDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            lINHKIENDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            lINHKIENDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            lINHKIENDataGridView.BackgroundColor = Color.White;
+
+            lINHKIENDataGridView.EnableHeadersVisualStyles = false;
+            lINHKIENDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            lINHKIENDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            lINHKIENDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void button1_Click(object sender, EventArgs e)

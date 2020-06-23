@@ -35,6 +35,30 @@ namespace nha_tro
             // TODO: This line of code loads data into the 'nghiepVu.NHAPHANG1' table. You can move, or remove it, as needed.
             this.nHAPHANG1TableAdapter.FillBy_lk(this.nghiepVu.NHAPHANG1);
 
+
+            nHAPHANGDataGridView.BorderStyle = BorderStyle.None;
+            nHAPHANGDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            nHAPHANGDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            nHAPHANGDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            nHAPHANGDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            nHAPHANGDataGridView.BackgroundColor = Color.White;
+
+            nHAPHANGDataGridView.EnableHeadersVisualStyles = false;
+            nHAPHANGDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            nHAPHANGDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            nHAPHANGDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            cT_NHAP_SP_DK_LUUKHODataGridView.BorderStyle = BorderStyle.None;
+            cT_NHAP_SP_DK_LUUKHODataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            cT_NHAP_SP_DK_LUUKHODataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            cT_NHAP_SP_DK_LUUKHODataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            cT_NHAP_SP_DK_LUUKHODataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            cT_NHAP_SP_DK_LUUKHODataGridView.BackgroundColor = Color.White;
+
+            cT_NHAP_SP_DK_LUUKHODataGridView.EnableHeadersVisualStyles = false;
+            cT_NHAP_SP_DK_LUUKHODataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            cT_NHAP_SP_DK_LUUKHODataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            cT_NHAP_SP_DK_LUUKHODataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void fill_theoMaNhapToolStripButton_Click(object sender, EventArgs e)

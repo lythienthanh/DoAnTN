@@ -48,6 +48,42 @@ namespace nha_tro
             // TODO: This line of code loads data into the 'nghiepVu.NHAPHANG1' table. You can move, or remove it, as needed.
             this.nHAPHANG1TableAdapter.FillBy_lk(this.nghiepVu.NHAPHANG1);
 
+
+            nHAPHANG1DataGridView.BorderStyle = BorderStyle.None;
+            nHAPHANG1DataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            nHAPHANG1DataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            nHAPHANG1DataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            nHAPHANG1DataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            nHAPHANG1DataGridView.BackgroundColor = Color.White;
+
+            nHAPHANG1DataGridView.EnableHeadersVisualStyles = false;
+            nHAPHANG1DataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            nHAPHANG1DataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            nHAPHANG1DataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            cT_NHAP_SP_DK_LUUKHODataGridView.BorderStyle = BorderStyle.None;
+            cT_NHAP_SP_DK_LUUKHODataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            cT_NHAP_SP_DK_LUUKHODataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            cT_NHAP_SP_DK_LUUKHODataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            cT_NHAP_SP_DK_LUUKHODataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            cT_NHAP_SP_DK_LUUKHODataGridView.BackgroundColor = Color.White;
+
+            cT_NHAP_SP_DK_LUUKHODataGridView.EnableHeadersVisualStyles = false;
+            cT_NHAP_SP_DK_LUUKHODataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            cT_NHAP_SP_DK_LUUKHODataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            cT_NHAP_SP_DK_LUUKHODataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            tinhTrangTTDataGridView1.BorderStyle = BorderStyle.None;
+            tinhTrangTTDataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            tinhTrangTTDataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            tinhTrangTTDataGridView1.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            tinhTrangTTDataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            tinhTrangTTDataGridView1.BackgroundColor = Color.White;
+
+            tinhTrangTTDataGridView1.EnableHeadersVisualStyles = false;
+            tinhTrangTTDataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            tinhTrangTTDataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            tinhTrangTTDataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void fill_theoMaNhapToolStripButton_Click(object sender, EventArgs e)
@@ -193,14 +229,14 @@ namespace nha_tro
 
         private void fillToolStripButton_Click(object sender, EventArgs e)
         {
-            try
+/*            try
             {
                 this.hOADON_kttontaiTableAdapter.Fill(this.tt.HOADON_kttontai, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(nGAYLAPToolStripTextBox.Text, typeof(System.DateTime))))));
             }
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+            }*/
 
         }
 
@@ -324,6 +360,11 @@ namespace nha_tro
             //load data
             this.tinhTrangTTTableAdapter.Fill(this.tt.TinhTrangTT);
             this.nHAPHANG1TableAdapter.Fill(this.nghiepVu.NHAPHANG1);
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

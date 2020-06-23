@@ -95,7 +95,7 @@ namespace nha_tro
                             BarButtonItem btnBar = btn as BarButtonItem;
                             if (string.Compare(btnBar.Name,nameBarbtn) == 0)//btnBar.Name.ToString() == nameBarbtn
                             {
-                                btnBar.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+                                btnBar.Enabled = true;
                             }
                         }
                     }
@@ -282,7 +282,8 @@ namespace nha_tro
         private void MH000000000000000004_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form2 Form2 = new Form2();
-            Form2.ShowDialog();
+            Form2.MdiParent = this;
+            Form2.Show();
         }
 
         private void barButtonItem3_ItemClick_2(object sender, ItemClickEventArgs e)
@@ -295,7 +296,7 @@ namespace nha_tro
 
         private void barButtonItem7_ItemClick_2(object sender, ItemClickEventArgs e)
         {
-            TaoPhieuNhap TaoPhieuNhap = new TaoPhieuNhap(tendn);
+            MH000000000000000024 TaoPhieuNhap = new MH000000000000000024(tendn);
             TaoPhieuNhap.MdiParent = this;
             TaoPhieuNhap.Show();
         }

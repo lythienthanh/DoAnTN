@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(thanhtoantheophantramLK));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -91,10 +92,6 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hOADON_kttontaiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hOADON_kttontaiTableAdapter = new nha_tro.ttTableAdapters.HOADON_kttontaiTableAdapter();
-            this.fillToolStrip = new System.Windows.Forms.ToolStrip();
-            this.nGAYLAPToolStripLabel = new System.Windows.Forms.ToolStripLabel();
-            this.nGAYLAPToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.fillToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.hOADON_kttontaiDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -113,6 +110,7 @@
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.nHAPHANG1TableAdapter = new nha_tro.NghiepVuTableAdapters.NHAPHANG1TableAdapter();
             this.tableAdapterManager = new nha_tro.NghiepVuTableAdapters.TableAdapterManager();
+            this.button9 = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tinhTrangTTDataGridView1)).BeginInit();
@@ -128,7 +126,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_timmahd_vuathemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_timmahd_vuathemDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_kttontaiBindingSource)).BeginInit();
-            this.fillToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_kttontaiDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_DangNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANBindingSource)).BeginInit();
@@ -140,12 +137,12 @@
             this.groupBox3.Controls.Add(this.radioButton3);
             this.groupBox3.Controls.Add(this.radioButton2);
             this.groupBox3.Controls.Add(this.radioButton1);
-            this.groupBox3.Location = new System.Drawing.Point(70, 12);
+            this.groupBox3.Location = new System.Drawing.Point(20, 60);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(373, 55);
             this.groupBox3.TabIndex = 29;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Thông tin thanh toán";
+            this.groupBox3.Text = "Lọc thông tin thanh toán";
             // 
             // radioButton3
             // 
@@ -187,7 +184,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(499, 70);
+            this.label10.Location = new System.Drawing.Point(501, 132);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(88, 13);
             this.label10.TabIndex = 28;
@@ -196,7 +193,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(27, 70);
+            this.label9.Location = new System.Drawing.Point(29, 132);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(129, 13);
             this.label9.TabIndex = 27;
@@ -214,16 +211,18 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.textBox3);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(511, 330);
+            this.groupBox2.Location = new System.Drawing.Point(513, 392);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(841, 252);
+            this.groupBox2.Size = new System.Drawing.Size(841, 206);
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thanh toán tiếp theo";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // tinhTrangTTDataGridView1
             // 
             this.tinhTrangTTDataGridView1.AutoGenerateColumns = false;
+            this.tinhTrangTTDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tinhTrangTTDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tinhTrangTTDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -231,9 +230,9 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.tinhTrangTTDataGridView1.DataSource = this.tinhTrangTTBindingSource;
-            this.tinhTrangTTDataGridView1.Location = new System.Drawing.Point(345, 42);
+            this.tinhTrangTTDataGridView1.Location = new System.Drawing.Point(394, 42);
             this.tinhTrangTTDataGridView1.Name = "tinhTrangTTDataGridView1";
-            this.tinhTrangTTDataGridView1.Size = new System.Drawing.Size(476, 128);
+            this.tinhTrangTTDataGridView1.Size = new System.Drawing.Size(441, 128);
             this.tinhTrangTTDataGridView1.TabIndex = 29;
             this.tinhTrangTTDataGridView1.Click += new System.EventHandler(this.tinhTrangTTDataGridView1_Click);
             // 
@@ -274,7 +273,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(342, 26);
+            this.label11.Location = new System.Drawing.Point(391, 26);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(109, 13);
             this.label11.TabIndex = 19;
@@ -306,19 +305,23 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(238, 105);
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = global::nha_tro.Properties.Resources.Avosoft_Warm_Toolbar_Print__1_;
+            this.button3.Location = new System.Drawing.Point(234, 131);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 23);
+            this.button3.Size = new System.Drawing.Size(79, 56);
             this.button3.TabIndex = 15;
-            this.button3.Text = "Xuất hóa đơn";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(238, 70);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(234, 76);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 23);
+            this.button2.Size = new System.Drawing.Size(127, 40);
             this.button2.TabIndex = 15;
             this.button2.Text = "Thanh Toán";
             this.button2.UseVisualStyleBackColor = true;
@@ -364,9 +367,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(18, 319);
+            this.groupBox1.Location = new System.Drawing.Point(20, 381);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(658, 311);
+            this.groupBox1.Size = new System.Drawing.Size(422, 242);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thanh toán mới";
@@ -409,9 +412,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(383, 80);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(274, 84);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(127, 40);
             this.button1.TabIndex = 2;
             this.button1.Text = "Thanh Toán";
             this.button1.UseVisualStyleBackColor = true;
@@ -493,7 +499,7 @@
             this.slDataGridViewTextBoxColumn,
             this.donGiaDataGridViewTextBoxColumn});
             this.cT_NHAP_SP_DK_LUUKHODataGridView.DataSource = this.cT_NHAP_LK_theoMaNhapBindingSource;
-            this.cT_NHAP_SP_DK_LUUKHODataGridView.Location = new System.Drawing.Point(498, 89);
+            this.cT_NHAP_SP_DK_LUUKHODataGridView.Location = new System.Drawing.Point(500, 151);
             this.cT_NHAP_SP_DK_LUUKHODataGridView.Name = "cT_NHAP_SP_DK_LUUKHODataGridView";
             this.cT_NHAP_SP_DK_LUUKHODataGridView.Size = new System.Drawing.Size(551, 220);
             this.cT_NHAP_SP_DK_LUUKHODataGridView.TabIndex = 24;
@@ -545,7 +551,7 @@
             this.nGAYNHAPDataGridViewTextBoxColumn,
             this.trangThaiDataGridViewTextBoxColumn});
             this.nHAPHANG1DataGridView.DataSource = this.nHAPHANG1BindingSource;
-            this.nHAPHANG1DataGridView.Location = new System.Drawing.Point(18, 89);
+            this.nHAPHANG1DataGridView.Location = new System.Drawing.Point(20, 151);
             this.nHAPHANG1DataGridView.Name = "nHAPHANG1DataGridView";
             this.nHAPHANG1DataGridView.Size = new System.Drawing.Size(452, 220);
             this.nHAPHANG1DataGridView.TabIndex = 23;
@@ -601,10 +607,13 @@
             this.tableAdapterManager1.CT_NHAP_LK_theoMaNhapTableAdapter = this.cT_NHAP_LK_theoMaNhapTableAdapter;
             this.tableAdapterManager1.DATHANG_SPTableAdapter = null;
             this.tableAdapterManager1.DOITRATableAdapter = null;
+            this.tableAdapterManager1.HOADON_baohanhTableAdapter = null;
             this.tableAdapterManager1.HOADON_kttontaiTableAdapter = null;
             this.tableAdapterManager1.HOADON_timmahd_vuathemTableAdapter = null;
             this.tableAdapterManager1.HOADON_ttTableAdapter = null;
             this.tableAdapterManager1.KHO_ttTableAdapter = null;
+            this.tableAdapterManager1.KHUYENMAI1TableAdapter = null;
+            this.tableAdapterManager1.KHUYENMAI2TableAdapter = null;
             this.tableAdapterManager1.KHUYENMAITableAdapter = null;
             this.tableAdapterManager1.LOAISANPHAMTableAdapter = null;
             this.tableAdapterManager1.NDBaoHanhTableAdapter = null;
@@ -645,7 +654,7 @@
             this.dataGridViewTextBoxColumn5});
             this.hOADON_timmahd_vuathemDataGridView.DataSource = this.hOADON_timmahd_vuathemBindingSource;
             this.hOADON_timmahd_vuathemDataGridView.Enabled = false;
-            this.hOADON_timmahd_vuathemDataGridView.Location = new System.Drawing.Point(1128, 74);
+            this.hOADON_timmahd_vuathemDataGridView.Location = new System.Drawing.Point(1130, 136);
             this.hOADON_timmahd_vuathemDataGridView.Name = "hOADON_timmahd_vuathemDataGridView";
             this.hOADON_timmahd_vuathemDataGridView.Size = new System.Drawing.Size(164, 91);
             this.hOADON_timmahd_vuathemDataGridView.TabIndex = 15;
@@ -667,38 +676,6 @@
             // 
             this.hOADON_kttontaiTableAdapter.ClearBeforeFill = true;
             // 
-            // fillToolStrip
-            // 
-            this.fillToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nGAYLAPToolStripLabel,
-            this.nGAYLAPToolStripTextBox,
-            this.fillToolStripButton});
-            this.fillToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fillToolStrip.Name = "fillToolStrip";
-            this.fillToolStrip.Size = new System.Drawing.Size(1370, 25);
-            this.fillToolStrip.TabIndex = 30;
-            this.fillToolStrip.Text = "fillToolStrip";
-            // 
-            // nGAYLAPToolStripLabel
-            // 
-            this.nGAYLAPToolStripLabel.Name = "nGAYLAPToolStripLabel";
-            this.nGAYLAPToolStripLabel.Size = new System.Drawing.Size(62, 22);
-            this.nGAYLAPToolStripLabel.Text = "NGAYLAP:";
-            // 
-            // nGAYLAPToolStripTextBox
-            // 
-            this.nGAYLAPToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nGAYLAPToolStripTextBox.Name = "nGAYLAPToolStripTextBox";
-            this.nGAYLAPToolStripTextBox.Size = new System.Drawing.Size(100, 25);
-            // 
-            // fillToolStripButton
-            // 
-            this.fillToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillToolStripButton.Name = "fillToolStripButton";
-            this.fillToolStripButton.Size = new System.Drawing.Size(26, 22);
-            this.fillToolStripButton.Text = "Fill";
-            this.fillToolStripButton.Click += new System.EventHandler(this.fillToolStripButton_Click);
-            // 
             // hOADON_kttontaiDataGridView
             // 
             this.hOADON_kttontaiDataGridView.AutoGenerateColumns = false;
@@ -712,7 +689,7 @@
             this.dataGridViewTextBoxColumn11});
             this.hOADON_kttontaiDataGridView.DataSource = this.hOADON_kttontaiBindingSource;
             this.hOADON_kttontaiDataGridView.Enabled = false;
-            this.hOADON_kttontaiDataGridView.Location = new System.Drawing.Point(1232, 215);
+            this.hOADON_kttontaiDataGridView.Location = new System.Drawing.Point(1234, 277);
             this.hOADON_kttontaiDataGridView.Name = "hOADON_kttontaiDataGridView";
             this.hOADON_kttontaiDataGridView.Size = new System.Drawing.Size(126, 94);
             this.hOADON_kttontaiDataGridView.TabIndex = 15;
@@ -793,7 +770,7 @@
             this.dataGridViewCheckBoxColumn1});
             this.tAIKHOANDataGridView.DataSource = this.tAIKHOANBindingSource;
             this.tAIKHOANDataGridView.Enabled = false;
-            this.tAIKHOANDataGridView.Location = new System.Drawing.Point(1070, 171);
+            this.tAIKHOANDataGridView.Location = new System.Drawing.Point(1072, 233);
             this.tAIKHOANDataGridView.Name = "tAIKHOANDataGridView";
             this.tAIKHOANDataGridView.Size = new System.Drawing.Size(146, 106);
             this.tAIKHOANDataGridView.TabIndex = 29;
@@ -857,16 +834,33 @@
             this.tableAdapterManager.TAIKHOANTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = nha_tro.NghiepVuTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Transparent;
+            this.button9.Image = global::nha_tro.Properties.Resources.Designcontest_Ecommerce_Business_Dollar;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button9.Location = new System.Drawing.Point(0, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(1370, 42);
+            this.button9.TabIndex = 31;
+            this.button9.Text = "Thanh Toán Nhập Linh Kiện Theo Phần Trăm";
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
             // thanhtoantheophantramLK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1370, 630);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.hOADON_timmahd_vuathemDataGridView);
             this.Controls.Add(this.hOADON_kttontaiDataGridView);
             this.Controls.Add(this.tAIKHOANDataGridView);
-            this.Controls.Add(this.fillToolStrip);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -895,8 +889,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_timmahd_vuathemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_timmahd_vuathemDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_kttontaiBindingSource)).EndInit();
-            this.fillToolStrip.ResumeLayout(false);
-            this.fillToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_kttontaiDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_DangNhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANBindingSource)).EndInit();
@@ -972,10 +964,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.BindingSource hOADON_kttontaiBindingSource;
         private ttTableAdapters.HOADON_kttontaiTableAdapter hOADON_kttontaiTableAdapter;
-        private System.Windows.Forms.ToolStrip fillToolStrip;
-        private System.Windows.Forms.ToolStripLabel nGAYLAPToolStripLabel;
-        private System.Windows.Forms.ToolStripTextBox nGAYLAPToolStripTextBox;
-        private System.Windows.Forms.ToolStripButton fillToolStripButton;
         private System.Windows.Forms.DataGridView hOADON_kttontaiDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
@@ -992,5 +980,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.Button button9;
     }
 }

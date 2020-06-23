@@ -88,6 +88,7 @@
             this.hOADON_ttTableAdapter = new nha_tro.ttTableAdapters.HOADON_ttTableAdapter();
             this.tableAdapterManager1 = new nha_tro.ttTableAdapters.TableAdapterManager();
             this.hOADON_kttontaiTableAdapter = new nha_tro.ttTableAdapters.HOADON_kttontaiTableAdapter();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cT_NHAP_SPBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -165,7 +166,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.nHAPHANGDataGridView);
-            this.groupBox1.Location = new System.Drawing.Point(20, 28);
+            this.groupBox1.Location = new System.Drawing.Point(12, 77);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(598, 217);
             this.groupBox1.TabIndex = 3;
@@ -221,10 +222,11 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.hOADON_kttontaiDataGridView);
+            this.groupBox2.Controls.Add(this.tAIKHOANDataGridView);
             this.groupBox2.Controls.Add(this.cT_NHAP_SP_DK_LUUKHODataGridView);
-            this.groupBox2.Location = new System.Drawing.Point(638, 28);
+            this.groupBox2.Location = new System.Drawing.Point(630, 77);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(598, 401);
+            this.groupBox2.Size = new System.Drawing.Size(598, 490);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết nhập";
@@ -306,9 +308,10 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.cT_NHAP_SP_DK_LUUKHODataGridView.DataSource = this.cT_NHAP_SP_DK_LUUKHOBindingSource;
-            this.cT_NHAP_SP_DK_LUUKHODataGridView.Location = new System.Drawing.Point(6, 24);
+            this.cT_NHAP_SP_DK_LUUKHODataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cT_NHAP_SP_DK_LUUKHODataGridView.Location = new System.Drawing.Point(3, 16);
             this.cT_NHAP_SP_DK_LUUKHODataGridView.Name = "cT_NHAP_SP_DK_LUUKHODataGridView";
-            this.cT_NHAP_SP_DK_LUUKHODataGridView.Size = new System.Drawing.Size(548, 371);
+            this.cT_NHAP_SP_DK_LUUKHODataGridView.Size = new System.Drawing.Size(592, 471);
             this.cT_NHAP_SP_DK_LUUKHODataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn4
@@ -355,9 +358,9 @@
             // 
             this.groupBox3.Controls.Add(this.kHO1GridControl);
             this.groupBox3.Controls.Add(this.kHOComboBox);
-            this.groupBox3.Location = new System.Drawing.Point(26, 251);
+            this.groupBox3.Location = new System.Drawing.Point(18, 300);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(618, 308);
+            this.groupBox3.Size = new System.Drawing.Size(592, 308);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Kho";
@@ -470,9 +473,9 @@
             this.mATKHAUDataGridViewTextBoxColumn,
             this.hOATDONGDataGridViewCheckBoxColumn});
             this.tAIKHOANDataGridView.DataSource = this.tAIKHOANBindingSource;
-            this.tAIKHOANDataGridView.Location = new System.Drawing.Point(650, 435);
+            this.tAIKHOANDataGridView.Location = new System.Drawing.Point(153, 223);
             this.tAIKHOANDataGridView.Name = "tAIKHOANDataGridView";
-            this.tAIKHOANDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.tAIKHOANDataGridView.Size = new System.Drawing.Size(300, 124);
             this.tAIKHOANDataGridView.TabIndex = 7;
             this.tAIKHOANDataGridView.Visible = false;
             // 
@@ -534,10 +537,13 @@
             this.tableAdapterManager1.CT_NHAP_LK_theoMaNhapTableAdapter = null;
             this.tableAdapterManager1.DATHANG_SPTableAdapter = null;
             this.tableAdapterManager1.DOITRATableAdapter = null;
+            this.tableAdapterManager1.HOADON_baohanhTableAdapter = null;
             this.tableAdapterManager1.HOADON_kttontaiTableAdapter = null;
             this.tableAdapterManager1.HOADON_timmahd_vuathemTableAdapter = null;
             this.tableAdapterManager1.HOADON_ttTableAdapter = this.hOADON_ttTableAdapter;
             this.tableAdapterManager1.KHO_ttTableAdapter = null;
+            this.tableAdapterManager1.KHUYENMAI1TableAdapter = null;
+            this.tableAdapterManager1.KHUYENMAI2TableAdapter = null;
             this.tableAdapterManager1.KHUYENMAITableAdapter = null;
             this.tableAdapterManager1.LOAISANPHAMTableAdapter = null;
             this.tableAdapterManager1.NDBaoHanhTableAdapter = null;
@@ -552,12 +558,29 @@
             // 
             this.hOADON_kttontaiTableAdapter.ClearBeforeFill = true;
             // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Transparent;
+            this.button9.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_document_save;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button9.Location = new System.Drawing.Point(0, 24);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(1262, 42);
+            this.button9.TabIndex = 31;
+            this.button9.Text = "Lưu Nhập Hàng";
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
             // LuuNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 749);
-            this.Controls.Add(this.tAIKHOANDataGridView);
+            this.ClientSize = new System.Drawing.Size(1262, 579);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -658,5 +681,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.Button button9;
     }
 }

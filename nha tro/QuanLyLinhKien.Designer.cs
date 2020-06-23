@@ -35,6 +35,10 @@
             System.Windows.Forms.Label mAKHOLabel1;
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lINHKIENDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lINHKIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nghiepVu = new nha_tro.NghiepVu();
             this.button1 = new System.Windows.Forms.Button();
@@ -48,10 +52,7 @@
             this.kHOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kHOTableAdapter = new nha_tro.NghiepVuTableAdapters.KHOTableAdapter();
             this.mAKHOComboBox = new System.Windows.Forms.ComboBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button9 = new System.Windows.Forms.Button();
             mALINHKIENLabel = new System.Windows.Forms.Label();
             tENLINHKIENLabel = new System.Windows.Forms.Label();
             dONGIALabel = new System.Windows.Forms.Label();
@@ -69,43 +70,43 @@
             // mALINHKIENLabel
             // 
             mALINHKIENLabel.AutoSize = true;
-            mALINHKIENLabel.Location = new System.Drawing.Point(48, 18);
+            mALINHKIENLabel.Location = new System.Drawing.Point(94, 145);
             mALINHKIENLabel.Name = "mALINHKIENLabel";
-            mALINHKIENLabel.Size = new System.Drawing.Size(76, 13);
+            mALINHKIENLabel.Size = new System.Drawing.Size(69, 13);
             mALINHKIENLabel.TabIndex = 2;
-            mALINHKIENLabel.Text = "MALINHKIEN:";
+            mALINHKIENLabel.Text = "Mã Linh Kiện";
             // 
             // tENLINHKIENLabel
             // 
             tENLINHKIENLabel.AutoSize = true;
-            tENLINHKIENLabel.Location = new System.Drawing.Point(48, 44);
+            tENLINHKIENLabel.Location = new System.Drawing.Point(94, 171);
             tENLINHKIENLabel.Name = "tENLINHKIENLabel";
-            tENLINHKIENLabel.Size = new System.Drawing.Size(82, 13);
+            tENLINHKIENLabel.Size = new System.Drawing.Size(73, 13);
             tENLINHKIENLabel.TabIndex = 4;
-            tENLINHKIENLabel.Text = "TENLINHKIEN:";
+            tENLINHKIENLabel.Text = "Tên Linh Kiện";
             // 
             // dONGIALabel
             // 
             dONGIALabel.AutoSize = true;
-            dONGIALabel.Location = new System.Drawing.Point(253, 18);
+            dONGIALabel.Location = new System.Drawing.Point(94, 206);
             dONGIALabel.Name = "dONGIALabel";
-            dONGIALabel.Size = new System.Drawing.Size(52, 13);
+            dONGIALabel.Size = new System.Drawing.Size(46, 13);
             dONGIALabel.TabIndex = 6;
-            dONGIALabel.Text = "DONGIA:";
+            dONGIALabel.Text = "Đơn Giá";
             // 
             // mAKHOLabel1
             // 
             mAKHOLabel1.AutoSize = true;
-            mAKHOLabel1.Location = new System.Drawing.Point(256, 44);
+            mAKHOLabel1.Location = new System.Drawing.Point(97, 235);
             mAKHOLabel1.Name = "mAKHOLabel1";
-            mAKHOLabel1.Size = new System.Drawing.Size(49, 13);
+            mAKHOLabel1.Size = new System.Drawing.Size(44, 13);
             mAKHOLabel1.TabIndex = 12;
-            mAKHOLabel1.Text = "MAKHO:";
+            mAKHOLabel1.Text = "Mã Kho";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lINHKIENDataGridView);
-            this.groupBox1.Location = new System.Drawing.Point(35, 102);
+            this.groupBox1.Location = new System.Drawing.Point(418, 110);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(524, 259);
             this.groupBox1.TabIndex = 0;
@@ -115,6 +116,7 @@
             // lINHKIENDataGridView
             // 
             this.lINHKIENDataGridView.AutoGenerateColumns = false;
+            this.lINHKIENDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.lINHKIENDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lINHKIENDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -122,10 +124,35 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.lINHKIENDataGridView.DataSource = this.lINHKIENBindingSource;
-            this.lINHKIENDataGridView.Location = new System.Drawing.Point(16, 19);
+            this.lINHKIENDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lINHKIENDataGridView.Location = new System.Drawing.Point(3, 16);
             this.lINHKIENDataGridView.Name = "lINHKIENDataGridView";
-            this.lINHKIENDataGridView.Size = new System.Drawing.Size(486, 220);
+            this.lINHKIENDataGridView.Size = new System.Drawing.Size(518, 240);
             this.lINHKIENDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MALINHKIEN";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã linh kiện";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TENLINHKIEN";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên linh kiện";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "DONGIA";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Đơn giá";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "MAKHO";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Mã kho";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // lINHKIENBindingSource
             // 
@@ -139,18 +166,19 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(110, 73);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::nha_tro.Properties.Resources.Awicons_Vista_Artistic_Add;
+            this.button1.Location = new System.Drawing.Point(86, 267);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(60, 46);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // mALINHKIENTextEdit
             // 
             this.mALINHKIENTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.lINHKIENBindingSource, "MALINHKIEN", true));
-            this.mALINHKIENTextEdit.Location = new System.Drawing.Point(136, 15);
+            this.mALINHKIENTextEdit.Location = new System.Drawing.Point(182, 142);
             this.mALINHKIENTextEdit.Name = "mALINHKIENTextEdit";
             this.mALINHKIENTextEdit.Size = new System.Drawing.Size(100, 20);
             this.mALINHKIENTextEdit.TabIndex = 3;
@@ -158,7 +186,7 @@
             // tENLINHKIENTextEdit
             // 
             this.tENLINHKIENTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.lINHKIENBindingSource, "TENLINHKIEN", true));
-            this.tENLINHKIENTextEdit.Location = new System.Drawing.Point(136, 41);
+            this.tENLINHKIENTextEdit.Location = new System.Drawing.Point(182, 168);
             this.tENLINHKIENTextEdit.Name = "tENLINHKIENTextEdit";
             this.tENLINHKIENTextEdit.Size = new System.Drawing.Size(100, 20);
             this.tENLINHKIENTextEdit.TabIndex = 5;
@@ -171,7 +199,7 @@
             0,
             0,
             0});
-            this.dONGIASpinEdit.Location = new System.Drawing.Point(341, 15);
+            this.dONGIASpinEdit.Location = new System.Drawing.Point(182, 203);
             this.dONGIASpinEdit.Name = "dONGIASpinEdit";
             this.dONGIASpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -180,21 +208,23 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(230, 73);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_edit_delete;
+            this.button2.Location = new System.Drawing.Point(182, 267);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(60, 46);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Xóa";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(351, 73);
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_document_edit;
+            this.button3.Location = new System.Drawing.Point(268, 267);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(60, 46);
             this.button3.TabIndex = 1;
-            this.button3.Text = "Sửa";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -245,40 +275,33 @@
             // 
             this.mAKHOComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHOBindingSource, "MAKHO", true));
             this.mAKHOComboBox.FormattingEnabled = true;
-            this.mAKHOComboBox.Location = new System.Drawing.Point(341, 44);
+            this.mAKHOComboBox.Location = new System.Drawing.Point(182, 232);
             this.mAKHOComboBox.Name = "mAKHOComboBox";
             this.mAKHOComboBox.Size = new System.Drawing.Size(100, 21);
             this.mAKHOComboBox.TabIndex = 13;
             // 
-            // dataGridViewTextBoxColumn1
+            // button9
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "MALINHKIEN";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã linh kiện";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "TENLINHKIEN";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên linh kiện";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "DONGIA";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Đơn giá";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "MAKHO";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Mã kho";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Transparent;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button9.Location = new System.Drawing.Point(0, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(954, 42);
+            this.button9.TabIndex = 30;
+            this.button9.Text = "Quản Lý Linh Kiện";
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // QuanLyLinhKien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 381);
+            this.ClientSize = new System.Drawing.Size(954, 381);
+            this.Controls.Add(this.button9);
             this.Controls.Add(mAKHOLabel1);
             this.Controls.Add(this.mAKHOComboBox);
             this.Controls.Add(mALINHKIENLabel);
@@ -328,5 +351,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Button button9;
     }
 }

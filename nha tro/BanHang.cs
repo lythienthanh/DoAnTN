@@ -52,6 +52,54 @@ namespace nha_tro
             // TODO: This line of code loads data into the 'nghiepVu.SANPHAM' table. You can move, or remove it, as needed.
             this.sANPHAMTableAdapter.Fill(this.nghiepVu.SANPHAM);
             maTraGopTextEdit.ReadOnly = true;
+
+            sANPHAMDataGridView.BorderStyle = BorderStyle.None;
+            sANPHAMDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            sANPHAMDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            sANPHAMDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            sANPHAMDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            sANPHAMDataGridView.BackgroundColor = Color.White;
+
+            sANPHAMDataGridView.EnableHeadersVisualStyles = false;
+            sANPHAMDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            sANPHAMDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            sANPHAMDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            //
+            kHUYENMAI_DKDataGridView.BorderStyle = BorderStyle.None;
+            kHUYENMAI_DKDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            kHUYENMAI_DKDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            kHUYENMAI_DKDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            kHUYENMAI_DKDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            kHUYENMAI_DKDataGridView.BackgroundColor = Color.White;
+
+            kHUYENMAI_DKDataGridView.EnableHeadersVisualStyles = false;
+            kHUYENMAI_DKDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            kHUYENMAI_DKDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            kHUYENMAI_DKDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            //
+            kHACHHANG_dkDataGridView.BorderStyle = BorderStyle.None;
+            kHACHHANG_dkDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            kHACHHANG_dkDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            kHACHHANG_dkDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            kHACHHANG_dkDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            kHACHHANG_dkDataGridView.BackgroundColor = Color.White;
+
+            kHACHHANG_dkDataGridView.EnableHeadersVisualStyles = false;
+            kHACHHANG_dkDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            kHACHHANG_dkDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            kHACHHANG_dkDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            //
+            ct_mua_SP_TIMKIEMDataGridView.BorderStyle = BorderStyle.None;
+            ct_mua_SP_TIMKIEMDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            ct_mua_SP_TIMKIEMDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            ct_mua_SP_TIMKIEMDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            ct_mua_SP_TIMKIEMDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            ct_mua_SP_TIMKIEMDataGridView.BackgroundColor = Color.White;
+
+            ct_mua_SP_TIMKIEMDataGridView.EnableHeadersVisualStyles = false;
+            ct_mua_SP_TIMKIEMDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            ct_mua_SP_TIMKIEMDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            ct_mua_SP_TIMKIEMDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void fill_DKToolStripButton_Click(object sender, EventArgs e)

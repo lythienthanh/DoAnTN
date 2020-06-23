@@ -38,7 +38,31 @@ namespace nha_tro
             // TODO: This line of code loads data into the 'tt.HOADON_tt' table. You can move, or remove it, as needed.
             this.hOADON_ttTableAdapter.Fill(this.tt.HOADON_tt);
 
-            
+            nHAPHANG1DataGridView.BorderStyle = BorderStyle.None;
+            nHAPHANG1DataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            nHAPHANG1DataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            nHAPHANG1DataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            nHAPHANG1DataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            nHAPHANG1DataGridView.BackgroundColor = Color.White;
+
+            nHAPHANG1DataGridView.EnableHeadersVisualStyles = false;
+            nHAPHANG1DataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            nHAPHANG1DataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            nHAPHANG1DataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            cT_NHAP_LK_theoMaNhapDataGridView.BorderStyle = BorderStyle.None;
+            cT_NHAP_LK_theoMaNhapDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            cT_NHAP_LK_theoMaNhapDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            cT_NHAP_LK_theoMaNhapDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            cT_NHAP_LK_theoMaNhapDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            cT_NHAP_LK_theoMaNhapDataGridView.BackgroundColor = Color.White;
+
+            cT_NHAP_LK_theoMaNhapDataGridView.EnableHeadersVisualStyles = false;
+            cT_NHAP_LK_theoMaNhapDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            cT_NHAP_LK_theoMaNhapDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            cT_NHAP_LK_theoMaNhapDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+
         }
         //====nhan ten dang nhap tu form dang nhap
         private string tendn;

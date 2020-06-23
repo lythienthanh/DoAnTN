@@ -30,6 +30,17 @@ namespace nha_tro
             // TODO: This line of code loads data into the 'nghiepVu.NHACUNGCAP' table. You can move, or remove it, as needed.
             this.nHACUNGCAPTableAdapter.Fill(this.nghiepVu.NHACUNGCAP);
 
+            nHACUNGCAPDataGridView.BorderStyle = BorderStyle.None;
+            nHACUNGCAPDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            nHACUNGCAPDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            nHACUNGCAPDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            nHACUNGCAPDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            nHACUNGCAPDataGridView.BackgroundColor = Color.White;
+
+            nHACUNGCAPDataGridView.EnableHeadersVisualStyles = false;
+            nHACUNGCAPDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            nHACUNGCAPDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            nHACUNGCAPDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void button1_Click(object sender, EventArgs e)

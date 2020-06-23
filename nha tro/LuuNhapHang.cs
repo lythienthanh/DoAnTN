@@ -45,8 +45,31 @@ namespace nha_tro
             ////this.kHOTableAdapter.Fill(this.nghiepVu.KHO);
             // TODO: This line of code loads data into the 'nghiepVu.CT_NHAP_SP' table. You can move, or remove it, as needed.
             this.cT_NHAP_SPTableAdapter.Fill(this.nghiepVu.CT_NHAP_SP);
-            
 
+
+            nHAPHANGDataGridView.BorderStyle = BorderStyle.None;
+            nHAPHANGDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            nHAPHANGDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            nHAPHANGDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            nHAPHANGDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            nHAPHANGDataGridView.BackgroundColor = Color.White;
+
+            nHAPHANGDataGridView.EnableHeadersVisualStyles = false;
+            nHAPHANGDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            nHAPHANGDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            nHAPHANGDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            cT_NHAP_SP_DK_LUUKHODataGridView.BorderStyle = BorderStyle.None;
+            cT_NHAP_SP_DK_LUUKHODataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            cT_NHAP_SP_DK_LUUKHODataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            cT_NHAP_SP_DK_LUUKHODataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            cT_NHAP_SP_DK_LUUKHODataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            cT_NHAP_SP_DK_LUUKHODataGridView.BackgroundColor = Color.White;
+
+            cT_NHAP_SP_DK_LUUKHODataGridView.EnableHeadersVisualStyles = false;
+            cT_NHAP_SP_DK_LUUKHODataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            cT_NHAP_SP_DK_LUUKHODataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            cT_NHAP_SP_DK_LUUKHODataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
         }
 

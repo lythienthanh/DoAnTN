@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace nha_tro
 {
-    public partial class TaoPhieuNhap : Form
+    public partial class MH000000000000000024 : Form
     {
-        public TaoPhieuNhap()
+        public MH000000000000000024()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace nha_tro
         }
         //====nhan ten dang nhap tu form dang nhap
         private string tendn;
-        public TaoPhieuNhap(string Message)
+        public MH000000000000000024(string Message)
             : this()
         {
             tendn = Message;

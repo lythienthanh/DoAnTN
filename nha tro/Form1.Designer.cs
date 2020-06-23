@@ -91,6 +91,12 @@
             this.sANPHAMTableAdapter = new nha_tro.NghiepVuTableAdapters.SANPHAMTableAdapter();
             this.kHO1TableAdapter = new nha_tro.NghiepVuTableAdapters.KHO1TableAdapter();
             this.sP_NEWTableAdapter = new nha_tro.NghiepVuTableAdapters.SP_NEWTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tongSLspBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tongSLspTableAdapter = new nha_tro.NghiepVuTableAdapters.tongSLspTableAdapter();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tongSLspGridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             mALOAILabel = new System.Windows.Forms.Label();
             mAKHOLabel = new System.Windows.Forms.Label();
             mASPLabel = new System.Windows.Forms.Label();
@@ -129,102 +135,106 @@
             ((System.ComponentModel.ISupportInitialize)(this.sLSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diaChiTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tongSLspBindingSource)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tongSLspGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // mALOAILabel
             // 
             mALOAILabel.AutoSize = true;
-            mALOAILabel.Location = new System.Drawing.Point(191, 42);
+            mALOAILabel.Location = new System.Drawing.Point(178, 42);
             mALOAILabel.Name = "mALOAILabel";
-            mALOAILabel.Size = new System.Drawing.Size(50, 13);
+            mALOAILabel.Size = new System.Drawing.Size(41, 13);
             mALOAILabel.TabIndex = 2;
-            mALOAILabel.Text = "MALOAI:";
+            mALOAILabel.Text = "Mã loại";
             // 
             // mAKHOLabel
             // 
             mAKHOLabel.AutoSize = true;
-            mAKHOLabel.Location = new System.Drawing.Point(191, 68);
+            mAKHOLabel.Location = new System.Drawing.Point(178, 68);
             mAKHOLabel.Name = "mAKHOLabel";
-            mAKHOLabel.Size = new System.Drawing.Size(49, 13);
+            mAKHOLabel.Size = new System.Drawing.Size(44, 13);
             mAKHOLabel.TabIndex = 4;
-            mAKHOLabel.Text = "MAKHO:";
+            mAKHOLabel.Text = "Mã Kho";
             // 
             // mASPLabel
             // 
             mASPLabel.AutoSize = true;
-            mASPLabel.Location = new System.Drawing.Point(191, 16);
+            mASPLabel.Location = new System.Drawing.Point(178, 16);
             mASPLabel.Name = "mASPLabel";
-            mASPLabel.Size = new System.Drawing.Size(40, 13);
+            mASPLabel.Size = new System.Drawing.Size(71, 13);
             mASPLabel.TabIndex = 13;
-            mASPLabel.Text = "MASP:";
+            mASPLabel.Text = "Mã sản phẩm";
             // 
             // tENSPLabel
             // 
             tENSPLabel.AutoSize = true;
-            tENSPLabel.Location = new System.Drawing.Point(191, 94);
+            tENSPLabel.Location = new System.Drawing.Point(178, 94);
             tENSPLabel.Name = "tENSPLabel";
-            tENSPLabel.Size = new System.Drawing.Size(46, 13);
+            tENSPLabel.Size = new System.Drawing.Size(75, 13);
             tENSPLabel.TabIndex = 19;
-            tENSPLabel.Text = "TENSP:";
+            tENSPLabel.Text = "Tên sản phẩm";
             // 
             // tINHTRANGLabel
             // 
             tINHTRANGLabel.AutoSize = true;
-            tINHTRANGLabel.Location = new System.Drawing.Point(191, 120);
+            tINHTRANGLabel.Location = new System.Drawing.Point(178, 120);
             tINHTRANGLabel.Name = "tINHTRANGLabel";
-            tINHTRANGLabel.Size = new System.Drawing.Size(74, 13);
+            tINHTRANGLabel.Size = new System.Drawing.Size(55, 13);
             tINHTRANGLabel.TabIndex = 21;
-            tINHTRANGLabel.Text = "TINHTRANG:";
+            tINHTRANGLabel.Text = "Tình trạng";
             // 
             // donGiaLabel
             // 
             donGiaLabel.AutoSize = true;
-            donGiaLabel.Location = new System.Drawing.Point(191, 146);
+            donGiaLabel.Location = new System.Drawing.Point(178, 146);
             donGiaLabel.Name = "donGiaLabel";
-            donGiaLabel.Size = new System.Drawing.Size(49, 13);
+            donGiaLabel.Size = new System.Drawing.Size(44, 13);
             donGiaLabel.TabIndex = 23;
-            donGiaLabel.Text = "Don Gia:";
+            donGiaLabel.Text = "Đơn giá";
             // 
             // mALOAILabel1
             // 
             mALOAILabel1.AutoSize = true;
-            mALOAILabel1.Location = new System.Drawing.Point(197, 51);
+            mALOAILabel1.Location = new System.Drawing.Point(178, 51);
             mALOAILabel1.Name = "mALOAILabel1";
-            mALOAILabel1.Size = new System.Drawing.Size(50, 13);
+            mALOAILabel1.Size = new System.Drawing.Size(41, 13);
             mALOAILabel1.TabIndex = 16;
-            mALOAILabel1.Text = "MALOAI:";
+            mALOAILabel1.Text = "Mã loại";
             // 
             // tENLOAILabel
             // 
             tENLOAILabel.AutoSize = true;
-            tENLOAILabel.Location = new System.Drawing.Point(197, 77);
+            tENLOAILabel.Location = new System.Drawing.Point(175, 91);
             tENLOAILabel.Name = "tENLOAILabel";
-            tENLOAILabel.Size = new System.Drawing.Size(56, 13);
+            tENLOAILabel.Size = new System.Drawing.Size(45, 13);
             tENLOAILabel.TabIndex = 18;
-            tENLOAILabel.Text = "TENLOAI:";
+            tENLOAILabel.Text = "Tên loại";
             // 
             // mASPLabel1
             // 
             mASPLabel1.AutoSize = true;
-            mASPLabel1.Location = new System.Drawing.Point(204, 81);
+            mASPLabel1.Location = new System.Drawing.Point(178, 80);
             mASPLabel1.Name = "mASPLabel1";
-            mASPLabel1.Size = new System.Drawing.Size(40, 13);
+            mASPLabel1.Size = new System.Drawing.Size(71, 13);
             mASPLabel1.TabIndex = 20;
-            mASPLabel1.Text = "MASP:";
+            mASPLabel1.Text = "Mã sản phẩm";
             // 
             // mAKHOLabel1
             // 
             mAKHOLabel1.AutoSize = true;
-            mAKHOLabel1.Location = new System.Drawing.Point(204, 29);
+            mAKHOLabel1.Location = new System.Drawing.Point(178, 28);
             mAKHOLabel1.Name = "mAKHOLabel1";
-            mAKHOLabel1.Size = new System.Drawing.Size(49, 13);
+            mAKHOLabel1.Size = new System.Drawing.Size(43, 13);
             mAKHOLabel1.TabIndex = 20;
-            mAKHOLabel1.Text = "MAKHO:";
+            mAKHOLabel1.Text = "Mã kho";
             // 
             // sLLabel
             // 
             sLLabel.AutoSize = true;
-            sLLabel.Location = new System.Drawing.Point(204, 55);
+            sLLabel.Location = new System.Drawing.Point(178, 54);
             sLLabel.Name = "sLLabel";
             sLLabel.Size = new System.Drawing.Size(23, 13);
             sLLabel.TabIndex = 22;
@@ -233,16 +243,16 @@
             // diaChiLabel
             // 
             diaChiLabel.AutoSize = true;
-            diaChiLabel.Location = new System.Drawing.Point(204, 107);
+            diaChiLabel.Location = new System.Drawing.Point(178, 106);
             diaChiLabel.Name = "diaChiLabel";
-            diaChiLabel.Size = new System.Drawing.Size(44, 13);
+            diaChiLabel.Size = new System.Drawing.Size(40, 13);
             diaChiLabel.TabIndex = 26;
-            diaChiLabel.Text = "Dia Chi:";
+            diaChiLabel.Text = "Địa chỉ";
             // 
             // sDTLabel
             // 
             sDTLabel.AutoSize = true;
-            sDTLabel.Location = new System.Drawing.Point(204, 133);
+            sDTLabel.Location = new System.Drawing.Point(178, 132);
             sDTLabel.Name = "sDTLabel";
             sDTLabel.Size = new System.Drawing.Size(32, 13);
             sDTLabel.TabIndex = 28;
@@ -265,7 +275,7 @@
             this.groupBox1.Controls.Add(this.sANPHAMComboBox);
             this.groupBox1.Controls.Add(mALOAILabel);
             this.groupBox1.Controls.Add(mAKHOLabel);
-            this.groupBox1.Location = new System.Drawing.Point(12, 39);
+            this.groupBox1.Location = new System.Drawing.Point(12, 48);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1022, 173);
             this.groupBox1.TabIndex = 1;
@@ -393,21 +403,23 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(34, 68);
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_document_edit;
+            this.button3.Location = new System.Drawing.Point(34, 84);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(60, 46);
             this.button3.TabIndex = 13;
-            this.button3.Text = "Sữa";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::nha_tro.Properties.Resources.Awicons_Vista_Artistic_Add;
             this.button1.Location = new System.Drawing.Point(34, 32);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(60, 46);
             this.button1.TabIndex = 11;
-            this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -457,7 +469,7 @@
             this.groupBox2.Controls.Add(this.lOAISANPHAMGridControl);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Location = new System.Drawing.Point(12, 218);
+            this.groupBox2.Location = new System.Drawing.Point(12, 227);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1016, 168);
             this.groupBox2.TabIndex = 2;
@@ -468,7 +480,7 @@
             // mALOAITextEdit
             // 
             this.mALOAITextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.lOAISANPHAMBindingSource, "MALOAI", true));
-            this.mALOAITextEdit.Location = new System.Drawing.Point(259, 48);
+            this.mALOAITextEdit.Location = new System.Drawing.Point(271, 48);
             this.mALOAITextEdit.Name = "mALOAITextEdit";
             this.mALOAITextEdit.Size = new System.Drawing.Size(100, 20);
             this.mALOAITextEdit.TabIndex = 17;
@@ -476,7 +488,7 @@
             // tENLOAITextEdit
             // 
             this.tENLOAITextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.lOAISANPHAMBindingSource, "TENLOAI", true));
-            this.tENLOAITextEdit.Location = new System.Drawing.Point(259, 74);
+            this.tENLOAITextEdit.Location = new System.Drawing.Point(271, 88);
             this.tENLOAITextEdit.Name = "tENLOAITextEdit";
             this.tENLOAITextEdit.Size = new System.Drawing.Size(100, 20);
             this.tENLOAITextEdit.TabIndex = 19;
@@ -499,26 +511,29 @@
             // 
             // button4
             // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_document_edit;
             this.button4.Location = new System.Drawing.Point(34, 87);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(60, 46);
             this.button4.TabIndex = 16;
-            this.button4.Text = "Sữa";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(34, 51);
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Image = global::nha_tro.Properties.Resources.Awicons_Vista_Artistic_Add;
+            this.button6.Location = new System.Drawing.Point(34, 22);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(60, 46);
             this.button6.TabIndex = 14;
-            this.button6.Text = "Thêm";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.kHO1ComboBox);
             this.groupBox3.Controls.Add(this.button5);
             this.groupBox3.Controls.Add(this.textBox1);
@@ -535,7 +550,7 @@
             this.groupBox3.Controls.Add(this.button9);
             this.groupBox3.Location = new System.Drawing.Point(12, 392);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1016, 192);
+            this.groupBox3.Size = new System.Drawing.Size(1016, 239);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Kho";
@@ -545,7 +560,7 @@
             this.kHO1ComboBox.DataSource = this.kHO1BindingSource1;
             this.kHO1ComboBox.DisplayMember = "MAKHO";
             this.kHO1ComboBox.FormattingEnabled = true;
-            this.kHO1ComboBox.Location = new System.Drawing.Point(259, 25);
+            this.kHO1ComboBox.Location = new System.Drawing.Point(271, 21);
             this.kHO1ComboBox.Name = "kHO1ComboBox";
             this.kHO1ComboBox.Size = new System.Drawing.Size(100, 21);
             this.kHO1ComboBox.TabIndex = 31;
@@ -558,17 +573,18 @@
             // 
             // button5
             // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Location = new System.Drawing.Point(34, 55);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(129, 23);
             this.button5.TabIndex = 31;
-            this.button5.Text = "Thêm kho moi";
+            this.button5.Text = "Thêm kho mới";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(259, 130);
+            this.textBox1.Location = new System.Drawing.Point(271, 126);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 30;
@@ -576,10 +592,10 @@
             // kHO1GridControl
             // 
             this.kHO1GridControl.DataSource = this.kHO1BindingSource;
-            this.kHO1GridControl.Location = new System.Drawing.Point(443, 29);
+            this.kHO1GridControl.Location = new System.Drawing.Point(443, 13);
             this.kHO1GridControl.MainView = this.gridView3;
             this.kHO1GridControl.Name = "kHO1GridControl";
-            this.kHO1GridControl.Size = new System.Drawing.Size(553, 132);
+            this.kHO1GridControl.Size = new System.Drawing.Size(553, 98);
             this.kHO1GridControl.TabIndex = 29;
             this.kHO1GridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -597,7 +613,7 @@
             0,
             0,
             0});
-            this.sLSpinEdit.Location = new System.Drawing.Point(259, 52);
+            this.sLSpinEdit.Location = new System.Drawing.Point(271, 48);
             this.sLSpinEdit.Name = "sLSpinEdit";
             this.sLSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -607,7 +623,7 @@
             // diaChiTextEdit
             // 
             this.diaChiTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.kHOBindingSource, "DiaChi", true));
-            this.diaChiTextEdit.Location = new System.Drawing.Point(259, 104);
+            this.diaChiTextEdit.Location = new System.Drawing.Point(271, 100);
             this.diaChiTextEdit.Name = "diaChiTextEdit";
             this.diaChiTextEdit.Size = new System.Drawing.Size(100, 20);
             this.diaChiTextEdit.TabIndex = 27;
@@ -617,7 +633,7 @@
             this.sANPHAMComboBox1.DataSource = this.sANPHAMBindingSource1;
             this.sANPHAMComboBox1.DisplayMember = "TENSP";
             this.sANPHAMComboBox1.FormattingEnabled = true;
-            this.sANPHAMComboBox1.Location = new System.Drawing.Point(259, 81);
+            this.sANPHAMComboBox1.Location = new System.Drawing.Point(271, 77);
             this.sANPHAMComboBox1.Name = "sANPHAMComboBox1";
             this.sANPHAMComboBox1.Size = new System.Drawing.Size(100, 21);
             this.sANPHAMComboBox1.TabIndex = 20;
@@ -630,21 +646,23 @@
             // 
             // button7
             // 
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_document_edit;
             this.button7.Location = new System.Drawing.Point(34, 107);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.Size = new System.Drawing.Size(60, 46);
             this.button7.TabIndex = 16;
-            this.button7.Text = "Sữa";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button9
             // 
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Location = new System.Drawing.Point(34, 19);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(129, 23);
             this.button9.TabIndex = 14;
-            this.button9.Text = "Thêm SP vao` kho";
+            this.button9.Text = "Thêm sp vào kho";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
@@ -698,12 +716,65 @@
             // 
             this.sP_NEWTableAdapter.ClearBeforeFill = true;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(1104, 42);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Quản Lý Sản Phẩm";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // tongSLspBindingSource
+            // 
+            this.tongSLspBindingSource.DataMember = "tongSLsp";
+            this.tongSLspBindingSource.DataSource = this.nghiepVu;
+            // 
+            // tongSLspTableAdapter
+            // 
+            this.tongSLspTableAdapter.ClearBeforeFill = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.tongSLspGridControl);
+            this.groupBox4.Location = new System.Drawing.Point(443, 117);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(553, 109);
+            this.groupBox4.TabIndex = 32;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Tổng sản phẩm trong các kho";
+            // 
+            // tongSLspGridControl
+            // 
+            this.tongSLspGridControl.DataSource = this.tongSLspBindingSource;
+            this.tongSLspGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tongSLspGridControl.Location = new System.Drawing.Point(3, 16);
+            this.tongSLspGridControl.MainView = this.gridView4;
+            this.tongSLspGridControl.Name = "tongSLspGridControl";
+            this.tongSLspGridControl.Size = new System.Drawing.Size(547, 90);
+            this.tongSLspGridControl.TabIndex = 32;
+            this.tongSLspGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView4});
+            // 
+            // gridView4
+            // 
+            this.gridView4.GridControl = this.tongSLspGridControl;
+            this.gridView4.Name = "gridView4";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1370, 705);
+            this.ClientSize = new System.Drawing.Size(1104, 749);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -738,6 +809,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.sLSpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diaChiTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tongSLspBindingSource)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tongSLspGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -793,5 +868,11 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ComboBox kHO1ComboBox;
         private System.Windows.Forms.BindingSource kHO1BindingSource1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.BindingSource tongSLspBindingSource;
+        private NghiepVuTableAdapters.tongSLspTableAdapter tongSLspTableAdapter;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private DevExpress.XtraGrid.GridControl tongSLspGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
     }
 }

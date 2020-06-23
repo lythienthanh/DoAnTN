@@ -45,6 +45,30 @@ namespace nha_tro
             //this.nguoiDungTableAdapter.Fill(this.dataSet1.NguoiDung);
             //load_dl();
 
+            tAIKHOANDataGridView.BorderStyle = BorderStyle.None;
+            tAIKHOANDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            tAIKHOANDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            tAIKHOANDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            tAIKHOANDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            tAIKHOANDataGridView.BackgroundColor = Color.White;
+
+            tAIKHOANDataGridView.EnableHeadersVisualStyles = false;
+            tAIKHOANDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            tAIKHOANDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            tAIKHOANDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            tk_NND_DKDataGridView.BorderStyle = BorderStyle.None;
+            tk_NND_DKDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            tk_NND_DKDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            tk_NND_DKDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            tk_NND_DKDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            tk_NND_DKDataGridView.BackgroundColor = Color.White;
+
+            tk_NND_DKDataGridView.EnableHeadersVisualStyles = false;
+            tk_NND_DKDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            tk_NND_DKDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            tk_NND_DKDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
         }
 
         private void nhomNguoiDungComboBox_SelectedIndexChanged(object sender, EventArgs e)

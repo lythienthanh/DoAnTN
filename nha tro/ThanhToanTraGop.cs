@@ -28,9 +28,22 @@ namespace nha_tro
         private void ThanhToanTraGop_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'tt.LOAISANPHAM' table. You can move, or remove it, as needed.
-           
+
             // TODO: This line of code loads data into the 'tt.TraGop' table. You can move, or remove it, as needed.
             /*this.traGopTableAdapter.Fill(this.tt.TraGop);*/
+
+
+            dataTable1DataGridView.BorderStyle = BorderStyle.None;
+            dataTable1DataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataTable1DataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataTable1DataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataTable1DataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataTable1DataGridView.BackgroundColor = Color.White;
+
+            dataTable1DataGridView.EnableHeadersVisualStyles = false;
+            dataTable1DataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataTable1DataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataTable1DataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
         }
         ThongKe ThongKe = new ThongKe();

@@ -1,6 +1,6 @@
 ﻿namespace nha_tro
 {
-    partial class TaoPhieuNhap
+    partial class MH000000000000000024
     {
         /// <summary>
         /// Required designer variable.
@@ -78,6 +78,7 @@
             this.sLSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.donGiaSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.cT_Nhap_dkTableAdapter = new nha_tro.NghiepVuTableAdapters.CT_Nhap_dkTableAdapter();
+            this.button9 = new System.Windows.Forms.Button();
             mANVLabel = new System.Windows.Forms.Label();
             nGAYNHAPLabel = new System.Windows.Forms.Label();
             mANHAPLabel = new System.Windows.Forms.Label();
@@ -113,50 +114,50 @@
             mANVLabel.AutoSize = true;
             mANVLabel.Location = new System.Drawing.Point(6, 71);
             mANVLabel.Name = "mANVLabel";
-            mANVLabel.Size = new System.Drawing.Size(41, 13);
+            mANVLabel.Size = new System.Drawing.Size(72, 13);
             mANVLabel.TabIndex = 8;
-            mANVLabel.Text = "MANV:";
+            mANVLabel.Text = "Mã nhân viên";
             // 
             // nGAYNHAPLabel
             // 
             nGAYNHAPLabel.AutoSize = true;
             nGAYNHAPLabel.Location = new System.Drawing.Point(6, 97);
             nGAYNHAPLabel.Name = "nGAYNHAPLabel";
-            nGAYNHAPLabel.Size = new System.Drawing.Size(70, 13);
+            nGAYNHAPLabel.Size = new System.Drawing.Size(62, 13);
             nGAYNHAPLabel.TabIndex = 10;
-            nGAYNHAPLabel.Text = "NGAYNHAP:";
+            nGAYNHAPLabel.Text = "Ngày nhập ";
             // 
             // mANHAPLabel
             // 
             mANHAPLabel.AutoSize = true;
-            mANHAPLabel.Location = new System.Drawing.Point(6, 72);
+            mANHAPLabel.Location = new System.Drawing.Point(12, 48);
             mANHAPLabel.Name = "mANHAPLabel";
-            mANHAPLabel.Size = new System.Drawing.Size(56, 13);
+            mANHAPLabel.Size = new System.Drawing.Size(49, 13);
             mANHAPLabel.TabIndex = 0;
-            mANHAPLabel.Text = "MANHAP:";
+            mANHAPLabel.Text = "Mã nhập";
             // 
             // mASPLabel
             // 
             mASPLabel.AutoSize = true;
-            mASPLabel.Location = new System.Drawing.Point(6, 98);
+            mASPLabel.Location = new System.Drawing.Point(12, 74);
             mASPLabel.Name = "mASPLabel";
-            mASPLabel.Size = new System.Drawing.Size(43, 13);
+            mASPLabel.Size = new System.Drawing.Size(75, 13);
             mASPLabel.TabIndex = 2;
-            mASPLabel.Text = "TENSP";
+            mASPLabel.Text = "Tên sản phẩm";
             // 
             // mANCCLabel
             // 
             mANCCLabel.AutoSize = true;
-            mANCCLabel.Location = new System.Drawing.Point(6, 124);
+            mANCCLabel.Location = new System.Drawing.Point(12, 100);
             mANCCLabel.Name = "mANCCLabel";
-            mANCCLabel.Size = new System.Drawing.Size(51, 13);
+            mANCCLabel.Size = new System.Drawing.Size(95, 13);
             mANCCLabel.TabIndex = 4;
-            mANCCLabel.Text = "TENNCC";
+            mANCCLabel.Text = "Tên nhà cung cấp";
             // 
             // sLLabel
             // 
             sLLabel.AutoSize = true;
-            sLLabel.Location = new System.Drawing.Point(6, 150);
+            sLLabel.Location = new System.Drawing.Point(12, 126);
             sLLabel.Name = "sLLabel";
             sLLabel.Size = new System.Drawing.Size(23, 13);
             sLLabel.TabIndex = 6;
@@ -165,11 +166,11 @@
             // donGiaLabel
             // 
             donGiaLabel.AutoSize = true;
-            donGiaLabel.Location = new System.Drawing.Point(6, 176);
+            donGiaLabel.Location = new System.Drawing.Point(12, 152);
             donGiaLabel.Name = "donGiaLabel";
-            donGiaLabel.Size = new System.Drawing.Size(49, 13);
+            donGiaLabel.Size = new System.Drawing.Size(44, 13);
             donGiaLabel.TabIndex = 8;
-            donGiaLabel.Text = "Don Gia:";
+            donGiaLabel.Text = "Đơn giá";
             // 
             // nghiepVu
             // 
@@ -251,9 +252,9 @@
             this.groupBox2.Controls.Add(this.mANVTextEdit);
             this.groupBox2.Controls.Add(nGAYNHAPLabel);
             this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Location = new System.Drawing.Point(18, 28);
+            this.groupBox2.Location = new System.Drawing.Point(12, 52);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(773, 161);
+            this.groupBox2.Size = new System.Drawing.Size(865, 161);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Phiếu Nhập";
@@ -264,7 +265,7 @@
             this.nHAPHANGGridControl.Location = new System.Drawing.Point(288, 19);
             this.nHAPHANGGridControl.MainView = this.gridView1;
             this.nHAPHANGGridControl.Name = "nHAPHANGGridControl";
-            this.nHAPHANGGridControl.Size = new System.Drawing.Size(479, 131);
+            this.nHAPHANGGridControl.Size = new System.Drawing.Size(571, 131);
             this.nHAPHANGGridControl.TabIndex = 11;
             this.nHAPHANGGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -328,11 +329,12 @@
             // 
             // button6
             // 
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Image = global::nha_tro.Properties.Resources.Awicons_Vista_Artistic_Add;
             this.button6.Location = new System.Drawing.Point(6, 19);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(60, 46);
             this.button6.TabIndex = 4;
-            this.button6.Text = "Thêm";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -356,20 +358,21 @@
             this.groupBox1.Controls.Add(this.sLSpinEdit);
             this.groupBox1.Controls.Add(donGiaLabel);
             this.groupBox1.Controls.Add(this.donGiaSpinEdit);
-            this.groupBox1.Location = new System.Drawing.Point(18, 215);
+            this.groupBox1.Location = new System.Drawing.Point(12, 239);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(809, 258);
+            this.groupBox1.Size = new System.Drawing.Size(865, 258);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết phiếu nhập";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(171, 19);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_document_edit;
+            this.button1.Location = new System.Drawing.Point(177, 189);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(60, 46);
             this.button1.TabIndex = 15;
-            this.button1.Text = "Sữa";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -378,9 +381,9 @@
             this.nHACUNGCAPComboBox.DataSource = this.nHACUNGCAPBindingSource1;
             this.nHACUNGCAPComboBox.DisplayMember = "TENNCC";
             this.nHACUNGCAPComboBox.FormattingEnabled = true;
-            this.nHACUNGCAPComboBox.Location = new System.Drawing.Point(68, 120);
+            this.nHACUNGCAPComboBox.Location = new System.Drawing.Point(110, 97);
             this.nHACUNGCAPComboBox.Name = "nHACUNGCAPComboBox";
-            this.nHACUNGCAPComboBox.Size = new System.Drawing.Size(100, 21);
+            this.nHACUNGCAPComboBox.Size = new System.Drawing.Size(172, 21);
             this.nHACUNGCAPComboBox.TabIndex = 14;
             this.nHACUNGCAPComboBox.ValueMember = "MANCC";
             // 
@@ -394,9 +397,9 @@
             this.sANPHAMComboBox.DataSource = this.sANPHAMBindingSource1;
             this.sANPHAMComboBox.DisplayMember = "TENSP";
             this.sANPHAMComboBox.FormattingEnabled = true;
-            this.sANPHAMComboBox.Location = new System.Drawing.Point(68, 94);
+            this.sANPHAMComboBox.Location = new System.Drawing.Point(110, 71);
             this.sANPHAMComboBox.Name = "sANPHAMComboBox";
-            this.sANPHAMComboBox.Size = new System.Drawing.Size(100, 21);
+            this.sANPHAMComboBox.Size = new System.Drawing.Size(172, 21);
             this.sANPHAMComboBox.TabIndex = 14;
             this.sANPHAMComboBox.ValueMember = "MASP";
             // 
@@ -410,9 +413,9 @@
             this.nHAPHANGComboBox.DataSource = this.nHAPHANGBindingSource1;
             this.nHAPHANGComboBox.DisplayMember = "MANHAP";
             this.nHAPHANGComboBox.FormattingEnabled = true;
-            this.nHAPHANGComboBox.Location = new System.Drawing.Point(68, 68);
+            this.nHAPHANGComboBox.Location = new System.Drawing.Point(110, 45);
             this.nHAPHANGComboBox.Name = "nHAPHANGComboBox";
-            this.nHAPHANGComboBox.Size = new System.Drawing.Size(100, 21);
+            this.nHAPHANGComboBox.Size = new System.Drawing.Size(172, 21);
             this.nHAPHANGComboBox.TabIndex = 14;
             this.nHAPHANGComboBox.ValueMember = "MANHAP";
             this.nHAPHANGComboBox.SelectedIndexChanged += new System.EventHandler(this.nHAPHANGComboBox_SelectedIndexChanged);
@@ -425,10 +428,10 @@
             // cT_Nhap_dkGridControl
             // 
             this.cT_Nhap_dkGridControl.DataSource = this.cT_Nhap_dkBindingSource;
-            this.cT_Nhap_dkGridControl.Location = new System.Drawing.Point(174, 51);
+            this.cT_Nhap_dkGridControl.Location = new System.Drawing.Point(288, 44);
             this.cT_Nhap_dkGridControl.MainView = this.gridView2;
             this.cT_Nhap_dkGridControl.Name = "cT_Nhap_dkGridControl";
-            this.cT_Nhap_dkGridControl.Size = new System.Drawing.Size(593, 138);
+            this.cT_Nhap_dkGridControl.Size = new System.Drawing.Size(571, 138);
             this.cT_Nhap_dkGridControl.TabIndex = 10;
             this.cT_Nhap_dkGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -478,21 +481,23 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(90, 19);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_edit_delete;
+            this.button2.Location = new System.Drawing.Point(96, 189);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(60, 46);
             this.button2.TabIndex = 13;
-            this.button2.Text = "Xóa";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(9, 19);
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = global::nha_tro.Properties.Resources.Awicons_Vista_Artistic_Add;
+            this.button3.Location = new System.Drawing.Point(15, 189);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(60, 46);
             this.button3.TabIndex = 12;
-            this.button3.Text = "Thêm";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -504,11 +509,11 @@
             0,
             0,
             0});
-            this.sLSpinEdit.Location = new System.Drawing.Point(68, 147);
+            this.sLSpinEdit.Location = new System.Drawing.Point(110, 124);
             this.sLSpinEdit.Name = "sLSpinEdit";
             this.sLSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.sLSpinEdit.Size = new System.Drawing.Size(100, 20);
+            this.sLSpinEdit.Size = new System.Drawing.Size(172, 20);
             this.sLSpinEdit.TabIndex = 7;
             // 
             // donGiaSpinEdit
@@ -519,25 +524,43 @@
             0,
             0,
             0});
-            this.donGiaSpinEdit.Location = new System.Drawing.Point(68, 173);
+            this.donGiaSpinEdit.Location = new System.Drawing.Point(110, 150);
             this.donGiaSpinEdit.Name = "donGiaSpinEdit";
             this.donGiaSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.donGiaSpinEdit.Size = new System.Drawing.Size(100, 20);
+            this.donGiaSpinEdit.Size = new System.Drawing.Size(172, 20);
             this.donGiaSpinEdit.TabIndex = 9;
             // 
             // cT_Nhap_dkTableAdapter
             // 
             this.cT_Nhap_dkTableAdapter.ClearBeforeFill = true;
             // 
-            // TaoPhieuNhap
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Transparent;
+            this.button9.Image = global::nha_tro.Properties.Resources.Awicons_Vista_Artistic_Add;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button9.Location = new System.Drawing.Point(0, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(932, 42);
+            this.button9.TabIndex = 31;
+            this.button9.Text = "Tạo phiểu nhập sản phẩm";
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // MH000000000000000024
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 513);
+            this.ClientSize = new System.Drawing.Size(932, 513);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
-            this.Name = "TaoPhieuNhap";
+            this.Name = "MH000000000000000024";
             this.Text = "TaoPhieuNhap";
             this.Load += new System.EventHandler(this.TaoPhieuNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).EndInit();
@@ -611,5 +634,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMAKHO;
         private DevExpress.XtraGrid.Columns.GridColumn colThanhTien;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button9;
     }
 }
