@@ -56,17 +56,28 @@
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tAIKHOANBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hOADON_timmahd_vuathemDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hOADON_timmahd_vuathemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tt = new nha_tro.tt();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tinhTrangTTDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tinhTrangTTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -87,23 +98,19 @@
             this.cT_Nhap_dkTableAdapter = new nha_tro.NghiepVuTableAdapters.CT_Nhap_dkTableAdapter();
             this.cT_NHAP_LK_sreach_lk_manhapBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cT_NHAP_LK_sreach_lk_manhapTableAdapter = new nha_tro.NghiepVuTableAdapters.CT_NHAP_LK_sreach_lk_manhapTableAdapter();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tinhTrangTTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tt = new nha_tro.tt();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hOADON_timmahd_vuathemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hOADON_ttBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hOADON_ttTableAdapter = new nha_tro.ttTableAdapters.HOADON_ttTableAdapter();
             this.tableAdapterManager1 = new nha_tro.ttTableAdapters.TableAdapterManager();
             this.hOADON_timmahd_vuathemTableAdapter = new nha_tro.ttTableAdapters.HOADON_timmahd_vuathemTableAdapter();
             this.tinhTrangTTTableAdapter = new nha_tro.ttTableAdapters.TinhTrangTTTableAdapter();
             this.button9 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.kHOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kHOTableAdapter = new nha_tro.NghiepVuTableAdapters.KHOTableAdapter();
+            this.makho_cboBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.makho_cboTableAdapter = new nha_tro.NghiepVuTableAdapters.makho_cboTableAdapter();
+            this.makho_cboBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.makho_cboComboBox = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nHAPHANG1DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHAPHANG1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).BeginInit();
@@ -112,18 +119,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_timmahd_vuathemDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOADON_timmahd_vuathemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tt)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tinhTrangTTDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tinhTrangTTBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nHAPHANG1BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cT_NHAP_SPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cT_Nhap_dkBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cT_NHAP_LK_sreach_lk_manhapBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tinhTrangTTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hOADON_timmahd_vuathemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_ttBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kHOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // nHAPHANG1DataGridView
@@ -179,7 +189,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(154, 119);
+            this.textBox1.Location = new System.Drawing.Point(157, 147);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 3;
@@ -187,7 +197,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 122);
+            this.label1.Location = new System.Drawing.Point(9, 150);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 4;
@@ -338,10 +348,27 @@
             this.hOADON_timmahd_vuathemDataGridView.TabIndex = 12;
             this.hOADON_timmahd_vuathemDataGridView.Visible = false;
             // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "MAHD";
+            this.dataGridViewTextBoxColumn13.HeaderText = "MAHD";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // hOADON_timmahd_vuathemBindingSource
+            // 
+            this.hOADON_timmahd_vuathemBindingSource.DataMember = "HOADON_timmahd_vuathem";
+            this.hOADON_timmahd_vuathemBindingSource.DataSource = this.tt;
+            // 
+            // tt
+            // 
+            this.tt.DataSetName = "tt";
+            this.tt.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 161);
+            this.label6.Location = new System.Drawing.Point(9, 189);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 13);
             this.label6.TabIndex = 14;
@@ -349,13 +376,15 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(154, 158);
+            this.textBox2.Location = new System.Drawing.Point(157, 186);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 13;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.makho_cboComboBox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.button1);
@@ -369,14 +398,27 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(13, 350);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(478, 248);
+            this.groupBox1.Size = new System.Drawing.Size(483, 256);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thanh toán mới";
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::nha_tro.Properties.Resources.Designcontest_Ecommerce_Business_Dollar;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(334, 72);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(129, 38);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Thanh Toán";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(154, 201);
+            this.textBox5.Location = new System.Drawing.Point(157, 229);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 3;
@@ -384,7 +426,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 204);
+            this.label12.Location = new System.Drawing.Point(9, 232);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(102, 13);
             this.label12.TabIndex = 4;
@@ -436,6 +478,35 @@
             this.tinhTrangTTDataGridView.TabIndex = 17;
             this.tinhTrangTTDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tinhTrangTTDataGridView_CellClick);
             // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "MaHD";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Mã hóa đơn";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "TinhTrangThanhToan";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Tình trạng thanh toán";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "NgayTT";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Ngày thanh toán";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "NgayTTTiepTheo";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Ngày kết thúc";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // tinhTrangTTBindingSource
+            // 
+            this.tinhTrangTTBindingSource.DataMember = "TinhTrangTT";
+            this.tinhTrangTTBindingSource.DataSource = this.tt;
+            // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(115, 150);
@@ -459,6 +530,30 @@
             this.label13.Size = new System.Drawing.Size(102, 13);
             this.label13.TabIndex = 16;
             this.label13.Text = "Thanh toán tiền mặt";
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = global::nha_tro.Properties.Resources.Avosoft_Warm_Toolbar_Print__1_;
+            this.button3.Location = new System.Drawing.Point(234, 125);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(69, 45);
+            this.button3.TabIndex = 15;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::nha_tro.Properties.Resources.Designcontest_Ecommerce_Business_Dollar;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(234, 56);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(129, 38);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Thanh Toán";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label8
             // 
@@ -628,52 +723,6 @@
             // 
             this.cT_NHAP_LK_sreach_lk_manhapTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "MaHD";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Mã hóa đơn";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "TinhTrangThanhToan";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Tình trạng thanh toán";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "NgayTT";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Ngày thanh toán";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "NgayTTTiepTheo";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Ngày kết thúc";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            // 
-            // tinhTrangTTBindingSource
-            // 
-            this.tinhTrangTTBindingSource.DataMember = "TinhTrangTT";
-            this.tinhTrangTTBindingSource.DataSource = this.tt;
-            // 
-            // tt
-            // 
-            this.tt.DataSetName = "tt";
-            this.tt.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "MAHD";
-            this.dataGridViewTextBoxColumn13.HeaderText = "MAHD";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            // 
-            // hOADON_timmahd_vuathemBindingSource
-            // 
-            this.hOADON_timmahd_vuathemBindingSource.DataMember = "HOADON_timmahd_vuathem";
-            this.hOADON_timmahd_vuathemBindingSource.DataSource = this.tt;
-            // 
             // hOADON_ttBindingSource
             // 
             this.hOADON_ttBindingSource.DataMember = "HOADON_tt";
@@ -737,49 +786,55 @@
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // kHOBindingSource
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = global::nha_tro.Properties.Resources.Avosoft_Warm_Toolbar_Print__1_;
-            this.button3.Location = new System.Drawing.Point(234, 125);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(69, 45);
-            this.button3.TabIndex = 15;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.kHOBindingSource.DataMember = "KHO";
+            this.kHOBindingSource.DataSource = this.nghiepVu;
             // 
-            // button2
+            // kHOTableAdapter
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::nha_tro.Properties.Resources.Designcontest_Ecommerce_Business_Dollar;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(234, 56);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 38);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Thanh Toán";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.kHOTableAdapter.ClearBeforeFill = true;
             // 
-            // button1
+            // makho_cboBindingSource
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::nha_tro.Properties.Resources.Designcontest_Ecommerce_Business_Dollar;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(334, 72);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 38);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Thanh Toán";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.makho_cboBindingSource.DataMember = "makho_cbo";
+            this.makho_cboBindingSource.DataSource = this.nghiepVu;
+            // 
+            // makho_cboTableAdapter
+            // 
+            this.makho_cboTableAdapter.ClearBeforeFill = true;
+            // 
+            // makho_cboBindingSource1
+            // 
+            this.makho_cboBindingSource1.DataMember = "makho_cbo";
+            this.makho_cboBindingSource1.DataSource = this.nghiepVu;
+            // 
+            // makho_cboComboBox
+            // 
+            this.makho_cboComboBox.DataSource = this.makho_cboBindingSource1;
+            this.makho_cboComboBox.DisplayMember = "MAKHO";
+            this.makho_cboComboBox.FormattingEnabled = true;
+            this.makho_cboComboBox.Location = new System.Drawing.Point(154, 120);
+            this.makho_cboComboBox.Name = "makho_cboComboBox";
+            this.makho_cboComboBox.Size = new System.Drawing.Size(100, 21);
+            this.makho_cboComboBox.TabIndex = 14;
+            this.makho_cboComboBox.ValueMember = "MAKHO";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(9, 123);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(26, 13);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Kho";
             // 
             // ThanhToanTheoPhanTramNH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1370, 607);
+            this.ClientSize = new System.Drawing.Size(1370, 618);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label10);
@@ -801,21 +856,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_timmahd_vuathemDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOADON_timmahd_vuathemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tt)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tinhTrangTTDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tinhTrangTTBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nHAPHANG1BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cT_NHAP_SPBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cT_Nhap_dkBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cT_NHAP_LK_sreach_lk_manhapBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tinhTrangTTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hOADON_timmahd_vuathemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_ttBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kHOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -898,5 +956,12 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.BindingSource kHOBindingSource;
+        private NghiepVuTableAdapters.KHOTableAdapter kHOTableAdapter;
+        private System.Windows.Forms.BindingSource makho_cboBindingSource;
+        private NghiepVuTableAdapters.makho_cboTableAdapter makho_cboTableAdapter;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox makho_cboComboBox;
+        private System.Windows.Forms.BindingSource makho_cboBindingSource1;
     }
 }

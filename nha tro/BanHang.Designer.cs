@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label label8;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BanHang));
             System.Windows.Forms.Label maTraGopLabel;
             System.Windows.Forms.Label soTienPhaiTraLabel;
             System.Windows.Forms.Label soTienConLaiLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BanHang));
-            System.Windows.Forms.Label label8;
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.sANPHAMDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -119,11 +119,7 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tAIKHOAN_TIMMANVBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button5 = new System.Windows.Forms.Button();
-            this.maTraGopTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.traGopBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.soTienPhaiTraSpinEdit = new DevExpress.XtraEditors.SpinEdit();
-            this.soTienConLaiSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.ct_KM_LKBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cT_KM_SPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ct_mua_SP_TIMKIEMTableAdapter = new nha_tro.ttTableAdapters.Ct_mua_SP_TIMKIEMTableAdapter();
@@ -142,10 +138,17 @@
             this.cT_KM_SPTableAdapter = new nha_tro.ttTableAdapters.CT_KM_SPTableAdapter();
             this.ct_KM_LKTableAdapter = new nha_tro.ttTableAdapters.Ct_KM_LKTableAdapter();
             this.button9 = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.maTraGopTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.soTienPhaiTraSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.soTienConLaiSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.button5 = new System.Windows.Forms.Button();
+            this.lINHKIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lINHKIENTableAdapter = new nha_tro.NghiepVuTableAdapters.LINHKIENTableAdapter();
+            label8 = new System.Windows.Forms.Label();
             maTraGopLabel = new System.Windows.Forms.Label();
             soTienPhaiTraLabel = new System.Windows.Forms.Label();
             soTienConLaiLabel = new System.Windows.Forms.Label();
-            label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource)).BeginInit();
@@ -174,43 +177,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOAN_TIMMANVDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOAN_TIMMANVBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maTraGopTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traGopBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.soTienPhaiTraSpinEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.soTienConLaiSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ct_KM_LKBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cT_KM_SPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_ttBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHO_ttBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHUYENMAIBindingSource1)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maTraGopTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soTienPhaiTraSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soTienConLaiSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lINHKIENBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // maTraGopLabel
+            // label8
             // 
-            maTraGopLabel.AutoSize = true;
-            maTraGopLabel.Location = new System.Drawing.Point(883, 457);
-            maTraGopLabel.Name = "maTraGopLabel";
-            maTraGopLabel.Size = new System.Drawing.Size(61, 13);
-            maTraGopLabel.TabIndex = 17;
-            maTraGopLabel.Text = "Mã trả góp:";
-            // 
-            // soTienPhaiTraLabel
-            // 
-            soTienPhaiTraLabel.AutoSize = true;
-            soTienPhaiTraLabel.Location = new System.Drawing.Point(883, 483);
-            soTienPhaiTraLabel.Name = "soTienPhaiTraLabel";
-            soTienPhaiTraLabel.Size = new System.Drawing.Size(81, 13);
-            soTienPhaiTraLabel.TabIndex = 19;
-            soTienPhaiTraLabel.Text = "Số tiền phải trả:";
-            // 
-            // soTienConLaiLabel
-            // 
-            soTienConLaiLabel.AutoSize = true;
-            soTienConLaiLabel.Location = new System.Drawing.Point(883, 509);
-            soTienConLaiLabel.Name = "soTienConLaiLabel";
-            soTienConLaiLabel.Size = new System.Drawing.Size(77, 13);
-            soTienConLaiLabel.TabIndex = 21;
-            soTienConLaiLabel.Text = "Số tiền còn lại:";
+            label8.AutoSize = true;
+            label8.Location = new System.Drawing.Point(6, 122);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(29, 13);
+            label8.TabIndex = 32;
+            label8.Text = "SDT";
             // 
             // imageCollection1
             // 
@@ -517,6 +504,8 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.sANPHAMDataGridView);
+            this.groupBox1.Controls.Add(this.sANPHAM__sreach_giaDataGridView);
+            this.groupBox1.Controls.Add(this.hOADON_timmahd_vuathemDataGridView);
             this.groupBox1.Location = new System.Drawing.Point(16, 75);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(811, 194);
@@ -692,7 +681,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::nha_tro.Properties.Resources.Designcontest_Ecommerce_Business_Dollar;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(327, 332);
+            this.button2.Location = new System.Drawing.Point(313, 245);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(121, 32);
             this.button2.TabIndex = 4;
@@ -708,6 +697,7 @@
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.kHACHHANG_dkDataGridView);
+            this.groupBox3.Controls.Add(this.tAIKHOAN_TIMMANVDataGridView);
             this.groupBox3.Location = new System.Drawing.Point(13, 428);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(802, 152);
@@ -719,11 +709,9 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.ct_hoa_donDataGridView);
-            this.groupBox4.Controls.Add(this.sANPHAM__sreach_giaDataGridView);
             this.groupBox4.Controls.Add(this.ct_mua_SP_TIMKIEMDataGridView);
             this.groupBox4.Controls.Add(this.button6);
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Controls.Add(this.hOADON_timmahd_vuathemDataGridView);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.button2);
             this.groupBox4.Controls.Add(this.label6);
@@ -736,9 +724,9 @@
             this.groupBox4.Controls.Add(this.textBox3);
             this.groupBox4.Controls.Add(this.textBox2);
             this.groupBox4.Controls.Add(this.button4);
-            this.groupBox4.Location = new System.Drawing.Point(880, 54);
+            this.groupBox4.Location = new System.Drawing.Point(880, 75);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(454, 370);
+            this.groupBox4.Size = new System.Drawing.Size(454, 288);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Chi tiết mua";
@@ -796,7 +784,7 @@
             this.dataGridViewTextBoxColumn20,
             this.dataGridViewTextBoxColumn21});
             this.sANPHAM__sreach_giaDataGridView.DataSource = this.sANPHAM__sreach_giaBindingSource;
-            this.sANPHAM__sreach_giaDataGridView.Location = new System.Drawing.Point(21, 269);
+            this.sANPHAM__sreach_giaDataGridView.Location = new System.Drawing.Point(463, 122);
             this.sANPHAM__sreach_giaDataGridView.Name = "sANPHAM__sreach_giaDataGridView";
             this.sANPHAM__sreach_giaDataGridView.Size = new System.Drawing.Size(144, 66);
             this.sANPHAM__sreach_giaDataGridView.TabIndex = 16;
@@ -873,7 +861,7 @@
             // button6
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(131, 230);
+            this.button6.Location = new System.Drawing.Point(359, 193);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(82, 22);
             this.button6.TabIndex = 16;
@@ -898,7 +886,7 @@
             this.hOADON_timmahd_vuathemDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn9});
             this.hOADON_timmahd_vuathemDataGridView.DataSource = this.hOADON_timmahd_vuathemBindingSource;
-            this.hOADON_timmahd_vuathemDataGridView.Location = new System.Drawing.Point(229, 269);
+            this.hOADON_timmahd_vuathemDataGridView.Location = new System.Drawing.Point(640, 122);
             this.hOADON_timmahd_vuathemDataGridView.Name = "hOADON_timmahd_vuathemDataGridView";
             this.hOADON_timmahd_vuathemDataGridView.Size = new System.Drawing.Size(154, 53);
             this.hOADON_timmahd_vuathemDataGridView.TabIndex = 7;
@@ -928,7 +916,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(291, 345);
+            this.label6.Location = new System.Drawing.Point(277, 258);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 13);
             this.label6.TabIndex = 17;
@@ -937,7 +925,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(226, 345);
+            this.label7.Location = new System.Drawing.Point(212, 258);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(39, 13);
             this.label7.TabIndex = 17;
@@ -964,7 +952,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(117, 345);
+            this.label5.Location = new System.Drawing.Point(103, 258);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 13);
             this.label5.TabIndex = 17;
@@ -1114,7 +1102,7 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.tAIKHOAN_TIMMANVDataGridView.DataSource = this.tAIKHOAN_TIMMANVBindingSource;
-            this.tAIKHOAN_TIMMANVDataGridView.Location = new System.Drawing.Point(880, 590);
+            this.tAIKHOAN_TIMMANVDataGridView.Location = new System.Drawing.Point(486, 29);
             this.tAIKHOAN_TIMMANVDataGridView.Name = "tAIKHOAN_TIMMANVDataGridView";
             this.tAIKHOAN_TIMMANVDataGridView.Size = new System.Drawing.Size(253, 49);
             this.tAIKHOAN_TIMMANVDataGridView.TabIndex = 6;
@@ -1137,62 +1125,10 @@
             this.tAIKHOAN_TIMMANVBindingSource.DataMember = "TAIKHOAN_TIMMANV";
             this.tAIKHOAN_TIMMANVBindingSource.DataSource = this.tt;
             // 
-            // button5
-            // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Image = global::nha_tro.Properties.Resources.Designcontest_Ecommerce_Business_Dollar;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(886, 537);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(193, 38);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "Thanh Toán Trả Góp";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
-            // 
-            // maTraGopTextEdit
-            // 
-            this.maTraGopTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.traGopBindingSource, "MaTraGop", true));
-            this.maTraGopTextEdit.Location = new System.Drawing.Point(979, 454);
-            this.maTraGopTextEdit.Name = "maTraGopTextEdit";
-            this.maTraGopTextEdit.Size = new System.Drawing.Size(100, 20);
-            this.maTraGopTextEdit.TabIndex = 18;
-            // 
             // traGopBindingSource
             // 
             this.traGopBindingSource.DataMember = "TraGop";
             this.traGopBindingSource.DataSource = this.tt;
-            // 
-            // soTienPhaiTraSpinEdit
-            // 
-            this.soTienPhaiTraSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.traGopBindingSource, "SoTienPhaiTra", true));
-            this.soTienPhaiTraSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.soTienPhaiTraSpinEdit.Location = new System.Drawing.Point(979, 480);
-            this.soTienPhaiTraSpinEdit.Name = "soTienPhaiTraSpinEdit";
-            this.soTienPhaiTraSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.soTienPhaiTraSpinEdit.Size = new System.Drawing.Size(100, 20);
-            this.soTienPhaiTraSpinEdit.TabIndex = 20;
-            // 
-            // soTienConLaiSpinEdit
-            // 
-            this.soTienConLaiSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.traGopBindingSource, "SoTienConLai", true));
-            this.soTienConLaiSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.soTienConLaiSpinEdit.Location = new System.Drawing.Point(979, 506);
-            this.soTienConLaiSpinEdit.Name = "soTienConLaiSpinEdit";
-            this.soTienConLaiSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.soTienConLaiSpinEdit.Size = new System.Drawing.Size(100, 20);
-            this.soTienConLaiSpinEdit.TabIndex = 22;
             // 
             // ct_KM_LKBindingSource
             // 
@@ -1306,18 +1242,112 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(1370, 42);
             this.button9.TabIndex = 31;
-            this.button9.Text = "Bán Hàng";
+            this.button9.Text = "Bán Điện Thoại";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
-            // label8
+            // groupBox5
             // 
-            label8.AutoSize = true;
-            label8.Location = new System.Drawing.Point(6, 122);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(29, 13);
-            label8.TabIndex = 32;
-            label8.Text = "SDT";
+            this.groupBox5.Controls.Add(maTraGopLabel);
+            this.groupBox5.Controls.Add(this.maTraGopTextEdit);
+            this.groupBox5.Controls.Add(soTienPhaiTraLabel);
+            this.groupBox5.Controls.Add(this.soTienPhaiTraSpinEdit);
+            this.groupBox5.Controls.Add(soTienConLaiLabel);
+            this.groupBox5.Controls.Add(this.soTienConLaiSpinEdit);
+            this.groupBox5.Controls.Add(this.button5);
+            this.groupBox5.Location = new System.Drawing.Point(880, 386);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(237, 194);
+            this.groupBox5.TabIndex = 32;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Thanh toán trả góp";
+            // 
+            // maTraGopLabel
+            // 
+            maTraGopLabel.AutoSize = true;
+            maTraGopLabel.Location = new System.Drawing.Point(20, 40);
+            maTraGopLabel.Name = "maTraGopLabel";
+            maTraGopLabel.Size = new System.Drawing.Size(61, 13);
+            maTraGopLabel.TabIndex = 23;
+            maTraGopLabel.Text = "Mã trả góp:";
+            // 
+            // maTraGopTextEdit
+            // 
+            this.maTraGopTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.traGopBindingSource, "MaTraGop", true));
+            this.maTraGopTextEdit.Location = new System.Drawing.Point(116, 37);
+            this.maTraGopTextEdit.Name = "maTraGopTextEdit";
+            this.maTraGopTextEdit.Size = new System.Drawing.Size(100, 20);
+            this.maTraGopTextEdit.TabIndex = 25;
+            // 
+            // soTienPhaiTraLabel
+            // 
+            soTienPhaiTraLabel.AutoSize = true;
+            soTienPhaiTraLabel.Location = new System.Drawing.Point(20, 66);
+            soTienPhaiTraLabel.Name = "soTienPhaiTraLabel";
+            soTienPhaiTraLabel.Size = new System.Drawing.Size(81, 13);
+            soTienPhaiTraLabel.TabIndex = 26;
+            soTienPhaiTraLabel.Text = "Số tiền phải trả:";
+            // 
+            // soTienPhaiTraSpinEdit
+            // 
+            this.soTienPhaiTraSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.traGopBindingSource, "SoTienPhaiTra", true));
+            this.soTienPhaiTraSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.soTienPhaiTraSpinEdit.Location = new System.Drawing.Point(116, 63);
+            this.soTienPhaiTraSpinEdit.Name = "soTienPhaiTraSpinEdit";
+            this.soTienPhaiTraSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.soTienPhaiTraSpinEdit.Size = new System.Drawing.Size(100, 20);
+            this.soTienPhaiTraSpinEdit.TabIndex = 27;
+            // 
+            // soTienConLaiLabel
+            // 
+            soTienConLaiLabel.AutoSize = true;
+            soTienConLaiLabel.Location = new System.Drawing.Point(20, 92);
+            soTienConLaiLabel.Name = "soTienConLaiLabel";
+            soTienConLaiLabel.Size = new System.Drawing.Size(77, 13);
+            soTienConLaiLabel.TabIndex = 28;
+            soTienConLaiLabel.Text = "Số tiền còn lại:";
+            // 
+            // soTienConLaiSpinEdit
+            // 
+            this.soTienConLaiSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.traGopBindingSource, "SoTienConLai", true));
+            this.soTienConLaiSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.soTienConLaiSpinEdit.Location = new System.Drawing.Point(116, 89);
+            this.soTienConLaiSpinEdit.Name = "soTienConLaiSpinEdit";
+            this.soTienConLaiSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.soTienConLaiSpinEdit.Size = new System.Drawing.Size(100, 20);
+            this.soTienConLaiSpinEdit.TabIndex = 29;
+            // 
+            // button5
+            // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Image = global::nha_tro.Properties.Resources.Designcontest_Ecommerce_Business_Dollar;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(23, 120);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(193, 38);
+            this.button5.TabIndex = 24;
+            this.button5.Text = "Thanh Toán Trả Góp";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // lINHKIENBindingSource
+            // 
+            this.lINHKIENBindingSource.DataMember = "LINHKIEN";
+            this.lINHKIENBindingSource.DataSource = this.nghiepVu;
+            // 
+            // lINHKIENTableAdapter
+            // 
+            this.lINHKIENTableAdapter.ClearBeforeFill = true;
             // 
             // BanHang
             // 
@@ -1325,17 +1355,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.button9);
-            this.Controls.Add(maTraGopLabel);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.maTraGopTextEdit);
-            this.Controls.Add(soTienPhaiTraLabel);
-            this.Controls.Add(this.soTienPhaiTraSpinEdit);
-            this.Controls.Add(soTienConLaiLabel);
-            this.Controls.Add(this.soTienConLaiSpinEdit);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.tAIKHOAN_TIMMANVDataGridView);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "BanHang";
@@ -1371,17 +1394,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOAN_TIMMANVDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOAN_TIMMANVBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maTraGopTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.traGopBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.soTienPhaiTraSpinEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.soTienConLaiSpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ct_KM_LKBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cT_KM_SPBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_ttBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHO_ttBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHUYENMAIBindingSource1)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maTraGopTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soTienPhaiTraSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soTienConLaiSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lINHKIENBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1456,12 +1481,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.BindingSource kHUYENMAIBindingSource1;
         private ttTableAdapters.KHUYENMAITableAdapter kHUYENMAITableAdapter1;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.BindingSource traGopBindingSource;
         private ttTableAdapters.TraGopTableAdapter traGopTableAdapter;
-        private DevExpress.XtraEditors.TextEdit maTraGopTextEdit;
-        private DevExpress.XtraEditors.SpinEdit soTienPhaiTraSpinEdit;
-        private DevExpress.XtraEditors.SpinEdit soTienConLaiSpinEdit;
         private System.Windows.Forms.BindingSource ct_hoa_donBindingSource;
         private ttTableAdapters.ct_hoa_donTableAdapter ct_hoa_donTableAdapter;
         private System.Windows.Forms.DataGridView ct_hoa_donDataGridView;
@@ -1495,5 +1516,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private DevExpress.XtraEditors.TextEdit maTraGopTextEdit;
+        private DevExpress.XtraEditors.SpinEdit soTienPhaiTraSpinEdit;
+        private DevExpress.XtraEditors.SpinEdit soTienConLaiSpinEdit;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.BindingSource lINHKIENBindingSource;
+        private NghiepVuTableAdapters.LINHKIENTableAdapter lINHKIENTableAdapter;
     }
 }

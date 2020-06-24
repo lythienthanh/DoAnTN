@@ -1,4 +1,5 @@
-﻿using System;
+﻿using nha_tro.NghiepVuTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,10 @@ namespace nha_tro
 
         private void ThanhToanTheoPhanTramNH_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'nghiepVu.makho_cbo' table. You can move, or remove it, as needed.
+            this.makho_cboTableAdapter.Fill(this.nghiepVu.makho_cbo);
+            // TODO: This line of code loads data into the 'nghiepVu.KHO' table. You can move, or remove it, as needed.
+            this.kHOTableAdapter.Fill(this.nghiepVu.KHO);
             // TODO: This line of code loads data into the 'tt.TinhTrangTT' table. You can move, or remove it, as needed.
             //this.tinhTrangTTTableAdapter.Fill(this.tt.TinhTrangTT);
             //// TODO: This line of code loads data into the 'tt.HOADON_timmahd_vuathem' table. You can move, or remove it, as needed.
@@ -38,6 +43,7 @@ namespace nha_tro
             // TODO: This line of code loads data into the 'nghiepVu.NHAPHANG1' table. You can move, or remove it, as needed.
             this.nHAPHANG1TableAdapter.FillBy1_sp(this.nghiepVu.NHAPHANG1);
 
+            textBox3.ReadOnly = true;
 
 
             nHAPHANG1DataGridView.BorderStyle = BorderStyle.None;
@@ -224,6 +230,12 @@ namespace nha_tro
             // TODO: This line of code loads data into the 'nghiepVu.NHAPHANG1' table. You can move, or remove it, as needed.
             this.nHAPHANG1TableAdapter.Fill(this.nghiepVu.NHAPHANG1);
             button1.Enabled = true;
+
+            //cap nhat so luong trong kho
+            for(int i = 0; i < cT_NHAP_SP_DK_LUUKHODataGridView.RowCount - 1; i++)
+            {
+                kHOTableAdapter.UpdateQuery_sl(int.Parse(cT_NHAP_SP_DK_LUUKHODataGridView.Rows[i].Cells[3].Value.ToString()), cT_NHAP_SP_DK_LUUKHODataGridView.Rows[i].Cells[1].Value.ToString(), makho_cboComboBox.SelectedValue.ToString());
+            }
         }
 
         private void fill_dkToolStripButton_Click(object sender, EventArgs e)

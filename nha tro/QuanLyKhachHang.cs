@@ -27,6 +27,8 @@ namespace nha_tro
 
         private void QuanLyKhachHang_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'nghiepVu.KHACHHANG_thanthiet' table. You can move, or remove it, as needed.
+            this.kHACHHANG_thanthietTableAdapter.Fill(this.nghiepVu.KHACHHANG_thanthiet);
             // TODO: This line of code loads data into the 'nghiepVu.KHACHHANG' table. You can move, or remove it, as needed.
             this.kHACHHANGTableAdapter.Fill(this.nghiepVu.KHACHHANG);
 
@@ -41,6 +43,18 @@ namespace nha_tro
             kHACHHANGDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             kHACHHANGDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
             kHACHHANGDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            kHACHHANG_thanthietDataGridView.BorderStyle = BorderStyle.None;
+            kHACHHANG_thanthietDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            kHACHHANG_thanthietDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            kHACHHANG_thanthietDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            kHACHHANG_thanthietDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            kHACHHANG_thanthietDataGridView.BackgroundColor = Color.White;
+
+            kHACHHANG_thanthietDataGridView.EnableHeadersVisualStyles = false;
+            kHACHHANG_thanthietDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            kHACHHANG_thanthietDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            kHACHHANG_thanthietDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
         }
 

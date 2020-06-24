@@ -122,6 +122,12 @@
     <Compile Include="BanHang.Designer.cs">
       <DependentUpon>BanHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="banlinhkien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="banlinhkien.Designer.cs">
+      <DependentUpon>banlinhkien.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaoHanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -416,6 +422,9 @@
     </Compile>
     <EmbeddedResource Include="BanHang.resx">
       <DependentUpon>BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="banlinhkien.resx">
+      <DependentUpon>banlinhkien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoHanh.resx">
       <DependentUpon>BaoHanh.cs</DependentUpon>

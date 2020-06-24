@@ -27,6 +27,10 @@ namespace nha_tro
 
         private void LuuNhapHang_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'nghiepVu.makho_cbo' table. You can move, or remove it, as needed.
+            this.makho_cboTableAdapter.Fill(this.nghiepVu.makho_cbo);
+            // TODO: This line of code loads data into the 'nghiepVu.makho_cbo' table. You can move, or remove it, as needed.
+            this.makho_cboTableAdapter.Fill(this.nghiepVu.makho_cbo);
             // TODO: This line of code loads data into the 'tt.HOADON_tt' table. You can move, or remove it, as needed.
             this.hOADON_ttTableAdapter.Fill(this.tt.HOADON_tt);
             // TODO: This line of code loads data into the 'nghiepVu.KHO1' table. You can move, or remove it, as needed.

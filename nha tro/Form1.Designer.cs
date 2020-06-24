@@ -70,21 +70,35 @@
             this.tENLOAITextEdit = new DevExpress.XtraEditors.TextEdit();
             this.lOAISANPHAMGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tongSLspGridControl = new DevExpress.XtraGrid.GridControl();
+            this.tongSLspBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.kHO1ComboBox = new System.Windows.Forms.ComboBox();
-            this.kHO1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.kHO1GridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.sLSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.diaChiTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.sANPHAMComboBox1 = new System.Windows.Forms.ComboBox();
             this.sANPHAMBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button7 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.kHO1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.kHOTableAdapter = new nha_tro.NghiepVuTableAdapters.KHOTableAdapter();
             this.tableAdapterManager = new nha_tro.NghiepVuTableAdapters.TableAdapterManager();
             this.lOAISANPHAMTableAdapter = new nha_tro.NghiepVuTableAdapters.LOAISANPHAMTableAdapter();
@@ -92,11 +106,9 @@
             this.kHO1TableAdapter = new nha_tro.NghiepVuTableAdapters.KHO1TableAdapter();
             this.sP_NEWTableAdapter = new nha_tro.NghiepVuTableAdapters.SP_NEWTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
-            this.tongSLspBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tongSLspTableAdapter = new nha_tro.NghiepVuTableAdapters.tongSLspTableAdapter();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.tongSLspGridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.makho_cboBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.makho_cboTableAdapter = new nha_tro.NghiepVuTableAdapters.makho_cboTableAdapter();
             mALOAILabel = new System.Windows.Forms.Label();
             mAKHOLabel = new System.Windows.Forms.Label();
             mASPLabel = new System.Windows.Forms.Label();
@@ -129,16 +141,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.lOAISANPHAMGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource1)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tongSLspGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tongSLspBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHO1GridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sLSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diaChiTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tongSLspBindingSource)).BeginInit();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tongSLspGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mALOAILabel
@@ -361,6 +374,7 @@
             // 
             // colMASP
             // 
+            this.colMASP.Caption = "Mã sản phẩm";
             this.colMASP.FieldName = "MASP";
             this.colMASP.Name = "colMASP";
             this.colMASP.Visible = true;
@@ -368,6 +382,7 @@
             // 
             // colTENLOAI
             // 
+            this.colTENLOAI.Caption = "Tên loại";
             this.colTENLOAI.FieldName = "TENLOAI";
             this.colTENLOAI.Name = "colTENLOAI";
             this.colTENLOAI.Visible = true;
@@ -375,6 +390,7 @@
             // 
             // colMAKHO
             // 
+            this.colMAKHO.Caption = "Mã kho";
             this.colMAKHO.FieldName = "MAKHO";
             this.colMAKHO.Name = "colMAKHO";
             this.colMAKHO.Visible = true;
@@ -382,6 +398,7 @@
             // 
             // colTENSP
             // 
+            this.colTENSP.Caption = "Tên sãn phẩm";
             this.colTENSP.FieldName = "TENSP";
             this.colTENSP.Name = "colTENSP";
             this.colTENSP.Visible = true;
@@ -389,6 +406,7 @@
             // 
             // colTINHTRANG
             // 
+            this.colTINHTRANG.Caption = "Tình trạng";
             this.colTINHTRANG.FieldName = "TINHTRANG";
             this.colTINHTRANG.Name = "colTINHTRANG";
             this.colTINHTRANG.Visible = true;
@@ -396,6 +414,7 @@
             // 
             // colDonGia
             // 
+            this.colDonGia.Caption = "Đơn giá";
             this.colDonGia.FieldName = "DonGia";
             this.colDonGia.Name = "colDonGia";
             this.colDonGia.Visible = true;
@@ -471,7 +490,7 @@
             this.groupBox2.Controls.Add(this.button6);
             this.groupBox2.Location = new System.Drawing.Point(12, 227);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1016, 168);
+            this.groupBox2.Size = new System.Drawing.Size(1016, 262);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Loại Sản Phẩm";
@@ -506,8 +525,27 @@
             // 
             // gridView2
             // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2});
             this.gridView2.GridControl = this.lOAISANPHAMGridControl;
             this.gridView2.Name = "gridView2";
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Mã loại";
+            this.gridColumn1.FieldName = "MALOAI";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Tên loại";
+            this.gridColumn2.FieldName = "TENLOAI";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
             // 
             // button4
             // 
@@ -555,21 +593,75 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Kho";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.tongSLspGridControl);
+            this.groupBox4.Location = new System.Drawing.Point(443, 117);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(553, 109);
+            this.groupBox4.TabIndex = 32;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Tổng sản phẩm trong các kho";
+            // 
+            // tongSLspGridControl
+            // 
+            this.tongSLspGridControl.DataSource = this.tongSLspBindingSource;
+            this.tongSLspGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tongSLspGridControl.Location = new System.Drawing.Point(3, 16);
+            this.tongSLspGridControl.MainView = this.gridView4;
+            this.tongSLspGridControl.Name = "tongSLspGridControl";
+            this.tongSLspGridControl.Size = new System.Drawing.Size(547, 90);
+            this.tongSLspGridControl.TabIndex = 32;
+            this.tongSLspGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView4});
+            // 
+            // tongSLspBindingSource
+            // 
+            this.tongSLspBindingSource.DataMember = "tongSLsp";
+            this.tongSLspBindingSource.DataSource = this.nghiepVu;
+            // 
+            // gridView4
+            // 
+            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn8,
+            this.gridColumn9,
+            this.gridColumn10});
+            this.gridView4.GridControl = this.tongSLspGridControl;
+            this.gridView4.Name = "gridView4";
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "Mã sản phẩm";
+            this.gridColumn8.FieldName = "MASP";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 0;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Tên sản phẩm";
+            this.gridColumn9.FieldName = "TENSP";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 1;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "SL";
+            this.gridColumn10.FieldName = "Column1";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 2;
+            // 
             // kHO1ComboBox
             // 
-            this.kHO1ComboBox.DataSource = this.kHO1BindingSource1;
-            this.kHO1ComboBox.DisplayMember = "MAKHO";
+            this.kHO1ComboBox.DataSource = this.makho_cboBindingSource;
             this.kHO1ComboBox.FormattingEnabled = true;
             this.kHO1ComboBox.Location = new System.Drawing.Point(271, 21);
             this.kHO1ComboBox.Name = "kHO1ComboBox";
             this.kHO1ComboBox.Size = new System.Drawing.Size(100, 21);
             this.kHO1ComboBox.TabIndex = 31;
             this.kHO1ComboBox.ValueMember = "MAKHO";
-            // 
-            // kHO1BindingSource1
-            // 
-            this.kHO1BindingSource1.DataMember = "KHO1";
-            this.kHO1BindingSource1.DataSource = this.nghiepVu;
             // 
             // button5
             // 
@@ -602,8 +694,54 @@
             // 
             // gridView3
             // 
+            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn7});
             this.gridView3.GridControl = this.kHO1GridControl;
             this.gridView3.Name = "gridView3";
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Mã kho";
+            this.gridColumn3.FieldName = "MAKHO";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 0;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "SL";
+            this.gridColumn4.FieldName = "SL";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 1;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Mã sản phẩm";
+            this.gridColumn5.FieldName = "MASP";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 2;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Địa chỉ";
+            this.gridColumn6.FieldName = "DiaChi";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 3;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "SDT";
+            this.gridColumn7.FieldName = "SDT";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 4;
             // 
             // sLSpinEdit
             // 
@@ -665,6 +803,11 @@
             this.button9.Text = "Thêm sp vào kho";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // kHO1BindingSource1
+            // 
+            this.kHO1BindingSource1.DataMember = "KHO1";
+            this.kHO1BindingSource1.DataSource = this.nghiepVu;
             // 
             // kHOTableAdapter
             // 
@@ -732,41 +875,18 @@
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // tongSLspBindingSource
-            // 
-            this.tongSLspBindingSource.DataMember = "tongSLsp";
-            this.tongSLspBindingSource.DataSource = this.nghiepVu;
-            // 
             // tongSLspTableAdapter
             // 
             this.tongSLspTableAdapter.ClearBeforeFill = true;
             // 
-            // groupBox4
+            // makho_cboBindingSource
             // 
-            this.groupBox4.Controls.Add(this.tongSLspGridControl);
-            this.groupBox4.Location = new System.Drawing.Point(443, 117);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(553, 109);
-            this.groupBox4.TabIndex = 32;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Tổng sản phẩm trong các kho";
+            this.makho_cboBindingSource.DataMember = "makho_cbo";
+            this.makho_cboBindingSource.DataSource = this.nghiepVu;
             // 
-            // tongSLspGridControl
+            // makho_cboTableAdapter
             // 
-            this.tongSLspGridControl.DataSource = this.tongSLspBindingSource;
-            this.tongSLspGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tongSLspGridControl.Location = new System.Drawing.Point(3, 16);
-            this.tongSLspGridControl.MainView = this.gridView4;
-            this.tongSLspGridControl.Name = "tongSLspGridControl";
-            this.tongSLspGridControl.Size = new System.Drawing.Size(547, 90);
-            this.tongSLspGridControl.TabIndex = 32;
-            this.tongSLspGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView4});
-            // 
-            // gridView4
-            // 
-            this.gridView4.GridControl = this.tongSLspGridControl;
-            this.gridView4.Name = "gridView4";
+            this.makho_cboTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 
@@ -803,16 +923,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource1)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tongSLspGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tongSLspBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHO1GridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sLSpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diaChiTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tongSLspBindingSource)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tongSLspGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -874,5 +995,17 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private DevExpress.XtraGrid.GridControl tongSLspGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private System.Windows.Forms.BindingSource makho_cboBindingSource;
+        private NghiepVuTableAdapters.makho_cboTableAdapter makho_cboTableAdapter;
     }
 }
