@@ -63,6 +63,16 @@ namespace nha_tro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Aha_Soft_Software_Options {
+            get {
+                object obj = ResourceManager.GetObject("Aha-Soft-Software-Options", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Artdesigner_Urban_Stories_House {
             get {
                 object obj = ResourceManager.GetObject("Artdesigner-Urban-Stories-House", resourceCulture);

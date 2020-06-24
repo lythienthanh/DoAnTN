@@ -30,6 +30,17 @@ namespace nha_tro
             // TODO: This line of code loads data into the 'nghiepVu.LOIDONHASX' table. You can move, or remove it, as needed.
             this.lOIDONHASXTableAdapter.Fill(this.nghiepVu.LOIDONHASX);
 
+            lOIDONHASXDataGridView.BorderStyle = BorderStyle.None;
+            lOIDONHASXDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            lOIDONHASXDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            lOIDONHASXDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            lOIDONHASXDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            lOIDONHASXDataGridView.BackgroundColor = Color.White;
+
+            lOIDONHASXDataGridView.EnableHeadersVisualStyles = false;
+            lOIDONHASXDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            lOIDONHASXDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            lOIDONHASXDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void button1_Click(object sender, EventArgs e)

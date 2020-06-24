@@ -663,6 +663,7 @@
     <None Include="Resources\Designcontest-Ecommerce-Business-Dollar.ico" />
     <None Include="Resources\Avosoft-Warm-Toolbar-Print %281%29.ico" />
     <None Include="Resources\Rockettheme-Ecommerce-Sale.ico" />
+    <None Include="Resources\Aha-Soft-Software-Options.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

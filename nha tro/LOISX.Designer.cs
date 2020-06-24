@@ -36,14 +36,14 @@
             this.lOIDONHASXTableAdapter = new nha_tro.NghiepVuTableAdapters.LOIDONHASXTableAdapter();
             this.tableAdapterManager = new nha_tro.NghiepVuTableAdapters.TableAdapterManager();
             this.lOIDONHASXDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mALOISXTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.tENLOISXTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             mALOISXLabel = new System.Windows.Forms.Label();
             tENLOISXLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).BeginInit();
@@ -58,18 +58,18 @@
             mALOISXLabel.AutoSize = true;
             mALOISXLabel.Location = new System.Drawing.Point(12, 57);
             mALOISXLabel.Name = "mALOISXLabel";
-            mALOISXLabel.Size = new System.Drawing.Size(57, 13);
+            mALOISXLabel.Size = new System.Drawing.Size(78, 13);
             mALOISXLabel.TabIndex = 1;
-            mALOISXLabel.Text = "MALOISX:";
+            mALOISXLabel.Text = "Mã lỗi sản xuất";
             // 
             // tENLOISXLabel
             // 
             tENLOISXLabel.AutoSize = true;
             tENLOISXLabel.Location = new System.Drawing.Point(12, 83);
             tENLOISXLabel.Name = "tENLOISXLabel";
-            tENLOISXLabel.Size = new System.Drawing.Size(63, 13);
+            tENLOISXLabel.Size = new System.Drawing.Size(82, 13);
             tENLOISXLabel.TabIndex = 3;
-            tENLOISXLabel.Text = "TENLOISX:";
+            tENLOISXLabel.Text = "Tên lỗi sản xuất";
             // 
             // nghiepVu
             // 
@@ -118,32 +118,21 @@
             // lOIDONHASXDataGridView
             // 
             this.lOIDONHASXDataGridView.AutoGenerateColumns = false;
+            this.lOIDONHASXDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.lOIDONHASXDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lOIDONHASXDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.lOIDONHASXDataGridView.DataSource = this.lOIDONHASXBindingSource;
-            this.lOIDONHASXDataGridView.Location = new System.Drawing.Point(12, 135);
+            this.lOIDONHASXDataGridView.Location = new System.Drawing.Point(12, 178);
             this.lOIDONHASXDataGridView.Name = "lOIDONHASXDataGridView";
             this.lOIDONHASXDataGridView.Size = new System.Drawing.Size(257, 200);
             this.lOIDONHASXDataGridView.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "MALOISX";
-            this.dataGridViewTextBoxColumn1.HeaderText = "MALOISX";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "TENLOISX";
-            this.dataGridViewTextBoxColumn2.HeaderText = "TENLOISX";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
             // mALOISXTextEdit
             // 
             this.mALOISXTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.lOIDONHASXBindingSource, "MALOISX", true));
-            this.mALOISXTextEdit.Location = new System.Drawing.Point(81, 54);
+            this.mALOISXTextEdit.Location = new System.Drawing.Point(121, 54);
             this.mALOISXTextEdit.Name = "mALOISXTextEdit";
             this.mALOISXTextEdit.Size = new System.Drawing.Size(100, 20);
             this.mALOISXTextEdit.TabIndex = 2;
@@ -151,60 +140,81 @@
             // tENLOISXTextEdit
             // 
             this.tENLOISXTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.lOIDONHASXBindingSource, "TENLOISX", true));
-            this.tENLOISXTextEdit.Location = new System.Drawing.Point(81, 80);
+            this.tENLOISXTextEdit.Location = new System.Drawing.Point(121, 80);
             this.tENLOISXTextEdit.Name = "tENLOISXTextEdit";
-            this.tENLOISXTextEdit.Size = new System.Drawing.Size(100, 20);
+            this.tENLOISXTextEdit.Size = new System.Drawing.Size(147, 20);
             this.tENLOISXTextEdit.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 25);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "LỖI NHÀ SẢN XUẤT";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(29, 106);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::nha_tro.Properties.Resources.Awicons_Vista_Artistic_Add;
+            this.button1.Location = new System.Drawing.Point(15, 106);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 23);
+            this.button1.Size = new System.Drawing.Size(68, 54);
             this.button1.TabIndex = 6;
-            this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(99, 106);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_edit_delete;
+            this.button2.Location = new System.Drawing.Point(110, 106);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 23);
+            this.button2.Size = new System.Drawing.Size(68, 54);
             this.button2.TabIndex = 6;
-            this.button2.Text = "Xóa";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(169, 106);
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_document_edit;
+            this.button3.Location = new System.Drawing.Point(200, 106);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(64, 23);
+            this.button3.Size = new System.Drawing.Size(68, 54);
             this.button3.TabIndex = 6;
-            this.button3.Text = "Sửa";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Transparent;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button9.Location = new System.Drawing.Point(0, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(280, 42);
+            this.button9.TabIndex = 31;
+            this.button9.Text = "Lỗi sản xuất";
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MALOISX";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã lỗi sản xuất";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TENLOISX";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên lỗi sản xuất";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // LOISX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(280, 351);
+            this.ClientSize = new System.Drawing.Size(280, 403);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(mALOISXLabel);
             this.Controls.Add(this.mALOISXTextEdit);
             this.Controls.Add(tENLOISXLabel);
@@ -230,13 +240,13 @@
         private NghiepVuTableAdapters.LOIDONHASXTableAdapter lOIDONHASXTableAdapter;
         private NghiepVuTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView lOIDONHASXDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DevExpress.XtraEditors.TextEdit mALOISXTextEdit;
         private DevExpress.XtraEditors.TextEdit tENLOISXTextEdit;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.Button button9;
     }
 }

@@ -89,6 +89,55 @@ namespace nha_tro
             mAKHTextEdit.ReadOnly = true;
             tENDOITRATextEdit.Text = "Đổi máy";
 
+            //
+            kHACHHANG_dkDataGridView.BorderStyle = BorderStyle.None;
+            kHACHHANG_dkDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            kHACHHANG_dkDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            kHACHHANG_dkDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            kHACHHANG_dkDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            kHACHHANG_dkDataGridView.BackgroundColor = Color.White;
+
+            kHACHHANG_dkDataGridView.EnableHeadersVisualStyles = false;
+            kHACHHANG_dkDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            kHACHHANG_dkDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            kHACHHANG_dkDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            //
+            sELECT_DATA_HDDataGridView.BorderStyle = BorderStyle.None;
+            sELECT_DATA_HDDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            sELECT_DATA_HDDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            sELECT_DATA_HDDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            sELECT_DATA_HDDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            sELECT_DATA_HDDataGridView.BackgroundColor = Color.White;
+
+            sELECT_DATA_HDDataGridView.EnableHeadersVisualStyles = false;
+            sELECT_DATA_HDDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            sELECT_DATA_HDDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            sELECT_DATA_HDDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            //
+            dOITRA_SPDataGridView.BorderStyle = BorderStyle.None;
+            dOITRA_SPDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dOITRA_SPDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dOITRA_SPDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dOITRA_SPDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dOITRA_SPDataGridView.BackgroundColor = Color.White;
+
+            dOITRA_SPDataGridView.EnableHeadersVisualStyles = false;
+            dOITRA_SPDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dOITRA_SPDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dOITRA_SPDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            //
+            xuat_hd_chenhlechDataGridView.BorderStyle = BorderStyle.None;
+            xuat_hd_chenhlechDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            xuat_hd_chenhlechDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            xuat_hd_chenhlechDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            xuat_hd_chenhlechDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            xuat_hd_chenhlechDataGridView.BackgroundColor = Color.White;
+
+            xuat_hd_chenhlechDataGridView.EnableHeadersVisualStyles = false;
+            xuat_hd_chenhlechDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            xuat_hd_chenhlechDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            xuat_hd_chenhlechDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
         }
         string tempMaDoiTra = "";
         private void button2_Click(object sender, EventArgs e)

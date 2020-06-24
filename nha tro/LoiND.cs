@@ -30,6 +30,17 @@ namespace nha_tro
             // TODO: This line of code loads data into the 'nghiepVu.LOIDONGUOIDUNG' table. You can move, or remove it, as needed.
             this.lOIDONGUOIDUNGTableAdapter.Fill(this.nghiepVu.LOIDONGUOIDUNG);
 
+            lOIDONGUOIDUNGDataGridView.BorderStyle = BorderStyle.None;
+            lOIDONGUOIDUNGDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            lOIDONGUOIDUNGDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            lOIDONGUOIDUNGDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            lOIDONGUOIDUNGDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            lOIDONGUOIDUNGDataGridView.BackgroundColor = Color.White;
+
+            lOIDONGUOIDUNGDataGridView.EnableHeadersVisualStyles = false;
+            lOIDONGUOIDUNGDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            lOIDONGUOIDUNGDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            lOIDONGUOIDUNGDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void lOIDONGUOIDUNGDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

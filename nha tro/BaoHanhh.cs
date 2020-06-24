@@ -76,6 +76,55 @@ namespace nha_tro
             // TODO: This line of code loads data into the 'tt.BAOHANH' table. You can move, or remove it, as needed.
             this.bAOHANHTableAdapter.Fill(this.tt.BAOHANH);
             mAKHTextEdit.ReadOnly = true;
+
+            //
+            kHACHHANG_dkDataGridView.BorderStyle = BorderStyle.None;
+            kHACHHANG_dkDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            kHACHHANG_dkDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            kHACHHANG_dkDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            kHACHHANG_dkDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            kHACHHANG_dkDataGridView.BackgroundColor = Color.White;
+
+            kHACHHANG_dkDataGridView.EnableHeadersVisualStyles = false;
+            kHACHHANG_dkDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            kHACHHANG_dkDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            kHACHHANG_dkDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            //
+            sELECT_DATA_HDDataGridView.BorderStyle = BorderStyle.None;
+            sELECT_DATA_HDDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            sELECT_DATA_HDDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            sELECT_DATA_HDDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            sELECT_DATA_HDDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            sELECT_DATA_HDDataGridView.BackgroundColor = Color.White;
+
+            sELECT_DATA_HDDataGridView.EnableHeadersVisualStyles = false;
+            sELECT_DATA_HDDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            sELECT_DATA_HDDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            sELECT_DATA_HDDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            //
+            bAOHANHDataGridView.BorderStyle = BorderStyle.None;
+            bAOHANHDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            bAOHANHDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            bAOHANHDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            bAOHANHDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            bAOHANHDataGridView.BackgroundColor = Color.White;
+
+            bAOHANHDataGridView.EnableHeadersVisualStyles = false;
+            bAOHANHDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            bAOHANHDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            bAOHANHDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            //
+            dataTable2DataGridView.BorderStyle = BorderStyle.None;
+            dataTable2DataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataTable2DataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataTable2DataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataTable2DataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataTable2DataGridView.BackgroundColor = Color.White;
+
+            dataTable2DataGridView.EnableHeadersVisualStyles = false;
+            dataTable2DataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataTable2DataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataTable2DataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private string tendn;

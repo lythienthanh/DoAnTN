@@ -169,9 +169,9 @@
             tENLOISXLabel.AutoSize = true;
             tENLOISXLabel.Location = new System.Drawing.Point(6, 44);
             tENLOISXLabel.Name = "tENLOISXLabel";
-            tENLOISXLabel.Size = new System.Drawing.Size(63, 13);
+            tENLOISXLabel.Size = new System.Drawing.Size(64, 13);
             tENLOISXLabel.TabIndex = 2;
-            tENLOISXLabel.Text = "TENLOISX:";
+            tENLOISXLabel.Text = "Lỗi sản xuất";
             // 
             // label1
             // 
@@ -196,9 +196,10 @@
             label3.AutoSize = true;
             label3.Location = new System.Drawing.Point(43, 16);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(38, 13);
+            label3.Size = new System.Drawing.Size(65, 13);
             label3.TabIndex = 26;
-            label3.Text = "MaHD";
+            label3.Text = "Mã hóa đơn";
+            label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -214,45 +215,45 @@
             tENDOITRALabel.AutoSize = true;
             tENDOITRALabel.Location = new System.Drawing.Point(307, 54);
             tENDOITRALabel.Name = "tENDOITRALabel";
-            tENDOITRALabel.Size = new System.Drawing.Size(73, 13);
+            tENDOITRALabel.Size = new System.Drawing.Size(59, 13);
             tENDOITRALabel.TabIndex = 6;
-            tENDOITRALabel.Text = "TENDOITRA:";
+            tENDOITRALabel.Text = "Tên đổi trả";
             // 
             // nGAYDOILabel
             // 
             nGAYDOILabel.AutoSize = true;
             nGAYDOILabel.Location = new System.Drawing.Point(307, 28);
             nGAYDOILabel.Name = "nGAYDOILabel";
-            nGAYDOILabel.Size = new System.Drawing.Size(59, 13);
+            nGAYDOILabel.Size = new System.Drawing.Size(50, 13);
             nGAYDOILabel.TabIndex = 4;
-            nGAYDOILabel.Text = "NGAYDOI:";
+            nGAYDOILabel.Text = "Ngày đổi";
             // 
             // mAKHLabel
             // 
             mAKHLabel.AutoSize = true;
-            mAKHLabel.Location = new System.Drawing.Point(78, 54);
+            mAKHLabel.Location = new System.Drawing.Point(65, 54);
             mAKHLabel.Name = "mAKHLabel";
-            mAKHLabel.Size = new System.Drawing.Size(41, 13);
+            mAKHLabel.Size = new System.Drawing.Size(82, 13);
             mAKHLabel.TabIndex = 2;
-            mAKHLabel.Text = "MAKH:";
+            mAKHLabel.Text = "Mã khách hàng";
             // 
             // mADOITRALabel
             // 
             mADOITRALabel.AutoSize = true;
-            mADOITRALabel.Location = new System.Drawing.Point(78, 28);
+            mADOITRALabel.Location = new System.Drawing.Point(65, 28);
             mADOITRALabel.Name = "mADOITRALabel";
-            mADOITRALabel.Size = new System.Drawing.Size(67, 13);
+            mADOITRALabel.Size = new System.Drawing.Size(55, 13);
             mADOITRALabel.TabIndex = 0;
-            mADOITRALabel.Text = "MADOITRA:";
+            mADOITRALabel.Text = "Mã đổi trả";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Location = new System.Drawing.Point(6, 22);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(67, 13);
+            label5.Size = new System.Drawing.Size(55, 13);
             label5.TabIndex = 30;
-            label5.Text = "MADOITRA:";
+            label5.Text = "Mã đổi trả";
             // 
             // groupBox1
             // 
@@ -275,9 +276,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(147, 24);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::nha_tro.Properties.Resources.Gakuseisean_Aire_Search;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(134, 8);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 23);
+            this.button1.Size = new System.Drawing.Size(165, 43);
             this.button1.TabIndex = 3;
             this.button1.Text = "Tìm kiếm (SDT)";
             this.button1.UseVisualStyleBackColor = true;
@@ -353,7 +357,7 @@
             this.groupBox2.Controls.Add(tENLOISXLabel);
             this.groupBox2.Location = new System.Drawing.Point(581, 160);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(774, 327);
+            this.groupBox2.Size = new System.Drawing.Size(774, 277);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thêm chi tiết đổi trả";
@@ -443,11 +447,15 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(217, 119);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::nha_tro.Properties.Resources.Awicons_Vista_Artistic_Add;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(217, 91);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(133, 51);
             this.button2.TabIndex = 17;
             this.button2.Text = "Thêm lý do ";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -456,7 +464,7 @@
             this.lOIDONHASXComboBox.DataSource = this.lOIDONHASXBindingSource;
             this.lOIDONHASXComboBox.DisplayMember = "TENLOISX";
             this.lOIDONHASXComboBox.FormattingEnabled = true;
-            this.lOIDONHASXComboBox.Location = new System.Drawing.Point(75, 41);
+            this.lOIDONHASXComboBox.Location = new System.Drawing.Point(79, 41);
             this.lOIDONHASXComboBox.Name = "lOIDONHASXComboBox";
             this.lOIDONHASXComboBox.Size = new System.Drawing.Size(566, 21);
             this.lOIDONHASXComboBox.TabIndex = 2;
@@ -585,7 +593,7 @@
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Location = new System.Drawing.Point(581, 443);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(774, 197);
+            this.groupBox3.Size = new System.Drawing.Size(774, 185);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Đổi Trả";
@@ -708,6 +716,7 @@
             // 
             // button4
             // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(43, 152);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
@@ -848,11 +857,12 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(542, 28);
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = global::nha_tro.Properties.Resources.Awicons_Vista_Artistic_Add;
+            this.button3.Location = new System.Drawing.Point(503, 19);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(78, 50);
             this.button3.TabIndex = 8;
-            this.button3.Text = "Thêm";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
@@ -925,7 +935,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1367, 601);
+            this.ClientSize = new System.Drawing.Size(1367, 630);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox5);

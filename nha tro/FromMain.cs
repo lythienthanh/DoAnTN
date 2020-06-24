@@ -240,15 +240,13 @@ namespace nha_tro
         private void barButtonItem25_ItemClick(object sender, ItemClickEventArgs e)
         {
             LOISX LOISX = new LOISX();
-            LOISX.MdiParent = this;
-            LOISX.Show();
+            LOISX.ShowDialog();
         }
 
         private void barButtonItem26_ItemClick(object sender, ItemClickEventArgs e)
         {
             LoiND LoiND = new LoiND();
-            LoiND.MdiParent = this;
-            LoiND.Show();
+            LoiND.ShowDialog();
         }
 
         private void MH000000000000000015_ItemClick(object sender, ItemClickEventArgs e)
