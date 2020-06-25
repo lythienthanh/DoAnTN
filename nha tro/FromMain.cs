@@ -344,7 +344,7 @@ namespace nha_tro
 
         private void MH000000000000000029_ItemClick(object sender, ItemClickEventArgs e)
         {
-            banlinhkien banlinhkien = new banlinhkien();
+            banlinhkien banlinhkien = new banlinhkien(tendn);
             banlinhkien.MdiParent = this;
             banlinhkien.Show();
         }

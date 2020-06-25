@@ -54,6 +54,7 @@ namespace nha_tro
             // TODO: This line of code loads data into the 'nghiepVu.SANPHAM' table. You can move, or remove it, as needed.
             this.sANPHAMTableAdapter.Fill(this.nghiepVu.SANPHAM);
             maTraGopTextEdit.ReadOnly = true;
+            textBox2.ReadOnly = true;
             textBox3.ReadOnly = true;
             textBox4.ReadOnly = true;
             sANPHAMDataGridView.BorderStyle = BorderStyle.None;
