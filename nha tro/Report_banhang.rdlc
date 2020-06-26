@@ -204,7 +204,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Tên sản phẩm</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -234,7 +236,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>SL</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -264,7 +268,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Đơn Giá</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />

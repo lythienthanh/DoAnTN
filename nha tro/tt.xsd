@@ -416,7 +416,7 @@ SELECT MAKHO, SL, MASP, DiaChi, SDT FROM KHO WHERE (MAKHO = @MAKHO) AND (MASP = 
               <Mapping SourceColumn="SDT" DataSetColumn="SDT" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="KT_SL_LK" Modifier="Public" Name="KT_SL_LK" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="KT_SL_LK">
+              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="KT_SL_LK" Modifier="Public" Name="KT_SL_LK" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="KT_SL_LK">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        SUM(SL) AS Expr1
@@ -428,7 +428,7 @@ WHERE        (MALINHKIEN = @MALINHKIEN)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="KT_SL_TRONGKHO" Modifier="Public" Name="KT_SL_TRONGKHO" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="KT_SL_TRONGKHO">
+              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="KT_SL_TRONGKHO" Modifier="Public" Name="KT_SL_TRONGKHO" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="KT_SL_TRONGKHO">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        SUM(SL) AS Expr1
@@ -440,7 +440,7 @@ WHERE        (MASP = @masp)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Update_sl_kho" Modifier="Public" Name="Update_sl_kho" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="Update_sl_kho">
+              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Update_sl_kho" Modifier="Public" Name="Update_sl_kho" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="Update_sl_kho">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE KHO
@@ -454,7 +454,7 @@ WHERE MASP=@MASP and MAKHO=@MAKHO;</CommandText>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Update_SL_LK" Modifier="Public" Name="Update_SL_LK" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="Update_SL_LK">
+              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Update_SL_LK" Modifier="Public" Name="Update_SL_LK" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="Update_SL_LK">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>update KHO
@@ -1143,12 +1143,14 @@ SELECT MADAT, MASP, SL FROM DATHANG_SP WHERE (MADAT = @MADAT) AND (MASP = @MASP)
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DOITRA_SPTableAdapter" GeneratorDataComponentClassName="DOITRA_SPTableAdapter" Name="DOITRA_SP" UserDataComponentName="DOITRA_SPTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="DTDD.dbo.DOITRA_SP" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        DOITRA_SP.*
-FROM            DOITRA_SP
-where MADOITRA = @MADOITRA</CommandText>
+                    <CommandText>SELECT        DOITRA_SP.MADOITRA, DOITRA_SP.MASP, DOITRA_SP.MALOIND, LOIDONGUOIDUNG.TENLOIND, DOITRA_SP.MALOISX, LOIDONHASX.TENLOISX
+FROM            DOITRA_SP INNER JOIN
+                         LOIDONGUOIDUNG ON DOITRA_SP.MALOIND = LOIDONGUOIDUNG.MALOIND INNER JOIN
+                         LOIDONHASX ON DOITRA_SP.MALOISX = LOIDONHASX.MALOISX
+WHERE        (DOITRA_SP.MADOITRA = @MADOITRA)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="MADOITRA" ColumnName="MADOITRA" DataSourceName="DTDD.dbo.DOITRA_SP" DataTypeServer="char(21)" DbType="AnsiString" Direction="Input" ParameterName="@MADOITRA" Precision="0" ProviderType="Char" Scale="0" Size="21" SourceColumn="MADOITRA" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
@@ -1161,6 +1163,8 @@ where MADOITRA = @MADOITRA</CommandText>
               <Mapping SourceColumn="MASP" DataSetColumn="MASP" />
               <Mapping SourceColumn="MALOIND" DataSetColumn="MALOIND" />
               <Mapping SourceColumn="MALOISX" DataSetColumn="MALOISX" />
+              <Mapping SourceColumn="TENLOIND" DataSetColumn="TENLOIND" />
+              <Mapping SourceColumn="TENLOISX" DataSetColumn="TENLOISX" />
             </Mappings>
             <Sources>
               <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertQuery">
@@ -1431,8 +1435,8 @@ and SANPHAM.MASP = Ct_mua_SP.MaSP</CommandText>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_MaTraGop" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MaTraGop" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SoTienPhaiTra" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienPhaiTra" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SoTienPhaiTra" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienPhaiTra" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NgayTra" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NgayTra" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_NgayTra" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="NgayTra" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_deadline" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="deadline" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -1447,7 +1451,7 @@ SELECT MaTraGop, SoTienPhaiTra, SoTienConLai, NgayTra, deadline FROM TraGop WHER
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@MaTraGop" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MaTraGop" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SoTienPhaiTra" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienPhaiTra" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@NgayTra" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="NgayTra" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@deadline" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="deadline" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
@@ -1470,14 +1474,14 @@ SELECT MaTraGop, SoTienPhaiTra, SoTienConLai, NgayTra, deadline FROM TraGop WHER
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@MaTraGop" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MaTraGop" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SoTienPhaiTra" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienPhaiTra" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@NgayTra" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="NgayTra" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@deadline" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="deadline" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_MaTraGop" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MaTraGop" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SoTienPhaiTra" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienPhaiTra" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SoTienPhaiTra" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienPhaiTra" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NgayTra" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NgayTra" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_NgayTra" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="NgayTra" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_deadline" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="deadline" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -2679,6 +2683,146 @@ and MAHD = @mahd</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TraGop_tinhtienTableAdapter" GeneratorDataComponentClassName="TraGop_tinhtienTableAdapter" Name="TraGop_tinhtien" UserDataComponentName="TraGop_tinhtienTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="DTDD.dbo.TraGop" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [TraGop] WHERE (([MaTraGop] = @Original_MaTraGop) AND ((@IsNull_SoTienPhaiTra = 1 AND [SoTienPhaiTra] IS NULL) OR ([SoTienPhaiTra] = @Original_SoTienPhaiTra)) AND ((@IsNull_SoTienConLai = 1 AND [SoTienConLai] IS NULL) OR ([SoTienConLai] = @Original_SoTienConLai)) AND ([NgayTra] = @Original_NgayTra) AND ((@IsNull_deadline = 1 AND [deadline] IS NULL) OR ([deadline] = @Original_deadline)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_MaTraGop" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MaTraGop" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SoTienPhaiTra" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienPhaiTra" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SoTienPhaiTra" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienPhaiTra" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_NgayTra" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="NgayTra" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_deadline" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="deadline" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_deadline" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="deadline" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [TraGop] ([MaTraGop], [SoTienPhaiTra], [SoTienConLai], [NgayTra], [deadline]) VALUES (@MaTraGop, @SoTienPhaiTra, @SoTienConLai, @NgayTra, @deadline);
+SELECT TOP (1) MaTraGop, SoTienPhaiTra, SoTienConLai, NgayTra, deadline FROM TraGop WHERE (MaTraGop = @MaTraGop) AND (NgayTra = @NgayTra) ORDER BY SoTienConLai</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@MaTraGop" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MaTraGop" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SoTienPhaiTra" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienPhaiTra" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@NgayTra" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="NgayTra" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@deadline" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="deadline" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT top 1 MaTraGop, SoTienPhaiTra, SoTienConLai, NgayTra, deadline
+FROM            TraGop
+WHERE        (MaTraGop = @matragop)
+order by SoTienConLai asc</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="matragop" ColumnName="MaTraGop" DataSourceName="DTDD.dbo.TraGop" DataTypeServer="char(20)" DbType="AnsiString" Direction="Input" ParameterName="@matragop" Precision="0" ProviderType="Char" Scale="0" Size="20" SourceColumn="MaTraGop" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [TraGop] SET [MaTraGop] = @MaTraGop, [SoTienPhaiTra] = @SoTienPhaiTra, [SoTienConLai] = @SoTienConLai, [NgayTra] = @NgayTra, [deadline] = @deadline WHERE (([MaTraGop] = @Original_MaTraGop) AND ((@IsNull_SoTienPhaiTra = 1 AND [SoTienPhaiTra] IS NULL) OR ([SoTienPhaiTra] = @Original_SoTienPhaiTra)) AND ((@IsNull_SoTienConLai = 1 AND [SoTienConLai] IS NULL) OR ([SoTienConLai] = @Original_SoTienConLai)) AND ([NgayTra] = @Original_NgayTra) AND ((@IsNull_deadline = 1 AND [deadline] IS NULL) OR ([deadline] = @Original_deadline)));
+SELECT TOP (1) MaTraGop, SoTienPhaiTra, SoTienConLai, NgayTra, deadline FROM TraGop WHERE (MaTraGop = @MaTraGop) AND (NgayTra = @NgayTra) ORDER BY SoTienConLai</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@MaTraGop" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MaTraGop" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SoTienPhaiTra" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienPhaiTra" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@NgayTra" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="NgayTra" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@deadline" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="deadline" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_MaTraGop" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MaTraGop" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SoTienPhaiTra" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienPhaiTra" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SoTienPhaiTra" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienPhaiTra" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SoTienConLai" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SoTienConLai" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_NgayTra" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="NgayTra" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_deadline" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="deadline" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_deadline" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="deadline" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaTraGop" DataSetColumn="MaTraGop" />
+              <Mapping SourceColumn="SoTienPhaiTra" DataSetColumn="SoTienPhaiTra" />
+              <Mapping SourceColumn="SoTienConLai" DataSetColumn="SoTienConLai" />
+              <Mapping SourceColumn="NgayTra" DataSetColumn="NgayTra" />
+              <Mapping SourceColumn="deadline" DataSetColumn="deadline" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SP_LOITableAdapter" GeneratorDataComponentClassName="SP_LOITableAdapter" Name="SP_LOI" UserDataComponentName="SP_LOITableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="DTDD.dbo.SP_LOI" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [SP_LOI] WHERE (([MASP] = @Original_MASP) AND ((@IsNull_NGAYTHU = 1 AND [NGAYTHU] IS NULL) OR ([NGAYTHU] = @Original_NGAYTHU)) AND ([SOSERIES] = @Original_SOSERIES) AND ([MALINHKIEN] = @Original_MALINHKIEN) AND ([MADOITRA] = @Original_MADOITRA))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_MASP" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MASP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NGAYTHU" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NGAYTHU" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_NGAYTHU" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="NGAYTHU" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_SOSERIES" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="SOSERIES" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_MALINHKIEN" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MALINHKIEN" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_MADOITRA" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MADOITRA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [SP_LOI] ([MASP], [NGAYTHU], [SOSERIES], [MALINHKIEN], [MADOITRA]) VALUES (@MASP, @NGAYTHU, @SOSERIES, @MALINHKIEN, @MADOITRA);
+SELECT MASP, NGAYTHU, SOSERIES, MALINHKIEN, MADOITRA FROM SP_LOI WHERE (MADOITRA = @MADOITRA) AND (MALINHKIEN = @MALINHKIEN) AND (MASP = @MASP) AND (SOSERIES = @SOSERIES)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@MASP" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MASP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@NGAYTHU" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="NGAYTHU" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@SOSERIES" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="SOSERIES" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@MALINHKIEN" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MALINHKIEN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@MADOITRA" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MADOITRA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MASP, NGAYTHU, SOSERIES, MALINHKIEN, MADOITRA
+FROM            SP_LOI</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [SP_LOI] SET [MASP] = @MASP, [NGAYTHU] = @NGAYTHU, [SOSERIES] = @SOSERIES, [MALINHKIEN] = @MALINHKIEN, [MADOITRA] = @MADOITRA WHERE (([MASP] = @Original_MASP) AND ((@IsNull_NGAYTHU = 1 AND [NGAYTHU] IS NULL) OR ([NGAYTHU] = @Original_NGAYTHU)) AND ([SOSERIES] = @Original_SOSERIES) AND ([MALINHKIEN] = @Original_MALINHKIEN) AND ([MADOITRA] = @Original_MADOITRA));
+SELECT MASP, NGAYTHU, SOSERIES, MALINHKIEN, MADOITRA FROM SP_LOI WHERE (MADOITRA = @MADOITRA) AND (MALINHKIEN = @MALINHKIEN) AND (MASP = @MASP) AND (SOSERIES = @SOSERIES)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@MASP" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MASP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@NGAYTHU" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="NGAYTHU" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@SOSERIES" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="SOSERIES" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@MALINHKIEN" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MALINHKIEN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@MADOITRA" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MADOITRA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_MASP" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MASP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NGAYTHU" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NGAYTHU" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_NGAYTHU" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="NGAYTHU" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_SOSERIES" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="SOSERIES" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_MALINHKIEN" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MALINHKIEN" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_MADOITRA" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MADOITRA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MASP" DataSetColumn="MASP" />
+              <Mapping SourceColumn="NGAYTHU" DataSetColumn="NGAYTHU" />
+              <Mapping SourceColumn="SOSERIES" DataSetColumn="SOSERIES" />
+              <Mapping SourceColumn="MALINHKIEN" DataSetColumn="MALINHKIEN" />
+              <Mapping SourceColumn="MADOITRA" DataSetColumn="MADOITRA" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -3061,6 +3205,20 @@ and MAHD = @mahd</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="TENLOIND" msprop:Generator_ColumnVarNameInTable="columnTENLOIND" msprop:Generator_ColumnPropNameInRow="TENLOIND" msprop:Generator_ColumnPropNameInTable="TENLOINDColumn" msprop:Generator_UserColumnName="TENLOIND" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TENLOISX" msprop:Generator_ColumnVarNameInTable="columnTENLOISX" msprop:Generator_ColumnPropNameInRow="TENLOISX" msprop:Generator_ColumnPropNameInTable="TENLOISXColumn" msprop:Generator_UserColumnName="TENLOISX" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="51" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -3154,7 +3312,7 @@ and MAHD = @mahd</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="SoTienPhaiTra" msprop:Generator_ColumnVarNameInTable="columnSoTienPhaiTra" msprop:Generator_ColumnPropNameInRow="SoTienPhaiTra" msprop:Generator_ColumnPropNameInTable="SoTienPhaiTraColumn" msprop:Generator_UserColumnName="SoTienPhaiTra" type="xs:int" minOccurs="0" />
-              <xs:element name="SoTienConLai" msprop:Generator_ColumnVarNameInTable="columnSoTienConLai" msprop:Generator_ColumnPropNameInRow="SoTienConLai" msprop:Generator_ColumnPropNameInTable="SoTienConLaiColumn" msprop:Generator_UserColumnName="SoTienConLai" type="xs:int" minOccurs="0" />
+              <xs:element name="SoTienConLai" msprop:Generator_ColumnVarNameInTable="columnSoTienConLai" msprop:Generator_ColumnPropNameInRow="SoTienConLai" msprop:Generator_ColumnPropNameInTable="SoTienConLaiColumn" msprop:Generator_UserColumnName="SoTienConLai" type="xs:int" />
               <xs:element name="NgayTra" msprop:Generator_ColumnVarNameInTable="columnNgayTra" msprop:Generator_ColumnPropNameInRow="NgayTra" msprop:Generator_ColumnPropNameInTable="NgayTraColumn" msprop:Generator_UserColumnName="NgayTra" type="xs:dateTime" />
               <xs:element name="deadline" msprop:Generator_ColumnVarNameInTable="columndeadline" msprop:Generator_ColumnPropNameInRow="deadline" msprop:Generator_ColumnPropNameInTable="deadlineColumn" msprop:Generator_UserColumnName="deadline" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
@@ -3756,6 +3914,70 @@ and MAHD = @mahd</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="TraGop_tinhtien" msprop:Generator_TableClassName="TraGop_tinhtienDataTable" msprop:Generator_TableVarName="tableTraGop_tinhtien" msprop:Generator_RowChangedName="TraGop_tinhtienRowChanged" msprop:Generator_TablePropName="TraGop_tinhtien" msprop:Generator_RowDeletingName="TraGop_tinhtienRowDeleting" msprop:Generator_RowChangingName="TraGop_tinhtienRowChanging" msprop:Generator_RowEvHandlerName="TraGop_tinhtienRowChangeEventHandler" msprop:Generator_RowDeletedName="TraGop_tinhtienRowDeleted" msprop:Generator_RowClassName="TraGop_tinhtienRow" msprop:Generator_UserTableName="TraGop_tinhtien" msprop:Generator_RowEvArgName="TraGop_tinhtienRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaTraGop" msprop:Generator_ColumnVarNameInTable="columnMaTraGop" msprop:Generator_ColumnPropNameInRow="MaTraGop" msprop:Generator_ColumnPropNameInTable="MaTraGopColumn" msprop:Generator_UserColumnName="MaTraGop">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SoTienPhaiTra" msprop:Generator_ColumnVarNameInTable="columnSoTienPhaiTra" msprop:Generator_ColumnPropNameInRow="SoTienPhaiTra" msprop:Generator_ColumnPropNameInTable="SoTienPhaiTraColumn" msprop:Generator_UserColumnName="SoTienPhaiTra" type="xs:int" minOccurs="0" />
+              <xs:element name="SoTienConLai" msprop:Generator_ColumnVarNameInTable="columnSoTienConLai" msprop:Generator_ColumnPropNameInRow="SoTienConLai" msprop:Generator_ColumnPropNameInTable="SoTienConLaiColumn" msprop:Generator_UserColumnName="SoTienConLai" type="xs:int" />
+              <xs:element name="NgayTra" msprop:Generator_ColumnVarNameInTable="columnNgayTra" msprop:Generator_ColumnPropNameInRow="NgayTra" msprop:Generator_ColumnPropNameInTable="NgayTraColumn" msprop:Generator_UserColumnName="NgayTra" type="xs:dateTime" />
+              <xs:element name="deadline" msprop:Generator_ColumnVarNameInTable="columndeadline" msprop:Generator_ColumnPropNameInRow="deadline" msprop:Generator_ColumnPropNameInTable="deadlineColumn" msprop:Generator_UserColumnName="deadline" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SP_LOI" msprop:Generator_TableClassName="SP_LOIDataTable" msprop:Generator_TableVarName="tableSP_LOI" msprop:Generator_TablePropName="SP_LOI" msprop:Generator_RowDeletingName="SP_LOIRowDeleting" msprop:Generator_RowChangingName="SP_LOIRowChanging" msprop:Generator_RowEvHandlerName="SP_LOIRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_LOIRowDeleted" msprop:Generator_UserTableName="SP_LOI" msprop:Generator_RowChangedName="SP_LOIRowChanged" msprop:Generator_RowEvArgName="SP_LOIRowChangeEvent" msprop:Generator_RowClassName="SP_LOIRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MASP" msprop:Generator_ColumnVarNameInTable="columnMASP" msprop:Generator_ColumnPropNameInRow="MASP" msprop:Generator_ColumnPropNameInTable="MASPColumn" msprop:Generator_UserColumnName="MASP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NGAYTHU" msprop:Generator_ColumnVarNameInTable="columnNGAYTHU" msprop:Generator_ColumnPropNameInRow="NGAYTHU" msprop:Generator_ColumnPropNameInTable="NGAYTHUColumn" msprop:Generator_UserColumnName="NGAYTHU" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOSERIES" msprop:Generator_ColumnVarNameInTable="columnSOSERIES" msprop:Generator_ColumnPropNameInRow="SOSERIES" msprop:Generator_ColumnPropNameInTable="SOSERIESColumn" msprop:Generator_UserColumnName="SOSERIES">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MALINHKIEN" msprop:Generator_ColumnVarNameInTable="columnMALINHKIEN" msprop:Generator_ColumnPropNameInRow="MALINHKIEN" msprop:Generator_ColumnPropNameInTable="MALINHKIENColumn" msprop:Generator_UserColumnName="MALINHKIEN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MADOITRA" msprop:Generator_ColumnVarNameInTable="columnMADOITRA" msprop:Generator_ColumnPropNameInRow="MADOITRA" msprop:Generator_ColumnPropNameInTable="MADOITRAColumn" msprop:Generator_UserColumnName="MADOITRA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="21" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -3844,8 +4066,9 @@ and MAHD = @mahd</CommandText>
     </xs:unique>
     <xs:unique name="TraGop1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:TraGop1" />
-      <xs:field xpath="mstns:NgayTra" />
+      <xs:field xpath="mstns:SoTienConLai" />
       <xs:field xpath="mstns:MaTraGop" />
+      <xs:field xpath="mstns:NgayTra" />
     </xs:unique>
     <xs:unique name="TraGop2_select_theo_ngay_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:TraGop2_select_theo_ngay" />
@@ -3922,6 +4145,19 @@ and MAHD = @mahd</CommandText>
       <xs:field xpath="mstns:MALINHKIEN" />
       <xs:field xpath="mstns:MAHD" />
     </xs:unique>
+    <xs:unique name="TraGop_tinhtien_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TraGop_tinhtien" />
+      <xs:field xpath="mstns:SoTienConLai" />
+      <xs:field xpath="mstns:NgayTra" />
+      <xs:field xpath="mstns:MaTraGop" />
+    </xs:unique>
+    <xs:unique name="SP_LOI_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SP_LOI" />
+      <xs:field xpath="mstns:MADOITRA" />
+      <xs:field xpath="mstns:MALINHKIEN" />
+      <xs:field xpath="mstns:SOSERIES" />
+      <xs:field xpath="mstns:MASP" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
@@ -3981,6 +4217,7 @@ and MAHD = @mahd</CommandText>
       <msdata:Relationship name="FK_CT_HOADO_CT_HOADON_HOADON5" msdata:parent="HOADON_kttontai" msdata:child="ct_mua_lk" msdata:parentkey="MAHD" msdata:childkey="MAHD" msprop:Generator_UserChildTable="ct_mua_lk" msprop:Generator_ChildPropName="Getct_mua_lkRows" msprop:Generator_UserRelationName="FK_CT_HOADO_CT_HOADON_HOADON5" msprop:Generator_ParentPropName="HOADON_kttontaiRow" msprop:Generator_RelationVarName="relationFK_CT_HOADO_CT_HOADON_HOADON5" msprop:Generator_UserParentTable="HOADON_kttontai" />
       <msdata:Relationship name="FK_CT_HOADO_CT_HOADON_HOADON6" msdata:parent="HOADON_timmahd_vuathem" msdata:child="ct_mua_lk" msdata:parentkey="MAHD" msdata:childkey="MAHD" msprop:Generator_UserChildTable="ct_mua_lk" msprop:Generator_ChildPropName="Getct_mua_lkRows" msprop:Generator_UserRelationName="FK_CT_HOADO_CT_HOADON_HOADON6" msprop:Generator_ParentPropName="HOADON_timmahd_vuathemRow" msprop:Generator_RelationVarName="relationFK_CT_HOADO_CT_HOADON_HOADON6" msprop:Generator_UserParentTable="HOADON_timmahd_vuathem" />
       <msdata:Relationship name="FK_CT_HOADO_CT_HOADON_HOADON7" msdata:parent="HOADON_baohanh" msdata:child="ct_mua_lk" msdata:parentkey="MAHD" msdata:childkey="MAHD" msprop:Generator_UserChildTable="ct_mua_lk" msprop:Generator_ChildPropName="Getct_mua_lkRows" msprop:Generator_UserRelationName="FK_CT_HOADO_CT_HOADON_HOADON7" msprop:Generator_ParentPropName="HOADON_baohanhRow" msprop:Generator_RelationVarName="relationFK_CT_HOADO_CT_HOADON_HOADON7" msprop:Generator_UserParentTable="HOADON_baohanh" />
+      <msdata:Relationship name="FK_SP_LOI_SANPHAM" msdata:parent="SANPHAM__sreach_gia" msdata:child="SP_LOI" msdata:parentkey="MASP" msdata:childkey="MASP" msprop:Generator_UserChildTable="SP_LOI" msprop:Generator_ChildPropName="GetSP_LOIRows" msprop:Generator_UserRelationName="FK_SP_LOI_SANPHAM" msprop:Generator_ParentPropName="SANPHAM__sreach_giaRow" msprop:Generator_RelationVarName="relationFK_SP_LOI_SANPHAM" msprop:Generator_UserParentTable="SANPHAM__sreach_gia" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

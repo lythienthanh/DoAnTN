@@ -55,10 +55,12 @@
             this.dOITRABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tt = new nha_tro.tt();
             this.dOITRA_SPDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mADOITRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mALOINDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tENLOINDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mALOISXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tENLOISXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dOITRA_SPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.selectSPDaMuaTheoMaHDBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -122,6 +124,10 @@
             this.kHO1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kHO1TableAdapter = new nha_tro.NghiepVuTableAdapters.KHO1TableAdapter();
             this.button9 = new System.Windows.Forms.Button();
+            this.sP_LOIBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sP_LOITableAdapter = new nha_tro.ttTableAdapters.SP_LOITableAdapter();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             tENLOISXLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
@@ -162,6 +168,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tENDOITRATextEdit.Properties)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sP_LOIBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tENLOISXLabel
@@ -185,7 +192,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(43, 56);
+            label2.Location = new System.Drawing.Point(17, 46);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(23, 13);
             label2.TabIndex = 24;
@@ -194,7 +201,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(43, 16);
+            label3.Location = new System.Drawing.Point(17, 21);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(65, 13);
             label3.TabIndex = 26;
@@ -204,7 +211,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(46, 91);
+            label6.Location = new System.Drawing.Point(20, 96);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(24, 13);
             label6.TabIndex = 29;
@@ -357,7 +364,7 @@
             this.groupBox2.Controls.Add(tENLOISXLabel);
             this.groupBox2.Location = new System.Drawing.Point(581, 160);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(774, 277);
+            this.groupBox2.Size = new System.Drawing.Size(774, 337);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thêm chi tiết đổi trả";
@@ -390,39 +397,53 @@
             this.dOITRA_SPDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dOITRA_SPDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dOITRA_SPDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
+            this.mADOITRADataGridViewTextBoxColumn,
+            this.mASPDataGridViewTextBoxColumn,
+            this.mALOINDDataGridViewTextBoxColumn,
+            this.tENLOINDDataGridViewTextBoxColumn,
+            this.mALOISXDataGridViewTextBoxColumn,
+            this.tENLOISXDataGridViewTextBoxColumn});
             this.dOITRA_SPDataGridView.DataSource = this.dOITRA_SPBindingSource;
             this.dOITRA_SPDataGridView.Location = new System.Drawing.Point(9, 148);
             this.dOITRA_SPDataGridView.Name = "dOITRA_SPDataGridView";
             this.dOITRA_SPDataGridView.Size = new System.Drawing.Size(615, 108);
             this.dOITRA_SPDataGridView.TabIndex = 29;
             // 
-            // dataGridViewTextBoxColumn6
+            // mADOITRADataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "MADOITRA";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Mã đổi trả";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.mADOITRADataGridViewTextBoxColumn.DataPropertyName = "MADOITRA";
+            this.mADOITRADataGridViewTextBoxColumn.HeaderText = "Mã đổi trả";
+            this.mADOITRADataGridViewTextBoxColumn.Name = "mADOITRADataGridViewTextBoxColumn";
             // 
-            // dataGridViewTextBoxColumn7
+            // mASPDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "MASP";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Mã sản phẩm";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.mASPDataGridViewTextBoxColumn.DataPropertyName = "MASP";
+            this.mASPDataGridViewTextBoxColumn.HeaderText = "Mã sản phẩm";
+            this.mASPDataGridViewTextBoxColumn.Name = "mASPDataGridViewTextBoxColumn";
             // 
-            // dataGridViewTextBoxColumn8
+            // mALOINDDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "MALOIND";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Mã lối nội dung";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.mALOINDDataGridViewTextBoxColumn.DataPropertyName = "MALOIND";
+            this.mALOINDDataGridViewTextBoxColumn.HeaderText = "Mã lỗi người dùng";
+            this.mALOINDDataGridViewTextBoxColumn.Name = "mALOINDDataGridViewTextBoxColumn";
             // 
-            // dataGridViewTextBoxColumn9
+            // tENLOINDDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "MALOISX";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Mã lỗi sản xuất";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.tENLOINDDataGridViewTextBoxColumn.DataPropertyName = "TENLOIND";
+            this.tENLOINDDataGridViewTextBoxColumn.HeaderText = "Tên lỗi người dùng";
+            this.tENLOINDDataGridViewTextBoxColumn.Name = "tENLOINDDataGridViewTextBoxColumn";
+            // 
+            // mALOISXDataGridViewTextBoxColumn
+            // 
+            this.mALOISXDataGridViewTextBoxColumn.DataPropertyName = "MALOISX";
+            this.mALOISXDataGridViewTextBoxColumn.HeaderText = "Mã lỗi sản xuất";
+            this.mALOISXDataGridViewTextBoxColumn.Name = "mALOISXDataGridViewTextBoxColumn";
+            // 
+            // tENLOISXDataGridViewTextBoxColumn
+            // 
+            this.tENLOISXDataGridViewTextBoxColumn.DataPropertyName = "TENLOISX";
+            this.tENLOISXDataGridViewTextBoxColumn.HeaderText = "Tên lỗi sản xuất";
+            this.tENLOISXDataGridViewTextBoxColumn.Name = "tENLOISXDataGridViewTextBoxColumn";
             // 
             // dOITRA_SPBindingSource
             // 
@@ -509,6 +530,7 @@
             this.tableAdapterManager.KHO1TableAdapter = null;
             this.tableAdapterManager.KHOTableAdapter = null;
             this.tableAdapterManager.KHUYENMAI_DKTableAdapter = null;
+            this.tableAdapterManager.KHUYENMAI_lk_malkTableAdapter = null;
             this.tableAdapterManager.KHUYENMAITableAdapter = null;
             this.tableAdapterManager.LAY_MANVbangTENDNTableAdapter = null;
             this.tableAdapterManager.LINHKIENTableAdapter = null;
@@ -543,6 +565,7 @@
             this.tableAdapterManager1.BAOHANHTableAdapter = null;
             this.tableAdapterManager1.Connection = null;
             this.tableAdapterManager1.ct_bHTableAdapter = null;
+            this.tableAdapterManager1.CT_HOADON_LINHKIENTableAdapter = null;
             this.tableAdapterManager1.Ct_KM_LKTableAdapter = null;
             this.tableAdapterManager1.CT_KM_SPTableAdapter = null;
             this.tableAdapterManager1.Ct_mua_SP_TIMKIEMTableAdapter = null;
@@ -560,8 +583,10 @@
             this.tableAdapterManager1.LOAISANPHAMTableAdapter = null;
             this.tableAdapterManager1.NDBaoHanhTableAdapter = null;
             this.tableAdapterManager1.SANPHAM__sreach_giaTableAdapter = null;
+            this.tableAdapterManager1.SP_LOITableAdapter = null;
             this.tableAdapterManager1.TAIKHOAN_TIMMANVTableAdapter = null;
             this.tableAdapterManager1.TinhTrangTTTableAdapter = null;
+            this.tableAdapterManager1.TraGop_tinhtienTableAdapter = null;
             this.tableAdapterManager1.TraGop1TableAdapter = null;
             this.tableAdapterManager1.TraGopTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = nha_tro.ttTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -581,6 +606,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.xuat_hd_chenhlechDataGridView);
             this.groupBox3.Controls.Add(this.textBox2);
             this.groupBox3.Controls.Add(this.sANPHAMComboBox1);
@@ -698,7 +725,7 @@
             this.selectSPDaMuaTheoMaHDComboBox.DataSource = this.selectSPDaMuaTheoMaHDBindingSource;
             this.selectSPDaMuaTheoMaHDComboBox.DisplayMember = "TENSP";
             this.selectSPDaMuaTheoMaHDComboBox.FormattingEnabled = true;
-            this.selectSPDaMuaTheoMaHDComboBox.Location = new System.Drawing.Point(114, 53);
+            this.selectSPDaMuaTheoMaHDComboBox.Location = new System.Drawing.Point(114, 38);
             this.selectSPDaMuaTheoMaHDComboBox.Name = "selectSPDaMuaTheoMaHDComboBox";
             this.selectSPDaMuaTheoMaHDComboBox.Size = new System.Drawing.Size(117, 21);
             this.selectSPDaMuaTheoMaHDComboBox.TabIndex = 28;
@@ -708,7 +735,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(43, 121);
+            this.label4.Location = new System.Drawing.Point(17, 126);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 27;
@@ -931,6 +958,31 @@
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
+            // sP_LOIBindingSource
+            // 
+            this.sP_LOIBindingSource.DataMember = "SP_LOI";
+            this.sP_LOIBindingSource.DataSource = this.tt;
+            // 
+            // sP_LOITableAdapter
+            // 
+            this.sP_LOITableAdapter.ClearBeforeFill = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(114, 66);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(117, 20);
+            this.textBox3.TabIndex = 32;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(17, 71);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 13);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Số series máy đổi";
+            // 
             // BaoHanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -979,6 +1031,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sP_LOIBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1049,10 +1102,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn mAHDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tENSPDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn cHENHLECHDataGridViewTextBoxColumn;
@@ -1068,5 +1117,15 @@
         private System.Windows.Forms.BindingSource kHO1BindingSource;
         private NghiepVuTableAdapters.KHO1TableAdapter kHO1TableAdapter;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mADOITRADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mASPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mALOINDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tENLOINDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mALOISXDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tENLOISXDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource sP_LOIBindingSource;
+        private ttTableAdapters.SP_LOITableAdapter sP_LOITableAdapter;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label7;
     }
 }

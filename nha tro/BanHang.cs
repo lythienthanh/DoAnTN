@@ -394,28 +394,11 @@ namespace nha_tro
                         System.Windows.Forms.MessageBox.Show(ex.Message);
                     }
 
-
-                    for (int i = 0; i < kHUYENMAI_DKDataGridView.Rows.Count - 1; i++)
-                    {
-                        //kt co tang kem phu kien hay k neu co update sl trong kho linh kien
-                        if (string.Compare(kHUYENMAI_DKDataGridView.Rows[i].Cells[2].Value.ToString(), "TEMP") == 0)
-                        {
-                            //MALINHKIEN = TEMP
-                        }
-                        else
-                        {
-                            //co tang kem linh kien
-                            //update sl kho LK
-                            kHO_ttTableAdapter.Update_SL_LK(1, kHUYENMAI_DKDataGridView.Rows[i].Cells[2].Value.ToString());
-                        }
-                    }
-
+                    //kt co tang kem phu kien hay k neu co update sl trong kho linh kien
 
                     //xu ly khuyen mai
                     for (int i = 0; i < ct_mua_SP_TIMKIEMDataGridView.Rows.Count - 1; i++)
                     {
-                        //kHO_ttTableAdapter.Update_sl_kho(int.Parse(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[3].Value.ToString()), ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[2].Value.ToString(), "KHO1");
-
                         //kt co khuyen mai giam gia san pham hay k
                         if (int.Parse(kHUYENMAITableAdapter1.kt_CoKMkhong(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[2].Value.ToString(), DateTime.Today).ToString()) != 0)
                         {
@@ -520,11 +503,6 @@ namespace nha_tro
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
             try
@@ -612,14 +590,15 @@ namespace nha_tro
                     tongtien += (sl * dongia);
                 }
             }
-            //XU LY XUAT pdf
+            //XU LY XUAT xuathd
 
             //sreach datagid
             string NamNgayThangStar = DateTime.Today.ToString("dd/MM/yyyy");
 
             //==========================================
-            ThongKe.xuatfile_HD_TraGop(ct_hoa_donDataGridView, maTraGopTextEdit.Text, label7.Text, NamNgayThangStar, "Hoa_Don_traGop");
-
+            //ThongKe.xuatfile_HD_TraGop(ct_hoa_donDataGridView, maTraGopTextEdit.Text, label7.Text, NamNgayThangStar, "Hoa_Don_traGop");
+            hd_tragop hd_Tragop = new hd_tragop(ct_mua_SP_TIMKIEMDataGridView.Rows[0].Cells[0].Value.ToString(), maTraGopTextEdit.Text, DateTime.Today.ToString("dd/MM/yyyy"));
+            hd_Tragop.ShowDialog();
             //========================
 
             //Restart==============================

@@ -944,7 +944,7 @@
             // button6
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(359, 193);
+            this.button6.Location = new System.Drawing.Point(106, 10);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(82, 22);
             this.button6.TabIndex = 16;
@@ -1179,6 +1179,7 @@
             this.tableAdapterManager1.BAOHANHTableAdapter = null;
             this.tableAdapterManager1.Connection = null;
             this.tableAdapterManager1.ct_bHTableAdapter = null;
+            this.tableAdapterManager1.CT_HOADON_LINHKIENTableAdapter = null;
             this.tableAdapterManager1.Ct_KM_LKTableAdapter = null;
             this.tableAdapterManager1.CT_KM_SPTableAdapter = null;
             this.tableAdapterManager1.Ct_mua_SP_TIMKIEMTableAdapter = null;
@@ -1340,6 +1341,7 @@
             this.button5.Text = "Thanh Toán Trả Góp";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // lINHKIENBindingSource
             // 

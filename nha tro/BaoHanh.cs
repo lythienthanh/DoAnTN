@@ -65,6 +65,8 @@ namespace nha_tro
         }
         private void BaoHanh_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'tt.SP_LOI' table. You can move, or remove it, as needed.
+            this.sP_LOITableAdapter.Fill(this.tt.SP_LOI);
             // TODO: This line of code loads data into the 'nghiepVu.KHO1' table. You can move, or remove it, as needed.
             this.kHO1TableAdapter.Fill(this.nghiepVu.KHO1);
             // TODO: This line of code loads data into the 'tt.DATHANG_SP' table. You can move, or remove it, as needed.
@@ -180,9 +182,14 @@ namespace nha_tro
                 //update chenhlech va madoitra trong bang hoadon
                 hOADON_ttTableAdapter.Update_MAHD_CHECHLENH(textBox2.Text, dOITRAComboBox.SelectedValue.ToString(), int.Parse(sELECT_DATA_HDComboBox.SelectedValue.ToString()));
                 MessageBox.Show("Đổi trả thành công");
+
                 //update sl trong kho SP DOI +1
-                string maspdoi = kHO1TableAdapter.select_masp(selectSPDaMuaTheoMaHDComboBox.Text.Trim()).ToString();
-                kHO1TableAdapter.UPDATE_SP_DOI(maspdoi);
+                //string maspdoi = kHO1TableAdapter.select_masp(selectSPDaMuaTheoMaHDComboBox.Text.Trim()).ToString();
+                //kHO1TableAdapter.UPDATE_SP_DOI(maspdoi);
+
+                //THEM SP VAO BANG SP LOI
+                sP_LOITableAdapter.Insert(selectSPDaMuaTheoMaHDComboBox.SelectedValue.ToString(), DateTime.Today.ToString("dd/MM/yyyy"), textBox3.Text, "TEMP", dOITRAComboBox.SelectedValue.ToString());
+
                 //UPDATE SL TRONG KHO SP LAY -1
                 kHO1TableAdapter.UPDATE_SP_LAY(sANPHAMComboBox1.SelectedValue.ToString());
                 //loaddata

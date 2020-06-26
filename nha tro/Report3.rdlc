@@ -318,7 +318,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Số Tiền Phải Trả</Value>
+                                  <Value>Số Tiền Đã Trả</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>

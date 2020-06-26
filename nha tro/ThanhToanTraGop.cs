@@ -57,13 +57,13 @@ namespace nha_tro
 
                 if (t <= t1)
                 {
-                    string ngay = DateTime.Today.ToString();
-                    int sotienconlai = int.Parse(dataTable1DataGridView.Rows[0].Cells[4].Value.ToString()) - int.Parse(textBox1.Text);
+/*                    string ngay = DateTime.Today.ToString();
+                    int sotienconlai = int.Parse(traGop_tinhtienDataGridView.Rows[0].Cells[2].Value.ToString()) - int.Parse(textBox1.Text);*/
                     //lay thong tin
                     string matragop = dataTable1DataGridView.CurrentRow.Cells[2].Value.ToString();
-                    int sotienphaitra = int.Parse(dataTable1DataGridView.CurrentRow.Cells[3].Value.ToString());
-                    string sotienconlaitt = dataTable1DataGridView.Rows[0].Cells[4].Value.ToString();
-                    string ngaytra = dataTable1DataGridView.CurrentRow.Cells[5].Value.ToString();
+                   // int sotienphaitra = int.Parse(dataTable1DataGridView.CurrentRow.Cells[1].Value.ToString());
+                    string sotienconlaitt = traGop_tinhtienDataGridView.Rows[0].Cells[2].Value.ToString();
+                    //string ngaytra = dataTable1DataGridView.CurrentRow.Cells[5].Value.ToString();
                     string deadline = dataTable1DataGridView.CurrentRow.Cells[6].Value.ToString();
                     traGopTableAdapter.Insert(textBox3.Text, int.Parse(textBox1.Text), int.Parse(sotienconlaitt) - int.Parse(textBox1.Text), Convert.ToDateTime(DateTime.Today), Convert.ToDateTime(deadline));
                     //traGopTableAdapter.Insert(traGopComboBox.SelectedValue.ToString(),)
@@ -141,6 +141,21 @@ namespace nha_tro
         private void dataTable1DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             textBox3.Text = dataTable1DataGridView.CurrentRow.Cells[2].Value.ToString();
+
+            try
+            {
+                this.traGop_tinhtienTableAdapter.Fill(this.tt.TraGop_tinhtien, dataTable1DataGridView.CurrentRow.Cells[2].Value.ToString());
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void fillToolStripButton_Click(object sender, EventArgs e)
+        {
+
+
         }
     }
 }
