@@ -30,7 +30,7 @@ namespace nha_tro
             // TODO: This line of code loads data into the 'nghiepVu1.SANPHAM' table. You can move, or remove it, as needed.
             this.sANPHAMTableAdapter1.Fill(this.nghiepVu1.SANPHAM);
             // TODO: This line of code loads data into the 'nghiepVu1.KHUYENMAI' table. You can move, or remove it, as needed.
-            this.kHUYENMAITableAdapter1.Fill(this.nghiepVu1.KHUYENMAI);
+            //this.kHUYENMAITableAdapter1.Fill(this.nghiepVu1.KHUYENMAI);
             // TODO: This line of code loads data into the 'nghiepVu.SANPHAM' table. You can move, or remove it, as needed.
            /* this.sANPHAMTableAdapter.Fill(this.nghiepVu.SANPHAM);*/
             // TODO: This line of code loads data into the 'tt.KHUYENMAI' table. You can move, or remove it, as needed.

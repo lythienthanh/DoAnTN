@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.thongKe_tragop_theongayDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thongKe_tragop_theongayBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tt = new nha_tro.tt();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,10 +59,6 @@
             this.traGop2_select_theo_ngayBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.traGop2_select_theo_ngayTableAdapter = new nha_tro.ttTableAdapters.TraGop2_select_theo_ngayTableAdapter();
             this.traGop2_select_theo_ngayDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,6 +76,7 @@
             // thongKe_tragop_theongayDataGridView
             // 
             this.thongKe_tragop_theongayDataGridView.AutoGenerateColumns = false;
+            this.thongKe_tragop_theongayDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.thongKe_tragop_theongayDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.thongKe_tragop_theongayDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -87,6 +88,31 @@
             this.thongKe_tragop_theongayDataGridView.Name = "thongKe_tragop_theongayDataGridView";
             this.thongKe_tragop_theongayDataGridView.Size = new System.Drawing.Size(450, 220);
             this.thongKe_tragop_theongayDataGridView.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MAHD";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã hóa đơn";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "MaSP";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Mã sản phẩm";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "NGAYLAP";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Ngày lập";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "SL";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Số lượng";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // thongKe_tragop_theongayBindingSource
             // 
@@ -140,7 +166,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 22;
-            this.button1.Text = "Thống kê";
+            this.button1.Text = "Lọc";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -231,21 +257,29 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BAOHANH1TableAdapter = null;
             this.tableAdapterManager.BAOHANHTableAdapter = null;
+            this.tableAdapterManager.ct_bHTableAdapter = null;
+            this.tableAdapterManager.CT_HOADON_LINHKIENTableAdapter = null;
             this.tableAdapterManager.Ct_KM_LKTableAdapter = null;
             this.tableAdapterManager.CT_KM_SPTableAdapter = null;
             this.tableAdapterManager.Ct_mua_SP_TIMKIEMTableAdapter = null;
             this.tableAdapterManager.CT_NHAP_LK_theoMaNhapTableAdapter = null;
             this.tableAdapterManager.DATHANG_SPTableAdapter = null;
             this.tableAdapterManager.DOITRATableAdapter = null;
+            this.tableAdapterManager.HOADON_baohanhTableAdapter = null;
             this.tableAdapterManager.HOADON_kttontaiTableAdapter = null;
             this.tableAdapterManager.HOADON_timmahd_vuathemTableAdapter = null;
             this.tableAdapterManager.HOADON_ttTableAdapter = null;
             this.tableAdapterManager.KHO_ttTableAdapter = null;
+            this.tableAdapterManager.KHUYENMAI1TableAdapter = null;
+            this.tableAdapterManager.KHUYENMAI2TableAdapter = null;
             this.tableAdapterManager.KHUYENMAITableAdapter = null;
             this.tableAdapterManager.LOAISANPHAMTableAdapter = null;
+            this.tableAdapterManager.NDBaoHanhTableAdapter = null;
             this.tableAdapterManager.SANPHAM__sreach_giaTableAdapter = null;
+            this.tableAdapterManager.SP_LOITableAdapter = null;
             this.tableAdapterManager.TAIKHOAN_TIMMANVTableAdapter = null;
             this.tableAdapterManager.TinhTrangTTTableAdapter = null;
+            this.tableAdapterManager.TraGop_tinhtienTableAdapter = null;
             this.tableAdapterManager.TraGop1TableAdapter = null;
             this.tableAdapterManager.TraGopTableAdapter = this.traGopTableAdapter;
             this.tableAdapterManager.UpdateOrder = nha_tro.ttTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -280,6 +314,7 @@
             // traGop2_select_theo_ngayDataGridView
             // 
             this.traGop2_select_theo_ngayDataGridView.AutoGenerateColumns = false;
+            this.traGop2_select_theo_ngayDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.traGop2_select_theo_ngayDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.traGop2_select_theo_ngayDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
@@ -292,31 +327,6 @@
             this.traGop2_select_theo_ngayDataGridView.Name = "traGop2_select_theo_ngayDataGridView";
             this.traGop2_select_theo_ngayDataGridView.Size = new System.Drawing.Size(549, 134);
             this.traGop2_select_theo_ngayDataGridView.TabIndex = 32;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "MAHD";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã hóa đơn";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "MaSP";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Mã sản phẩm";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "NGAYLAP";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Ngày lập";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "SL";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Số lượng";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
             // 

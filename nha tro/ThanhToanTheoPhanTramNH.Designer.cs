@@ -62,6 +62,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.makho_cboComboBox = new System.Windows.Forms.ComboBox();
+            this.makho_cboBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -108,9 +111,6 @@
             this.kHOTableAdapter = new nha_tro.NghiepVuTableAdapters.KHOTableAdapter();
             this.makho_cboBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.makho_cboTableAdapter = new nha_tro.NghiepVuTableAdapters.makho_cboTableAdapter();
-            this.makho_cboBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.makho_cboComboBox = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nHAPHANG1DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHAPHANG1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).BeginInit();
@@ -122,6 +122,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_timmahd_vuathemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tt)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tinhTrangTTDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tinhTrangTTBindingSource)).BeginInit();
@@ -133,7 +134,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_ttBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // nHAPHANG1DataGridView
@@ -403,6 +403,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thanh toán mới";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(9, 123);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(26, 13);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Kho";
+            // 
+            // makho_cboComboBox
+            // 
+            this.makho_cboComboBox.DataSource = this.makho_cboBindingSource1;
+            this.makho_cboComboBox.DisplayMember = "MAKHO";
+            this.makho_cboComboBox.FormattingEnabled = true;
+            this.makho_cboComboBox.Location = new System.Drawing.Point(154, 120);
+            this.makho_cboComboBox.Name = "makho_cboComboBox";
+            this.makho_cboComboBox.Size = new System.Drawing.Size(100, 21);
+            this.makho_cboComboBox.TabIndex = 14;
+            this.makho_cboComboBox.ValueMember = "MAKHO";
+            // 
+            // makho_cboBindingSource1
+            // 
+            this.makho_cboBindingSource1.DataMember = "makho_cbo";
+            this.makho_cboBindingSource1.DataSource = this.nghiepVu;
+            // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -668,6 +693,7 @@
             this.tableAdapterManager.KHO1TableAdapter = null;
             this.tableAdapterManager.KHOTableAdapter = null;
             this.tableAdapterManager.KHUYENMAI_DKTableAdapter = null;
+            this.tableAdapterManager.KHUYENMAI_lk_malkTableAdapter = null;
             this.tableAdapterManager.KHUYENMAITableAdapter = null;
             this.tableAdapterManager.LAY_MANVbangTENDNTableAdapter = null;
             this.tableAdapterManager.LINHKIENTableAdapter = null;
@@ -738,6 +764,7 @@
             this.tableAdapterManager1.BAOHANH1TableAdapter = null;
             this.tableAdapterManager1.BAOHANHTableAdapter = null;
             this.tableAdapterManager1.ct_bHTableAdapter = null;
+            this.tableAdapterManager1.CT_HOADON_LINHKIENTableAdapter = null;
             this.tableAdapterManager1.Ct_KM_LKTableAdapter = null;
             this.tableAdapterManager1.CT_KM_SPTableAdapter = null;
             this.tableAdapterManager1.Ct_mua_SP_TIMKIEMTableAdapter = null;
@@ -755,8 +782,10 @@
             this.tableAdapterManager1.LOAISANPHAMTableAdapter = null;
             this.tableAdapterManager1.NDBaoHanhTableAdapter = null;
             this.tableAdapterManager1.SANPHAM__sreach_giaTableAdapter = null;
+            this.tableAdapterManager1.SP_LOITableAdapter = null;
             this.tableAdapterManager1.TAIKHOAN_TIMMANVTableAdapter = null;
             this.tableAdapterManager1.TinhTrangTTTableAdapter = null;
+            this.tableAdapterManager1.TraGop_tinhtienTableAdapter = null;
             this.tableAdapterManager1.TraGop1TableAdapter = null;
             this.tableAdapterManager1.TraGopTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = nha_tro.ttTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -804,31 +833,6 @@
             // 
             this.makho_cboTableAdapter.ClearBeforeFill = true;
             // 
-            // makho_cboBindingSource1
-            // 
-            this.makho_cboBindingSource1.DataMember = "makho_cbo";
-            this.makho_cboBindingSource1.DataSource = this.nghiepVu;
-            // 
-            // makho_cboComboBox
-            // 
-            this.makho_cboComboBox.DataSource = this.makho_cboBindingSource1;
-            this.makho_cboComboBox.DisplayMember = "MAKHO";
-            this.makho_cboComboBox.FormattingEnabled = true;
-            this.makho_cboComboBox.Location = new System.Drawing.Point(154, 120);
-            this.makho_cboComboBox.Name = "makho_cboComboBox";
-            this.makho_cboComboBox.Size = new System.Drawing.Size(100, 21);
-            this.makho_cboComboBox.TabIndex = 14;
-            this.makho_cboComboBox.ValueMember = "MAKHO";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(9, 123);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(26, 13);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Kho";
-            // 
             // ThanhToanTheoPhanTramNH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -860,6 +864,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tt)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tinhTrangTTDataGridView)).EndInit();
@@ -873,7 +878,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_ttBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

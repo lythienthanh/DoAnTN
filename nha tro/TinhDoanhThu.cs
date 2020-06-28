@@ -116,7 +116,17 @@ namespace nha_tro
 
         private void TinhDoanhThu_Load(object sender, EventArgs e)
         {
+            thongKe_TinhDoanhThuDataGridView.BorderStyle = BorderStyle.None;
+            thongKe_TinhDoanhThuDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            thongKe_TinhDoanhThuDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            thongKe_TinhDoanhThuDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            thongKe_TinhDoanhThuDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            thongKe_TinhDoanhThuDataGridView.BackgroundColor = Color.White;
 
+            thongKe_TinhDoanhThuDataGridView.EnableHeadersVisualStyles = false;
+            thongKe_TinhDoanhThuDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            thongKe_TinhDoanhThuDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            thongKe_TinhDoanhThuDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
         ThongKe ThongKe = new ThongKe();
         private void button1_Click(object sender, EventArgs e)
@@ -170,12 +180,12 @@ namespace nha_tro
 
         }
 
-
-
-
-
-
-
-
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+            decimal value = decimal.Parse(textBox3.Text, System.Globalization.NumberStyles.AllowThousands);
+            textBox3.Text = String.Format(culture, "{0:N0}", value);
+            textBox3.Select(textBox3.Text.Length, 0);
+        }
     }
 }

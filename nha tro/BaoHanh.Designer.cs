@@ -51,9 +51,13 @@
             this.kHACHHANG_dkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nghiepVu = new nha_tro.NghiepVu();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tAIKHOAN_TIMMANVDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tAIKHOAN_TIMMANVBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tt = new nha_tro.tt();
             this.dOITRAComboBox = new System.Windows.Forms.ComboBox();
             this.dOITRABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tt = new nha_tro.tt();
             this.dOITRA_SPDataGridView = new System.Windows.Forms.DataGridView();
             this.mADOITRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,6 +84,9 @@
             this.dOITRABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dOITRATableAdapter = new nha_tro.ttTableAdapters.DOITRATableAdapter();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.xuat_hd_chenhlechDataGridView = new System.Windows.Forms.DataGridView();
             this.mAHDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tENSPDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -126,8 +133,11 @@
             this.button9 = new System.Windows.Forms.Button();
             this.sP_LOIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sP_LOITableAdapter = new nha_tro.ttTableAdapters.SP_LOITableAdapter();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.tAIKHOAN_TIMMANVTableAdapter = new nha_tro.ttTableAdapters.TAIKHOAN_TIMMANVTableAdapter();
+            this.fill_TIMMANVToolStrip = new System.Windows.Forms.ToolStrip();
+            this.tENDNToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.tENDNToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.fill_TIMMANVToolStripButton = new System.Windows.Forms.ToolStripButton();
             tENLOISXLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
@@ -143,8 +153,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.kHACHHANG_dkBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dOITRABindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tAIKHOAN_TIMMANVDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tAIKHOAN_TIMMANVBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOITRABindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOITRA_SPDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOITRA_SPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectSPDaMuaTheoMaHDBindingSource)).BeginInit();
@@ -169,6 +181,7 @@
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sP_LOIBindingSource)).BeginInit();
+            this.fill_TIMMANVToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // tENLOISXLabel
@@ -354,6 +367,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.tAIKHOAN_TIMMANVDataGridView);
             this.groupBox2.Controls.Add(label5);
             this.groupBox2.Controls.Add(this.dOITRAComboBox);
             this.groupBox2.Controls.Add(this.dOITRA_SPDataGridView);
@@ -364,10 +378,46 @@
             this.groupBox2.Controls.Add(tENLOISXLabel);
             this.groupBox2.Location = new System.Drawing.Point(581, 160);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(774, 337);
+            this.groupBox2.Size = new System.Drawing.Size(793, 337);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thêm chi tiết đổi trả";
+            // 
+            // tAIKHOAN_TIMMANVDataGridView
+            // 
+            this.tAIKHOAN_TIMMANVDataGridView.AutoGenerateColumns = false;
+            this.tAIKHOAN_TIMMANVDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tAIKHOAN_TIMMANVDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7});
+            this.tAIKHOAN_TIMMANVDataGridView.DataSource = this.tAIKHOAN_TIMMANVBindingSource;
+            this.tAIKHOAN_TIMMANVDataGridView.Location = new System.Drawing.Point(356, 165);
+            this.tAIKHOAN_TIMMANVDataGridView.Name = "tAIKHOAN_TIMMANVDataGridView";
+            this.tAIKHOAN_TIMMANVDataGridView.Size = new System.Drawing.Size(218, 125);
+            this.tAIKHOAN_TIMMANVDataGridView.TabIndex = 30;
+            this.tAIKHOAN_TIMMANVDataGridView.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "MANV";
+            this.dataGridViewTextBoxColumn6.HeaderText = "MANV";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "TENDANGNHAP";
+            this.dataGridViewTextBoxColumn7.HeaderText = "TENDANGNHAP";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // tAIKHOAN_TIMMANVBindingSource
+            // 
+            this.tAIKHOAN_TIMMANVBindingSource.DataMember = "TAIKHOAN_TIMMANV";
+            this.tAIKHOAN_TIMMANVBindingSource.DataSource = this.tt;
+            // 
+            // tt
+            // 
+            this.tt.DataSetName = "tt";
+            this.tt.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dOITRAComboBox
             // 
@@ -385,11 +435,6 @@
             // 
             this.dOITRABindingSource1.DataMember = "DOITRA";
             this.dOITRABindingSource1.DataSource = this.tt;
-            // 
-            // tt
-            // 
-            this.tt.DataSetName = "tt";
-            this.tt.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dOITRA_SPDataGridView
             // 
@@ -606,6 +651,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button5);
             this.groupBox3.Controls.Add(this.textBox3);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.xuat_hd_chenhlechDataGridView);
@@ -620,10 +666,36 @@
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Location = new System.Drawing.Point(581, 443);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(774, 185);
+            this.groupBox3.Size = new System.Drawing.Size(774, 175);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Đổi Trả";
+            // 
+            // button5
+            // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Image = global::nha_tro.Properties.Resources.Avosoft_Warm_Toolbar_Print__1_;
+            this.button5.Location = new System.Drawing.Point(317, 112);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(72, 48);
+            this.button5.TabIndex = 33;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(114, 66);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(117, 20);
+            this.textBox3.TabIndex = 32;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(17, 71);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 13);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Số series máy đổi";
             // 
             // xuat_hd_chenhlechDataGridView
             // 
@@ -744,9 +816,9 @@
             // button4
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(43, 152);
+            this.button4.Location = new System.Drawing.Point(237, 112);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(72, 48);
             this.button4.TabIndex = 22;
             this.button4.Text = "Đổi Trả";
             this.button4.UseVisualStyleBackColor = true;
@@ -952,7 +1024,7 @@
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button9.Location = new System.Drawing.Point(0, 0);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(1367, 42);
+            this.button9.Size = new System.Drawing.Size(1374, 42);
             this.button9.TabIndex = 31;
             this.button9.Text = "Đổi trả sản phẩm";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -967,27 +1039,49 @@
             // 
             this.sP_LOITableAdapter.ClearBeforeFill = true;
             // 
-            // textBox3
+            // tAIKHOAN_TIMMANVTableAdapter
             // 
-            this.textBox3.Location = new System.Drawing.Point(114, 66);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(117, 20);
-            this.textBox3.TabIndex = 32;
+            this.tAIKHOAN_TIMMANVTableAdapter.ClearBeforeFill = true;
             // 
-            // label7
+            // fill_TIMMANVToolStrip
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 71);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 13);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Số series máy đổi";
+            this.fill_TIMMANVToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tENDNToolStripLabel,
+            this.tENDNToolStripTextBox,
+            this.fill_TIMMANVToolStripButton});
+            this.fill_TIMMANVToolStrip.Location = new System.Drawing.Point(0, 42);
+            this.fill_TIMMANVToolStrip.Name = "fill_TIMMANVToolStrip";
+            this.fill_TIMMANVToolStrip.Size = new System.Drawing.Size(1374, 25);
+            this.fill_TIMMANVToolStrip.TabIndex = 32;
+            this.fill_TIMMANVToolStrip.Text = "fill_TIMMANVToolStrip";
+            // 
+            // tENDNToolStripLabel
+            // 
+            this.tENDNToolStripLabel.Name = "tENDNToolStripLabel";
+            this.tENDNToolStripLabel.Size = new System.Drawing.Size(48, 22);
+            this.tENDNToolStripLabel.Text = "TENDN:";
+            // 
+            // tENDNToolStripTextBox
+            // 
+            this.tENDNToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tENDNToolStripTextBox.Name = "tENDNToolStripTextBox";
+            this.tENDNToolStripTextBox.Size = new System.Drawing.Size(100, 25);
+            // 
+            // fill_TIMMANVToolStripButton
+            // 
+            this.fill_TIMMANVToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fill_TIMMANVToolStripButton.Name = "fill_TIMMANVToolStripButton";
+            this.fill_TIMMANVToolStripButton.Size = new System.Drawing.Size(86, 22);
+            this.fill_TIMMANVToolStripButton.Text = "Fill_TIMMANV";
+            this.fill_TIMMANVToolStripButton.Click += new System.EventHandler(this.fill_TIMMANVToolStripButton_Click);
             // 
             // BaoHanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1367, 630);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1370, 647);
+            this.Controls.Add(this.fill_TIMMANVToolStrip);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox5);
@@ -1004,8 +1098,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dOITRABindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tAIKHOAN_TIMMANVDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tAIKHOAN_TIMMANVBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOITRABindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOITRA_SPDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOITRA_SPBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectSPDaMuaTheoMaHDBindingSource)).EndInit();
@@ -1032,7 +1128,10 @@
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sP_LOIBindingSource)).EndInit();
+            this.fill_TIMMANVToolStrip.ResumeLayout(false);
+            this.fill_TIMMANVToolStrip.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1127,5 +1226,15 @@
         private ttTableAdapters.SP_LOITableAdapter sP_LOITableAdapter;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.BindingSource tAIKHOAN_TIMMANVBindingSource;
+        private ttTableAdapters.TAIKHOAN_TIMMANVTableAdapter tAIKHOAN_TIMMANVTableAdapter;
+        private System.Windows.Forms.ToolStrip fill_TIMMANVToolStrip;
+        private System.Windows.Forms.ToolStripLabel tENDNToolStripLabel;
+        private System.Windows.Forms.ToolStripTextBox tENDNToolStripTextBox;
+        private System.Windows.Forms.ToolStripButton fill_TIMMANVToolStripButton;
+        private System.Windows.Forms.DataGridView tAIKHOAN_TIMMANVDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 }

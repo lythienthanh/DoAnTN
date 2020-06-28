@@ -348,5 +348,12 @@ namespace nha_tro
             banlinhkien.MdiParent = this;
             banlinhkien.Show();
         }
+
+        private void barButtonItem2_ItemClick_3(object sender, ItemClickEventArgs e)
+        {
+            TraGopNCC traGopNCC = new TraGopNCC();
+            traGopNCC.MdiParent = this;
+            traGopNCC.Show();
+        }
     }
 }

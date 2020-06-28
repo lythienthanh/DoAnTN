@@ -171,6 +171,7 @@ namespace nha_tro
 
         }
         ThongKe ThongKe = new ThongKe();
+
         private void button4_Click(object sender, EventArgs e)
         {
             try
@@ -192,6 +193,19 @@ namespace nha_tro
 
                 //UPDATE SL TRONG KHO SP LAY -1
                 kHO1TableAdapter.UPDATE_SP_LAY(sANPHAMComboBox1.SelectedValue.ToString());
+
+                //insert hoadon moi
+                try
+                {
+                    this.tAIKHOAN_TIMMANVTableAdapter.Fill_TIMMANV(this.tt.TAIKHOAN_TIMMANV, tendn);
+                }
+                catch (System.Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                }
+                string MaNV = tAIKHOAN_TIMMANVDataGridView.Rows[0].Cells[0].Value.ToString();
+                hOADON_ttTableAdapter.Insert_doitra("temp", "MLHD06", DateTime.Today, "temp", MaNV,textBox2.Text, dOITRAComboBox.SelectedValue.ToString(),null);
+
                 //loaddata
                 try
                 {
@@ -202,8 +216,11 @@ namespace nha_tro
                     // System.Windows.Forms.MessageBox.Show(ex.Message);
                 }
                 //xuat hoa don
-                ThongKe.xuatfile_HD_DoiTra(xuat_hd_chenhlechDataGridView, sELECT_DATA_HDComboBox.SelectedValue.ToString(), textBox2.Text, DateTime.Now.ToString(), "Hd_Doi_SP");
-                tempMaDoiTra = "";
+/*                ThongKe.xuatfile_HD_DoiTra(xuat_hd_chenhlechDataGridView, sELECT_DATA_HDComboBox.SelectedValue.ToString(), textBox2.Text, DateTime.Now.ToString(), "Hd_Doi_SP");
+                tempMaDoiTra = "";*/
+
+
+
             }
             catch(Exception ex)
             {
@@ -347,14 +364,20 @@ namespace nha_tro
 
         private void dOITRAComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
+/*            try
             {
                 this.dOITRA_SPTableAdapter.Fill(this.tt.DOITRA_SP, dOITRAComboBox.SelectedValue.ToString());
             }
             catch (System.Exception ex)
             {
                 //System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+            }*/
+        }
+
+        private void fill_TIMMANVToolStripButton_Click(object sender, EventArgs e)
+        {
+
+
         }
     }
 }

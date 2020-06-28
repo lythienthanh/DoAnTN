@@ -4428,3 +4428,6 @@ C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.HD_tragop.resou
 C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.MH000000000000000024.resources
 C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.banlinhkien.resources
 C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.hd_lk.resources
+C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.hd_doitra.resources
+C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.TraGopNCC.resources
+C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.hd_tragop_ncc.resources

@@ -191,6 +191,12 @@
     <Compile Include="HD_BAOHANH.Designer.cs">
       <DependentUpon>HD_BAOHANH.cs</DependentUpon>
     </Compile>
+    <Compile Include="hd_doitra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hd_doitra.Designer.cs">
+      <DependentUpon>hd_doitra.cs</DependentUpon>
+    </Compile>
     <Compile Include="hd_lk.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,12 @@
     </Compile>
     <Compile Include="hd_tragop.Designer.cs">
       <DependentUpon>hd_tragop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hd_tragop_ncc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hd_tragop_ncc.Designer.cs">
+      <DependentUpon>hd_tragop_ncc.cs</DependentUpon>
     </Compile>
     <Compile Include="HoaDon.cs">
       <SubType>Form</SubType>
@@ -418,6 +430,12 @@
     <Compile Include="TraGop.Designer.cs">
       <DependentUpon>TraGop.cs</DependentUpon>
     </Compile>
+    <Compile Include="TraGopNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraGopNCC.Designer.cs">
+      <DependentUpon>TraGopNCC.cs</DependentUpon>
+    </Compile>
     <Compile Include="tt.cs">
       <DependentUpon>tt.xsd</DependentUpon>
     </Compile>
@@ -459,11 +477,17 @@
     <EmbeddedResource Include="HD_BAOHANH.resx">
       <DependentUpon>HD_BAOHANH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="hd_doitra.resx">
+      <DependentUpon>hd_doitra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="hd_lk.resx">
       <DependentUpon>hd_lk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="hd_tragop.resx">
       <DependentUpon>hd_tragop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hd_tragop_ncc.resx">
+      <DependentUpon>hd_tragop_ncc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
@@ -516,7 +540,9 @@
     <EmbeddedResource Include="Reporttklsp.rdlc" />
     <EmbeddedResource Include="Report_banhang.rdlc" />
     <EmbeddedResource Include="Report_banLK.rdlc" />
+    <EmbeddedResource Include="Report_doitra.rdlc" />
     <EmbeddedResource Include="Report_TinhDT_TheoNgay.rdlc" />
+    <EmbeddedResource Include="Report_tragop_ncc.rdlc" />
     <EmbeddedResource Include="TaoPhieuNhap.resx">
       <DependentUpon>TaoPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -564,6 +590,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TimKiem.resx">
       <DependentUpon>TimKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraGopNCC.resx">
+      <DependentUpon>TraGopNCC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="TimKiemSanPham.dbml.layout">
