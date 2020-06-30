@@ -173,6 +173,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
     <Compile Include="FromMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,18 @@
     </Compile>
     <Compile Include="hd_tragop.Designer.cs">
       <DependentUpon>hd_tragop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hd_tragop_kh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hd_tragop_kh.Designer.cs">
+      <DependentUpon>hd_tragop_kh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hd_tragop_kh_theongay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hd_tragop_kh_theongay.Designer.cs">
+      <DependentUpon>hd_tragop_kh_theongay.cs</DependentUpon>
     </Compile>
     <Compile Include="hd_tragop_ncc.cs">
       <SubType>Form</SubType>
@@ -468,6 +486,9 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FromMain.resx">
       <DependentUpon>FromMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -485,6 +506,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="hd_tragop.resx">
       <DependentUpon>hd_tragop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hd_tragop_kh.resx">
+      <DependentUpon>hd_tragop_kh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hd_tragop_kh_khoangthoigian.rdlc" />
+    <EmbeddedResource Include="hd_tragop_kh_theongay.resx">
+      <DependentUpon>hd_tragop_kh_theongay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="hd_tragop_ncc.resx">
       <DependentUpon>hd_tragop_ncc.cs</DependentUpon>
@@ -537,10 +565,12 @@
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report2_baohanh.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
     <EmbeddedResource Include="Reporttklsp.rdlc" />
     <EmbeddedResource Include="Report_banhang.rdlc" />
     <EmbeddedResource Include="Report_banLK.rdlc" />
     <EmbeddedResource Include="Report_doitra.rdlc" />
+    <EmbeddedResource Include="Report_hd_tragop_kh.rdlc" />
     <EmbeddedResource Include="Report_TinhDT_TheoNgay.rdlc" />
     <EmbeddedResource Include="Report_tragop_ncc.rdlc" />
     <EmbeddedResource Include="TaoPhieuNhap.resx">
@@ -712,6 +742,7 @@
     <None Include="Resources\Avosoft-Warm-Toolbar-Print %281%29.ico" />
     <None Include="Resources\Rockettheme-Ecommerce-Sale.ico" />
     <None Include="Resources\Aha-Soft-Software-Options.ico" />
+    <None Include="Resources\Iconsmind-Outline-Filter-2.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

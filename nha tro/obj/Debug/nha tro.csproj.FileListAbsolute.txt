@@ -4431,3 +4431,6 @@ C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.hd_lk.resources
 C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.hd_doitra.resources
 C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.TraGopNCC.resources
 C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.hd_tragop_ncc.resources
+C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.hd_tragop_kh.resources
+C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.hd_tragop_kh_theongay.resources
+C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.Form3.resources

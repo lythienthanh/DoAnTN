@@ -233,6 +233,16 @@ namespace nha_tro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Iconsmind_Outline_Filter_2 {
+            get {
+                object obj = ResourceManager.GetObject("Iconsmind-Outline-Filter-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lock_Unlock_icon {
             get {
                 object obj = ResourceManager.GetObject("Lock-Unlock-icon", resourceCulture);

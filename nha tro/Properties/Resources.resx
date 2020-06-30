@@ -139,6 +139,9 @@
   <data name="Database-Backup-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Database-Backup-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Aha-Soft-Software-Options" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Aha-Soft-Software-Options.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sync-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sync-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,7 +205,7 @@
   <data name="Oxygen-Icons.org-Oxygen-Actions-document-edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Oxygen-Icons.org-Oxygen-Actions-document-edit.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Aha-Soft-Software-Options" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Aha-Soft-Software-Options.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Iconsmind-Outline-Filter-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconsmind-Outline-Filter-2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -116,6 +116,8 @@ namespace nha_tro
 
         private void TinhDoanhThu_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'nghiepVu.SANPHAM' table. You can move, or remove it, as needed.
+            this.sANPHAMTableAdapter.Fill(this.nghiepVu.SANPHAM);
             thongKe_TinhDoanhThuDataGridView.BorderStyle = BorderStyle.None;
             thongKe_TinhDoanhThuDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             thongKe_TinhDoanhThuDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -186,6 +188,35 @@ namespace nha_tro
             decimal value = decimal.Parse(textBox3.Text, System.Globalization.NumberStyles.AllowThousands);
             textBox3.Text = String.Format(culture, "{0:N0}", value);
             textBox3.Select(textBox3.Text.Length, 0);
+        }
+
+        private void fillToolStripButton_Click_1(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int sl = 0;
+            // TODO: This line of code loads data into the 'nghiepVu.SANPHAM' table. You can move, or remove it, as needed.
+            //this.sANPHAMTableAdapter.Fill(this.nghiepVu.SANPHAM);
+            try
+            {
+                this.thongKe_SPTableAdapter.Fill(this.tt.ThongKe_SP, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateTimePicker4.Value, typeof(System.DateTime))))), new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateTimePicker3.Value, typeof(System.DateTime))))), sANPHAMComboBox.SelectedValue.ToString());
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+            for (int i = 0; i < thongKe_SPDataGridView.RowCount - 1; i++)
+            {
+                sl += int.Parse(thongKe_SPDataGridView.Rows[i].Cells[2].Value.ToString());
+            }
+            textBox6.Text = sl.ToString();
+            string dongia = thongKe_SPTableAdapter.select_dongia(sANPHAMComboBox.SelectedValue.ToString()).ToString();
+            textBox5.Text = (sl * int.Parse(dongia)).ToString();
         }
     }
 }
