@@ -27,6 +27,12 @@ namespace nha_tro
 
         private void TimKiemTheoSanPham_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'nghiepVu.LOAISANPHAM' table. You can move, or remove it, as needed.
+            this.lOAISANPHAMTableAdapter.Fill(this.nghiepVu.LOAISANPHAM);
+            // TODO: This line of code loads data into the 'nghiepVu.KHO' table. You can move, or remove it, as needed.
+            this.kHOTableAdapter.Fill(this.nghiepVu.KHO);
+            // TODO: This line of code loads data into the 'nghiepVu.SP_Loaisp' table. You can move, or remove it, as needed.
+            this.sP_LoaispTableAdapter.Fill(this.nghiepVu.SP_Loaisp);
             // TODO: This line of code loads data into the 'nghiepVu.SANPHAM' table. You can move, or remove it, as needed.
             this.sANPHAMTableAdapter.Fill(this.nghiepVu.SANPHAM);
 
@@ -41,29 +47,30 @@ namespace nha_tro
             sANPHAMDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             sANPHAMDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
             sANPHAMDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-
+            lOAISANPHAMComboBox.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
- 
-            TimKiemSanPhamDataContext db = new TimKiemSanPhamDataContext();
-            var x = from y in db.SANPHAMs where y.TENSP.Contains(textBox1.Text) select y;
-            sANPHAMDataGridView.DataSource = x;
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             if (textBox2.Text.Length != 0 && textBox3.Text.Length != 0)
             {
-                TimKiemSanPhamDataContext db = new TimKiemSanPhamDataContext();
-                var y = from x in db.SANPHAMs where (x.DonGia >= (int.Parse(textBox2.Text))) where (x.DonGia <= (int.Parse(textBox3.Text))) select x;
-                sANPHAMDataGridView.DataSource = y;
+                if(lOAISANPHAMComboBox.Text.Length != 0)
+                {
+                    sP_LoaispTableAdapter.FillBy_LOAISP_GIA(this.nghiepVu.SP_Loaisp, int.Parse(textBox2.Text), int.Parse(textBox3.Text), lOAISANPHAMComboBox.SelectedValue.ToString());
+                }
+                else
+                {
+                    sP_LoaispTableAdapter.FillBy_sreachTheoGia(this.nghiepVu.SP_Loaisp, int.Parse(textBox2.Text), int.Parse(textBox3.Text));
+                }
             }
             else
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
-            
             }
                   
         }
@@ -71,6 +78,23 @@ namespace nha_tro
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void sANPHAMDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            kHOTableAdapter.FillBy_MASP(this.nghiepVu.KHO, sANPHAMDataGridView.CurrentRow.Cells[0].Value.ToString());
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                sP_LoaispTableAdapter.FillBy_TENSP(this.nghiepVu.SP_Loaisp, textBox1.Text);
+            }
+            catch
+            {
+
+            }
         }
     }
 }

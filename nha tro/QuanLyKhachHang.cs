@@ -80,5 +80,11 @@ namespace nha_tro
             kHACHHANGTableAdapter.UpdateKHACHHANG(tENKHTextEdit.Text, sDTTextEdit.Text, dIACHITextEdit.Text, cMNDTextEdit.Text, mAKHTextEdit.Text);
             this.kHACHHANGTableAdapter.Fill(this.nghiepVu.KHACHHANG);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TimKiem frm = new TimKiem();
+            frm.ShowDialog();
+        }
     }
 }

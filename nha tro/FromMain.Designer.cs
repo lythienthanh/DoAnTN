@@ -68,13 +68,14 @@
             this.MH000000000000000025 = new DevExpress.XtraBars.BarButtonItem();
             this.MH000000000000000026 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
+            this.MH000000000000000032 = new DevExpress.XtraBars.BarButtonItem();
             this.MH000000000000000031 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
             this.MH000000000000000028 = new DevExpress.XtraBars.BarButtonItem();
             this.MH000000000000000029 = new DevExpress.XtraBars.BarButtonItem();
             this.MH000000000000000030 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -106,7 +107,6 @@
             this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -155,7 +155,7 @@
             this.MH000000000000000025,
             this.MH000000000000000026,
             this.barButtonItem11,
-            this.barButtonItem12,
+            this.MH000000000000000032,
             this.MH000000000000000031,
             this.barButtonItem15,
             this.barButtonItem16,
@@ -512,6 +512,7 @@
             this.MH000000000000000015.Name = "MH000000000000000015";
             this.MH000000000000000015.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.MH000000000000000015.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.MH000000000000000015.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MH000000000000000015_ItemClick);
             // 
             // MH000000000000000016
@@ -803,23 +804,23 @@
             this.barButtonItem11.Id = 38;
             this.barButtonItem11.Name = "barButtonItem11";
             // 
-            // barButtonItem12
+            // MH000000000000000032
             // 
-            this.barButtonItem12.Caption = "Loại Sản Phẩm";
-            this.barButtonItem12.Enabled = false;
-            this.barButtonItem12.Id = 39;
-            this.barButtonItem12.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem12.ImageOptions.SvgImage")));
-            this.barButtonItem12.Name = "barButtonItem12";
-            this.barButtonItem12.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            this.MH000000000000000032.Caption = "Loại Sản Phẩm";
+            this.MH000000000000000032.Enabled = false;
+            this.MH000000000000000032.Id = 39;
+            this.MH000000000000000032.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem12.ImageOptions.SvgImage")));
+            this.MH000000000000000032.Name = "MH000000000000000032";
+            this.MH000000000000000032.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.barButtonItem12.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem12_ItemClick_1);
+            this.MH000000000000000032.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem12_ItemClick_1);
             // 
             // MH000000000000000031
             // 
             this.MH000000000000000031.Caption = "Top 5 và Top 10";
             this.MH000000000000000031.Enabled = false;
             this.MH000000000000000031.Id = 40;
-            this.MH000000000000000031.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem14.ImageOptions.SvgImage")));
+            this.MH000000000000000031.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("MH000000000000000031.ImageOptions.SvgImage")));
             this.MH000000000000000031.Name = "MH000000000000000031";
             this.MH000000000000000031.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -876,6 +877,14 @@
             this.MH000000000000000030.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.MH000000000000000030.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick_3);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Top 5 và Top 10";
+            this.barButtonItem2.Id = 46;
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
             // ribbonPage1
             // 
@@ -1021,7 +1030,7 @@
             // 
             this.ribbonPageGroup7.ItemLinks.Add(this.MH000000000000000011);
             this.ribbonPageGroup7.ItemLinks.Add(this.MH000000000000000014);
-            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem12);
+            this.ribbonPageGroup7.ItemLinks.Add(this.MH000000000000000032);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Doanh Thu Theo";
             // 
@@ -1104,14 +1113,6 @@
             this.barButtonItem22.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.barButtonItem22.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "Top 5 và Top 10";
-            this.barButtonItem2.Id = 46;
-            this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
             // FromMain
             // 
@@ -1197,7 +1198,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
         private DevExpress.XtraBars.BarButtonItem MH000000000000000026;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
+        private DevExpress.XtraBars.BarButtonItem MH000000000000000032;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup16;
         private DevExpress.XtraBars.BarButtonItem MH000000000000000031;
         private DevExpress.XtraBars.BarButtonItem barButtonItem15;
