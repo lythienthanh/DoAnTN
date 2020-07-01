@@ -209,6 +209,12 @@
     <Compile Include="hd_lk.Designer.cs">
       <DependentUpon>hd_lk.cs</DependentUpon>
     </Compile>
+    <Compile Include="hd_thongke_Sp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hd_thongke_Sp.Designer.cs">
+      <DependentUpon>hd_thongke_Sp.cs</DependentUpon>
+    </Compile>
     <Compile Include="hd_tragop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -504,6 +510,9 @@
     <EmbeddedResource Include="hd_lk.resx">
       <DependentUpon>hd_lk.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="hd_thongke_Sp.resx">
+      <DependentUpon>hd_thongke_Sp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="hd_tragop.resx">
       <DependentUpon>hd_tragop.cs</DependentUpon>
     </EmbeddedResource>
@@ -618,6 +627,7 @@
     <EmbeddedResource Include="ThongKeTop5.resx">
       <DependentUpon>ThongKeTop5.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="thongke_sp.rdlc" />
     <EmbeddedResource Include="TimKiem.resx">
       <DependentUpon>TimKiem.cs</DependentUpon>
     </EmbeddedResource>

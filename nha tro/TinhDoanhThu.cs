@@ -25,21 +25,23 @@ namespace nha_tro
 
         private void button2_Click(object sender, EventArgs e)
         {
+            DateTime ngaytemp = Convert.ToDateTime("01/01/2000");
             //clear
             try
             {
-                this.thongKe_TinhDoanhThuTableAdapter.Fill(this.tt.ThongKe_TinhDoanhThu, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(Convert.ToDateTime("01/01/1800"), typeof(System.DateTime))))), new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(Convert.ToDateTime("01/01/1800"), typeof(System.DateTime))))));
+                this.thongKe_TinhDoanhThuTableAdapter.Fill(this.tt.ThongKe_TinhDoanhThu, ngaytemp, ngaytemp);
             }
             catch (System.Exception ex)
             {
                 //System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+            
             //tinh thong ke theo ngay
             if (radioButton1.Checked == true)
             {
                 try
                 {
-                    this.thongKe_TinhDoanhThuTableAdapter.Fill(this.tt.ThongKe_TinhDoanhThu, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateTimePicker1.Value, typeof(System.DateTime))))), new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateTimePicker2.Value, typeof(System.DateTime))))));
+                    this.thongKe_TinhDoanhThuTableAdapter.Fill(this.tt.ThongKe_TinhDoanhThu, dateTimePicker1.Value, dateTimePicker2.Value);
                 }
                 catch (System.Exception ex)
                 {
@@ -48,11 +50,21 @@ namespace nha_tro
                 //tinh sl da ban
                 int sl = 0;
                 int tongtien = 0;
+
                 for (int i = 0; i < thongKe_TinhDoanhThuDataGridView.RowCount - 1; i++)
                 {
-                    sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
-                    string dongiatheomasp = (thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString())).ToString();
-                    tongtien += (int.Parse(dongiatheomasp) * sl);
+                    if (thongKe_SPTableAdapter.kt_cokm_k(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString())) != null) //co km
+                    {
+                        sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
+                        string dongiatheomasp = (thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString())).ToString();
+                        tongtien += (int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString())) - ((int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString()))*int.Parse(thongKe_SPTableAdapter.kt_cokm_k(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString())).ToString()) /100);
+                    }
+                    else
+                    {
+                        sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
+                        string dongiatheomasp = (thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString())).ToString();
+                        tongtien += (int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString()));
+                    }
                 }
                 textBox4.Text = sl.ToString();
                 textBox3.Text = tongtien.ToString();
@@ -65,7 +77,7 @@ namespace nha_tro
                 string cuoithang = DateTime.Today.Year + "/" +DateTime.Today.Month + "/"+DateTime.DaysInMonth(DateTime.Today.Year, DateTime.Today.Month);
                 try
                 {
-                    this.thongKe_TinhDoanhThuTableAdapter.Fill(this.tt.ThongKe_TinhDoanhThu, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(Convert.ToDateTime(dauthang), typeof(System.DateTime))))), new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(Convert.ToDateTime(cuoithang), typeof(System.DateTime))))));
+                    this.thongKe_TinhDoanhThuTableAdapter.Fill(this.tt.ThongKe_TinhDoanhThu, Convert.ToDateTime( dauthang), Convert.ToDateTime(cuoithang));
                 }
                 catch (System.Exception ex)
                 {
@@ -76,9 +88,18 @@ namespace nha_tro
                 int tongtien = 0;
                 for (int i = 0; i < thongKe_TinhDoanhThuDataGridView.RowCount - 1; i++)
                 {
-                    sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
-                    int dongiatheomasp = int.Parse(thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString()).ToString());
-                    tongtien += (dongiatheomasp * sl);
+                    if (thongKe_SPTableAdapter.kt_cokm_k(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString())) != null) //co km
+                    {
+                        sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
+                        string dongiatheomasp = (thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString())).ToString();
+                        tongtien += (int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString())) - ((int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString())) * int.Parse(thongKe_SPTableAdapter.kt_cokm_k(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString())).ToString()) / 100);
+                    }
+                    else
+                    {
+                        sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
+                        string dongiatheomasp = (thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString())).ToString();
+                        tongtien += (int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString()));
+                    }
                 }
                 textBox4.Text = sl.ToString();
                 textBox3.Text = tongtien.ToString();
@@ -91,7 +112,7 @@ namespace nha_tro
                 string cuoinam = textBox1.Text + "/01/01" ;
                 try
                 {
-                    this.thongKe_TinhDoanhThuTableAdapter.Fill(this.tt.ThongKe_TinhDoanhThu, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(Convert.ToDateTime(daunam), typeof(System.DateTime))))), new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(Convert.ToDateTime(cuoinam), typeof(System.DateTime))))));
+                    this.thongKe_TinhDoanhThuTableAdapter.Fill(this.tt.ThongKe_TinhDoanhThu, Convert.ToDateTime( daunam),Convert.ToDateTime( cuoinam));
                 }
                 catch (System.Exception ex)
                 {
@@ -102,9 +123,18 @@ namespace nha_tro
                 int tongtien = 0;
                 for (int i = 0; i < thongKe_TinhDoanhThuDataGridView.RowCount - 1; i++)
                 {
-                    sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
-                    int dongiatheomasp = int.Parse(thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString()).ToString());
-                    tongtien += (dongiatheomasp * sl);
+                    if (thongKe_SPTableAdapter.kt_cokm_k(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString())) != null) //co km
+                    {
+                        sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
+                        string dongiatheomasp = (thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString())).ToString();
+                        tongtien += (int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString())) - ((int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString()))*int.Parse(thongKe_SPTableAdapter.kt_cokm_k(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString())).ToString()) /100);
+                    }
+                    else
+                    {
+                        sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
+                        string dongiatheomasp = (thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString())).ToString();
+                        tongtien += (int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString()));
+                    }
                 }
                 textBox4.Text = sl.ToString();
                 textBox3.Text = tongtien.ToString();
@@ -203,20 +233,47 @@ namespace nha_tro
             //this.sANPHAMTableAdapter.Fill(this.nghiepVu.SANPHAM);
             try
             {
-                this.thongKe_SPTableAdapter.Fill(this.tt.ThongKe_SP, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateTimePicker4.Value, typeof(System.DateTime))))), new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateTimePicker3.Value, typeof(System.DateTime))))), sANPHAMComboBox.SelectedValue.ToString());
+                this.thongKe_SPTableAdapter.Fill(this.tt.ThongKe_SP, dateTimePicker4.Value, dateTimePicker3.Value, sANPHAMComboBox.SelectedValue.ToString());
             }
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-
+            string dongia = thongKe_SPTableAdapter.select_dongia(sANPHAMComboBox.SelectedValue.ToString()).ToString();
+            int tongtienhientai = 0;
             for (int i = 0; i < thongKe_SPDataGridView.RowCount - 1; i++)
             {
                 sl += int.Parse(thongKe_SPDataGridView.Rows[i].Cells[2].Value.ToString());
+                
+
+                if (thongKe_SPTableAdapter.kt_cokm_k(int.Parse(thongKe_SPDataGridView.Rows[i].Cells[0].Value.ToString())) != null) //co km
+                {
+                    tongtienhientai = int.Parse(thongKe_SPDataGridView.Rows[i].Cells[2].Value.ToString())*int.Parse(dongia);
+                    tongtienbanduoc += tongtienhientai - (tongtienhientai * int.Parse(thongKe_SPTableAdapter.kt_cokm_k(int.Parse(thongKe_SPDataGridView.Rows[i].Cells[0].Value.ToString())).ToString())) /100;
+                }
+                else
+                {
+                    tongtienhientai = sl * int.Parse(dongia);
+                    tongtienbanduoc += tongtienhientai;
+                }    
             }
             textBox6.Text = sl.ToString();
-            string dongia = thongKe_SPTableAdapter.select_dongia(sANPHAMComboBox.SelectedValue.ToString()).ToString();
-            textBox5.Text = (sl * int.Parse(dongia)).ToString();
+            textBox5.Text = tongtienbanduoc.ToString();
+
+        }
+        int tongtienbanduoc = 0;
+        private void button4_Click(object sender, EventArgs e)
+        {
+            hd_thongke_Sp hd_Thongke_Sp = new hd_thongke_Sp(DateTime.Today.ToString("dd/MM/yyyy"), dateTimePicker4.Value.ToString(), dateTimePicker3.Value.ToString(), sANPHAMComboBox.Text, textBox6.Text, tongtienbanduoc.ToString(), sANPHAMComboBox.SelectedValue.ToString());
+            hd_Thongke_Sp.ShowDialog();
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+            decimal value = decimal.Parse(textBox5.Text, System.Globalization.NumberStyles.AllowThousands);
+            textBox5.Text = String.Format(culture, "{0:N0}", value);
+            textBox5.Select(textBox5.Text.Length, 0);
         }
     }
 }

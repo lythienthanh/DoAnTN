@@ -197,7 +197,7 @@ namespace nha_tro
                 //xu ly khuyen mai
 
                 //kt co khuyen mai hay k
-                if(kHUYENMAI_DKDataGridView.RowCount -1 != 0)
+                if (cT_KM_SPTableAdapter.SELECT_GIATRI(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[2].Value.ToString(), DateTime.Today).ToString() != null)
                 {
                     //lay don gia san pham
                     try
@@ -208,7 +208,6 @@ namespace nha_tro
                     {
                         System.Windows.Forms.MessageBox.Show(ex.Message);
                     }
-
                     int giatri = int.Parse(cT_KM_SPTableAdapter.SELECT_GIATRI(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[2].Value.ToString(), DateTime.Today).ToString());
                     int sl = int.Parse(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[3].Value.ToString());
                     int dongia = int.Parse(sANPHAM__sreach_giaDataGridView.Rows[0].Cells[0].Value.ToString());
