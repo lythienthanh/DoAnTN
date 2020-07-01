@@ -27,6 +27,8 @@ namespace nha_tro
 
         private void TimkiemSPKM_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'nghiepVu.KM_TENSP' table. You can move, or remove it, as needed.
+            this.kM_TENSPTableAdapter.Fill(this.nghiepVu.KM_TENSP);
             // TODO: This line of code loads data into the 'nghiepVu.KHUYENMAI' table. You can move, or remove it, as needed.
             this.kHUYENMAITableAdapter.Fill(this.nghiepVu.KHUYENMAI);
 
@@ -46,10 +48,7 @@ namespace nha_tro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TimKiemSanPhamDataContext db = new TimKiemSanPhamDataContext();
-            var x=from y in db.KHUYENMAIs where y.MASP.Contains(textBox1.Text) select y;
-            kHUYENMAIDataGridView.DataSource = x;
-
+            kM_TENSPTableAdapter.FillBy_TENSP(this.nghiepVu.KM_TENSP, textBox1.Text);
         }
     }
 }

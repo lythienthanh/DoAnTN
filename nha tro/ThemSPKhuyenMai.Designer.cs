@@ -70,13 +70,14 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kHUYENMAIDataGridView = new System.Windows.Forms.DataGridView();
-            this.button9 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button9 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             mAKHUYENMAILabel = new System.Windows.Forms.Label();
             mALINHKIENLabel = new System.Windows.Forms.Label();
             tENKHUYENMAILabel = new System.Windows.Forms.Label();
@@ -430,9 +431,9 @@
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
             this.kHUYENMAI2DataGridView.DataSource = this.kHUYENMAI2BindingSource;
-            this.kHUYENMAI2DataGridView.Location = new System.Drawing.Point(19, 281);
+            this.kHUYENMAI2DataGridView.Location = new System.Drawing.Point(634, 43);
             this.kHUYENMAI2DataGridView.Name = "kHUYENMAI2DataGridView";
-            this.kHUYENMAI2DataGridView.Size = new System.Drawing.Size(599, 173);
+            this.kHUYENMAI2DataGridView.Size = new System.Drawing.Size(523, 159);
             this.kHUYENMAI2DataGridView.TabIndex = 33;
             // 
             // dataGridViewTextBoxColumn11
@@ -470,60 +471,6 @@
             this.kHUYENMAIDataGridView.TabIndex = 32;
             this.kHUYENMAIDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kHUYENMAIDataGridView_CellClick_1);
             // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.Transparent;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.Location = new System.Drawing.Point(0, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(1224, 42);
-            this.button9.TabIndex = 34;
-            this.button9.Text = "Quản Lý Các Đợt Khuyến Mãi";
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(mAKHUYENMAILabel);
-            this.groupBox1.Controls.Add(this.mAKHUYENMAITextEdit);
-            this.groupBox1.Controls.Add(this.kHUYENMAI2DataGridView);
-            this.groupBox1.Controls.Add(this.sANPHAMComboBox);
-            this.groupBox1.Controls.Add(this.kHUYENMAIDataGridView);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(mALINHKIENLabel);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.tENKHUYENMAITextEdit);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(tENKHUYENMAILabel);
-            this.groupBox1.Controls.Add(gIATRILabel);
-            this.groupBox1.Controls.Add(this.gIATRISpinEdit);
-            this.groupBox1.Controls.Add(nGAYBDLabel);
-            this.groupBox1.Controls.Add(this.nGAYBDDateEdit);
-            this.groupBox1.Controls.Add(this.mALINHKIENTextEdit);
-            this.groupBox1.Controls.Add(nGAYKTLabel);
-            this.groupBox1.Controls.Add(this.nGAYKTDateEdit);
-            this.groupBox1.Location = new System.Drawing.Point(27, 48);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(624, 484);
-            this.groupBox1.TabIndex = 35;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin khuyến mãi";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 251);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 13);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Chi tiết khuyến mãi";
-            // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "MAKHUYENMAI";
@@ -548,11 +495,77 @@
             this.dataGridViewTextBoxColumn10.HeaderText = "Ngày kết thúc";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Transparent;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button9.Location = new System.Drawing.Point(0, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(1224, 42);
+            this.button9.TabIndex = 34;
+            this.button9.Text = "Quản Lý Các Đợt Khuyến Mãi";
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(mAKHUYENMAILabel);
+            this.groupBox1.Controls.Add(this.mAKHUYENMAITextEdit);
+            this.groupBox1.Controls.Add(this.kHUYENMAI2DataGridView);
+            this.groupBox1.Controls.Add(this.sANPHAMComboBox);
+            this.groupBox1.Controls.Add(this.kHUYENMAIDataGridView);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(mALINHKIENLabel);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.tENKHUYENMAITextEdit);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(tENKHUYENMAILabel);
+            this.groupBox1.Controls.Add(gIATRILabel);
+            this.groupBox1.Controls.Add(this.gIATRISpinEdit);
+            this.groupBox1.Controls.Add(nGAYBDLabel);
+            this.groupBox1.Controls.Add(this.nGAYBDDateEdit);
+            this.groupBox1.Controls.Add(this.mALINHKIENTextEdit);
+            this.groupBox1.Controls.Add(nGAYKTLabel);
+            this.groupBox1.Controls.Add(this.nGAYKTDateEdit);
+            this.groupBox1.Location = new System.Drawing.Point(27, 48);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1163, 221);
+            this.groupBox1.TabIndex = 35;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin khuyến mãi";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(631, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 13);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Chi tiết khuyến mãi";
+            // 
+            // button4
+            // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = global::nha_tro.Properties.Resources.Gakuseisean_Aire_Search;
+            this.button4.Location = new System.Drawing.Point(511, 13);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(73, 62);
+            this.button4.TabIndex = 35;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // ThemSPKhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1224, 544);
+            this.ClientSize = new System.Drawing.Size(1224, 293);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button9);
             this.Name = "ThemSPKhuyenMai";
@@ -638,5 +651,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.Button button4;
     }
 }

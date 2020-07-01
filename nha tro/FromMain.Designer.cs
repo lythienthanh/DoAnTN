@@ -535,6 +535,7 @@
             this.MH000000000000000017.Name = "MH000000000000000017";
             this.MH000000000000000017.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.MH000000000000000017.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.MH000000000000000017.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MH000000000000000017_ItemClick);
             // 
             // MH000000000000000011
@@ -809,7 +810,7 @@
             this.MH000000000000000032.Caption = "Loại Sản Phẩm";
             this.MH000000000000000032.Enabled = false;
             this.MH000000000000000032.Id = 39;
-            this.MH000000000000000032.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem12.ImageOptions.SvgImage")));
+            this.MH000000000000000032.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("MH000000000000000032.ImageOptions.SvgImage")));
             this.MH000000000000000032.Name = "MH000000000000000032";
             this.MH000000000000000032.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));

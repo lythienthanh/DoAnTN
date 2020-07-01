@@ -33,21 +33,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kHUYENMAIBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button9 = new System.Windows.Forms.Button();
+            this.kM_TENSPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nghiepVu = new nha_tro.NghiepVu();
+            this.kHUYENMAIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kHUYENMAITableAdapter = new nha_tro.NghiepVuTableAdapters.KHUYENMAITableAdapter();
             this.tableAdapterManager = new nha_tro.NghiepVuTableAdapters.TableAdapterManager();
-            this.button9 = new System.Windows.Forms.Button();
+            this.kM_TENSPTableAdapter = new nha_tro.NghiepVuTableAdapters.KM_TENSPTableAdapter();
+            this.mAKHUYENMAIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mALINHKIENDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tENKHUYENMAIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nGAYBDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nGAYKTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gIATRIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.kHUYENMAIDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kHUYENMAIBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kM_TENSPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kHUYENMAIBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // kHUYENMAIDataGridView
@@ -56,14 +60,15 @@
             this.kHUYENMAIDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.kHUYENMAIDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kHUYENMAIDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
-            this.kHUYENMAIDataGridView.DataSource = this.kHUYENMAIBindingSource;
+            this.mAKHUYENMAIDataGridViewTextBoxColumn,
+            this.mASPDataGridViewTextBoxColumn,
+            this.mALINHKIENDataGridViewTextBoxColumn,
+            this.tENKHUYENMAIDataGridViewTextBoxColumn,
+            this.nGAYBDDataGridViewTextBoxColumn,
+            this.nGAYKTDataGridViewTextBoxColumn,
+            this.gIATRIDataGridViewTextBoxColumn,
+            this.tENSPDataGridViewTextBoxColumn});
+            this.kHUYENMAIDataGridView.DataSource = this.kM_TENSPBindingSource;
             this.kHUYENMAIDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.kHUYENMAIDataGridView.Location = new System.Drawing.Point(0, 148);
             this.kHUYENMAIDataGridView.Name = "kHUYENMAIDataGridView";
@@ -97,57 +102,37 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridViewTextBoxColumn1
+            // button9
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "MAKHUYENMAI";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã khuyến mãi";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Transparent;
+            this.button9.Image = global::nha_tro.Properties.Resources.Gakuseisean_Aire_Search;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button9.Location = new System.Drawing.Point(0, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(723, 42);
+            this.button9.TabIndex = 29;
+            this.button9.Text = "Tìm kiếm Sản Phẩm Khuyến Mãi";
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button9.UseVisualStyleBackColor = false;
             // 
-            // dataGridViewTextBoxColumn2
+            // kM_TENSPBindingSource
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "MASP";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Mã sản phẩm";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "MALINHKIEN";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Mã linh kiện";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "TENKHUYENMAI";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Tên khuyến mãi";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "NGAYBD";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Ngày bắt đầu";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "NGAYKT";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Ngày kết thúc";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "GIATRI";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Giá trị";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // kHUYENMAIBindingSource
-            // 
-            this.kHUYENMAIBindingSource.DataMember = "KHUYENMAI";
-            this.kHUYENMAIBindingSource.DataSource = this.nghiepVu;
+            this.kM_TENSPBindingSource.DataMember = "KM_TENSP";
+            this.kM_TENSPBindingSource.DataSource = this.nghiepVu;
             // 
             // nghiepVu
             // 
             this.nghiepVu.DataSetName = "NghiepVu";
             this.nghiepVu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kHUYENMAIBindingSource
+            // 
+            this.kHUYENMAIBindingSource.DataMember = "KHUYENMAI";
+            this.kHUYENMAIBindingSource.DataSource = this.nghiepVu;
             // 
             // kHUYENMAITableAdapter
             // 
@@ -168,6 +153,7 @@
             this.tableAdapterManager.KHO1TableAdapter = null;
             this.tableAdapterManager.KHOTableAdapter = null;
             this.tableAdapterManager.KHUYENMAI_DKTableAdapter = null;
+            this.tableAdapterManager.KHUYENMAI_lk_malkTableAdapter = null;
             this.tableAdapterManager.KHUYENMAITableAdapter = this.kHUYENMAITableAdapter;
             this.tableAdapterManager.LAY_MANVbangTENDNTableAdapter = null;
             this.tableAdapterManager.LINHKIENTableAdapter = null;
@@ -183,22 +169,57 @@
             this.tableAdapterManager.TAIKHOANTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = nha_tro.NghiepVuTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // button9
+            // kM_TENSPTableAdapter
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.Transparent;
-            this.button9.Image = global::nha_tro.Properties.Resources.Gakuseisean_Aire_Search;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.Location = new System.Drawing.Point(0, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(723, 42);
-            this.button9.TabIndex = 29;
-            this.button9.Text = "Tìm kiếm Sản Phẩm Khuyến Mãi";
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button9.UseVisualStyleBackColor = false;
+            this.kM_TENSPTableAdapter.ClearBeforeFill = true;
+            // 
+            // mAKHUYENMAIDataGridViewTextBoxColumn
+            // 
+            this.mAKHUYENMAIDataGridViewTextBoxColumn.DataPropertyName = "MAKHUYENMAI";
+            this.mAKHUYENMAIDataGridViewTextBoxColumn.HeaderText = "Mã KM";
+            this.mAKHUYENMAIDataGridViewTextBoxColumn.Name = "mAKHUYENMAIDataGridViewTextBoxColumn";
+            // 
+            // mASPDataGridViewTextBoxColumn
+            // 
+            this.mASPDataGridViewTextBoxColumn.DataPropertyName = "MASP";
+            this.mASPDataGridViewTextBoxColumn.HeaderText = "Mã SP";
+            this.mASPDataGridViewTextBoxColumn.Name = "mASPDataGridViewTextBoxColumn";
+            // 
+            // mALINHKIENDataGridViewTextBoxColumn
+            // 
+            this.mALINHKIENDataGridViewTextBoxColumn.DataPropertyName = "MALINHKIEN";
+            this.mALINHKIENDataGridViewTextBoxColumn.HeaderText = "Mã LK";
+            this.mALINHKIENDataGridViewTextBoxColumn.Name = "mALINHKIENDataGridViewTextBoxColumn";
+            // 
+            // tENKHUYENMAIDataGridViewTextBoxColumn
+            // 
+            this.tENKHUYENMAIDataGridViewTextBoxColumn.DataPropertyName = "TENKHUYENMAI";
+            this.tENKHUYENMAIDataGridViewTextBoxColumn.HeaderText = "Tên KM";
+            this.tENKHUYENMAIDataGridViewTextBoxColumn.Name = "tENKHUYENMAIDataGridViewTextBoxColumn";
+            // 
+            // nGAYBDDataGridViewTextBoxColumn
+            // 
+            this.nGAYBDDataGridViewTextBoxColumn.DataPropertyName = "NGAYBD";
+            this.nGAYBDDataGridViewTextBoxColumn.HeaderText = "Ngày BD";
+            this.nGAYBDDataGridViewTextBoxColumn.Name = "nGAYBDDataGridViewTextBoxColumn";
+            // 
+            // nGAYKTDataGridViewTextBoxColumn
+            // 
+            this.nGAYKTDataGridViewTextBoxColumn.DataPropertyName = "NGAYKT";
+            this.nGAYKTDataGridViewTextBoxColumn.HeaderText = "Ngày KT";
+            this.nGAYKTDataGridViewTextBoxColumn.Name = "nGAYKTDataGridViewTextBoxColumn";
+            // 
+            // gIATRIDataGridViewTextBoxColumn
+            // 
+            this.gIATRIDataGridViewTextBoxColumn.DataPropertyName = "GIATRI";
+            this.gIATRIDataGridViewTextBoxColumn.HeaderText = "Giá trị";
+            this.gIATRIDataGridViewTextBoxColumn.Name = "gIATRIDataGridViewTextBoxColumn";
+            // 
+            // tENSPDataGridViewTextBoxColumn
+            // 
+            this.tENSPDataGridViewTextBoxColumn.DataPropertyName = "TENSP";
+            this.tENSPDataGridViewTextBoxColumn.HeaderText = "Tên SP";
+            this.tENSPDataGridViewTextBoxColumn.Name = "tENSPDataGridViewTextBoxColumn";
             // 
             // TimkiemSPKM
             // 
@@ -214,8 +235,9 @@
             this.Text = "TimkiemSPKM";
             this.Load += new System.EventHandler(this.TimkiemSPKM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kHUYENMAIDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kHUYENMAIBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kM_TENSPBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kHUYENMAIBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,13 +253,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.BindingSource kM_TENSPBindingSource;
+        private NghiepVuTableAdapters.KM_TENSPTableAdapter kM_TENSPTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mAKHUYENMAIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mASPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mALINHKIENDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tENKHUYENMAIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nGAYBDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nGAYKTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gIATRIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tENSPDataGridViewTextBoxColumn;
     }
 }

@@ -118,5 +118,11 @@ namespace nha_tro
             kHUYENMAI2TableAdapter.Fill(tt.KHUYENMAI2, kHUYENMAIDataGridView.CurrentRow.Cells[0].Value.ToString());
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TimkiemSPKM frm = new TimkiemSPKM();
+            frm.ShowDialog();
+        }
     }
 }
