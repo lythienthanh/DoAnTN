@@ -223,15 +223,15 @@ namespace nha_tro
 
         private void bAOHANHComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-/*            try
+            try
             {
                 this.dataTable2TableAdapter.Fill(this.tt.DataTable2, ((int)(System.Convert.ChangeType(bAOHANHComboBox.SelectedValue.ToString(), typeof(int)))));
             }
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
-            }*/
-            //textBox2.Text = bAOHANHComboBox.SelectedValue.ToString();
+            }
+            textBox2.Text = bAOHANHComboBox.SelectedValue.ToString();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -274,7 +274,7 @@ namespace nha_tro
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
-            }*/
+            }
 
         }
 

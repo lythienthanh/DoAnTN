@@ -158,6 +158,7 @@ namespace nha_tro
                     //System.Windows.Forms.MessageBox.Show(ex.Message);
                 }
                 MessageBox.Show("Thành Công");
+                madoitra = hOADON_ttTableAdapter.select_madoitra(int.Parse(sELECT_DATA_HDComboBox.Text));
             }
             else
             {
@@ -171,7 +172,7 @@ namespace nha_tro
 
         }
         ThongKe ThongKe = new ThongKe();
-
+        int mahdtra = 0;
         private void button4_Click(object sender, EventArgs e)
         {
             try
@@ -205,7 +206,7 @@ namespace nha_tro
                 }
                 string MaNV = tAIKHOAN_TIMMANVDataGridView.Rows[0].Cells[0].Value.ToString();
                 hOADON_ttTableAdapter.Insert_doitra("temp", "MLHD06", DateTime.Today, "temp", MaNV,textBox2.Text, dOITRAComboBox.SelectedValue.ToString(),null);
-
+                mahdtra = int.Parse(hOADON_ttTableAdapter.select_MAHD().ToString());
                 //loaddata
                 try
                 {
@@ -216,10 +217,10 @@ namespace nha_tro
                     // System.Windows.Forms.MessageBox.Show(ex.Message);
                 }
                 //xuat hoa don
-/*                ThongKe.xuatfile_HD_DoiTra(xuat_hd_chenhlechDataGridView, sELECT_DATA_HDComboBox.SelectedValue.ToString(), textBox2.Text, DateTime.Now.ToString(), "Hd_Doi_SP");
-                tempMaDoiTra = "";*/
+                /*                ThongKe.xuatfile_HD_DoiTra(xuat_hd_chenhlechDataGridView, sELECT_DATA_HDComboBox.SelectedValue.ToString(), textBox2.Text, DateTime.Now.ToString(), "Hd_Doi_SP");
+                                tempMaDoiTra = "";*/
 
-
+                madoitra = hOADON_ttTableAdapter.select_madoitra(int.Parse(sELECT_DATA_HDComboBox.Text));
 
             }
             catch(Exception ex)
@@ -300,7 +301,7 @@ namespace nha_tro
         {
 
         }
-
+        string madoitra = "";
         private void sELECT_DATA_HDComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -320,7 +321,7 @@ namespace nha_tro
             {
                // System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-
+            
         }
 
         private void selectSPDaMuaTheoMaHDComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -364,20 +365,36 @@ namespace nha_tro
 
         private void dOITRAComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-/*            try
+            try
             {
                 this.dOITRA_SPTableAdapter.Fill(this.tt.DOITRA_SP, dOITRAComboBox.SelectedValue.ToString());
             }
             catch (System.Exception ex)
             {
                 //System.Windows.Forms.MessageBox.Show(ex.Message);
-            }*/
+            }
+            madoitra = hOADON_ttTableAdapter.select_madoitra(int.Parse(sELECT_DATA_HDComboBox.Text));
         }
 
         private void fill_TIMMANVToolStripButton_Click(object sender, EventArgs e)
         {
 
 
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            madoitra = hOADON_ttTableAdapter.select_madoitra(int.Parse(sELECT_DATA_HDComboBox.Text));
+            if (string.Compare(textBox2.Text.Substring(0,1),"-") == 0)
+            {
+                hd_doitra hd_Doitra = new hd_doitra(DateTime.Today.ToString("dd/MM/yyyy"), mahdtra.ToString(), xuat_hd_chenhlechDataGridView.Rows[0].Cells[0].Value.ToString(), sANPHAMComboBox1.Text.ToString(), selectSPDaMuaTheoMaHDComboBox.Text.ToString(),"0", textBox2.Text.Substring(1, textBox2.Text.Length - 1), madoitra);
+                hd_Doitra.ShowDialog();
+            }
+            else
+            {
+                hd_doitra hd_Doitra = new hd_doitra(DateTime.Today.ToString("dd/MM/yyyy"), mahdtra.ToString(), xuat_hd_chenhlechDataGridView.Rows[0].Cells[0].Value.ToString(), sANPHAMComboBox1.Text.ToString(), selectSPDaMuaTheoMaHDComboBox.Text.ToString(), textBox2.Text, "0", madoitra);
+                hd_Doitra.ShowDialog();
+            }
         }
     }
 }

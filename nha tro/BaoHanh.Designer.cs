@@ -88,11 +88,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.xuat_hd_chenhlechDataGridView = new System.Windows.Forms.DataGridView();
-            this.mAHDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tENSPDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cHENHLECHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sPLayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xuat_hd_chenhlechBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.sANPHAMComboBox1 = new System.Windows.Forms.ComboBox();
@@ -134,10 +129,11 @@
             this.sP_LOIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sP_LOITableAdapter = new nha_tro.ttTableAdapters.SP_LOITableAdapter();
             this.tAIKHOAN_TIMMANVTableAdapter = new nha_tro.ttTableAdapters.TAIKHOAN_TIMMANVTableAdapter();
-            this.fill_TIMMANVToolStrip = new System.Windows.Forms.ToolStrip();
-            this.tENDNToolStripLabel = new System.Windows.Forms.ToolStripLabel();
-            this.tENDNToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.fill_TIMMANVToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.mAHDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tENSPDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cHENHLECHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sPLayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             tENLOISXLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
@@ -181,7 +177,6 @@
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sP_LOIBindingSource)).BeginInit();
-            this.fill_TIMMANVToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // tENLOISXLabel
@@ -216,9 +211,9 @@
             label3.AutoSize = true;
             label3.Location = new System.Drawing.Point(17, 21);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(65, 13);
+            label3.Size = new System.Drawing.Size(83, 13);
             label3.TabIndex = 26;
-            label3.Text = "Mã hóa đơn";
+            label3.Text = "Mã hóa đơn đổi";
             label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
@@ -680,6 +675,7 @@
             this.button5.Size = new System.Drawing.Size(72, 48);
             this.button5.TabIndex = 33;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // textBox3
             // 
@@ -713,37 +709,6 @@
             this.xuat_hd_chenhlechDataGridView.Name = "xuat_hd_chenhlechDataGridView";
             this.xuat_hd_chenhlechDataGridView.Size = new System.Drawing.Size(486, 91);
             this.xuat_hd_chenhlechDataGridView.TabIndex = 30;
-            // 
-            // mAHDDataGridViewTextBoxColumn1
-            // 
-            this.mAHDDataGridViewTextBoxColumn1.DataPropertyName = "MAHD";
-            this.mAHDDataGridViewTextBoxColumn1.HeaderText = "Mã hóa đơn";
-            this.mAHDDataGridViewTextBoxColumn1.Name = "mAHDDataGridViewTextBoxColumn1";
-            this.mAHDDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // tENSPDataGridViewTextBoxColumn1
-            // 
-            this.tENSPDataGridViewTextBoxColumn1.DataPropertyName = "TENSP";
-            this.tENSPDataGridViewTextBoxColumn1.HeaderText = "Tên sản phẩm";
-            this.tENSPDataGridViewTextBoxColumn1.Name = "tENSPDataGridViewTextBoxColumn1";
-            // 
-            // cHENHLECHDataGridViewTextBoxColumn
-            // 
-            this.cHENHLECHDataGridViewTextBoxColumn.DataPropertyName = "CHENHLECH";
-            this.cHENHLECHDataGridViewTextBoxColumn.HeaderText = "Chênh lệch";
-            this.cHENHLECHDataGridViewTextBoxColumn.Name = "cHENHLECHDataGridViewTextBoxColumn";
-            // 
-            // maNVDataGridViewTextBoxColumn
-            // 
-            this.maNVDataGridViewTextBoxColumn.DataPropertyName = "MaNV";
-            this.maNVDataGridViewTextBoxColumn.HeaderText = "Mã nhân viên";
-            this.maNVDataGridViewTextBoxColumn.Name = "maNVDataGridViewTextBoxColumn";
-            // 
-            // sPLayDataGridViewTextBoxColumn
-            // 
-            this.sPLayDataGridViewTextBoxColumn.DataPropertyName = "SPLay";
-            this.sPLayDataGridViewTextBoxColumn.HeaderText = "Sản phẩm lấy";
-            this.sPLayDataGridViewTextBoxColumn.Name = "sPLayDataGridViewTextBoxColumn";
             // 
             // xuat_hd_chenhlechBindingSource
             // 
@@ -1043,37 +1008,36 @@
             // 
             this.tAIKHOAN_TIMMANVTableAdapter.ClearBeforeFill = true;
             // 
-            // fill_TIMMANVToolStrip
+            // mAHDDataGridViewTextBoxColumn1
             // 
-            this.fill_TIMMANVToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tENDNToolStripLabel,
-            this.tENDNToolStripTextBox,
-            this.fill_TIMMANVToolStripButton});
-            this.fill_TIMMANVToolStrip.Location = new System.Drawing.Point(0, 42);
-            this.fill_TIMMANVToolStrip.Name = "fill_TIMMANVToolStrip";
-            this.fill_TIMMANVToolStrip.Size = new System.Drawing.Size(1374, 25);
-            this.fill_TIMMANVToolStrip.TabIndex = 32;
-            this.fill_TIMMANVToolStrip.Text = "fill_TIMMANVToolStrip";
+            this.mAHDDataGridViewTextBoxColumn1.DataPropertyName = "MAHD";
+            this.mAHDDataGridViewTextBoxColumn1.HeaderText = "Mã hóa đơn đổi";
+            this.mAHDDataGridViewTextBoxColumn1.Name = "mAHDDataGridViewTextBoxColumn1";
+            this.mAHDDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // tENDNToolStripLabel
+            // tENSPDataGridViewTextBoxColumn1
             // 
-            this.tENDNToolStripLabel.Name = "tENDNToolStripLabel";
-            this.tENDNToolStripLabel.Size = new System.Drawing.Size(48, 22);
-            this.tENDNToolStripLabel.Text = "TENDN:";
+            this.tENSPDataGridViewTextBoxColumn1.DataPropertyName = "TENSP";
+            this.tENSPDataGridViewTextBoxColumn1.HeaderText = "Tên sản phẩm";
+            this.tENSPDataGridViewTextBoxColumn1.Name = "tENSPDataGridViewTextBoxColumn1";
             // 
-            // tENDNToolStripTextBox
+            // cHENHLECHDataGridViewTextBoxColumn
             // 
-            this.tENDNToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tENDNToolStripTextBox.Name = "tENDNToolStripTextBox";
-            this.tENDNToolStripTextBox.Size = new System.Drawing.Size(100, 25);
+            this.cHENHLECHDataGridViewTextBoxColumn.DataPropertyName = "CHENHLECH";
+            this.cHENHLECHDataGridViewTextBoxColumn.HeaderText = "Chênh lệch";
+            this.cHENHLECHDataGridViewTextBoxColumn.Name = "cHENHLECHDataGridViewTextBoxColumn";
             // 
-            // fill_TIMMANVToolStripButton
+            // maNVDataGridViewTextBoxColumn
             // 
-            this.fill_TIMMANVToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fill_TIMMANVToolStripButton.Name = "fill_TIMMANVToolStripButton";
-            this.fill_TIMMANVToolStripButton.Size = new System.Drawing.Size(86, 22);
-            this.fill_TIMMANVToolStripButton.Text = "Fill_TIMMANV";
-            this.fill_TIMMANVToolStripButton.Click += new System.EventHandler(this.fill_TIMMANVToolStripButton_Click);
+            this.maNVDataGridViewTextBoxColumn.DataPropertyName = "MaNV";
+            this.maNVDataGridViewTextBoxColumn.HeaderText = "Mã nhân viên";
+            this.maNVDataGridViewTextBoxColumn.Name = "maNVDataGridViewTextBoxColumn";
+            // 
+            // sPLayDataGridViewTextBoxColumn
+            // 
+            this.sPLayDataGridViewTextBoxColumn.DataPropertyName = "SPLay";
+            this.sPLayDataGridViewTextBoxColumn.HeaderText = "Sản phẩm lấy";
+            this.sPLayDataGridViewTextBoxColumn.Name = "sPLayDataGridViewTextBoxColumn";
             // 
             // BaoHanh
             // 
@@ -1081,7 +1045,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1370, 647);
-            this.Controls.Add(this.fill_TIMMANVToolStrip);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox5);
@@ -1128,10 +1091,7 @@
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sP_LOIBindingSource)).EndInit();
-            this.fill_TIMMANVToolStrip.ResumeLayout(false);
-            this.fill_TIMMANVToolStrip.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1201,11 +1161,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mAHDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tENSPDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cHENHLECHDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maNVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sPLayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mAHDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mAKHDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tENKHDataGridViewTextBoxColumn;
@@ -1229,12 +1184,13 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.BindingSource tAIKHOAN_TIMMANVBindingSource;
         private ttTableAdapters.TAIKHOAN_TIMMANVTableAdapter tAIKHOAN_TIMMANVTableAdapter;
-        private System.Windows.Forms.ToolStrip fill_TIMMANVToolStrip;
-        private System.Windows.Forms.ToolStripLabel tENDNToolStripLabel;
-        private System.Windows.Forms.ToolStripTextBox tENDNToolStripTextBox;
-        private System.Windows.Forms.ToolStripButton fill_TIMMANVToolStripButton;
         private System.Windows.Forms.DataGridView tAIKHOAN_TIMMANVDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mAHDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tENSPDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cHENHLECHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maNVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sPLayDataGridViewTextBoxColumn;
     }
 }
