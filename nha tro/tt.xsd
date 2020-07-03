@@ -99,7 +99,7 @@ SELECT MAHD, MANCC, MALOAIHD, NGAYLAP, MaTraGop, MaNV FROM HOADON WHERE (MAHD = 
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="DTDD.dbo.HOADON" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="select_madoitra" Modifier="Public" Name="select_madoitra" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="select_madoitra">
+              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="DTDD.dbo.HOADON" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="select_madoitra" Modifier="Public" Name="select_madoitra" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="select_madoitra">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        MaDoiTra
@@ -111,7 +111,7 @@ WHERE        (MAHD = @mahd)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="DTDD.dbo.HOADON" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="select_MAHD" Modifier="Public" Name="select_MAHD" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="select_MAHD">
+              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="DTDD.dbo.HOADON" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="select_MAHD" Modifier="Public" Name="select_MAHD" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="select_MAHD">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>select top 1 MAHD from HOADON order by MAHD desc</CommandText>
@@ -119,7 +119,7 @@ WHERE        (MAHD = @mahd)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Update_MAHD_CHECHLENH" Modifier="Public" Name="Update_MAHD_CHECHLENH" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="Update_MAHD_CHECHLENH">
+              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Update_MAHD_CHECHLENH" Modifier="Public" Name="Update_MAHD_CHECHLENH" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="Update_MAHD_CHECHLENH">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>update HOADON
@@ -133,7 +133,7 @@ WHERE MAHD=@MAHD</CommandText>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="updateThanhToanTG" Modifier="Public" Name="updateThanhToanTG" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="updateThanhToanTG">
+              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="updateThanhToanTG" Modifier="Public" Name="updateThanhToanTG" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="updateThanhToanTG">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>update HOADON
@@ -752,6 +752,19 @@ SELECT MAKHUYENMAI, TENKHUYENMAI, NGAYBD, NGAYKT, MALINHKIEN, MASP, GIATRI FROM 
               <Mapping SourceColumn="GIATRI" DataSetColumn="GIATRI" />
             </Mappings>
             <Sources>
+              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM KHUYENMAI
+WHERE        (MAKHUYENMAI = @MAKM) AND (MASP = @MASP) AND (MALINHKIEN = @MALINHKIEN)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="MAKM" ColumnName="MAKHUYENMAI" DataSourceName="DTDD.dbo.KHUYENMAI" DataTypeServer="char(20)" DbType="AnsiString" Direction="Input" ParameterName="@MAKM" Precision="0" ProviderType="Char" Scale="0" Size="20" SourceColumn="MAKHUYENMAI" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="MASP" ColumnName="MASP" DataSourceName="DTDD.dbo.KHUYENMAI" DataTypeServer="char(20)" DbType="AnsiString" Direction="Input" ParameterName="@MASP" Precision="0" ProviderType="Char" Scale="0" Size="20" SourceColumn="MASP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="MALINHKIEN" ColumnName="MALINHKIEN" DataSourceName="DTDD.dbo.KHUYENMAI" DataTypeServer="char(20)" DbType="AnsiString" Direction="Input" ParameterName="@MALINHKIEN" Precision="0" ProviderType="Char" Scale="0" Size="20" SourceColumn="MALINHKIEN" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
               <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="DTDD.dbo.KHUYENMAI" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy_KM" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="FillBy_KM" GetMethodModifier="Public" GetMethodName="GetDataBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy_KM">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
@@ -761,7 +774,7 @@ FROM            KHUYENMAI</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="kt_CoKMkhong" Modifier="Public" Name="kt_CoKMkhong" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="kt_CoKMkhong">
+              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="kt_CoKMkhong" Modifier="Public" Name="kt_CoKMkhong" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="kt_CoKMkhong">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT COUNT(*) FROM KHUYENMAI where MASP = @MASP and @NgayHT &lt; NGAYKT and NGAYBD &lt; @NgayHT</CommandText>
@@ -772,7 +785,7 @@ FROM            KHUYENMAI</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="DTDD.dbo.KHUYENMAI" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="SELECT_GIATRI" Modifier="Public" Name="SELECT_GIATRI" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="SELECT_GIATRI">
+              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectName="DTDD.dbo.KHUYENMAI" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="SELECT_GIATRI" Modifier="Public" Name="SELECT_GIATRI" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="SELECT_GIATRI">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>select  GIATRI  from KHUYENMAI where MASP = @masp and @NGAYHIENTAI &lt; NGAYKT</CommandText>
@@ -2686,7 +2699,20 @@ SELECT MASP, MALINHKIEN, GIATRI, MAKHUYENMAI FROM KHUYENMAI WHERE (MAKHUYENMAI =
               <Mapping SourceColumn="GIATRI" DataSetColumn="GIATRI" />
               <Mapping SourceColumn="MAKHUYENMAI" DataSetColumn="MAKHUYENMAI" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="DTDDConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT KHUYENMAI.MASP, KHUYENMAI.MALINHKIEN, KHUYENMAI.GIATRI, KHUYENMAI.MAKHUYENMAI, SANPHAM.TENSP
+FROM            KHUYENMAI INNER JOIN
+                         SANPHAM ON KHUYENMAI.MASP = SANPHAM.MASP AND KHUYENMAI.MAKHUYENMAI = @makm</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="makm" ColumnName="MAKHUYENMAI" DataSourceName="DTDD.dbo.KHUYENMAI" DataTypeServer="char(20)" DbType="AnsiString" Direction="Input" ParameterName="@makm" Precision="0" ProviderType="Char" Scale="0" Size="20" SourceColumn="MAKHUYENMAI" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CT_HOADON_LINHKIENTableAdapter" GeneratorDataComponentClassName="CT_HOADON_LINHKIENTableAdapter" Name="CT_HOADON_LINHKIEN" UserDataComponentName="CT_HOADON_LINHKIENTableAdapter">
             <MainSource>

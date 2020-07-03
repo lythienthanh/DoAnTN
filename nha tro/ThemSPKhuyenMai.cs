@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraEditors.Filtering.Templates;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,8 @@ namespace nha_tro
 
         private void ThemSPKhuyenMai_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'nghiepVu1.LINHKIEN' table. You can move, or remove it, as needed.
+            this.lINHKIENTableAdapter.Fill(this.nghiepVu1.LINHKIEN);
             // TODO: This line of code loads data into the 'nghiepVu1.SANPHAM' table. You can move, or remove it, as needed.
             this.sANPHAMTableAdapter1.Fill(this.nghiepVu1.SANPHAM);
             // TODO: This line of code loads data into the 'nghiepVu1.KHUYENMAI' table. You can move, or remove it, as needed.
@@ -35,7 +38,31 @@ namespace nha_tro
            /* this.sANPHAMTableAdapter.Fill(this.nghiepVu.SANPHAM);*/
             // TODO: This line of code loads data into the 'tt.KHUYENMAI' table. You can move, or remove it, as needed.
             this.kHUYENMAITableAdapter.Fill(this.tt.KHUYENMAI);
-            
+
+            kHUYENMAIDataGridView.BorderStyle = BorderStyle.None;
+            kHUYENMAIDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            kHUYENMAIDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            kHUYENMAIDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            kHUYENMAIDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            kHUYENMAIDataGridView.BackgroundColor = Color.White;
+
+            kHUYENMAIDataGridView.EnableHeadersVisualStyles = false;
+            kHUYENMAIDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            kHUYENMAIDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            kHUYENMAIDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            kHUYENMAI2DataGridView.BorderStyle = BorderStyle.None;
+            kHUYENMAI2DataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            kHUYENMAI2DataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            kHUYENMAI2DataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            kHUYENMAI2DataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            kHUYENMAI2DataGridView.BackgroundColor = Color.White;
+
+            kHUYENMAI2DataGridView.EnableHeadersVisualStyles = false;
+            kHUYENMAI2DataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            kHUYENMAI2DataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            kHUYENMAI2DataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
         }
 
         
@@ -72,7 +99,7 @@ namespace nha_tro
         {
             try
             {
-                this.kHUYENMAITableAdapter.Insert(mAKHUYENMAITextEdit.Text, tENKHUYENMAITextEdit.Text, Convert.ToDateTime(nGAYBDDateEdit.Text), Convert.ToDateTime(nGAYKTDateEdit.Text), mALINHKIENTextEdit.Text, sANPHAMComboBox.SelectedValue.ToString(), double.Parse(gIATRISpinEdit.Text));
+                this.kHUYENMAITableAdapter.Insert(mAKHUYENMAITextEdit.Text, tENKHUYENMAITextEdit.Text, Convert.ToDateTime(nGAYBDDateEdit.Text), Convert.ToDateTime(nGAYKTDateEdit.Text), lINHKIENComboBox.SelectedValue.ToString(), sANPHAMComboBox.SelectedValue.ToString(), double.Parse(gIATRISpinEdit.Text));
 
 
                 this.kHUYENMAITableAdapter.Fill(this.tt.KHUYENMAI);
@@ -87,7 +114,8 @@ namespace nha_tro
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.kHUYENMAITableAdapter.Delete(mAKHUYENMAITextEdit.Text, tENKHUYENMAITextEdit.Text, Convert.ToDateTime(nGAYBDDateEdit.Text), Convert.ToDateTime(nGAYKTDateEdit.Text), mALINHKIENTextEdit.Text, sANPHAMComboBox.SelectedValue.ToString(), double.Parse(gIATRISpinEdit.Text));
+            //this.kHUYENMAITableAdapter.Delete(mAKHUYENMAITextEdit.Text, tENKHUYENMAITextEdit.Text, Convert.ToDateTime(nGAYBDDateEdit.Text), Convert.ToDateTime(nGAYKTDateEdit.Text), lINHKIENComboBox.SelectedValue.ToString(), sANPHAMComboBox.SelectedValue.ToString(), double.Parse(gIATRISpinEdit.Text));
+            kHUYENMAITableAdapter.DeleteQuery(mAKHUYENMAITextEdit.Text, sANPHAMComboBox.SelectedValue.ToString(), lINHKIENComboBox.SelectedValue.ToString());
             this.kHUYENMAITableAdapter.Fill(tt.KHUYENMAI);
         
         }
@@ -96,7 +124,7 @@ namespace nha_tro
         {
             try
             {
-                this.kHUYENMAITableAdapter1.UpdateKHUYENMAI(sANPHAMComboBox.SelectedValue.ToString(), mALINHKIENTextEdit.Text, tENKHUYENMAITextEdit.Text, Convert.ToDateTime(nGAYBDDateEdit.Text), Convert.ToDateTime(nGAYKTDateEdit.Text), double.Parse(gIATRISpinEdit.Text), mAKHUYENMAITextEdit.Text);
+                this.kHUYENMAITableAdapter1.UpdateKHUYENMAI(sANPHAMComboBox.SelectedValue.ToString(), lINHKIENComboBox.SelectedValue.ToString(), tENKHUYENMAITextEdit.Text, Convert.ToDateTime(nGAYBDDateEdit.Text), Convert.ToDateTime(nGAYKTDateEdit.Text), double.Parse(gIATRISpinEdit.Text), mAKHUYENMAITextEdit.Text);
                 this.kHUYENMAITableAdapter.Fill(this.tt.KHUYENMAI);
             }
             catch
@@ -115,7 +143,35 @@ namespace nha_tro
         
         private void kHUYENMAIDataGridView_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            kHUYENMAI2TableAdapter.Fill(tt.KHUYENMAI2, kHUYENMAIDataGridView.CurrentRow.Cells[0].Value.ToString());
+            try
+            {
+                kHUYENMAI2TableAdapter.Fill(tt.KHUYENMAI2, kHUYENMAIDataGridView.CurrentRow.Cells[0].Value.ToString());
+                mAKHUYENMAITextEdit.Text = kHUYENMAIDataGridView.CurrentRow.Cells[0].Value.ToString();
+                tENKHUYENMAITextEdit.Text = kHUYENMAIDataGridView.CurrentRow.Cells[1].Value.ToString();
+                DateTime ngaybd = Convert.ToDateTime(kHUYENMAIDataGridView.CurrentRow.Cells[2].Value.ToString());
+                nGAYBDDateEdit.Text = ngaybd.ToString("MM/dd/yyyy");
+                DateTime ngaykt = Convert.ToDateTime(kHUYENMAIDataGridView.CurrentRow.Cells[3].Value.ToString());
+                nGAYKTDateEdit.Text = ngaykt.ToString("MM/dd/yyyy");
+
+                int temp = DateTime.Today.Date.CompareTo(Convert.ToDateTime(kHUYENMAIDataGridView.CurrentRow.Cells[2].Value.ToString()));
+
+                if ( temp < 0)
+                {
+                    button2.Enabled = true;
+                    button3.Enabled = true;
+                }
+                else
+                {
+                    button2.Enabled = false;
+                    button3.Enabled = false;
+                }
+                kHUYENMAI2TableAdapter.FillBy(this.tt.KHUYENMAI2, kHUYENMAIDataGridView.CurrentRow.Cells[0].Value.ToString());
+            }
+            catch
+            {
+                button2.Enabled = false;
+                button3.Enabled = false;
+            }
 
         }
 

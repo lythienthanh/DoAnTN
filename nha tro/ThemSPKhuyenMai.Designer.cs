@@ -48,7 +48,6 @@
             this.tableAdapterManager2 = new nha_tro.NghiepVuTableAdapters.TableAdapterManager();
             this.sANPHAMTableAdapter1 = new nha_tro.NghiepVuTableAdapters.SANPHAMTableAdapter();
             this.mAKHUYENMAITextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.mALINHKIENTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.tENKHUYENMAITextEdit = new DevExpress.XtraEditors.TextEdit();
             this.nGAYBDDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.nGAYKTDateEdit = new DevExpress.XtraEditors.DateEdit();
@@ -66,9 +65,6 @@
             this.kHUYENMAI2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kHUYENMAI2TableAdapter = new nha_tro.ttTableAdapters.KHUYENMAI2TableAdapter();
             this.kHUYENMAI2DataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kHUYENMAIDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,8 +72,15 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button9 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lINHKIENComboBox = new System.Windows.Forms.ComboBox();
+            this.lINHKIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button4 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lINHKIENTableAdapter = new nha_tro.NghiepVuTableAdapters.LINHKIENTableAdapter();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             mAKHUYENMAILabel = new System.Windows.Forms.Label();
             mALINHKIENLabel = new System.Windows.Forms.Label();
             tENKHUYENMAILabel = new System.Windows.Forms.Label();
@@ -91,7 +94,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHUYENMAIBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mAKHUYENMAITextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mALINHKIENTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tENKHUYENMAITextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGAYBDDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGAYBDDateEdit.Properties)).BeginInit();
@@ -106,6 +108,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kHUYENMAI2DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHUYENMAIDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lINHKIENBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mAKHUYENMAILabel
@@ -113,54 +116,54 @@
             mAKHUYENMAILabel.AutoSize = true;
             mAKHUYENMAILabel.Location = new System.Drawing.Point(16, 28);
             mAKHUYENMAILabel.Name = "mAKHUYENMAILabel";
-            mAKHUYENMAILabel.Size = new System.Drawing.Size(90, 13);
+            mAKHUYENMAILabel.Size = new System.Drawing.Size(82, 13);
             mAKHUYENMAILabel.TabIndex = 15;
-            mAKHUYENMAILabel.Text = "MAKHUYENMAI:";
+            mAKHUYENMAILabel.Text = "Mã khuyến mãi:";
             // 
             // mALINHKIENLabel
             // 
             mALINHKIENLabel.AutoSize = true;
             mALINHKIENLabel.Location = new System.Drawing.Point(19, 81);
             mALINHKIENLabel.Name = "mALINHKIENLabel";
-            mALINHKIENLabel.Size = new System.Drawing.Size(76, 13);
+            mALINHKIENLabel.Size = new System.Drawing.Size(67, 13);
             mALINHKIENLabel.TabIndex = 19;
-            mALINHKIENLabel.Text = "MALINHKIEN:";
+            mALINHKIENLabel.Text = "Mã linh kiện:";
             // 
             // tENKHUYENMAILabel
             // 
             tENKHUYENMAILabel.AutoSize = true;
             tENKHUYENMAILabel.Location = new System.Drawing.Point(19, 107);
             tENKHUYENMAILabel.Name = "tENKHUYENMAILabel";
-            tENKHUYENMAILabel.Size = new System.Drawing.Size(96, 13);
+            tENKHUYENMAILabel.Size = new System.Drawing.Size(105, 13);
             tENKHUYENMAILabel.TabIndex = 21;
-            tENKHUYENMAILabel.Text = "TENKHUYENMAI:";
+            tENKHUYENMAILabel.Text = "Tên đợt khuyến mãi:";
             // 
             // nGAYBDLabel
             // 
             nGAYBDLabel.AutoSize = true;
             nGAYBDLabel.Location = new System.Drawing.Point(19, 133);
             nGAYBDLabel.Name = "nGAYBDLabel";
-            nGAYBDLabel.Size = new System.Drawing.Size(55, 13);
+            nGAYBDLabel.Size = new System.Drawing.Size(75, 13);
             nGAYBDLabel.TabIndex = 23;
-            nGAYBDLabel.Text = "NGAYBD:";
+            nGAYBDLabel.Text = "Ngày bắt đầu:";
             // 
             // nGAYKTLabel
             // 
             nGAYKTLabel.AutoSize = true;
             nGAYKTLabel.Location = new System.Drawing.Point(19, 159);
             nGAYKTLabel.Name = "nGAYKTLabel";
-            nGAYKTLabel.Size = new System.Drawing.Size(54, 13);
+            nGAYKTLabel.Size = new System.Drawing.Size(77, 13);
             nGAYKTLabel.TabIndex = 25;
-            nGAYKTLabel.Text = "NGAYKT:";
+            nGAYKTLabel.Text = "Ngày kết thúc:";
             // 
             // gIATRILabel
             // 
             gIATRILabel.AutoSize = true;
             gIATRILabel.Location = new System.Drawing.Point(19, 183);
             gIATRILabel.Name = "gIATRILabel";
-            gIATRILabel.Size = new System.Drawing.Size(46, 13);
+            gIATRILabel.Size = new System.Drawing.Size(113, 13);
             gIATRILabel.TabIndex = 27;
-            gIATRILabel.Text = "GIATRI:";
+            gIATRILabel.Text = "Giá trị đợt khuyến mãi:";
             // 
             // tt
             // 
@@ -195,7 +198,6 @@
             this.tableAdapterManager.HOADON_ttTableAdapter = null;
             this.tableAdapterManager.KHO_ttTableAdapter = null;
             this.tableAdapterManager.KHUYENMAI1TableAdapter = null;
-            this.tableAdapterManager.KHUYENMAI2TableAdapter = null;
             this.tableAdapterManager.KHUYENMAITableAdapter = this.kHUYENMAITableAdapter;
             this.tableAdapterManager.LOAISANPHAMTableAdapter = null;
             this.tableAdapterManager.NDBaoHanhTableAdapter = null;
@@ -273,51 +275,43 @@
             // mAKHUYENMAITextEdit
             // 
             this.mAKHUYENMAITextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.kHUYENMAIBindingSource1, "MAKHUYENMAI", true));
-            this.mAKHUYENMAITextEdit.Location = new System.Drawing.Point(121, 25);
+            this.mAKHUYENMAITextEdit.Location = new System.Drawing.Point(138, 25);
             this.mAKHUYENMAITextEdit.Name = "mAKHUYENMAITextEdit";
-            this.mAKHUYENMAITextEdit.Size = new System.Drawing.Size(100, 20);
+            this.mAKHUYENMAITextEdit.Size = new System.Drawing.Size(83, 20);
             this.mAKHUYENMAITextEdit.TabIndex = 16;
-            // 
-            // mALINHKIENTextEdit
-            // 
-            this.mALINHKIENTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.kHUYENMAIBindingSource1, "MALINHKIEN", true));
-            this.mALINHKIENTextEdit.Location = new System.Drawing.Point(121, 78);
-            this.mALINHKIENTextEdit.Name = "mALINHKIENTextEdit";
-            this.mALINHKIENTextEdit.Size = new System.Drawing.Size(100, 20);
-            this.mALINHKIENTextEdit.TabIndex = 20;
             // 
             // tENKHUYENMAITextEdit
             // 
             this.tENKHUYENMAITextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.kHUYENMAIBindingSource1, "TENKHUYENMAI", true));
-            this.tENKHUYENMAITextEdit.Location = new System.Drawing.Point(121, 104);
+            this.tENKHUYENMAITextEdit.Location = new System.Drawing.Point(138, 104);
             this.tENKHUYENMAITextEdit.Name = "tENKHUYENMAITextEdit";
-            this.tENKHUYENMAITextEdit.Size = new System.Drawing.Size(100, 20);
+            this.tENKHUYENMAITextEdit.Size = new System.Drawing.Size(83, 20);
             this.tENKHUYENMAITextEdit.TabIndex = 22;
             // 
             // nGAYBDDateEdit
             // 
             this.nGAYBDDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.kHUYENMAIBindingSource1, "NGAYBD", true));
             this.nGAYBDDateEdit.EditValue = null;
-            this.nGAYBDDateEdit.Location = new System.Drawing.Point(121, 130);
+            this.nGAYBDDateEdit.Location = new System.Drawing.Point(138, 130);
             this.nGAYBDDateEdit.Name = "nGAYBDDateEdit";
             this.nGAYBDDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.nGAYBDDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.nGAYBDDateEdit.Size = new System.Drawing.Size(100, 20);
+            this.nGAYBDDateEdit.Size = new System.Drawing.Size(83, 20);
             this.nGAYBDDateEdit.TabIndex = 24;
             // 
             // nGAYKTDateEdit
             // 
             this.nGAYKTDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.kHUYENMAIBindingSource1, "NGAYKT", true));
             this.nGAYKTDateEdit.EditValue = null;
-            this.nGAYKTDateEdit.Location = new System.Drawing.Point(121, 156);
+            this.nGAYKTDateEdit.Location = new System.Drawing.Point(138, 156);
             this.nGAYKTDateEdit.Name = "nGAYKTDateEdit";
             this.nGAYKTDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.nGAYKTDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.nGAYKTDateEdit.Size = new System.Drawing.Size(100, 20);
+            this.nGAYKTDateEdit.Size = new System.Drawing.Size(83, 20);
             this.nGAYKTDateEdit.TabIndex = 26;
             // 
             // gIATRISpinEdit
@@ -328,11 +322,11 @@
             0,
             0,
             0});
-            this.gIATRISpinEdit.Location = new System.Drawing.Point(121, 182);
+            this.gIATRISpinEdit.Location = new System.Drawing.Point(138, 182);
             this.gIATRISpinEdit.Name = "gIATRISpinEdit";
             this.gIATRISpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.gIATRISpinEdit.Size = new System.Drawing.Size(100, 20);
+            this.gIATRISpinEdit.Size = new System.Drawing.Size(83, 20);
             this.gIATRISpinEdit.TabIndex = 28;
             // 
             // sANPHAMBindingSource1
@@ -353,6 +347,7 @@
             // 
             // button2
             // 
+            this.button2.Enabled = false;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_edit_delete;
             this.button2.Location = new System.Drawing.Point(328, 13);
@@ -364,6 +359,7 @@
             // 
             // button3
             // 
+            this.button3.Enabled = false;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_document_edit;
             this.button3.Location = new System.Drawing.Point(420, 13);
@@ -388,9 +384,9 @@
             this.sANPHAMComboBox.DataSource = this.sANPHAMBindingSource3;
             this.sANPHAMComboBox.DisplayMember = "TENSP";
             this.sANPHAMComboBox.FormattingEnabled = true;
-            this.sANPHAMComboBox.Location = new System.Drawing.Point(121, 54);
+            this.sANPHAMComboBox.Location = new System.Drawing.Point(138, 54);
             this.sANPHAMComboBox.Name = "sANPHAMComboBox";
-            this.sANPHAMComboBox.Size = new System.Drawing.Size(100, 21);
+            this.sANPHAMComboBox.Size = new System.Drawing.Size(83, 21);
             this.sANPHAMComboBox.TabIndex = 30;
             this.sANPHAMComboBox.ValueMember = "MASP";
             // 
@@ -401,7 +397,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 31;
-            this.label1.Text = "Ten SP";
+            this.label1.Text = "Tên SP";
             // 
             // kHUYENMAI1BindingSource
             // 
@@ -428,31 +424,14 @@
             this.kHUYENMAI2DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kHUYENMAI2DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn11,
+            this.TENSP,
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
             this.kHUYENMAI2DataGridView.DataSource = this.kHUYENMAI2BindingSource;
-            this.kHUYENMAI2DataGridView.Location = new System.Drawing.Point(634, 43);
+            this.kHUYENMAI2DataGridView.Location = new System.Drawing.Point(708, 43);
             this.kHUYENMAI2DataGridView.Name = "kHUYENMAI2DataGridView";
-            this.kHUYENMAI2DataGridView.Size = new System.Drawing.Size(523, 159);
+            this.kHUYENMAI2DataGridView.Size = new System.Drawing.Size(449, 272);
             this.kHUYENMAI2DataGridView.TabIndex = 33;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "MASP";
-            this.dataGridViewTextBoxColumn11.HeaderText = "MASP";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "MALINHKIEN";
-            this.dataGridViewTextBoxColumn12.HeaderText = "MALINHKIEN";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "GIATRI";
-            this.dataGridViewTextBoxColumn13.HeaderText = "GIATRI";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
             // kHUYENMAIDataGridView
             // 
@@ -467,7 +446,7 @@
             this.kHUYENMAIDataGridView.DataSource = this.kHUYENMAIBindingSource;
             this.kHUYENMAIDataGridView.Location = new System.Drawing.Point(227, 81);
             this.kHUYENMAIDataGridView.Name = "kHUYENMAIDataGridView";
-            this.kHUYENMAIDataGridView.Size = new System.Drawing.Size(391, 121);
+            this.kHUYENMAIDataGridView.Size = new System.Drawing.Size(475, 234);
             this.kHUYENMAIDataGridView.TabIndex = 32;
             this.kHUYENMAIDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kHUYENMAIDataGridView_CellClick_1);
             // 
@@ -513,6 +492,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lINHKIENComboBox);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(mAKHUYENMAILabel);
@@ -531,24 +511,30 @@
             this.groupBox1.Controls.Add(this.gIATRISpinEdit);
             this.groupBox1.Controls.Add(nGAYBDLabel);
             this.groupBox1.Controls.Add(this.nGAYBDDateEdit);
-            this.groupBox1.Controls.Add(this.mALINHKIENTextEdit);
             this.groupBox1.Controls.Add(nGAYKTLabel);
             this.groupBox1.Controls.Add(this.nGAYKTDateEdit);
             this.groupBox1.Location = new System.Drawing.Point(27, 48);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1163, 221);
+            this.groupBox1.Size = new System.Drawing.Size(1177, 337);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khuyến mãi";
             // 
-            // label2
+            // lINHKIENComboBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(631, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 13);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Chi tiết khuyến mãi";
+            this.lINHKIENComboBox.DataSource = this.lINHKIENBindingSource;
+            this.lINHKIENComboBox.DisplayMember = "TENLINHKIEN";
+            this.lINHKIENComboBox.FormattingEnabled = true;
+            this.lINHKIENComboBox.Location = new System.Drawing.Point(138, 78);
+            this.lINHKIENComboBox.Name = "lINHKIENComboBox";
+            this.lINHKIENComboBox.Size = new System.Drawing.Size(83, 21);
+            this.lINHKIENComboBox.TabIndex = 35;
+            this.lINHKIENComboBox.ValueMember = "MALINHKIEN";
+            // 
+            // lINHKIENBindingSource
+            // 
+            this.lINHKIENBindingSource.DataMember = "LINHKIEN";
+            this.lINHKIENBindingSource.DataSource = this.nghiepVu1;
             // 
             // button4
             // 
@@ -561,11 +547,48 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(705, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 13);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Chi tiết khuyến mãi";
+            // 
+            // lINHKIENTableAdapter
+            // 
+            this.lINHKIENTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "MASP";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Mã SP";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // TENSP
+            // 
+            this.TENSP.DataPropertyName = "TENSP";
+            this.TENSP.HeaderText = "Tên SP";
+            this.TENSP.Name = "TENSP";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "MALINHKIEN";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Mã LK";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "GIATRI";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Giá trị khuyến mãi";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
             // ThemSPKhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1224, 293);
+            this.ClientSize = new System.Drawing.Size(1224, 397);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button9);
             this.Name = "ThemSPKhuyenMai";
@@ -578,7 +601,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHUYENMAIBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mAKHUYENMAITextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mALINHKIENTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tENKHUYENMAITextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGAYBDDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGAYBDDateEdit.Properties)).EndInit();
@@ -594,6 +616,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kHUYENMAIDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lINHKIENBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -622,7 +645,6 @@
         private NghiepVuTableAdapters.TableAdapterManager tableAdapterManager2;
         private NghiepVuTableAdapters.SANPHAMTableAdapter sANPHAMTableAdapter1;
         private DevExpress.XtraEditors.TextEdit mAKHUYENMAITextEdit;
-        private DevExpress.XtraEditors.TextEdit mALINHKIENTextEdit;
         private DevExpress.XtraEditors.TextEdit tENKHUYENMAITextEdit;
         private DevExpress.XtraEditors.DateEdit nGAYBDDateEdit;
         private DevExpress.XtraEditors.DateEdit nGAYKTDateEdit;
@@ -640,9 +662,6 @@
         private System.Windows.Forms.BindingSource kHUYENMAI2BindingSource;
         private ttTableAdapters.KHUYENMAI2TableAdapter kHUYENMAI2TableAdapter;
         private System.Windows.Forms.DataGridView kHUYENMAI2DataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridView kHUYENMAIDataGridView;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -652,5 +671,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.BindingSource lINHKIENBindingSource;
+        private NghiepVuTableAdapters.LINHKIENTableAdapter lINHKIENTableAdapter;
+        private System.Windows.Forms.ComboBox lINHKIENComboBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
     }
 }

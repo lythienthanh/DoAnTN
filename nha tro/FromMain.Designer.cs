@@ -571,7 +571,7 @@
             // 
             // MH000000000000000018
             // 
-            this.MH000000000000000018.Caption = "Sản Phẩm";
+            this.MH000000000000000018.Caption = "Sản Phẩm & Linh Kiện";
             this.MH000000000000000018.Enabled = false;
             this.MH000000000000000018.Id = 16;
             this.MH000000000000000018.ImageOptions.ImageIndex = 117;
