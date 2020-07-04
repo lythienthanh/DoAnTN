@@ -251,6 +251,12 @@
     <Compile Include="LoiND.Designer.cs">
       <DependentUpon>LoiND.cs</DependentUpon>
     </Compile>
+    <Compile Include="loinhuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loinhuan.Designer.cs">
+      <DependentUpon>loinhuan.cs</DependentUpon>
+    </Compile>
     <Compile Include="LOISX.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -388,6 +394,12 @@
     </Compile>
     <Compile Include="ThongKeSanPham.Designer.cs">
       <DependentUpon>ThongKeSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="thongkesltrongkho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="thongkesltrongkho.Designer.cs">
+      <DependentUpon>thongkesltrongkho.cs</DependentUpon>
     </Compile>
     <Compile Include="thongKeSPTheoKM.cs">
       <SubType>Form</SubType>
@@ -532,6 +544,9 @@
     <EmbeddedResource Include="LoiND.resx">
       <DependentUpon>LoiND.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="loinhuan.resx">
+      <DependentUpon>loinhuan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LOISX.resx">
       <DependentUpon>LOISX.cs</DependentUpon>
     </EmbeddedResource>
@@ -617,6 +632,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThongKeSanPham.resx">
       <DependentUpon>ThongKeSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="thongkesltrongkho.resx">
+      <DependentUpon>thongkesltrongkho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="thongKeSPTheoKM.resx">
       <DependentUpon>thongKeSPTheoKM.cs</DependentUpon>

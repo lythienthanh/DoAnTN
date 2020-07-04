@@ -355,5 +355,17 @@ namespace nha_tro
             traGopNCC.MdiParent = this;
             traGopNCC.Show();
         }
+
+        private void barButtonItem7_ItemClick_3(object sender, ItemClickEventArgs e)
+        {
+            loinhuan loinhuan = new loinhuan();
+            loinhuan.ShowDialog();
+        }
+
+        private void barButtonItem9_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            thongkesltrongkho thongkesltrongkho = new thongkesltrongkho();
+            thongkesltrongkho.ShowDialog();
+        }
     }
 }
