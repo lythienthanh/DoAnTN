@@ -159,7 +159,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(1209, 42);
             this.button9.TabIndex = 28;
-            this.button9.Text = "Tìm kiếm Sản Phẩm";
+            this.button9.Text = "TÌM KIẾM SẢN PHẨM";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -384,7 +384,7 @@
             this.Controls.Add(this.button9);
             this.Controls.Add(this.sANPHAMDataGridView);
             this.Name = "TimKiemTheoSanPham";
-            this.Text = "TimKiemTheoSanPham";
+            this.Text = "TÌM KIẾM SẢN PHẨM";
             this.Load += new System.EventHandler(this.TimKiemTheoSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sP_LoaispBindingSource)).EndInit();

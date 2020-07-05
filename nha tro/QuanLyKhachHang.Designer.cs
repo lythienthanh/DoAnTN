@@ -47,10 +47,6 @@
             this.sDTTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.dIACHITextEdit = new DevExpress.XtraEditors.TextEdit();
             this.cMNDTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.kHACHHANG_thanthietDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +61,10 @@
             this.kHACHHANG_thanthietTableAdapter = new nha_tro.NghiepVuTableAdapters.KHACHHANG_thanthietTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             mAKHLabel = new System.Windows.Forms.Label();
             tENKHLabel = new System.Windows.Forms.Label();
             sDTLabel = new System.Windows.Forms.Label();
@@ -86,7 +86,7 @@
             // mAKHLabel
             // 
             mAKHLabel.AutoSize = true;
-            mAKHLabel.Location = new System.Drawing.Point(761, 163);
+            mAKHLabel.Location = new System.Drawing.Point(758, 81);
             mAKHLabel.Name = "mAKHLabel";
             mAKHLabel.Size = new System.Drawing.Size(88, 13);
             mAKHLabel.TabIndex = 1;
@@ -95,7 +95,7 @@
             // tENKHLabel
             // 
             tENKHLabel.AutoSize = true;
-            tENKHLabel.Location = new System.Drawing.Point(761, 189);
+            tENKHLabel.Location = new System.Drawing.Point(758, 107);
             tENKHLabel.Name = "tENKHLabel";
             tENKHLabel.Size = new System.Drawing.Size(89, 13);
             tENKHLabel.TabIndex = 3;
@@ -104,7 +104,7 @@
             // sDTLabel
             // 
             sDTLabel.AutoSize = true;
-            sDTLabel.Location = new System.Drawing.Point(761, 215);
+            sDTLabel.Location = new System.Drawing.Point(758, 133);
             sDTLabel.Name = "sDTLabel";
             sDTLabel.Size = new System.Drawing.Size(32, 13);
             sDTLabel.TabIndex = 5;
@@ -113,7 +113,7 @@
             // dIACHILabel
             // 
             dIACHILabel.AutoSize = true;
-            dIACHILabel.Location = new System.Drawing.Point(761, 241);
+            dIACHILabel.Location = new System.Drawing.Point(758, 159);
             dIACHILabel.Name = "dIACHILabel";
             dIACHILabel.Size = new System.Drawing.Size(43, 13);
             dIACHILabel.TabIndex = 7;
@@ -122,7 +122,7 @@
             // cMNDLabel
             // 
             cMNDLabel.AutoSize = true;
-            cMNDLabel.Location = new System.Drawing.Point(761, 267);
+            cMNDLabel.Location = new System.Drawing.Point(758, 185);
             cMNDLabel.Name = "cMNDLabel";
             cMNDLabel.Size = new System.Drawing.Size(42, 13);
             cMNDLabel.TabIndex = 9;
@@ -140,7 +140,7 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.kHACHHANGDataGridView.DataSource = this.kHACHHANGBindingSource;
-            this.kHACHHANGDataGridView.Location = new System.Drawing.Point(12, 163);
+            this.kHACHHANGDataGridView.Location = new System.Drawing.Point(9, 81);
             this.kHACHHANGDataGridView.Name = "kHACHHANGDataGridView";
             this.kHACHHANGDataGridView.Size = new System.Drawing.Size(729, 220);
             this.kHACHHANGDataGridView.TabIndex = 1;
@@ -188,7 +188,7 @@
             // mAKHTextEdit
             // 
             this.mAKHTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.kHACHHANGBindingSource, "MAKH", true));
-            this.mAKHTextEdit.Location = new System.Drawing.Point(855, 160);
+            this.mAKHTextEdit.Location = new System.Drawing.Point(852, 78);
             this.mAKHTextEdit.Name = "mAKHTextEdit";
             this.mAKHTextEdit.Size = new System.Drawing.Size(146, 20);
             this.mAKHTextEdit.TabIndex = 2;
@@ -196,7 +196,7 @@
             // tENKHTextEdit
             // 
             this.tENKHTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.kHACHHANGBindingSource, "TENKH", true));
-            this.tENKHTextEdit.Location = new System.Drawing.Point(855, 186);
+            this.tENKHTextEdit.Location = new System.Drawing.Point(852, 104);
             this.tENKHTextEdit.Name = "tENKHTextEdit";
             this.tENKHTextEdit.Size = new System.Drawing.Size(146, 20);
             this.tENKHTextEdit.TabIndex = 4;
@@ -204,7 +204,7 @@
             // sDTTextEdit
             // 
             this.sDTTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.kHACHHANGBindingSource, "SDT", true));
-            this.sDTTextEdit.Location = new System.Drawing.Point(855, 212);
+            this.sDTTextEdit.Location = new System.Drawing.Point(852, 130);
             this.sDTTextEdit.Name = "sDTTextEdit";
             this.sDTTextEdit.Size = new System.Drawing.Size(146, 20);
             this.sDTTextEdit.TabIndex = 6;
@@ -212,7 +212,7 @@
             // dIACHITextEdit
             // 
             this.dIACHITextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.kHACHHANGBindingSource, "DIACHI", true));
-            this.dIACHITextEdit.Location = new System.Drawing.Point(855, 238);
+            this.dIACHITextEdit.Location = new System.Drawing.Point(852, 156);
             this.dIACHITextEdit.Name = "dIACHITextEdit";
             this.dIACHITextEdit.Size = new System.Drawing.Size(146, 20);
             this.dIACHITextEdit.TabIndex = 8;
@@ -220,65 +220,15 @@
             // cMNDTextEdit
             // 
             this.cMNDTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.kHACHHANGBindingSource, "CMND", true));
-            this.cMNDTextEdit.Location = new System.Drawing.Point(855, 264);
+            this.cMNDTextEdit.Location = new System.Drawing.Point(852, 182);
             this.cMNDTextEdit.Name = "cMNDTextEdit";
             this.cMNDTextEdit.Size = new System.Drawing.Size(146, 20);
             this.cMNDTextEdit.TabIndex = 10;
             // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::nha_tro.Properties.Resources.Awicons_Vista_Artistic_Add;
-            this.button1.Location = new System.Drawing.Point(764, 302);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 46);
-            this.button1.TabIndex = 11;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_edit_delete;
-            this.button2.Location = new System.Drawing.Point(830, 302);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 46);
-            this.button2.TabIndex = 11;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_document_edit;
-            this.button3.Location = new System.Drawing.Point(896, 302);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 46);
-            this.button3.TabIndex = 11;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.Transparent;
-            this.button9.Image = global::nha_tro.Properties.Resources.User_Group_icon;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.Location = new System.Drawing.Point(0, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(1075, 134);
-            this.button9.TabIndex = 32;
-            this.button9.Text = "Quản Lý Khách Hàng";
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.kHACHHANG_thanthietDataGridView);
-            this.groupBox1.Location = new System.Drawing.Point(12, 412);
+            this.groupBox1.Location = new System.Drawing.Point(9, 330);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(989, 305);
             this.groupBox1.TabIndex = 33;
@@ -388,7 +338,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 144);
+            this.label1.Location = new System.Drawing.Point(12, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 13);
             this.label1.TabIndex = 34;
@@ -398,12 +348,62 @@
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = global::nha_tro.Properties.Resources.Gakuseisean_Aire_Search;
-            this.button4.Location = new System.Drawing.Point(971, 302);
+            this.button4.Location = new System.Drawing.Point(968, 220);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(60, 46);
             this.button4.TabIndex = 35;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Transparent;
+            this.button9.Image = global::nha_tro.Properties.Resources.Treetog_Junior_User_group;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button9.Location = new System.Drawing.Point(0, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(1075, 50);
+            this.button9.TabIndex = 32;
+            this.button9.Text = "QUẢN LÝ KHÁCH HÀNG";
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_document_edit;
+            this.button3.Location = new System.Drawing.Point(893, 220);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(60, 46);
+            this.button3.TabIndex = 11;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_edit_delete;
+            this.button2.Location = new System.Drawing.Point(827, 220);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(60, 46);
+            this.button2.TabIndex = 11;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::nha_tro.Properties.Resources.Awicons_Vista_Artistic_Add;
+            this.button1.Location = new System.Drawing.Point(761, 220);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(60, 46);
+            this.button1.TabIndex = 11;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // QuanLyKhachHang
             // 
@@ -429,6 +429,7 @@
             this.Controls.Add(this.cMNDTextEdit);
             this.Controls.Add(this.kHACHHANGDataGridView);
             this.Name = "QuanLyKhachHang";
+            this.Text = "QUẢN LÝ KHÁCH HÀNG";
             this.Load += new System.EventHandler(this.QuanLyKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kHACHHANGDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHACHHANGBindingSource)).EndInit();

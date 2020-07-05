@@ -88,6 +88,11 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.xuat_hd_chenhlechDataGridView = new System.Windows.Forms.DataGridView();
+            this.mAHDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tENSPDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cHENHLECHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sPLayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xuat_hd_chenhlechBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.sANPHAMComboBox1 = new System.Windows.Forms.ComboBox();
@@ -129,11 +134,6 @@
             this.sP_LOIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sP_LOITableAdapter = new nha_tro.ttTableAdapters.SP_LOITableAdapter();
             this.tAIKHOAN_TIMMANVTableAdapter = new nha_tro.ttTableAdapters.TAIKHOAN_TIMMANVTableAdapter();
-            this.mAHDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tENSPDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cHENHLECHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sPLayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             tENLOISXLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
@@ -710,6 +710,37 @@
             this.xuat_hd_chenhlechDataGridView.Size = new System.Drawing.Size(486, 91);
             this.xuat_hd_chenhlechDataGridView.TabIndex = 30;
             // 
+            // mAHDDataGridViewTextBoxColumn1
+            // 
+            this.mAHDDataGridViewTextBoxColumn1.DataPropertyName = "MAHD";
+            this.mAHDDataGridViewTextBoxColumn1.HeaderText = "Mã hóa đơn đổi";
+            this.mAHDDataGridViewTextBoxColumn1.Name = "mAHDDataGridViewTextBoxColumn1";
+            this.mAHDDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // tENSPDataGridViewTextBoxColumn1
+            // 
+            this.tENSPDataGridViewTextBoxColumn1.DataPropertyName = "TENSP";
+            this.tENSPDataGridViewTextBoxColumn1.HeaderText = "Tên sản phẩm";
+            this.tENSPDataGridViewTextBoxColumn1.Name = "tENSPDataGridViewTextBoxColumn1";
+            // 
+            // cHENHLECHDataGridViewTextBoxColumn
+            // 
+            this.cHENHLECHDataGridViewTextBoxColumn.DataPropertyName = "CHENHLECH";
+            this.cHENHLECHDataGridViewTextBoxColumn.HeaderText = "Chênh lệch";
+            this.cHENHLECHDataGridViewTextBoxColumn.Name = "cHENHLECHDataGridViewTextBoxColumn";
+            // 
+            // maNVDataGridViewTextBoxColumn
+            // 
+            this.maNVDataGridViewTextBoxColumn.DataPropertyName = "MaNV";
+            this.maNVDataGridViewTextBoxColumn.HeaderText = "Mã nhân viên";
+            this.maNVDataGridViewTextBoxColumn.Name = "maNVDataGridViewTextBoxColumn";
+            // 
+            // sPLayDataGridViewTextBoxColumn
+            // 
+            this.sPLayDataGridViewTextBoxColumn.DataPropertyName = "SPLay";
+            this.sPLayDataGridViewTextBoxColumn.HeaderText = "Sản phẩm lấy";
+            this.sPLayDataGridViewTextBoxColumn.Name = "sPLayDataGridViewTextBoxColumn";
+            // 
             // xuat_hd_chenhlechBindingSource
             // 
             this.xuat_hd_chenhlechBindingSource.DataMember = "xuat_hd_chenhlech";
@@ -991,7 +1022,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(1374, 42);
             this.button9.TabIndex = 31;
-            this.button9.Text = "Đổi trả sản phẩm";
+            this.button9.Text = "ĐỔI TRẢ SẢM PHẨM";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -1008,37 +1039,6 @@
             // 
             this.tAIKHOAN_TIMMANVTableAdapter.ClearBeforeFill = true;
             // 
-            // mAHDDataGridViewTextBoxColumn1
-            // 
-            this.mAHDDataGridViewTextBoxColumn1.DataPropertyName = "MAHD";
-            this.mAHDDataGridViewTextBoxColumn1.HeaderText = "Mã hóa đơn đổi";
-            this.mAHDDataGridViewTextBoxColumn1.Name = "mAHDDataGridViewTextBoxColumn1";
-            this.mAHDDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // tENSPDataGridViewTextBoxColumn1
-            // 
-            this.tENSPDataGridViewTextBoxColumn1.DataPropertyName = "TENSP";
-            this.tENSPDataGridViewTextBoxColumn1.HeaderText = "Tên sản phẩm";
-            this.tENSPDataGridViewTextBoxColumn1.Name = "tENSPDataGridViewTextBoxColumn1";
-            // 
-            // cHENHLECHDataGridViewTextBoxColumn
-            // 
-            this.cHENHLECHDataGridViewTextBoxColumn.DataPropertyName = "CHENHLECH";
-            this.cHENHLECHDataGridViewTextBoxColumn.HeaderText = "Chênh lệch";
-            this.cHENHLECHDataGridViewTextBoxColumn.Name = "cHENHLECHDataGridViewTextBoxColumn";
-            // 
-            // maNVDataGridViewTextBoxColumn
-            // 
-            this.maNVDataGridViewTextBoxColumn.DataPropertyName = "MaNV";
-            this.maNVDataGridViewTextBoxColumn.HeaderText = "Mã nhân viên";
-            this.maNVDataGridViewTextBoxColumn.Name = "maNVDataGridViewTextBoxColumn";
-            // 
-            // sPLayDataGridViewTextBoxColumn
-            // 
-            this.sPLayDataGridViewTextBoxColumn.DataPropertyName = "SPLay";
-            this.sPLayDataGridViewTextBoxColumn.HeaderText = "Sản phẩm lấy";
-            this.sPLayDataGridViewTextBoxColumn.Name = "sPLayDataGridViewTextBoxColumn";
-            // 
             // BaoHanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1052,7 +1052,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "BaoHanh";
-            this.Text = "Đổi Sản Phẩm";
+            this.Text = "ĐỔI TRẢ SẢM PHẨM";
             this.Load += new System.EventHandler(this.BaoHanh_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

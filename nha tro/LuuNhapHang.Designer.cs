@@ -58,6 +58,11 @@
             this.hOATDONGDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tAIKHOANBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cT_NHAP_SP_DK_LUUKHODataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cT_NHAP_SP_DK_LUUKHOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cT_Nhap_dkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -65,6 +70,7 @@
             this.kHO1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.kHOComboBox = new System.Windows.Forms.ComboBox();
+            this.makho_cboBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kHOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.kHOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cT_Nhap_dkTableAdapter = new nha_tro.NghiepVuTableAdapters.CT_Nhap_dkTableAdapter();
@@ -84,12 +90,6 @@
             this.tableAdapterManager1 = new nha_tro.ttTableAdapters.TableAdapterManager();
             this.hOADON_kttontaiTableAdapter = new nha_tro.ttTableAdapters.HOADON_kttontaiTableAdapter();
             this.button9 = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.makho_cboBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.makho_cboTableAdapter = new nha_tro.NghiepVuTableAdapters.makho_cboTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cT_NHAP_SPBindingSource)).BeginInit();
@@ -109,13 +109,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.kHO1GridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHOBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHOBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hOADON1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOADONBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_ttBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nghiepVu
@@ -138,6 +138,7 @@
             this.tableAdapterManager.KHO1TableAdapter = null;
             this.tableAdapterManager.KHOTableAdapter = this.kHOTableAdapter;
             this.tableAdapterManager.KHUYENMAI_DKTableAdapter = null;
+            this.tableAdapterManager.KHUYENMAI_lk_malkTableAdapter = null;
             this.tableAdapterManager.KHUYENMAITableAdapter = null;
             this.tableAdapterManager.LAY_MANVbangTENDNTableAdapter = null;
             this.tableAdapterManager.LINHKIENTableAdapter = null;
@@ -362,6 +363,36 @@
             this.cT_NHAP_SP_DK_LUUKHODataGridView.Size = new System.Drawing.Size(592, 471);
             this.cT_NHAP_SP_DK_LUUKHODataGridView.TabIndex = 0;
             // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "MANHAP";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Mã nhập";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "MASP";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Mã sản phẩm";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "MANCC";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Mã nhà cung cấp";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "SL";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Số lượng";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "DonGia";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Đơn giá";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
             // cT_NHAP_SP_DK_LUUKHOBindingSource
             // 
             this.cT_NHAP_SP_DK_LUUKHOBindingSource.DataMember = "CT_NHAP_SP_DK_LUUKHO";
@@ -414,6 +445,11 @@
             this.kHOComboBox.Size = new System.Drawing.Size(580, 21);
             this.kHOComboBox.TabIndex = 1;
             this.kHOComboBox.ValueMember = "MAKHO";
+            // 
+            // makho_cboBindingSource
+            // 
+            this.makho_cboBindingSource.DataMember = "makho_cbo";
+            this.makho_cboBindingSource.DataSource = this.nghiepVu;
             // 
             // kHOBindingSource1
             // 
@@ -504,6 +540,7 @@
             this.tableAdapterManager1.BAOHANH1TableAdapter = null;
             this.tableAdapterManager1.BAOHANHTableAdapter = null;
             this.tableAdapterManager1.ct_bHTableAdapter = null;
+            this.tableAdapterManager1.CT_HOADON_LINHKIENTableAdapter = null;
             this.tableAdapterManager1.Ct_KM_LKTableAdapter = null;
             this.tableAdapterManager1.CT_KM_SPTableAdapter = null;
             this.tableAdapterManager1.Ct_mua_SP_TIMKIEMTableAdapter = null;
@@ -521,8 +558,10 @@
             this.tableAdapterManager1.LOAISANPHAMTableAdapter = null;
             this.tableAdapterManager1.NDBaoHanhTableAdapter = null;
             this.tableAdapterManager1.SANPHAM__sreach_giaTableAdapter = null;
+            this.tableAdapterManager1.SP_LOITableAdapter = null;
             this.tableAdapterManager1.TAIKHOAN_TIMMANVTableAdapter = null;
             this.tableAdapterManager1.TinhTrangTTTableAdapter = null;
+            this.tableAdapterManager1.TraGop_tinhtienTableAdapter = null;
             this.tableAdapterManager1.TraGop1TableAdapter = null;
             this.tableAdapterManager1.TraGopTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = nha_tro.ttTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -544,44 +583,9 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(1262, 42);
             this.button9.TabIndex = 31;
-            this.button9.Text = "Lưu Nhập Hàng";
+            this.button9.Text = "LƯU NHẬP HÀNG";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "DonGia";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Đơn giá";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "SL";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Số lượng";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "MANCC";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Mã nhà cung cấp";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "MASP";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Mã sản phẩm";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "MANHAP";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Mã nhập";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // makho_cboBindingSource
-            // 
-            this.makho_cboBindingSource.DataMember = "makho_cbo";
-            this.makho_cboBindingSource.DataSource = this.nghiepVu;
             // 
             // makho_cboTableAdapter
             // 
@@ -599,7 +603,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "LuuNhapHang";
-            this.Text = "LuuNhapHang";
+            this.Text = "LƯU NHẬP HÀNG";
             this.Load += new System.EventHandler(this.LuuNhapHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cT_NHAP_SPBindingSource)).EndInit();
@@ -619,6 +623,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kHO1GridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHOBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHOBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -626,7 +631,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.hOADON1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOADONBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOADON_ttBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

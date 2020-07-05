@@ -201,6 +201,7 @@
             this.tableAdapterManager.KHO1TableAdapter = null;
             this.tableAdapterManager.KHOTableAdapter = null;
             this.tableAdapterManager.KHUYENMAI_DKTableAdapter = null;
+            this.tableAdapterManager.KHUYENMAI_lk_malkTableAdapter = null;
             this.tableAdapterManager.KHUYENMAITableAdapter = null;
             this.tableAdapterManager.LAY_MANVbangTENDNTableAdapter = null;
             this.tableAdapterManager.LINHKIENTableAdapter = null;
@@ -548,7 +549,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(932, 42);
             this.button9.TabIndex = 31;
-            this.button9.Text = "Tạo phiểu nhập sản phẩm";
+            this.button9.Text = "TẠO PHIẾU NHẬP SẢN PHẨM";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -561,7 +562,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Name = "MH000000000000000024";
-            this.Text = "TaoPhieuNhap";
+            this.Text = "TẠO PHIẾU NHẬP SẢN PHẨM";
             this.Load += new System.EventHandler(this.TaoPhieuNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cT_NHAP_SPBindingSource)).EndInit();

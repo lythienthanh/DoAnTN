@@ -771,6 +771,9 @@
     <None Include="Resources\Rockettheme-Ecommerce-Sale.ico" />
     <None Include="Resources\Aha-Soft-Software-Options.ico" />
     <None Include="Resources\Iconsmind-Outline-Filter-2.ico" />
+    <None Include="Resources\Iconleak-Cerulean-Database.ico" />
+    <None Include="Resources\Treetog-Junior-User-group.ico" />
+    <None Include="Resources\Designbolts-Free-Multimedia-Mobile.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -266,7 +266,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(1261, 42);
             this.button9.TabIndex = 32;
-            this.button9.Text = "Thông Kê Doanh Thu Theo Các Đợt Khuyến Mãi";
+            this.button9.Text = "THỐNG KÊ DOANH THU THEO CÁC ĐỢT KHUYẾN MÃI";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -422,7 +422,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
             this.Name = "thongKeSPTheoKM";
-            this.Text = "thongKeSPTheoKM";
+            this.Text = "THỐNG KÊ DOANH THU THEO CÁC ĐỢT KHUYẾN MÃI";
             this.Load += new System.EventHandler(this.thongKeSPTheoKM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kHUYENMAIBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tt)).EndInit();

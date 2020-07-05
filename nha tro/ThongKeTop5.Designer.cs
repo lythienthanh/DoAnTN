@@ -50,14 +50,14 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.maSPDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tOP_10BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.tOP_10BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tOP_10TableAdapter = new nha_tro.ttTableAdapters.TOP_10TableAdapter();
-            this.maSPDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.thongKe_SPDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tOP_5BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tt)).BeginInit();
@@ -225,7 +225,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(1179, 42);
             this.button9.TabIndex = 34;
-            this.button9.Text = "Top 5 và Top 10 CÁC MẶT HÀNG BÁN CHẠY";
+            this.button9.Text = "THỐNG KÊ CÁC MẶT HÀNG BÁN CHẠY";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -279,6 +279,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(391, 220);
             this.dataGridView1.TabIndex = 43;
             // 
+            // maSPDataGridViewTextBoxColumn1
+            // 
+            this.maSPDataGridViewTextBoxColumn1.DataPropertyName = "MaSP";
+            this.maSPDataGridViewTextBoxColumn1.HeaderText = "Mã sp";
+            this.maSPDataGridViewTextBoxColumn1.Name = "maSPDataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "sl Đã Bán";
+            this.dataGridViewTextBoxColumn2.HeaderText = "sl Đã Bán";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // tOP_10BindingSource
+            // 
+            this.tOP_10BindingSource.DataMember = "TOP 10";
+            this.tOP_10BindingSource.DataSource = this.tt;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -315,27 +333,9 @@
             this.dateTimePicker4.Size = new System.Drawing.Size(300, 20);
             this.dateTimePicker4.TabIndex = 39;
             // 
-            // tOP_10BindingSource
-            // 
-            this.tOP_10BindingSource.DataMember = "TOP 10";
-            this.tOP_10BindingSource.DataSource = this.tt;
-            // 
             // tOP_10TableAdapter
             // 
             this.tOP_10TableAdapter.ClearBeforeFill = true;
-            // 
-            // maSPDataGridViewTextBoxColumn1
-            // 
-            this.maSPDataGridViewTextBoxColumn1.DataPropertyName = "MaSP";
-            this.maSPDataGridViewTextBoxColumn1.HeaderText = "Mã sp";
-            this.maSPDataGridViewTextBoxColumn1.Name = "maSPDataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "sl Đã Bán";
-            this.dataGridViewTextBoxColumn2.HeaderText = "sl Đã Bán";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // ThongKeTop5
             // 

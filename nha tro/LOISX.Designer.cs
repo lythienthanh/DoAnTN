@@ -36,14 +36,14 @@
             this.lOIDONHASXTableAdapter = new nha_tro.NghiepVuTableAdapters.LOIDONHASXTableAdapter();
             this.tableAdapterManager = new nha_tro.NghiepVuTableAdapters.TableAdapterManager();
             this.lOIDONHASXDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mALOISXTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.tENLOISXTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             mALOISXLabel = new System.Windows.Forms.Label();
             tENLOISXLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).BeginInit();
@@ -100,6 +100,7 @@
             this.tableAdapterManager.KHO1TableAdapter = null;
             this.tableAdapterManager.KHOTableAdapter = null;
             this.tableAdapterManager.KHUYENMAI_DKTableAdapter = null;
+            this.tableAdapterManager.KHUYENMAI_lk_malkTableAdapter = null;
             this.tableAdapterManager.KHUYENMAITableAdapter = null;
             this.tableAdapterManager.LAY_MANVbangTENDNTableAdapter = null;
             this.tableAdapterManager.LINHKIENTableAdapter = null;
@@ -128,6 +129,18 @@
             this.lOIDONHASXDataGridView.Name = "lOIDONHASXDataGridView";
             this.lOIDONHASXDataGridView.Size = new System.Drawing.Size(257, 200);
             this.lOIDONHASXDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MALOISX";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã lỗi sản xuất";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TENLOISX";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên lỗi sản xuất";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // mALOISXTextEdit
             // 
@@ -190,21 +203,9 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(280, 42);
             this.button9.TabIndex = 31;
-            this.button9.Text = "Lỗi sản xuất";
+            this.button9.Text = "LỖI SẢN XUẤT";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "MALOISX";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã lỗi sản xuất";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "TENLOISX";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên lỗi sản xuất";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // LOISX
             // 
@@ -221,7 +222,7 @@
             this.Controls.Add(this.tENLOISXTextEdit);
             this.Controls.Add(this.lOIDONHASXDataGridView);
             this.Name = "LOISX";
-            this.Text = "LOISX";
+            this.Text = "LỖI SẢN XUẤT";
             this.Load += new System.EventHandler(this.LOISX_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOIDONHASXBindingSource)).EndInit();

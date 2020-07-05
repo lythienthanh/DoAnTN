@@ -47,12 +47,12 @@
             this.button9 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tAIKHOANDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tk_NND_DKDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,8 +63,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tk_NNDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tk_NND_DKBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANDataGridView)).BeginInit();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tk_NND_DKDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,7 +178,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(929, 42);
             this.button9.TabIndex = 30;
-            this.button9.Text = "Thêm Người Dùng Vào Nhóm";
+            this.button9.Text = "THÊM NGƯỜI DÙNG VÀO NHÓM";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -200,16 +200,6 @@
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin tài khoản của nhân viên";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.tk_NND_DKDataGridView);
-            this.groupBox3.Location = new System.Drawing.Point(495, 116);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(422, 217);
-            this.groupBox3.TabIndex = 33;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Thông tin người dùng ở trong nhóm";
             // 
             // tAIKHOANDataGridView
             // 
@@ -252,6 +242,16 @@
             this.dataGridViewCheckBoxColumn1.HeaderText = "Tình trạng hoạt động";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.tk_NND_DKDataGridView);
+            this.groupBox3.Location = new System.Drawing.Point(495, 116);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(422, 217);
+            this.groupBox3.TabIndex = 33;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Thông tin người dùng ở trong nhóm";
+            // 
             // tk_NND_DKDataGridView
             // 
             this.tk_NND_DKDataGridView.AutoGenerateColumns = false;
@@ -292,7 +292,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.nhomNguoiDungComboBox);
             this.Name = "ThemNguoiDungVaoNhom";
-            this.Text = "ThemNguoiDungVaoNhom";
+            this.Text = "THÊM NGƯỜI DÙNG VÀO NHÓM";
             this.Load += new System.EventHandler(this.ThemNguoiDungVaoNhom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nHOMNGUOIDUNGBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_DangNhap)).EndInit();
@@ -301,8 +301,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tk_NNDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tk_NND_DKBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANDataGridView)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tk_NND_DKDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

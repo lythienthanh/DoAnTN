@@ -83,6 +83,7 @@
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.kHO1ComboBox = new System.Windows.Forms.ComboBox();
+            this.makho_cboBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.kHO1GridControl = new DevExpress.XtraGrid.GridControl();
@@ -107,7 +108,6 @@
             this.sP_NEWTableAdapter = new nha_tro.NghiepVuTableAdapters.SP_NEWTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.tongSLspTableAdapter = new nha_tro.NghiepVuTableAdapters.tongSLspTableAdapter();
-            this.makho_cboBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.makho_cboTableAdapter = new nha_tro.NghiepVuTableAdapters.makho_cboTableAdapter();
             mALOAILabel = new System.Windows.Forms.Label();
             mAKHOLabel = new System.Windows.Forms.Label();
@@ -145,13 +145,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.tongSLspGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tongSLspBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHO1GridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sLSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diaChiTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mALOAILabel
@@ -656,12 +656,18 @@
             // kHO1ComboBox
             // 
             this.kHO1ComboBox.DataSource = this.makho_cboBindingSource;
+            this.kHO1ComboBox.DisplayMember = "MAKHO";
             this.kHO1ComboBox.FormattingEnabled = true;
             this.kHO1ComboBox.Location = new System.Drawing.Point(271, 21);
             this.kHO1ComboBox.Name = "kHO1ComboBox";
             this.kHO1ComboBox.Size = new System.Drawing.Size(100, 21);
             this.kHO1ComboBox.TabIndex = 31;
             this.kHO1ComboBox.ValueMember = "MAKHO";
+            // 
+            // makho_cboBindingSource
+            // 
+            this.makho_cboBindingSource.DataMember = "makho_cbo";
+            this.makho_cboBindingSource.DataSource = this.nghiepVu;
             // 
             // button5
             // 
@@ -828,6 +834,7 @@
             this.tableAdapterManager.KHO1TableAdapter = null;
             this.tableAdapterManager.KHOTableAdapter = this.kHOTableAdapter;
             this.tableAdapterManager.KHUYENMAI_DKTableAdapter = null;
+            this.tableAdapterManager.KHUYENMAI_lk_malkTableAdapter = null;
             this.tableAdapterManager.KHUYENMAITableAdapter = null;
             this.tableAdapterManager.LAY_MANVbangTENDNTableAdapter = null;
             this.tableAdapterManager.LINHKIENTableAdapter = null;
@@ -866,23 +873,19 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.Image = global::nha_tro.Properties.Resources.Designbolts_Free_Multimedia_Mobile;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.Location = new System.Drawing.Point(0, 0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(1104, 42);
             this.button2.TabIndex = 33;
-            this.button2.Text = "Quản Lý Sản Phẩm";
+            this.button2.Text = "QUẢN LÝ SẢN PHẨM";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             // 
             // tongSLspTableAdapter
             // 
             this.tongSLspTableAdapter.ClearBeforeFill = true;
-            // 
-            // makho_cboBindingSource
-            // 
-            this.makho_cboBindingSource.DataMember = "makho_cbo";
-            this.makho_cboBindingSource.DataSource = this.nghiepVu;
             // 
             // makho_cboTableAdapter
             // 
@@ -927,13 +930,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.tongSLspGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tongSLspBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHO1GridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sLSpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diaChiTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.makho_cboBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

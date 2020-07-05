@@ -201,6 +201,7 @@
             this.tableAdapterManager.KHO1TableAdapter = null;
             this.tableAdapterManager.KHOTableAdapter = null;
             this.tableAdapterManager.KHUYENMAI_DKTableAdapter = null;
+            this.tableAdapterManager.KHUYENMAI_lk_malkTableAdapter = null;
             this.tableAdapterManager.KHUYENMAITableAdapter = null;
             this.tableAdapterManager.LAY_MANVbangTENDNTableAdapter = null;
             this.tableAdapterManager.LINHKIENTableAdapter = this.lINHKIENTableAdapter;
@@ -348,6 +349,7 @@
             this.tableAdapterManager1.BAOHANH1TableAdapter = null;
             this.tableAdapterManager1.BAOHANHTableAdapter = null;
             this.tableAdapterManager1.ct_bHTableAdapter = null;
+            this.tableAdapterManager1.CT_HOADON_LINHKIENTableAdapter = null;
             this.tableAdapterManager1.Ct_KM_LKTableAdapter = null;
             this.tableAdapterManager1.CT_KM_SPTableAdapter = null;
             this.tableAdapterManager1.Ct_mua_SP_TIMKIEMTableAdapter = null;
@@ -365,8 +367,10 @@
             this.tableAdapterManager1.LOAISANPHAMTableAdapter = null;
             this.tableAdapterManager1.NDBaoHanhTableAdapter = null;
             this.tableAdapterManager1.SANPHAM__sreach_giaTableAdapter = null;
+            this.tableAdapterManager1.SP_LOITableAdapter = null;
             this.tableAdapterManager1.TAIKHOAN_TIMMANVTableAdapter = null;
             this.tableAdapterManager1.TinhTrangTTTableAdapter = null;
+            this.tableAdapterManager1.TraGop_tinhtienTableAdapter = null;
             this.tableAdapterManager1.TraGop1TableAdapter = null;
             this.tableAdapterManager1.TraGopTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = nha_tro.ttTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -465,7 +469,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(1203, 42);
             this.button9.TabIndex = 31;
-            this.button9.Text = "Lưu Linh Kiện Vào Kho";
+            this.button9.Text = "LƯU LINH KIỆN VÀO KHO";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -481,7 +485,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "LưuLinhKienVaoKho";
-            this.Text = "LưuLinhKienVaoKho";
+            this.Text = "LƯU LINH KIỆN VÀO KHO";
             this.Load += new System.EventHandler(this.LưuLinhKienVaoKho_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

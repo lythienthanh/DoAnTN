@@ -73,14 +73,14 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nHAPHANG1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lAY_MANVbangTENDNDataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lAY_MANVbangTENDNBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.mANHAPTextEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.lAY_MANVbangTENDNBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lAY_MANVbangTENDNDataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nHAPHANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cT_NHAP_LK_theoMaNhapTableAdapter = new nha_tro.ttTableAdapters.CT_NHAP_LK_theoMaNhapTableAdapter();
             this.nHAPHANG1BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -108,9 +108,9 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nHAPHANG1DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHAPHANG1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mANHAPTextEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lAY_MANVbangTENDNBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lAY_MANVbangTENDNDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lAY_MANVbangTENDNBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mANHAPTextEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHAPHANGBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHAPHANG1BindingSource2)).BeginInit();
             this.SuspendLayout();
@@ -390,6 +390,7 @@
             this.tableAdapterManager.BAOHANH1TableAdapter = null;
             this.tableAdapterManager.BAOHANHTableAdapter = null;
             this.tableAdapterManager.ct_bHTableAdapter = null;
+            this.tableAdapterManager.CT_HOADON_LINHKIENTableAdapter = null;
             this.tableAdapterManager.Ct_KM_LKTableAdapter = null;
             this.tableAdapterManager.CT_KM_SPTableAdapter = null;
             this.tableAdapterManager.Ct_mua_SP_TIMKIEMTableAdapter = null;
@@ -407,8 +408,10 @@
             this.tableAdapterManager.LOAISANPHAMTableAdapter = null;
             this.tableAdapterManager.NDBaoHanhTableAdapter = null;
             this.tableAdapterManager.SANPHAM__sreach_giaTableAdapter = null;
+            this.tableAdapterManager.SP_LOITableAdapter = null;
             this.tableAdapterManager.TAIKHOAN_TIMMANVTableAdapter = null;
             this.tableAdapterManager.TinhTrangTTTableAdapter = null;
+            this.tableAdapterManager.TraGop_tinhtienTableAdapter = null;
             this.tableAdapterManager.TraGop1TableAdapter = null;
             this.tableAdapterManager.TraGopTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = nha_tro.ttTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -437,6 +440,7 @@
             this.tableAdapterManager1.KHO1TableAdapter = null;
             this.tableAdapterManager1.KHOTableAdapter = null;
             this.tableAdapterManager1.KHUYENMAI_DKTableAdapter = null;
+            this.tableAdapterManager1.KHUYENMAI_lk_malkTableAdapter = null;
             this.tableAdapterManager1.KHUYENMAITableAdapter = null;
             this.tableAdapterManager1.LAY_MANVbangTENDNTableAdapter = this.lAY_MANVbangTENDNTableAdapter;
             this.tableAdapterManager1.LINHKIENTableAdapter = null;
@@ -527,6 +531,37 @@
             this.nHAPHANG1BindingSource.DataMember = "NHAPHANG1";
             this.nHAPHANG1BindingSource.DataSource = this.nghiepVu;
             // 
+            // lAY_MANVbangTENDNDataGridView1
+            // 
+            this.lAY_MANVbangTENDNDataGridView1.AutoGenerateColumns = false;
+            this.lAY_MANVbangTENDNDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.lAY_MANVbangTENDNDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.lAY_MANVbangTENDNDataGridView1.DataSource = this.lAY_MANVbangTENDNBindingSource;
+            this.lAY_MANVbangTENDNDataGridView1.Location = new System.Drawing.Point(864, 32);
+            this.lAY_MANVbangTENDNDataGridView1.Name = "lAY_MANVbangTENDNDataGridView1";
+            this.lAY_MANVbangTENDNDataGridView1.Size = new System.Drawing.Size(119, 111);
+            this.lAY_MANVbangTENDNDataGridView1.TabIndex = 0;
+            this.lAY_MANVbangTENDNDataGridView1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MANV";
+            this.dataGridViewTextBoxColumn1.HeaderText = "MANV";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TENDANGNHAP";
+            this.dataGridViewTextBoxColumn2.HeaderText = "TENDANGNHAP";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // lAY_MANVbangTENDNBindingSource
+            // 
+            this.lAY_MANVbangTENDNBindingSource.DataMember = "LAY_MANVbangTENDN";
+            this.lAY_MANVbangTENDNBindingSource.DataSource = this.nghiepVu;
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -563,37 +598,6 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // lAY_MANVbangTENDNBindingSource
-            // 
-            this.lAY_MANVbangTENDNBindingSource.DataMember = "LAY_MANVbangTENDN";
-            this.lAY_MANVbangTENDNBindingSource.DataSource = this.nghiepVu;
-            // 
-            // lAY_MANVbangTENDNDataGridView1
-            // 
-            this.lAY_MANVbangTENDNDataGridView1.AutoGenerateColumns = false;
-            this.lAY_MANVbangTENDNDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.lAY_MANVbangTENDNDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.lAY_MANVbangTENDNDataGridView1.DataSource = this.lAY_MANVbangTENDNBindingSource;
-            this.lAY_MANVbangTENDNDataGridView1.Location = new System.Drawing.Point(864, 32);
-            this.lAY_MANVbangTENDNDataGridView1.Name = "lAY_MANVbangTENDNDataGridView1";
-            this.lAY_MANVbangTENDNDataGridView1.Size = new System.Drawing.Size(119, 111);
-            this.lAY_MANVbangTENDNDataGridView1.TabIndex = 0;
-            this.lAY_MANVbangTENDNDataGridView1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "MANV";
-            this.dataGridViewTextBoxColumn1.HeaderText = "MANV";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "TENDANGNHAP";
-            this.dataGridViewTextBoxColumn2.HeaderText = "TENDANGNHAP";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
             // nHAPHANGBindingSource
             // 
             this.nHAPHANGBindingSource.DataMember = "NHAPHANG";
@@ -624,7 +628,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(1222, 42);
             this.button9.TabIndex = 31;
-            this.button9.Text = "Tạo Phiếu Nhập Linh Kiện";
+            this.button9.Text = "TẠO PHIỂU NHẬP LINH KIỆN";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -637,7 +641,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Name = "TaoPhieuNhapLinhKien";
-            this.Text = "TaoPhieuNhapLinhKien";
+            this.Text = "TẠO PHIỂU NHẬP LINH KIỆN";
             this.Load += new System.EventHandler(this.TaoPhieuNhapLinhKien_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -656,9 +660,9 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nHAPHANG1DataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHAPHANG1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mANHAPTextEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lAY_MANVbangTENDNBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lAY_MANVbangTENDNDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lAY_MANVbangTENDNBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mANHAPTextEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHAPHANGBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHAPHANG1BindingSource2)).EndInit();
             this.ResumeLayout(false);

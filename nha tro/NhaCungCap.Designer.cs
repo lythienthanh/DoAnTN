@@ -247,6 +247,7 @@
             this.tableAdapterManager.KHO1TableAdapter = null;
             this.tableAdapterManager.KHOTableAdapter = null;
             this.tableAdapterManager.KHUYENMAI_DKTableAdapter = null;
+            this.tableAdapterManager.KHUYENMAI_lk_malkTableAdapter = null;
             this.tableAdapterManager.KHUYENMAITableAdapter = null;
             this.tableAdapterManager.LAY_MANVbangTENDNTableAdapter = null;
             this.tableAdapterManager.LINHKIENTableAdapter = null;
@@ -274,7 +275,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(982, 42);
             this.button9.TabIndex = 30;
-            this.button9.Text = "Quản lý nhà cung cấp";
+            this.button9.Text = "QUẢN LÝ NHÀ CUNG CẤP";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -297,7 +298,7 @@
             this.Controls.Add(sDTLabel);
             this.Controls.Add(this.sDTTextEdit);
             this.Name = "NhaCungCap";
-            this.Text = "NhaCungCap";
+            this.Text = "QUẢN LÝ KHÁCH HÀNG";
             this.Load += new System.EventHandler(this.NhaCungCap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mANCCTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHACUNGCAPBindingSource)).EndInit();

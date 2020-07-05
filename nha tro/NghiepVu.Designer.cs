@@ -40608,7 +40608,7 @@ WHERE        (SANPHAM.TENSP LIKE '%' + @TENSP + '%')";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT DISTINCT KHUYENMAI.MAKHUYENMAI, KHUYENMAI.MASP, KHUYENMAI.MALINHKIEN, KHUYENMAI.TENKHUYENMAI, KHUYENMAI.NGAYBD, KHUYENMAI.NGAYKT, KHUYENMAI.GIATRI, SANPHAM.TENSP
@@ -40620,9 +40620,33 @@ FROM            KHUYENMAI INNER JOIN
             this._commandCollection[1].CommandText = @"SELECT DISTINCT KHUYENMAI.MAKHUYENMAI, KHUYENMAI.MASP, KHUYENMAI.MALINHKIEN, KHUYENMAI.TENKHUYENMAI, KHUYENMAI.NGAYBD, KHUYENMAI.NGAYKT, KHUYENMAI.GIATRI, SANPHAM.TENSP
 FROM            KHUYENMAI INNER JOIN
                          SANPHAM ON KHUYENMAI.MASP = SANPHAM.MASP
-WHERE        (SANPHAM.TENSP LIKE '%' + @TENSP + '%')";
+WHERE        (KHUYENMAI.NGAYKT < @ngayht)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TENSP", global::System.Data.SqlDbType.NVarChar, 51, global::System.Data.ParameterDirection.Input, 0, 0, "TENSP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ngayht", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "NGAYKT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT DISTINCT KHUYENMAI.MAKHUYENMAI, KHUYENMAI.MASP, KHUYENMAI.MALINHKIEN, KHUYENMAI.TENKHUYENMAI, KHUYENMAI.NGAYBD, KHUYENMAI.NGAYKT, KHUYENMAI.GIATRI, SANPHAM.TENSP
+FROM            KHUYENMAI INNER JOIN
+                         SANPHAM ON KHUYENMAI.MASP = SANPHAM.MASP
+WHERE        (KHUYENMAI.NGAYBD <= @ngayht) AND (KHUYENMAI.NGAYKT >= @ngayht)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ngayht", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "NGAYBD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = @"SELECT DISTINCT KHUYENMAI.MAKHUYENMAI, KHUYENMAI.MASP, KHUYENMAI.MALINHKIEN, KHUYENMAI.TENKHUYENMAI, KHUYENMAI.NGAYBD, KHUYENMAI.NGAYKT, KHUYENMAI.GIATRI, SANPHAM.TENSP
+FROM            KHUYENMAI INNER JOIN
+                         SANPHAM ON KHUYENMAI.MASP = SANPHAM.MASP
+WHERE        (KHUYENMAI.NGAYBD > @ngayht)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ngayht", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "NGAYBD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = @"SELECT DISTINCT KHUYENMAI.MAKHUYENMAI, KHUYENMAI.MASP, KHUYENMAI.MALINHKIEN, KHUYENMAI.TENKHUYENMAI, KHUYENMAI.NGAYBD, KHUYENMAI.NGAYKT, KHUYENMAI.GIATRI, SANPHAM.TENSP
+FROM            KHUYENMAI INNER JOIN
+                         SANPHAM ON KHUYENMAI.MASP = SANPHAM.MASP
+WHERE        (SANPHAM.TENSP LIKE '%' + @TENSP + '%')";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TENSP", global::System.Data.SqlDbType.NVarChar, 51, global::System.Data.ParameterDirection.Input, 0, 0, "TENSP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -40653,8 +40677,116 @@ WHERE        (SANPHAM.TENSP LIKE '%' + @TENSP + '%')";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy_TENSP(NghiepVu.KM_TENSPDataTable dataTable, string TENSP) {
+        public virtual int FillBy_DAKT(NghiepVu.KM_TENSPDataTable dataTable, global::System.Nullable<global::System.DateTime> ngayht) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((ngayht.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(ngayht.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual NghiepVu.KM_TENSPDataTable GetDataBy_DAKT(global::System.Nullable<global::System.DateTime> ngayht) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((ngayht.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(ngayht.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            NghiepVu.KM_TENSPDataTable dataTable = new NghiepVu.KM_TENSPDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy_DANGKM(NghiepVu.KM_TENSPDataTable dataTable, global::System.Nullable<global::System.DateTime> ngayht) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((ngayht.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(ngayht.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual NghiepVu.KM_TENSPDataTable GetDataBy_DANGKM(global::System.Nullable<global::System.DateTime> ngayht) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((ngayht.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(ngayht.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            NghiepVu.KM_TENSPDataTable dataTable = new NghiepVu.KM_TENSPDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy_SAPKM(NghiepVu.KM_TENSPDataTable dataTable, global::System.Nullable<global::System.DateTime> ngayht) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((ngayht.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(ngayht.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual NghiepVu.KM_TENSPDataTable GetDataBy_SAPKM(global::System.Nullable<global::System.DateTime> ngayht) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((ngayht.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(ngayht.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            NghiepVu.KM_TENSPDataTable dataTable = new NghiepVu.KM_TENSPDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy_TENSP(NghiepVu.KM_TENSPDataTable dataTable, string TENSP) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
             if ((TENSP == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -40673,7 +40805,7 @@ WHERE        (SANPHAM.TENSP LIKE '%' + @TENSP + '%')";
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual NghiepVu.KM_TENSPDataTable GetDataBy_TENSP(string TENSP) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[4];
             if ((TENSP == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }

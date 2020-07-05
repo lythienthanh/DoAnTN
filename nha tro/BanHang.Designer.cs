@@ -1197,8 +1197,10 @@
             this.tableAdapterManager1.LOAISANPHAMTableAdapter = null;
             this.tableAdapterManager1.NDBaoHanhTableAdapter = null;
             this.tableAdapterManager1.SANPHAM__sreach_giaTableAdapter = null;
+            this.tableAdapterManager1.SP_LOITableAdapter = null;
             this.tableAdapterManager1.TAIKHOAN_TIMMANVTableAdapter = null;
             this.tableAdapterManager1.TinhTrangTTTableAdapter = null;
+            this.tableAdapterManager1.TraGop_tinhtienTableAdapter = null;
             this.tableAdapterManager1.TraGop1TableAdapter = null;
             this.tableAdapterManager1.TraGopTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = nha_tro.ttTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -1271,7 +1273,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(1370, 42);
             this.button9.TabIndex = 31;
-            this.button9.Text = "Bán Điện Thoại";
+            this.button9.Text = "BÁN ĐIỆN THOẠI";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -1365,7 +1367,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "BanHang";
-            this.Text = "Bán Hàng";
+            this.Text = "BÁN ĐIỆN THOẠI";
             this.Load += new System.EventHandler(this.BanHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMDataGridView)).EndInit();

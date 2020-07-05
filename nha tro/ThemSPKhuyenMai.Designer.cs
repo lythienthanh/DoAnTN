@@ -65,6 +65,10 @@
             this.kHUYENMAI2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kHUYENMAI2TableAdapter = new nha_tro.ttTableAdapters.KHUYENMAI2TableAdapter();
             this.kHUYENMAI2DataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kHUYENMAIDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,10 +81,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lINHKIENTableAdapter = new nha_tro.NghiepVuTableAdapters.LINHKIENTableAdapter();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TENSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             mAKHUYENMAILabel = new System.Windows.Forms.Label();
             mALINHKIENLabel = new System.Windows.Forms.Label();
             tENKHUYENMAILabel = new System.Windows.Forms.Label();
@@ -198,6 +198,7 @@
             this.tableAdapterManager.HOADON_ttTableAdapter = null;
             this.tableAdapterManager.KHO_ttTableAdapter = null;
             this.tableAdapterManager.KHUYENMAI1TableAdapter = null;
+            this.tableAdapterManager.KHUYENMAI2TableAdapter = null;
             this.tableAdapterManager.KHUYENMAITableAdapter = this.kHUYENMAITableAdapter;
             this.tableAdapterManager.LOAISANPHAMTableAdapter = null;
             this.tableAdapterManager.NDBaoHanhTableAdapter = null;
@@ -433,6 +434,30 @@
             this.kHUYENMAI2DataGridView.Size = new System.Drawing.Size(449, 272);
             this.kHUYENMAI2DataGridView.TabIndex = 33;
             // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "MASP";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Mã SP";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // TENSP
+            // 
+            this.TENSP.DataPropertyName = "TENSP";
+            this.TENSP.HeaderText = "Tên SP";
+            this.TENSP.Name = "TENSP";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "MALINHKIEN";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Mã LK";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "GIATRI";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Giá trị khuyến mãi";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
             // kHUYENMAIDataGridView
             // 
             this.kHUYENMAIDataGridView.AutoGenerateColumns = false;
@@ -486,7 +511,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(1224, 42);
             this.button9.TabIndex = 34;
-            this.button9.Text = "Quản Lý Các Đợt Khuyến Mãi";
+            this.button9.Text = "QUẢN LÝ CÁC ĐỢT KHUYẾN MÃI";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -560,30 +585,6 @@
             // 
             this.lINHKIENTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "MASP";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Mã SP";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // TENSP
-            // 
-            this.TENSP.DataPropertyName = "TENSP";
-            this.TENSP.HeaderText = "Tên SP";
-            this.TENSP.Name = "TENSP";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "MALINHKIEN";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Mã LK";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "GIATRI";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Giá trị khuyến mãi";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
             // ThemSPKhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -592,7 +593,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button9);
             this.Name = "ThemSPKhuyenMai";
-            this.Text = "ThemSPKhuyenMai";
+            this.Text = "QUẢN LÝ CÁC ĐỢT KHUYẾN MÃI";
             this.Load += new System.EventHandler(this.ThemSPKhuyenMai_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHUYENMAIBindingSource)).EndInit();

@@ -42,9 +42,6 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tHONGKE_TRAGOP_NCCDataGridView = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.TinhTrangThanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,16 +49,19 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TinhTrangThanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tHONGKE_TRAGOP_NCCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tt = new nha_tro.tt();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button9 = new System.Windows.Forms.Button();
             this.tHONGKE_TRAGOP_NCCTableAdapter = new nha_tro.ttTableAdapters.THONGKE_TRAGOP_NCCTableAdapter();
             this.tableAdapterManager = new nha_tro.ttTableAdapters.TableAdapterManager();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tHONGKE_TRAGOP_NCCDataGridView)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tHONGKE_TRAGOP_NCCBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tt)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox4
@@ -198,43 +198,6 @@
             this.tHONGKE_TRAGOP_NCCDataGridView.Size = new System.Drawing.Size(729, 277);
             this.tHONGKE_TRAGOP_NCCDataGridView.TabIndex = 47;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.tHONGKE_TRAGOP_NCCDataGridView);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 62);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(741, 455);
-            this.groupBox1.TabIndex = 48;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin trả góp nhà cung cấp";
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.Transparent;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.Location = new System.Drawing.Point(0, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(1131, 42);
-            this.button9.TabIndex = 49;
-            this.button9.Text = "Thống Kế Nhà Cung Cấp Trả Góp";
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // TinhTrangThanhToan
-            // 
-            this.TinhTrangThanhToan.DataPropertyName = "TinhTrangThanhToan";
-            this.TinhTrangThanhToan.HeaderText = "Tình Trạng Thanh Toán";
-            this.TinhTrangThanhToan.Name = "TinhTrangThanhToan";
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "MAHD";
@@ -278,6 +241,12 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "Ngày thanh toán";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
+            // TinhTrangThanhToan
+            // 
+            this.TinhTrangThanhToan.DataPropertyName = "TinhTrangThanhToan";
+            this.TinhTrangThanhToan.HeaderText = "Tình Trạng Thanh Toán";
+            this.TinhTrangThanhToan.Name = "TinhTrangThanhToan";
+            // 
             // tHONGKE_TRAGOP_NCCBindingSource
             // 
             this.tHONGKE_TRAGOP_NCCBindingSource.DataMember = "THONGKE_TRAGOP_NCC";
@@ -287,6 +256,37 @@
             // 
             this.tt.DataSetName = "tt";
             this.tt.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.tHONGKE_TRAGOP_NCCDataGridView);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Location = new System.Drawing.Point(12, 62);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(741, 455);
+            this.groupBox1.TabIndex = 48;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin trả góp nhà cung cấp";
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Transparent;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button9.Location = new System.Drawing.Point(0, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(1131, 42);
+            this.button9.TabIndex = 49;
+            this.button9.Text = "THỐNG KÊ TRẢ GÓP CỦA NHÀ CUNG CẤP";
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // tHONGKE_TRAGOP_NCCTableAdapter
             // 
@@ -361,12 +361,12 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Name = "TraGopNCC";
-            this.Text = "TraGopNCC";
+            this.Text = "THỐNG KÊ TRẢ GÓP CỦA NHÀ CUNG CẤP";
             ((System.ComponentModel.ISupportInitialize)(this.tHONGKE_TRAGOP_NCCDataGridView)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tHONGKE_TRAGOP_NCCBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tt)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

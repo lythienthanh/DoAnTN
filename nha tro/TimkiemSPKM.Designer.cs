@@ -30,16 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.kHUYENMAIDataGridView = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.kM_TENSPBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nghiepVu = new nha_tro.NghiepVu();
-            this.kHUYENMAIBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kHUYENMAITableAdapter = new nha_tro.NghiepVuTableAdapters.KHUYENMAITableAdapter();
-            this.tableAdapterManager = new nha_tro.NghiepVuTableAdapters.TableAdapterManager();
-            this.kM_TENSPTableAdapter = new nha_tro.NghiepVuTableAdapters.KM_TENSPTableAdapter();
             this.mAKHUYENMAIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mALINHKIENDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +38,19 @@
             this.nGAYKTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gIATRIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kM_TENSPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nghiepVu = new nha_tro.NghiepVu();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.kHUYENMAIBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kHUYENMAITableAdapter = new nha_tro.NghiepVuTableAdapters.KHUYENMAITableAdapter();
+            this.tableAdapterManager = new nha_tro.NghiepVuTableAdapters.TableAdapterManager();
+            this.kM_TENSPTableAdapter = new nha_tro.NghiepVuTableAdapters.KM_TENSPTableAdapter();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.kHUYENMAIDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kM_TENSPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).BeginInit();
@@ -74,104 +77,6 @@
             this.kHUYENMAIDataGridView.Name = "kHUYENMAIDataGridView";
             this.kHUYENMAIDataGridView.Size = new System.Drawing.Size(723, 254);
             this.kHUYENMAIDataGridView.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 119);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tên SP";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(66, 116);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(241, 20);
-            this.textBox1.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::nha_tro.Properties.Resources.Gakuseisean_Aire_Search;
-            this.button1.Location = new System.Drawing.Point(313, 109);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 33);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.Transparent;
-            this.button9.Image = global::nha_tro.Properties.Resources.Gakuseisean_Aire_Search;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.Location = new System.Drawing.Point(0, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(723, 42);
-            this.button9.TabIndex = 29;
-            this.button9.Text = "Tìm kiếm Sản Phẩm Khuyến Mãi";
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // kM_TENSPBindingSource
-            // 
-            this.kM_TENSPBindingSource.DataMember = "KM_TENSP";
-            this.kM_TENSPBindingSource.DataSource = this.nghiepVu;
-            // 
-            // nghiepVu
-            // 
-            this.nghiepVu.DataSetName = "NghiepVu";
-            this.nghiepVu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // kHUYENMAIBindingSource
-            // 
-            this.kHUYENMAIBindingSource.DataMember = "KHUYENMAI";
-            this.kHUYENMAIBindingSource.DataSource = this.nghiepVu;
-            // 
-            // kHUYENMAITableAdapter
-            // 
-            this.kHUYENMAITableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CT_HOADON_LINHKIENTableAdapter = null;
-            this.tableAdapterManager.Ct_mua_SPTableAdapter = null;
-            this.tableAdapterManager.CT_NHAP_LK_sreach_lk_manhapTableAdapter = null;
-            this.tableAdapterManager.CT_NHAP_SP_DK_LUUKHOTableAdapter = null;
-            this.tableAdapterManager.CT_NHAP_SPTableAdapter = null;
-            this.tableAdapterManager.HOADON1TableAdapter = null;
-            this.tableAdapterManager.HOADONTableAdapter = null;
-            this.tableAdapterManager.KHACHHANG_dkTableAdapter = null;
-            this.tableAdapterManager.KHACHHANGTableAdapter = null;
-            this.tableAdapterManager.KHO1TableAdapter = null;
-            this.tableAdapterManager.KHOTableAdapter = null;
-            this.tableAdapterManager.KHUYENMAI_DKTableAdapter = null;
-            this.tableAdapterManager.KHUYENMAI_lk_malkTableAdapter = null;
-            this.tableAdapterManager.KHUYENMAITableAdapter = this.kHUYENMAITableAdapter;
-            this.tableAdapterManager.LAY_MANVbangTENDNTableAdapter = null;
-            this.tableAdapterManager.LINHKIENTableAdapter = null;
-            this.tableAdapterManager.LOAIHOADONTableAdapter = null;
-            this.tableAdapterManager.LOAISANPHAMTableAdapter = null;
-            this.tableAdapterManager.LOIDONGUOIDUNGTableAdapter = null;
-            this.tableAdapterManager.LOIDONHASXTableAdapter = null;
-            this.tableAdapterManager.NHACUNGCAPTableAdapter = null;
-            this.tableAdapterManager.NHANVIENTableAdapter = null;
-            this.tableAdapterManager.NHAPHANG1TableAdapter = null;
-            this.tableAdapterManager.NHAPHANGTableAdapter = null;
-            this.tableAdapterManager.SANPHAMTableAdapter = null;
-            this.tableAdapterManager.TAIKHOANTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = nha_tro.NghiepVuTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // kM_TENSPTableAdapter
-            // 
-            this.kM_TENSPTableAdapter.ClearBeforeFill = true;
             // 
             // mAKHUYENMAIDataGridViewTextBoxColumn
             // 
@@ -221,11 +126,148 @@
             this.tENSPDataGridViewTextBoxColumn.HeaderText = "Tên SP";
             this.tENSPDataGridViewTextBoxColumn.Name = "tENSPDataGridViewTextBoxColumn";
             // 
+            // kM_TENSPBindingSource
+            // 
+            this.kM_TENSPBindingSource.DataMember = "KM_TENSP";
+            this.kM_TENSPBindingSource.DataSource = this.nghiepVu;
+            // 
+            // nghiepVu
+            // 
+            this.nghiepVu.DataSetName = "NghiepVu";
+            this.nghiepVu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 119);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Tên SP";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(66, 116);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(241, 20);
+            this.textBox1.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::nha_tro.Properties.Resources.Gakuseisean_Aire_Search;
+            this.button1.Location = new System.Drawing.Point(313, 109);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 33);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Transparent;
+            this.button9.Image = global::nha_tro.Properties.Resources.Gakuseisean_Aire_Search;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button9.Location = new System.Drawing.Point(0, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(723, 42);
+            this.button9.TabIndex = 29;
+            this.button9.Text = "Tìm kiếm Sản Phẩm Khuyến Mãi";
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // kHUYENMAIBindingSource
+            // 
+            this.kHUYENMAIBindingSource.DataMember = "KHUYENMAI";
+            this.kHUYENMAIBindingSource.DataSource = this.nghiepVu;
+            // 
+            // kHUYENMAITableAdapter
+            // 
+            this.kHUYENMAITableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CT_HOADON_LINHKIENTableAdapter = null;
+            this.tableAdapterManager.Ct_mua_SPTableAdapter = null;
+            this.tableAdapterManager.CT_NHAP_LK_sreach_lk_manhapTableAdapter = null;
+            this.tableAdapterManager.CT_NHAP_SP_DK_LUUKHOTableAdapter = null;
+            this.tableAdapterManager.CT_NHAP_SPTableAdapter = null;
+            this.tableAdapterManager.HOADON1TableAdapter = null;
+            this.tableAdapterManager.HOADONTableAdapter = null;
+            this.tableAdapterManager.KHACHHANG_dkTableAdapter = null;
+            this.tableAdapterManager.KHACHHANGTableAdapter = null;
+            this.tableAdapterManager.KHO1TableAdapter = null;
+            this.tableAdapterManager.KHOTableAdapter = null;
+            this.tableAdapterManager.KHUYENMAI_DKTableAdapter = null;
+            this.tableAdapterManager.KHUYENMAI_lk_malkTableAdapter = null;
+            this.tableAdapterManager.KHUYENMAITableAdapter = this.kHUYENMAITableAdapter;
+            this.tableAdapterManager.LAY_MANVbangTENDNTableAdapter = null;
+            this.tableAdapterManager.LINHKIENTableAdapter = null;
+            this.tableAdapterManager.LOAIHOADONTableAdapter = null;
+            this.tableAdapterManager.LOAISANPHAMTableAdapter = null;
+            this.tableAdapterManager.LOIDONGUOIDUNGTableAdapter = null;
+            this.tableAdapterManager.LOIDONHASXTableAdapter = null;
+            this.tableAdapterManager.NHACUNGCAPTableAdapter = null;
+            this.tableAdapterManager.NHANVIENTableAdapter = null;
+            this.tableAdapterManager.NHAPHANG1TableAdapter = null;
+            this.tableAdapterManager.NHAPHANGTableAdapter = null;
+            this.tableAdapterManager.SANPHAMTableAdapter = null;
+            this.tableAdapterManager.TAIKHOANTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = nha_tro.NghiepVuTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // kM_TENSPTableAdapter
+            // 
+            this.kM_TENSPTableAdapter.ClearBeforeFill = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(379, 69);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(101, 17);
+            this.radioButton1.TabIndex = 30;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Sắp khuyến mãi";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(379, 119);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(138, 17);
+            this.radioButton2.TabIndex = 31;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Đã kết thúc khuyến mãi";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(379, 92);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(108, 17);
+            this.radioButton3.TabIndex = 32;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Đang khuyến mãi";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
             // TimkiemSPKM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 402);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -264,5 +306,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nGAYKTDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gIATRIDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tENSPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
     }
 }

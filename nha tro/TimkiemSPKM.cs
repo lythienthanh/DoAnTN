@@ -50,5 +50,20 @@ namespace nha_tro
         {
             kM_TENSPTableAdapter.FillBy_TENSP(this.nghiepVu.KM_TENSP, textBox1.Text);
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            kM_TENSPTableAdapter.FillBy_SAPKM(this.nghiepVu.KM_TENSP, DateTime.Today.Date);
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            kM_TENSPTableAdapter.FillBy_DANGKM(this.nghiepVu.KM_TENSP, DateTime.Today.Date);
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            kM_TENSPTableAdapter.FillBy_DAKT(this.nghiepVu.KM_TENSP, DateTime.Today.Date);
+        }
     }
 }

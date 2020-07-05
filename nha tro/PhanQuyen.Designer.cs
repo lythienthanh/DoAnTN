@@ -44,11 +44,9 @@
             this.ghiChuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.phanQuyenDKDataGridView = new System.Windows.Forms.DataGridView();
+            this.coQuyenDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.button9 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.maManHinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenManHinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coQuyenDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable_dkBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_DangNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHANQUYENBindingSource)).BeginInit();
@@ -165,8 +163,6 @@
             this.phanQuyenDKDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.phanQuyenDKDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.phanQuyenDKDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maManHinhDataGridViewTextBoxColumn,
-            this.tenManHinhDataGridViewTextBoxColumn,
             this.coQuyenDataGridViewCheckBoxColumn});
             this.phanQuyenDKDataGridView.DataSource = this.dataTable_dkBindingSource;
             this.phanQuyenDKDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -174,6 +170,12 @@
             this.phanQuyenDKDataGridView.Name = "phanQuyenDKDataGridView";
             this.phanQuyenDKDataGridView.Size = new System.Drawing.Size(406, 218);
             this.phanQuyenDKDataGridView.TabIndex = 4;
+            // 
+            // coQuyenDataGridViewCheckBoxColumn
+            // 
+            this.coQuyenDataGridViewCheckBoxColumn.DataPropertyName = "CoQuyen";
+            this.coQuyenDataGridViewCheckBoxColumn.HeaderText = "Có quyền";
+            this.coQuyenDataGridViewCheckBoxColumn.Name = "coQuyenDataGridViewCheckBoxColumn";
             // 
             // button9
             // 
@@ -188,7 +190,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(801, 42);
             this.button9.TabIndex = 31;
-            this.button9.Text = "Cấp Quyền Cho Nhóm Người Dùng";
+            this.button9.Text = "CẤP QUYỀN CHO NHÓM NGƯỜI DÙNG";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -203,24 +205,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // maManHinhDataGridViewTextBoxColumn
-            // 
-            this.maManHinhDataGridViewTextBoxColumn.DataPropertyName = "MAMANHINH";
-            this.maManHinhDataGridViewTextBoxColumn.HeaderText = "Mã màn hình";
-            this.maManHinhDataGridViewTextBoxColumn.Name = "maManHinhDataGridViewTextBoxColumn";
-            // 
-            // tenManHinhDataGridViewTextBoxColumn
-            // 
-            this.tenManHinhDataGridViewTextBoxColumn.DataPropertyName = "TENMANHINH";
-            this.tenManHinhDataGridViewTextBoxColumn.HeaderText = "Tên màn hình";
-            this.tenManHinhDataGridViewTextBoxColumn.Name = "tenManHinhDataGridViewTextBoxColumn";
-            // 
-            // coQuyenDataGridViewCheckBoxColumn
-            // 
-            this.coQuyenDataGridViewCheckBoxColumn.DataPropertyName = "CoQuyen";
-            this.coQuyenDataGridViewCheckBoxColumn.HeaderText = "Có quyền";
-            this.coQuyenDataGridViewCheckBoxColumn.Name = "coQuyenDataGridViewCheckBoxColumn";
-            // 
             // PhanQuyen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,7 +215,7 @@
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button1);
             this.Name = "PhanQuyen";
-            this.Text = "PhanQuyen";
+            this.Text = "CẤP QUYỀN CHO NHÓM NGƯỜI DÙNG";
             this.Load += new System.EventHandler(this.PhanQuyen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataTable_dkBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_DangNhap)).EndInit();

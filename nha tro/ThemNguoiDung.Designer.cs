@@ -271,6 +271,7 @@
             this.tableAdapterManager1.KHO1TableAdapter = null;
             this.tableAdapterManager1.KHOTableAdapter = null;
             this.tableAdapterManager1.KHUYENMAI_DKTableAdapter = null;
+            this.tableAdapterManager1.KHUYENMAI_lk_malkTableAdapter = null;
             this.tableAdapterManager1.KHUYENMAITableAdapter = null;
             this.tableAdapterManager1.LAY_MANVbangTENDNTableAdapter = null;
             this.tableAdapterManager1.LINHKIENTableAdapter = null;
@@ -310,7 +311,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(1303, 42);
             this.button9.TabIndex = 29;
-            this.button9.Text = "Thêm Tài Khoản Cho Nhân Viên";
+            this.button9.Text = "THÊM TÀI KHOẢN CHO NHÂN VIÊN";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -490,7 +491,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Thêm);
             this.Name = "ThemNguoiDung";
-            this.Text = "ThemNguoiDung";
+            this.Text = "THÊM TÀI KHOÀN CHO NHÂN VIÊN";
             this.Load += new System.EventHandler(this.ThemNguoiDung_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dS_DangNhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANBindingSource)).EndInit();

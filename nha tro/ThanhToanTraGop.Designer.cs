@@ -37,9 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.dataTable1DataGridView = new System.Windows.Forms.DataGridView();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +46,9 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tt = new nha_tro.tt();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.traGopBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.traGopTableAdapter = new nha_tro.ttTableAdapters.TraGopTableAdapter();
             this.tableAdapterManager = new nha_tro.ttTableAdapters.TableAdapterManager();
@@ -59,12 +59,12 @@
             this.traGop_tinhtienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.traGop_tinhtienTableAdapter = new nha_tro.ttTableAdapters.TraGop_tinhtienTableAdapter();
             this.traGop_tinhtienDataGridView = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             maTraGopLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
@@ -164,40 +164,6 @@
             this.dataTable1DataGridView.TabIndex = 15;
             this.dataTable1DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTable1DataGridView_CellClick);
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(147, 43);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 11;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.Transparent;
-            this.button9.Image = global::nha_tro.Properties.Resources.Designcontest_Ecommerce_Business_Dollar;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.Location = new System.Drawing.Point(0, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(1311, 42);
-            this.button9.TabIndex = 31;
-            this.button9.Text = "Thanh toán Trả Góp";
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 13);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Thông tin khách hàng trả góp";
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "MAHD";
@@ -251,6 +217,40 @@
             this.tt.DataSetName = "tt";
             this.tt.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(147, 43);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 11;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Transparent;
+            this.button9.Image = global::nha_tro.Properties.Resources.Designcontest_Ecommerce_Business_Dollar;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button9.Location = new System.Drawing.Point(0, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(1311, 42);
+            this.button9.TabIndex = 31;
+            this.button9.Text = "THANH TOÁN TRẢ GÓP";
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 132);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(148, 13);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Thông tin khách hàng trả góp";
+            // 
             // traGopBindingSource
             // 
             this.traGopBindingSource.DataMember = "TraGop";
@@ -284,6 +284,7 @@
             this.tableAdapterManager.LOAISANPHAMTableAdapter = null;
             this.tableAdapterManager.NDBaoHanhTableAdapter = null;
             this.tableAdapterManager.SANPHAM__sreach_giaTableAdapter = null;
+            this.tableAdapterManager.SP_LOITableAdapter = null;
             this.tableAdapterManager.TAIKHOAN_TIMMANVTableAdapter = null;
             this.tableAdapterManager.TinhTrangTTTableAdapter = null;
             this.tableAdapterManager.TraGop_tinhtienTableAdapter = null;
@@ -335,21 +336,6 @@
             this.traGop_tinhtienDataGridView.Size = new System.Drawing.Size(422, 127);
             this.traGop_tinhtienDataGridView.TabIndex = 33;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.traGop_tinhtienDataGridView);
-            this.groupBox1.Controls.Add(maTraGopLabel);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Location = new System.Drawing.Point(786, 62);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(459, 319);
-            this.groupBox1.TabIndex = 34;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin thanh toán trả góp";
-            // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "MaTraGop";
@@ -380,6 +366,21 @@
             this.dataGridViewTextBoxColumn12.HeaderText = "Hạn trả";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.traGop_tinhtienDataGridView);
+            this.groupBox1.Controls.Add(maTraGopLabel);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Location = new System.Drawing.Point(786, 62);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(459, 319);
+            this.groupBox1.TabIndex = 34;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin thanh toán trả góp";
+            // 
             // ThanhToanTraGop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,7 +394,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Name = "ThanhToanTraGop";
-            this.Text = "ThanhToanTraGop";
+            this.Text = "THANH TOÁN TRẢ GÓP";
             this.Load += new System.EventHandler(this.ThanhToanTraGop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1DataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();

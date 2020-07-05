@@ -51,6 +51,11 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.traGop2_select_theo_ngayDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.traGop2_select_theo_ngayBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button9 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -71,11 +76,6 @@
             this.hOADON_cboTableAdapter = new nha_tro.ttTableAdapters.HOADON_cboTableAdapter();
             this.hOADON_cboComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.thongKe_tragop_theongayDataGridView)).BeginInit();
@@ -293,6 +293,36 @@
             this.traGop2_select_theo_ngayDataGridView.Size = new System.Drawing.Size(479, 201);
             this.traGop2_select_theo_ngayDataGridView.TabIndex = 32;
             // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "MaTraGop";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Mã trả góp";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "SoTienPhaiTra";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Số tiền đã trả";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "SoTienConLai";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Số tiền còn lại";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "NgayTra";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Ngảy trả";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "deadline";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Hạn cuối";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
             // traGop2_select_theo_ngayBindingSource
             // 
             this.traGop2_select_theo_ngayBindingSource.DataMember = "TraGop2_select_theo_ngay";
@@ -310,7 +340,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(1370, 42);
             this.button9.TabIndex = 33;
-            this.button9.Text = "Thống Kê Trả Góp Của Khách Hàng";
+            this.button9.Text = "THỐNG KÊ TRẢ GÓP CỦA KHÁCH HÀNG";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -469,36 +499,6 @@
             this.groupBox3.TabIndex = 38;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin thống kê";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "MaTraGop";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Mã trả góp";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "SoTienPhaiTra";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Số tiền đã trả";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "SoTienConLai";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Số tiền còn lại";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "NgayTra";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Ngảy trả";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "deadline";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Hạn cuối";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
             // groupBox4
             // 

@@ -552,6 +552,7 @@
             this.MH000000000000000011.Name = "MH000000000000000011";
             this.MH000000000000000011.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.MH000000000000000011.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.MH000000000000000011.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem12_ItemClick);
             // 
             // barButtonItem13
@@ -870,6 +871,7 @@
             this.MH000000000000000029.Name = "MH000000000000000029";
             this.MH000000000000000029.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.MH000000000000000029.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.MH000000000000000029.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MH000000000000000029_ItemClick);
             // 
             // MH000000000000000030

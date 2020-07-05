@@ -53,7 +53,7 @@ namespace nha_tro
             {
                 //System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-            mAKHTextEdit.Text = kHACHHANG_dkDataGridView.CurrentRow.Cells[0].Value.ToString();
+            textBox3.Text = kHACHHANG_dkDataGridView.CurrentRow.Cells[0].Value.ToString();
         }
 
         private void fillToolStripButton_Click(object sender, EventArgs e)
@@ -75,8 +75,9 @@ namespace nha_tro
             this.nDBaoHanhTableAdapter.Fill(this.tt.NDBaoHanh);
             // TODO: This line of code loads data into the 'tt.BAOHANH' table. You can move, or remove it, as needed.
             this.bAOHANHTableAdapter.Fill(this.tt.BAOHANH);
-            mAKHTextEdit.ReadOnly = true;
-
+            textBox3.ReadOnly = true;
+            textBox4.ReadOnly = true;
+            textBox4.Text = "";
             //
             kHACHHANG_dkDataGridView.BorderStyle = BorderStyle.None;
             kHACHHANG_dkDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
@@ -135,29 +136,57 @@ namespace nha_tro
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //tim manv
-            try
+            if(textBox4.Text != "")
             {
-                this.tAIKHOANTableAdapter.Fill_DK(this.nghiepVu.TAIKHOAN, tendn);
+                //tim manv
+                try
+                {
+                    this.tAIKHOANTableAdapter.Fill_DK(this.nghiepVu.TAIKHOAN, tendn);
+                }
+                catch (System.Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                }
+                string manv = tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString();
+
+
+                DateTime? nbhxong = null;
+                bAOHANHTableAdapter.Insert(int.Parse(textBox2.Text), textBox3.Text, dateTimePicker1.Value, nbhxong, lOIDONGUOIDUNGComboBox.SelectedValue.ToString());
+                //insert hd bao hanh
+                /* hOADON_baohanhTableAdapter.Insert("khong", "MLHD05", dateTimePicker1.Value, textBox2.Text, manv, "", "", int.Parse(textBox2.Text));*/
+                hOADON_baohanhTableAdapter.Insert("khong", "MLHD05", dateTimePicker1.Value, "", manv, "", "", int.Parse(textBox2.Text));
+
+                /* update ma bao hanh cho hoa don*/
+                hOADON_baohanhTableAdapter.Updatemahoadon(int.Parse(textBox2.Text), int.Parse(sELECT_DATA_HDDataGridView.CurrentRow.Cells[0].Value.ToString()));
+                //load data
+                this.select_baohanhTableAdapter.Fill(this.tt.select_baohanh, ((int)(System.Convert.ChangeType(textBox2.Text, typeof(int)))));
+                bAOHANHTableAdapter.Fill(tt.BAOHANH);
+
             }
-            catch (System.Exception ex)
+            else
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                //tim manv
+                try
+                {
+                    this.tAIKHOANTableAdapter.Fill_DK(this.nghiepVu.TAIKHOAN, tendn);
+                }
+                catch (System.Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                }
+                string manv = tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString();
+
+
+                DateTime? nbhxong = null;
+                bAOHANHTableAdapter.Insert(int.Parse(textBox2.Text), textBox3.Text, dateTimePicker1.Value, nbhxong, lOIDONGUOIDUNGComboBox.SelectedValue.ToString());
+                //insert hd bao hanh
+                /* hOADON_baohanhTableAdapter.Insert("khong", "MLHD05", dateTimePicker1.Value, textBox2.Text, manv, "", "", int.Parse(textBox2.Text));*/
+                hOADON_baohanhTableAdapter.Insert("khong", "MLHD05", dateTimePicker1.Value, "", manv, "", "", int.Parse(textBox2.Text));
+                //load data
+                this.select_baohanhTableAdapter.Fill(this.tt.select_baohanh, ((int)(System.Convert.ChangeType(textBox2.Text, typeof(int)))));
+                bAOHANHTableAdapter.Fill(tt.BAOHANH);
+
             }
-            string manv = tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString();
-
-
-            DateTime? nbhxong = null;
-            bAOHANHTableAdapter.Insert(int.Parse(textBox2.Text), mAKHTextEdit.Text, dateTimePicker1.Value, nbhxong,lOIDONGUOIDUNGComboBox.SelectedValue.ToString());
-            //insert hd bao hanh
-            /* hOADON_baohanhTableAdapter.Insert("khong", "MLHD05", dateTimePicker1.Value, textBox2.Text, manv, "", "", int.Parse(textBox2.Text));*/
-            hOADON_baohanhTableAdapter.Insert("khong", "MLHD05", dateTimePicker1.Value, "", manv, "", "", int.Parse(textBox2.Text));
-
-            /* update ma bao hanh cho hoa don*/
-            hOADON_baohanhTableAdapter.Updatemahoadon(int.Parse(textBox2.Text), int.Parse(sELECT_DATA_HDDataGridView.CurrentRow.Cells[0].Value.ToString()));
-            //load data
-            this.select_baohanhTableAdapter.Fill(this.tt.select_baohanh, ((int)(System.Convert.ChangeType(textBox2.Text, typeof(int)))));
-            bAOHANHTableAdapter.Fill(tt.BAOHANH);
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -226,41 +255,74 @@ namespace nha_tro
             try
             {
                 this.dataTable2TableAdapter.Fill(this.tt.DataTable2, ((int)(System.Convert.ChangeType(bAOHANHComboBox.SelectedValue.ToString(), typeof(int)))));
+                textBox2.Text = bAOHANHComboBox.SelectedValue.ToString();
             }
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-            textBox2.Text = bAOHANHComboBox.SelectedValue.ToString();
+            
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            string ngayban = sELECT_DATA_HDDataGridView.CurrentRow.Cells[6].Value.ToString();
-            
-            DateTime ngayb = Convert.ToDateTime(ngayban).AddMonths(6);
-            if (ngayb < DateTime.Today)
+            if(textBox4.Text != "")
             {
-                int tongtien = 0;
-                for (int i = 0; i < dataTable2DataGridView.Rows.Count - 1; i++)
+                string ngayban = sELECT_DATA_HDDataGridView.CurrentRow.Cells[6].Value.ToString();
+
+                DateTime ngayb = Convert.ToDateTime(ngayban).AddMonths(6);
+                if (ngayb < DateTime.Today)
                 {
-                    tongtien += int.Parse(dataTable2DataGridView.Rows[i].Cells[4].Value.ToString()) + int.Parse(dataTable2DataGridView.Rows[i].Cells[5].Value.ToString());
+                    int tongtien = 0;
+                    for (int i = 0; i < dataTable2DataGridView.Rows.Count - 1; i++)
+                    {
+                        tongtien += int.Parse(dataTable2DataGridView.Rows[i].Cells[4].Value.ToString()) + int.Parse(dataTable2DataGridView.Rows[i].Cells[5].Value.ToString());
+                    }
+                    int? mahd = hOADON_baohanhTableAdapter.selecet_mahdhientai();
+                    HD_BAOHANH hd_Baohanh = new HD_BAOHANH(mahd.ToString(), bAOHANHComboBox.SelectedValue.ToString(), tongtien.ToString(), bAOHANHDataGridView.Rows[0].Cells[2].Value.ToString(), textBox4.Text);
+                    hd_Baohanh.ShowDialog();
                 }
-                int? mahd = hOADON_baohanhTableAdapter.SELECT_MAHD(int.Parse(bAOHANHComboBox.SelectedValue.ToString()));
-                HD_BAOHANH hd_Baohanh = new HD_BAOHANH(mahd.ToString(), bAOHANHComboBox.SelectedValue.ToString(), tongtien.ToString(), bAOHANHDataGridView.Rows[0].Cells[2].Value.ToString(), sELECT_DATA_HDDataGridView.CurrentRow.Cells[0].Value.ToString());
-                hd_Baohanh.ShowDialog();
+                else
+                {
+                    int tongtien = 0;
+                    for (int i = 0; i < dataTable2DataGridView.Rows.Count - 1; i++)
+                    {
+                        tongtien += int.Parse(dataTable2DataGridView.Rows[i].Cells[4].Value.ToString()) + int.Parse(dataTable2DataGridView.Rows[i].Cells[5].Value.ToString());
+                        tongtien = tongtien - (tongtien * 10 / 100);
+                    }
+                    int? mahd = hOADON_baohanhTableAdapter.selecet_mahdhientai();
+                    HD_BAOHANH hd_Baohanh = new HD_BAOHANH(mahd.ToString(), bAOHANHComboBox.SelectedValue.ToString(), tongtien.ToString(), bAOHANHDataGridView.Rows[0].Cells[2].Value.ToString(), textBox4.Text);
+                    hd_Baohanh.ShowDialog();
+                }
             }
             else
             {
-                int tongtien = 0;
-                for (int i = 0; i < dataTable2DataGridView.Rows.Count - 1; i++)
+                string ngayban = sELECT_DATA_HDDataGridView.CurrentRow.Cells[6].Value.ToString();
+
+                DateTime ngayb = Convert.ToDateTime(ngayban).AddMonths(6);
+                if (ngayb < DateTime.Today)
                 {
-                    tongtien += int.Parse(dataTable2DataGridView.Rows[i].Cells[4].Value.ToString()) + int.Parse(dataTable2DataGridView.Rows[i].Cells[5].Value.ToString());
-                    tongtien = tongtien - (tongtien * 10 / 100);
+                    int tongtien = 0;
+                    for (int i = 0; i < dataTable2DataGridView.Rows.Count - 1; i++)
+                    {
+                        tongtien += int.Parse(dataTable2DataGridView.Rows[i].Cells[4].Value.ToString()) + int.Parse(dataTable2DataGridView.Rows[i].Cells[5].Value.ToString());
+                    }
+                    int? mahd = hOADON_baohanhTableAdapter.selecet_mahdhientai();
+                    HD_BAOHANH hd_Baohanh = new HD_BAOHANH(mahd.ToString(), bAOHANHComboBox.SelectedValue.ToString(), tongtien.ToString(), bAOHANHDataGridView.Rows[0].Cells[2].Value.ToString(), "khong");
+                    hd_Baohanh.ShowDialog();
                 }
-                int? mahd = hOADON_baohanhTableAdapter.SELECT_MAHD(int.Parse(bAOHANHComboBox.SelectedValue.ToString()));
-                HD_BAOHANH hd_Baohanh = new HD_BAOHANH(mahd.ToString(), bAOHANHComboBox.SelectedValue.ToString(), tongtien.ToString(), bAOHANHDataGridView.Rows[0].Cells[2].Value.ToString(), sELECT_DATA_HDDataGridView.CurrentRow.Cells[0].Value.ToString());
-                hd_Baohanh.ShowDialog();
+                else
+                {
+                    int tongtien = 0;
+                    for (int i = 0; i < dataTable2DataGridView.Rows.Count - 1; i++)
+                    {
+                        tongtien += int.Parse(dataTable2DataGridView.Rows[i].Cells[4].Value.ToString()) + int.Parse(dataTable2DataGridView.Rows[i].Cells[5].Value.ToString());
+                        tongtien = tongtien - (tongtien * 10 / 100);
+                    }
+                    int? mahd = hOADON_baohanhTableAdapter.selecet_mahdhientai();
+                    HD_BAOHANH hd_Baohanh = new HD_BAOHANH(mahd.ToString(), bAOHANHComboBox.SelectedValue.ToString(), tongtien.ToString(), bAOHANHDataGridView.Rows[0].Cells[2].Value.ToString(), "khong");
+                    hd_Baohanh.ShowDialog();
+                }
             }
             
         }
@@ -360,17 +422,28 @@ namespace nha_tro
         private void sELECT_DATA_HDDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string ngayban = sELECT_DATA_HDDataGridView.CurrentRow.Cells[6].Value.ToString();
+            textBox4.Text = sELECT_DATA_HDDataGridView.CurrentRow.Cells[0].Value.ToString();
+            try
+            {
+                DateTime ngayb = Convert.ToDateTime(ngayban).AddMonths(6);
+                if (ngayb < DateTime.Today)
+                {
+                    label5.Text = "Hết thời gian bảo hành";
+                }
+                else
+                {
+                    label5.Text = "Còn thời hạn bảo hành";
 
-            DateTime ngayb = Convert.ToDateTime(ngayban).AddMonths(6);
-            if (ngayb < DateTime.Today)
-            {
-                label5.Text = "Hết thời gian bảo hành";
+                }
             }
-            else
-            {
-                label5.Text = "Còn thời hạn bảo hành";
-                
-            }
+            catch { }
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            QuanLyKhachHang QuanLyKhachHang = new QuanLyKhachHang();
+            QuanLyKhachHang.ShowDialog();
         }
     }
 }

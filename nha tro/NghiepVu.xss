@@ -47,7 +47,7 @@
     <Shape ID="DesignTable:makho_cbo" ZOrder="11" X="880" Y="33" Height="96" Width="210" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="46" />
     <Shape ID="DesignTable:KHUYENMAI_lk_malk" ZOrder="7" X="54" Y="1725" Height="248" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:SP_Loaisp" ZOrder="5" X="931" Y="725" Height="267" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
-    <Shape ID="DesignTable:KM_TENSP" ZOrder="3" X="1603" Y="1828" Height="248" Width="265" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
+    <Shape ID="DesignTable:KM_TENSP" ZOrder="3" X="1534" Y="1785" Height="305" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FK_SANPHAM_THUOC_VE2_LOAISANP" ZOrder="104" LineWidth="11">
@@ -1006,11 +1006,11 @@
       <RoutePoints>
         <Point>
           <X>1069</X>
-          <Y>1891</Y>
+          <Y>1946</Y>
         </Point>
         <Point>
-          <X>1603</X>
-          <Y>1891</Y>
+          <X>1534</X>
+          <Y>1946</Y>
         </Point>
       </RoutePoints>
     </Connector>

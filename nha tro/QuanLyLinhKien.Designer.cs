@@ -247,6 +247,7 @@
             this.tableAdapterManager.KHO1TableAdapter = null;
             this.tableAdapterManager.KHOTableAdapter = null;
             this.tableAdapterManager.KHUYENMAI_DKTableAdapter = null;
+            this.tableAdapterManager.KHUYENMAI_lk_malkTableAdapter = null;
             this.tableAdapterManager.KHUYENMAITableAdapter = null;
             this.tableAdapterManager.LAY_MANVbangTENDNTableAdapter = null;
             this.tableAdapterManager.LINHKIENTableAdapter = this.lINHKIENTableAdapter;
@@ -292,7 +293,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(954, 42);
             this.button9.TabIndex = 30;
-            this.button9.Text = "Quản Lý Linh Kiện";
+            this.button9.Text = "QUẢN LÝ LINH KIỆN";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -315,7 +316,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Name = "QuanLyLinhKien";
-            this.Text = "QuanLyLinhKien";
+            this.Text = "QUẢN LÝ LINH KIỆN";
             this.Load += new System.EventHandler(this.QuanLyLinhKien_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lINHKIENDataGridView)).EndInit();

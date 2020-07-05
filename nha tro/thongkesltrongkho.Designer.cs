@@ -35,6 +35,14 @@
             this.thongke_khoTableAdapter = new nha_tro.ttTableAdapters.thongke_khoTableAdapter();
             this.tableAdapterManager = new nha_tro.ttTableAdapters.TableAdapterManager();
             this.thongke_khoDataGridView = new System.Windows.Forms.DataGridView();
+            this.mAKHODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mALOAIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tENLOAIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tINHTRANGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,14 +53,6 @@
             this.tableAdapterManager1 = new nha_tro.NghiepVuTableAdapters.TableAdapterManager();
             this.makho_cboComboBox = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.mAKHODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mALOAIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tENLOAIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tINHTRANGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thongke_khoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thongke_khoDataGridView)).BeginInit();
@@ -142,6 +142,54 @@
             this.thongke_khoDataGridView.Name = "thongke_khoDataGridView";
             this.thongke_khoDataGridView.Size = new System.Drawing.Size(773, 220);
             this.thongke_khoDataGridView.TabIndex = 33;
+            // 
+            // mAKHODataGridViewTextBoxColumn
+            // 
+            this.mAKHODataGridViewTextBoxColumn.DataPropertyName = "MAKHO";
+            this.mAKHODataGridViewTextBoxColumn.HeaderText = "Mã Kho";
+            this.mAKHODataGridViewTextBoxColumn.Name = "mAKHODataGridViewTextBoxColumn";
+            // 
+            // mASPDataGridViewTextBoxColumn
+            // 
+            this.mASPDataGridViewTextBoxColumn.DataPropertyName = "MASP";
+            this.mASPDataGridViewTextBoxColumn.HeaderText = "Mã SP";
+            this.mASPDataGridViewTextBoxColumn.Name = "mASPDataGridViewTextBoxColumn";
+            // 
+            // tENSPDataGridViewTextBoxColumn
+            // 
+            this.tENSPDataGridViewTextBoxColumn.DataPropertyName = "TENSP";
+            this.tENSPDataGridViewTextBoxColumn.HeaderText = "Tên SP";
+            this.tENSPDataGridViewTextBoxColumn.Name = "tENSPDataGridViewTextBoxColumn";
+            // 
+            // mALOAIDataGridViewTextBoxColumn
+            // 
+            this.mALOAIDataGridViewTextBoxColumn.DataPropertyName = "MALOAI";
+            this.mALOAIDataGridViewTextBoxColumn.HeaderText = "Mã loại sp";
+            this.mALOAIDataGridViewTextBoxColumn.Name = "mALOAIDataGridViewTextBoxColumn";
+            // 
+            // tENLOAIDataGridViewTextBoxColumn
+            // 
+            this.tENLOAIDataGridViewTextBoxColumn.DataPropertyName = "TENLOAI";
+            this.tENLOAIDataGridViewTextBoxColumn.HeaderText = "Tên loại sp";
+            this.tENLOAIDataGridViewTextBoxColumn.Name = "tENLOAIDataGridViewTextBoxColumn";
+            // 
+            // tINHTRANGDataGridViewTextBoxColumn
+            // 
+            this.tINHTRANGDataGridViewTextBoxColumn.DataPropertyName = "TINHTRANG";
+            this.tINHTRANGDataGridViewTextBoxColumn.HeaderText = "Tình trạng";
+            this.tINHTRANGDataGridViewTextBoxColumn.Name = "tINHTRANGDataGridViewTextBoxColumn";
+            // 
+            // donGiaDataGridViewTextBoxColumn
+            // 
+            this.donGiaDataGridViewTextBoxColumn.DataPropertyName = "DonGia";
+            this.donGiaDataGridViewTextBoxColumn.HeaderText = "Đơn giá";
+            this.donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
+            // 
+            // sLDataGridViewTextBoxColumn
+            // 
+            this.sLDataGridViewTextBoxColumn.DataPropertyName = "SL";
+            this.sLDataGridViewTextBoxColumn.HeaderText = "SL";
+            this.sLDataGridViewTextBoxColumn.Name = "sLDataGridViewTextBoxColumn";
             // 
             // label1
             // 
@@ -244,54 +292,6 @@
             this.textBox2.TabIndex = 38;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // mAKHODataGridViewTextBoxColumn
-            // 
-            this.mAKHODataGridViewTextBoxColumn.DataPropertyName = "MAKHO";
-            this.mAKHODataGridViewTextBoxColumn.HeaderText = "Mã Kho";
-            this.mAKHODataGridViewTextBoxColumn.Name = "mAKHODataGridViewTextBoxColumn";
-            // 
-            // mASPDataGridViewTextBoxColumn
-            // 
-            this.mASPDataGridViewTextBoxColumn.DataPropertyName = "MASP";
-            this.mASPDataGridViewTextBoxColumn.HeaderText = "Mã SP";
-            this.mASPDataGridViewTextBoxColumn.Name = "mASPDataGridViewTextBoxColumn";
-            // 
-            // tENSPDataGridViewTextBoxColumn
-            // 
-            this.tENSPDataGridViewTextBoxColumn.DataPropertyName = "TENSP";
-            this.tENSPDataGridViewTextBoxColumn.HeaderText = "Tên SP";
-            this.tENSPDataGridViewTextBoxColumn.Name = "tENSPDataGridViewTextBoxColumn";
-            // 
-            // mALOAIDataGridViewTextBoxColumn
-            // 
-            this.mALOAIDataGridViewTextBoxColumn.DataPropertyName = "MALOAI";
-            this.mALOAIDataGridViewTextBoxColumn.HeaderText = "Mã loại sp";
-            this.mALOAIDataGridViewTextBoxColumn.Name = "mALOAIDataGridViewTextBoxColumn";
-            // 
-            // tENLOAIDataGridViewTextBoxColumn
-            // 
-            this.tENLOAIDataGridViewTextBoxColumn.DataPropertyName = "TENLOAI";
-            this.tENLOAIDataGridViewTextBoxColumn.HeaderText = "Tên loại sp";
-            this.tENLOAIDataGridViewTextBoxColumn.Name = "tENLOAIDataGridViewTextBoxColumn";
-            // 
-            // tINHTRANGDataGridViewTextBoxColumn
-            // 
-            this.tINHTRANGDataGridViewTextBoxColumn.DataPropertyName = "TINHTRANG";
-            this.tINHTRANGDataGridViewTextBoxColumn.HeaderText = "Tình trạng";
-            this.tINHTRANGDataGridViewTextBoxColumn.Name = "tINHTRANGDataGridViewTextBoxColumn";
-            // 
-            // donGiaDataGridViewTextBoxColumn
-            // 
-            this.donGiaDataGridViewTextBoxColumn.DataPropertyName = "DonGia";
-            this.donGiaDataGridViewTextBoxColumn.HeaderText = "Đơn giá";
-            this.donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
-            // 
-            // sLDataGridViewTextBoxColumn
-            // 
-            this.sLDataGridViewTextBoxColumn.DataPropertyName = "SL";
-            this.sLDataGridViewTextBoxColumn.HeaderText = "SL";
-            this.sLDataGridViewTextBoxColumn.Name = "sLDataGridViewTextBoxColumn";
-            // 
             // thongkesltrongkho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,7 +306,7 @@
             this.Controls.Add(this.thongke_khoDataGridView);
             this.Controls.Add(this.button9);
             this.Name = "thongkesltrongkho";
-            this.Text = "thongkesltrongkho";
+            this.Text = "THỐNG KÊ SL TRONG KHO";
             this.Load += new System.EventHandler(this.thongkesltrongkho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.thongke_khoBindingSource)).EndInit();

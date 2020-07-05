@@ -173,6 +173,16 @@ namespace nha_tro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Designbolts_Free_Multimedia_Mobile {
+            get {
+                object obj = ResourceManager.GetObject("Designbolts-Free-Multimedia-Mobile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Designcontest_Ecommerce_Business_Dollar {
             get {
                 object obj = ResourceManager.GetObject("Designcontest-Ecommerce-Business-Dollar", resourceCulture);
@@ -226,6 +236,16 @@ namespace nha_tro.Properties {
         internal static System.Drawing.Bitmap Gakuseisean_Ivista_2_Alarm_Tick {
             get {
                 object obj = ResourceManager.GetObject("Gakuseisean-Ivista-2-Alarm-Tick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Iconleak_Cerulean_Database {
+            get {
+                object obj = ResourceManager.GetObject("Iconleak-Cerulean-Database", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -346,6 +366,16 @@ namespace nha_tro.Properties {
         internal static System.Drawing.Bitmap tải_xuống__1_ {
             get {
                 object obj = ResourceManager.GetObject("tải xuống (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Treetog_Junior_User_group {
+            get {
+                object obj = ResourceManager.GetObject("Treetog-Junior-User-group", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

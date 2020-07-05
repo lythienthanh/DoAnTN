@@ -36,14 +36,14 @@
             this.lOIDONGUOIDUNGTableAdapter = new nha_tro.NghiepVuTableAdapters.LOIDONGUOIDUNGTableAdapter();
             this.tableAdapterManager = new nha_tro.NghiepVuTableAdapters.TableAdapterManager();
             this.lOIDONGUOIDUNGDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mALOINDTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.tENLOINDTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             mALOINDLabel = new System.Windows.Forms.Label();
             tENLOINDLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).BeginInit();
@@ -100,6 +100,7 @@
             this.tableAdapterManager.KHO1TableAdapter = null;
             this.tableAdapterManager.KHOTableAdapter = null;
             this.tableAdapterManager.KHUYENMAI_DKTableAdapter = null;
+            this.tableAdapterManager.KHUYENMAI_lk_malkTableAdapter = null;
             this.tableAdapterManager.KHUYENMAITableAdapter = null;
             this.tableAdapterManager.LAY_MANVbangTENDNTableAdapter = null;
             this.tableAdapterManager.LINHKIENTableAdapter = null;
@@ -129,6 +130,18 @@
             this.lOIDONGUOIDUNGDataGridView.Size = new System.Drawing.Size(268, 220);
             this.lOIDONGUOIDUNGDataGridView.TabIndex = 0;
             this.lOIDONGUOIDUNGDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lOIDONGUOIDUNGDataGridView_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MALOIND";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã lỗi người dùng";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TENLOIND";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên lỗi người dùng";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // mALOINDTextEdit
             // 
@@ -191,21 +204,9 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(303, 42);
             this.button9.TabIndex = 31;
-            this.button9.Text = "Lỗi Người Dùng";
+            this.button9.Text = "LỖI NGƯỜI DÙNG";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "MALOIND";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã lỗi người dùng";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "TENLOIND";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên lỗi người dùng";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // LoiND
             // 
@@ -222,7 +223,7 @@
             this.Controls.Add(this.tENLOINDTextEdit);
             this.Controls.Add(this.lOIDONGUOIDUNGDataGridView);
             this.Name = "LoiND";
-            this.Text = "LoiND";
+            this.Text = "LỖI NGƯỜI DÙNG";
             this.Load += new System.EventHandler(this.LoiND_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOIDONGUOIDUNGBindingSource)).EndInit();
