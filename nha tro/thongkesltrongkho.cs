@@ -1,4 +1,5 @@
-﻿using System;
+﻿using nha_tro.ttTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +24,8 @@ namespace nha_tro
 
         private void thongkesltrongkho_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'tt.sl_linhkien_trongkho' table. You can move, or remove it, as needed.
+            this.sl_linhkien_trongkhoTableAdapter.Fill(this.tt.sl_linhkien_trongkho);
             // TODO: This line of code loads data into the 'nghiepVu.makho_cbo' table. You can move, or remove it, as needed.
             this.makho_cboTableAdapter.Fill(this.nghiepVu.makho_cbo);
             // TODO: This line of code loads data into the 'tt.thongke_kho' table. You can move, or remove it, as needed.
@@ -39,6 +42,18 @@ namespace nha_tro
             thongke_khoDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             thongke_khoDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
             thongke_khoDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            sl_linhkien_trongkhoDataGridView.BorderStyle = BorderStyle.None;
+            sl_linhkien_trongkhoDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            sl_linhkien_trongkhoDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            sl_linhkien_trongkhoDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            sl_linhkien_trongkhoDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            sl_linhkien_trongkhoDataGridView.BackgroundColor = Color.White;
+
+            sl_linhkien_trongkhoDataGridView.EnableHeadersVisualStyles = false;
+            sl_linhkien_trongkhoDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            sl_linhkien_trongkhoDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            sl_linhkien_trongkhoDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -57,6 +72,11 @@ namespace nha_tro
                 thongke_khoTableAdapter.FillBy_MAKHO(this.tt.thongke_kho, makho_cboComboBox.SelectedValue.ToString());
             }
             catch { }
+            try
+            {
+                sl_linhkien_trongkhoTableAdapter.FillBy_MAKHO(this.tt.sl_linhkien_trongkho, makho_cboComboBox.SelectedValue.ToString());
+            }
+            catch { }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -66,6 +86,11 @@ namespace nha_tro
                 thongke_khoTableAdapter.FillBy_LOAISP(this.tt.thongke_kho, textBox2.Text);
             }
             catch { }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            sl_linhkien_trongkhoTableAdapter.FillBy_TENLINHKIEN(this.tt.sl_linhkien_trongkho, textBox3.Text);
         }
     }
 }
