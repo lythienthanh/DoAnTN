@@ -321,6 +321,12 @@
     <Compile Include="QuanLyLinhKien.Designer.cs">
       <DependentUpon>QuanLyLinhKien.cs</DependentUpon>
     </Compile>
+    <Compile Include="report_banhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report_banhang.Designer.cs">
+      <DependentUpon>report_banhang.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="TaoPhieuNhap.cs">
       <SubType>Form</SubType>
@@ -590,8 +596,12 @@
     <EmbeddedResource Include="Report2_baohanh.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report5_banhang.rdlc" />
     <EmbeddedResource Include="Reporttklsp.rdlc" />
     <EmbeddedResource Include="Report_banhang.rdlc" />
+    <EmbeddedResource Include="report_banhang.resx">
+      <DependentUpon>report_banhang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report_banLK.rdlc" />
     <EmbeddedResource Include="Report_doitra.rdlc" />
     <EmbeddedResource Include="Report_hd_tragop_kh.rdlc" />

@@ -29,21 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.tt = new nha_tro.tt();
             this.HD_banhangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tt = new nha_tro.tt();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.HD_banhangTableAdapter = new nha_tro.ttTableAdapters.HD_banhangTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.tt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HD_banhangBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tt)).BeginInit();
             this.SuspendLayout();
+            // 
+            // HD_banhangBindingSource
+            // 
+            this.HD_banhangBindingSource.DataMember = "HD_banhang";
+            this.HD_banhangBindingSource.DataSource = this.tt;
+            // 
+            // tt
+            // 
+            this.tt.DataSetName = "tt";
+            this.tt.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "HDBANHANG";
-            reportDataSource1.Value = this.HD_banhangBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "nha_tro.Report_banhang.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -51,16 +57,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
-            // 
-            // tt
-            // 
-            this.tt.DataSetName = "tt";
-            this.tt.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // HD_banhangBindingSource
-            // 
-            this.HD_banhangBindingSource.DataMember = "HD_banhang";
-            this.HD_banhangBindingSource.DataSource = this.tt;
             // 
             // HD_banhangTableAdapter
             // 
@@ -75,8 +71,8 @@
             this.Name = "hd_banhang";
             this.Text = "hd_banhang";
             this.Load += new System.EventHandler(this.hd_banhang_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HD_banhangBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tt)).EndInit();
             this.ResumeLayout(false);
 
         }
