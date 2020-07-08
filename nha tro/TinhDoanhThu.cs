@@ -108,7 +108,7 @@ namespace nha_tro
             }
             else
             {
-                string daunam = textBox2.Text + "/01/01"  ;
+/*                string daunam = textBox2.Text + "/01/01"  ;
                 string cuoinam = textBox1.Text + "/01/01" ;
                 try
                 {
@@ -139,7 +139,7 @@ namespace nha_tro
                 textBox4.Text = sl.ToString();
                 textBox3.Text = tongtien.ToString();
                 sl = 0;
-                tongtien = 0;
+                tongtien = 0;*/
             }
 
         }
@@ -199,7 +199,7 @@ namespace nha_tro
             }
             else
             {
-                //do du lieu vao sheet
+/*                //do du lieu vao sheet
                 string daunam = "01/01/" + textBox2.Text;
                 string cuoinam = "01/01/" + textBox1.Text;
                 
@@ -207,7 +207,7 @@ namespace nha_tro
                 //==========================================
                 //ThongKe.xuatfile_tinhtong_khoantime(thongKe_TinhDoanhThuDataGridView, textBox3.Text, textBox4.Text, daunam, cuoinam, "ThongKe_DoanhThu");
                 TinhDTTheoNgay tinhDTTheoNgay = new TinhDTTheoNgay(textBox4.Text, textBox3.Text, DateTime.Today.ToString("dd/MM/yyyy"), daunam, cuoinam);
-                tinhDTTheoNgay.ShowDialog();
+                tinhDTTheoNgay.ShowDialog();*/
             }
 
         }

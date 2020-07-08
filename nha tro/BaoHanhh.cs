@@ -29,7 +29,7 @@ namespace nha_tro
                 }
                 catch (System.Exception ex)
                 {
-                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                    //System.Windows.Forms.MessageBox.Show(ex.Message);
                 }
             }
             else
@@ -145,7 +145,7 @@ namespace nha_tro
                 }
                 catch (System.Exception ex)
                 {
-                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                    //System.Windows.Forms.MessageBox.Show(ex.Message);
                 }
                 string manv = tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString();
 
@@ -172,7 +172,7 @@ namespace nha_tro
                 }
                 catch (System.Exception ex)
                 {
-                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                    //System.Windows.Forms.MessageBox.Show(ex.Message);
                 }
                 string manv = tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString();
 
@@ -245,7 +245,7 @@ namespace nha_tro
                 }
                 catch (System.Exception ex)
                 {
-                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                    //System.Windows.Forms.MessageBox.Show(ex.Message);
                 }
             }
         }
@@ -259,7 +259,7 @@ namespace nha_tro
             }
             catch (System.Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show(ex.Message);
             }
             
         }

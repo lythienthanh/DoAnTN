@@ -156,49 +156,57 @@ namespace nha_tro
 
         private void tragop_cboComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            traGop2_select_theo_ngayTableAdapter.FillBy_matragop(this.tt.TraGop2_select_theo_ngay, tragop_cboComboBox.SelectedValue.ToString());
-            thongKe_tragop_theongayTableAdapter.FillBy_matragop(this.tt.thongKe_tragop_theongay,tragop_cboComboBox.SelectedValue.ToString());
-            int sl = 0;
-            for (int i = 0; i < thongKe_tragop_theongayDataGridView.RowCount - 1; i++)
+            try
             {
-                sl += int.Parse(thongKe_tragop_theongayDataGridView.Rows[i].Cells[3].Value.ToString());
+                traGop2_select_theo_ngayTableAdapter.FillBy_matragop(this.tt.TraGop2_select_theo_ngay, tragop_cboComboBox.SelectedValue.ToString());
+                thongKe_tragop_theongayTableAdapter.FillBy_matragop(this.tt.thongKe_tragop_theongay, tragop_cboComboBox.SelectedValue.ToString());
+                int sl = 0;
+                for (int i = 0; i < thongKe_tragop_theongayDataGridView.RowCount - 1; i++)
+                {
+                    sl += int.Parse(thongKe_tragop_theongayDataGridView.Rows[i].Cells[3].Value.ToString());
+                }
+                int tongtiendathanhtoan = 0;
+                int tongtienconlai = 0;
+                for (int i = 0; i < traGop2_select_theo_ngayDataGridView.RowCount - 1; i++)
+                {
+                    tongtiendathanhtoan += int.Parse(traGop2_select_theo_ngayDataGridView.Rows[i].Cells[1].Value.ToString());
+                    tongtienconlai += int.Parse(traGop2_select_theo_ngayDataGridView.Rows[i].Cells[2].Value.ToString());
+                }
+                textBox1.Text = sl.ToString();
+                textBox3.Text = tongtiendathanhtoan.ToString();
+                textBox4.Text = tongtienconlai.ToString();
+                textBox2.Text = (tongtiendathanhtoan + tongtienconlai).ToString();
+                hOADON_cboComboBox.Text = "";
             }
-            int tongtiendathanhtoan = 0;
-            int tongtienconlai = 0;
-            for (int i = 0; i < traGop2_select_theo_ngayDataGridView.RowCount - 1; i++)
-            {
-                tongtiendathanhtoan += int.Parse(traGop2_select_theo_ngayDataGridView.Rows[i].Cells[1].Value.ToString());
-                tongtienconlai += int.Parse(traGop2_select_theo_ngayDataGridView.Rows[i].Cells[2].Value.ToString());
-            }
-            textBox1.Text = sl.ToString();
-            textBox3.Text = tongtiendathanhtoan.ToString();
-            textBox4.Text = tongtienconlai.ToString();
-            textBox2.Text = (tongtiendathanhtoan + tongtienconlai).ToString();
-            hOADON_cboComboBox.Text = "";
+            catch { }
 
         }
 
         private void hOADON_cboComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            thongKe_tragop_theongayTableAdapter.FillBy_mahd(this.tt.thongKe_tragop_theongay, int.Parse(hOADON_cboComboBox.SelectedValue.ToString()));
-            traGop2_select_theo_ngayTableAdapter.FillBy_mahd(this.tt.TraGop2_select_theo_ngay, int.Parse(hOADON_cboComboBox.SelectedValue.ToString()));
-            int sl = 0;      
-            for (int i = 0; i < thongKe_tragop_theongayDataGridView.RowCount - 1; i++)
+            try
             {
-                sl += int.Parse(thongKe_tragop_theongayDataGridView.Rows[i].Cells[3].Value.ToString());
+                thongKe_tragop_theongayTableAdapter.FillBy_mahd(this.tt.thongKe_tragop_theongay, int.Parse(hOADON_cboComboBox.SelectedValue.ToString()));
+                traGop2_select_theo_ngayTableAdapter.FillBy_mahd(this.tt.TraGop2_select_theo_ngay, int.Parse(hOADON_cboComboBox.SelectedValue.ToString()));
+                int sl = 0;
+                for (int i = 0; i < thongKe_tragop_theongayDataGridView.RowCount - 1; i++)
+                {
+                    sl += int.Parse(thongKe_tragop_theongayDataGridView.Rows[i].Cells[3].Value.ToString());
+                }
+                int tongtiendathanhtoan = 0;
+                int tongtienconlai = 0;
+                for (int i = 0; i < traGop2_select_theo_ngayDataGridView.RowCount - 1; i++)
+                {
+                    tongtiendathanhtoan += int.Parse(traGop2_select_theo_ngayDataGridView.Rows[i].Cells[1].Value.ToString());
+                    tongtienconlai += int.Parse(traGop2_select_theo_ngayDataGridView.Rows[i].Cells[2].Value.ToString());
+                }
+                textBox1.Text = sl.ToString();
+                textBox3.Text = tongtiendathanhtoan.ToString();
+                textBox4.Text = tongtienconlai.ToString();
+                textBox2.Text = (tongtiendathanhtoan + tongtienconlai).ToString();
+                tragop_cboComboBox.Text = "";
             }
-            int tongtiendathanhtoan = 0;
-            int tongtienconlai = 0;
-            for (int i = 0; i < traGop2_select_theo_ngayDataGridView.RowCount - 1; i++)
-            {
-                tongtiendathanhtoan += int.Parse(traGop2_select_theo_ngayDataGridView.Rows[i].Cells[1].Value.ToString());
-                tongtienconlai += int.Parse(traGop2_select_theo_ngayDataGridView.Rows[i].Cells[2].Value.ToString());
-            }
-            textBox1.Text = sl.ToString();
-            textBox3.Text = tongtiendathanhtoan.ToString();
-            textBox4.Text = tongtienconlai.ToString();
-            textBox2.Text = (tongtiendathanhtoan + tongtienconlai).ToString();
-            tragop_cboComboBox.Text = "";
+            catch { }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)

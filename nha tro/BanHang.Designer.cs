@@ -165,6 +165,7 @@
             this.ct_mua_SPTableAdapter = new nha_tro.NghiepVuTableAdapters.Ct_mua_SPTableAdapter();
             this.lINHKIENTableAdapter = new nha_tro.NghiepVuTableAdapters.LINHKIENTableAdapter();
             this.ct_mua_sp_lkTableAdapter = new nha_tro.NghiepVuTableAdapters.ct_mua_sp_lkTableAdapter();
+            this.button8 = new System.Windows.Forms.Button();
             label8 = new System.Windows.Forms.Label();
             maTraGopLabel = new System.Windows.Forms.Label();
             soTienPhaiTraLabel = new System.Windows.Forms.Label();
@@ -500,8 +501,7 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.sANPHAMDataGridView.DataSource = this.sANPHAMBindingSource;
-            this.sANPHAMDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sANPHAMDataGridView.Location = new System.Drawing.Point(3, 16);
+            this.sANPHAMDataGridView.Location = new System.Drawing.Point(3, 41);
             this.sANPHAMDataGridView.Name = "sANPHAMDataGridView";
             this.sANPHAMDataGridView.Size = new System.Drawing.Size(805, 93);
             this.sANPHAMDataGridView.TabIndex = 0;
@@ -555,15 +555,17 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button8);
             this.groupBox1.Controls.Add(this.sANPHAMDataGridView);
             this.groupBox1.Controls.Add(this.sANPHAM__sreach_giaDataGridView);
             this.groupBox1.Controls.Add(this.hOADON_timmahd_vuathemDataGridView);
-            this.groupBox1.Location = new System.Drawing.Point(16, 75);
+            this.groupBox1.Location = new System.Drawing.Point(16, 58);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(811, 112);
+            this.groupBox1.Size = new System.Drawing.Size(811, 140);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sản phẩm";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // sANPHAM__sreach_giaDataGridView
             // 
@@ -647,9 +649,10 @@
             this.nGAYKTDataGridViewTextBoxColumn,
             this.gIATRIDataGridViewTextBoxColumn});
             this.kHUYENMAI_DKDataGridView.DataSource = this.kHUYENMAI_DKBindingSource;
-            this.kHUYENMAI_DKDataGridView.Location = new System.Drawing.Point(6, 19);
+            this.kHUYENMAI_DKDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kHUYENMAI_DKDataGridView.Location = new System.Drawing.Point(3, 16);
             this.kHUYENMAI_DKDataGridView.Name = "kHUYENMAI_DKDataGridView";
-            this.kHUYENMAI_DKDataGridView.Size = new System.Drawing.Size(788, 81);
+            this.kHUYENMAI_DKDataGridView.Size = new System.Drawing.Size(802, 89);
             this.kHUYENMAI_DKDataGridView.TabIndex = 0;
             this.kHUYENMAI_DKDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kHUYENMAI_DKDataGridView_CellClick);
             // 
@@ -703,9 +706,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.kHUYENMAI_DKDataGridView);
-            this.groupBox2.Location = new System.Drawing.Point(16, 293);
+            this.groupBox2.Location = new System.Drawing.Point(16, 319);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(808, 115);
+            this.groupBox2.Size = new System.Drawing.Size(808, 108);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin khuyến mãi sản phẩm/phụ kiện";
@@ -817,6 +820,7 @@
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.kHACHHANG_dkDataGridView);
+            this.groupBox3.Controls.Add(this.tAIKHOAN_TIMMANVDataGridView);
             this.groupBox3.Location = new System.Drawing.Point(13, 428);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(802, 152);
@@ -833,7 +837,7 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.tAIKHOAN_TIMMANVDataGridView.DataSource = this.tAIKHOAN_TIMMANVBindingSource;
-            this.tAIKHOAN_TIMMANVDataGridView.Location = new System.Drawing.Point(577, 586);
+            this.tAIKHOAN_TIMMANVDataGridView.Location = new System.Drawing.Point(529, 117);
             this.tAIKHOAN_TIMMANVDataGridView.Name = "tAIKHOAN_TIMMANVDataGridView";
             this.tAIKHOAN_TIMMANVDataGridView.Size = new System.Drawing.Size(253, 49);
             this.tAIKHOAN_TIMMANVDataGridView.TabIndex = 6;
@@ -877,9 +881,9 @@
             this.groupBox4.Controls.Add(this.textBox3);
             this.groupBox4.Controls.Add(this.textBox2);
             this.groupBox4.Controls.Add(this.button4);
-            this.groupBox4.Location = new System.Drawing.Point(880, 75);
+            this.groupBox4.Location = new System.Drawing.Point(880, 48);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(454, 347);
+            this.groupBox4.Size = new System.Drawing.Size(454, 374);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Chi tiết mua";
@@ -1298,7 +1302,7 @@
             this.groupBox5.Controls.Add(this.button5);
             this.groupBox5.Location = new System.Drawing.Point(880, 428);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(237, 194);
+            this.groupBox5.Size = new System.Drawing.Size(454, 152);
             this.groupBox5.TabIndex = 32;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thanh toán trả góp";
@@ -1346,7 +1350,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = global::nha_tro.Properties.Resources.Designcontest_Ecommerce_Business_Dollar;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(23, 120);
+            this.button5.Location = new System.Drawing.Point(222, 71);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(193, 38);
             this.button5.TabIndex = 24;
@@ -1360,7 +1364,7 @@
             this.groupBox6.Controls.Add(this.lINHKIENDataGridView);
             this.groupBox6.Controls.Add(this.dataGridView2);
             this.groupBox6.Controls.Add(this.dataGridView3);
-            this.groupBox6.Location = new System.Drawing.Point(16, 178);
+            this.groupBox6.Location = new System.Drawing.Point(16, 201);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(814, 113);
             this.groupBox6.TabIndex = 17;
@@ -1545,18 +1549,28 @@
             // 
             this.ct_mua_sp_lkTableAdapter.ClearBeforeFill = true;
             // 
+            // button8
+            // 
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Image = global::nha_tro.Properties.Resources.Gakuseisean_Aire_Search;
+            this.button8.Location = new System.Drawing.Point(113, 7);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(44, 33);
+            this.button8.TabIndex = 21;
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // BanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 600);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.tAIKHOAN_TIMMANVDataGridView);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "BanHang";
@@ -1746,5 +1760,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mALINHKIENDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tENLINHKIENDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sLDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button8;
     }
 }

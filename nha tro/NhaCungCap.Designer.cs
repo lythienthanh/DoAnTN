@@ -270,6 +270,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.Transparent;
+            this.button9.Image = global::nha_tro.Properties.Resources.Double_J_Design_Ravenna_3d_Home;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button9.Location = new System.Drawing.Point(0, 0);
             this.button9.Name = "button9";

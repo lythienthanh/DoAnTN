@@ -99,7 +99,7 @@
             this.thanhToánToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1203, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1363, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -231,7 +231,7 @@
             this.groupBox2.Controls.Add(this.cT_NHAP_SP_DK_LUUKHODataGridView);
             this.groupBox2.Location = new System.Drawing.Point(616, 96);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(567, 333);
+            this.groupBox2.Size = new System.Drawing.Size(735, 432);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết nhập";
@@ -296,7 +296,7 @@
             this.cT_NHAP_SP_DK_LUUKHODataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cT_NHAP_SP_DK_LUUKHODataGridView.Location = new System.Drawing.Point(3, 16);
             this.cT_NHAP_SP_DK_LUUKHODataGridView.Name = "cT_NHAP_SP_DK_LUUKHODataGridView";
-            this.cT_NHAP_SP_DK_LUUKHODataGridView.Size = new System.Drawing.Size(561, 314);
+            this.cT_NHAP_SP_DK_LUUKHODataGridView.Size = new System.Drawing.Size(729, 413);
             this.cT_NHAP_SP_DK_LUUKHODataGridView.TabIndex = 0;
             // 
             // mALINHKIENDataGridViewTextBoxColumn
@@ -467,7 +467,7 @@
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button9.Location = new System.Drawing.Point(0, 24);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(1203, 42);
+            this.button9.Size = new System.Drawing.Size(1363, 42);
             this.button9.TabIndex = 31;
             this.button9.Text = "LƯU LINH KIỆN VÀO KHO";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -477,7 +477,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 656);
+            this.ClientSize = new System.Drawing.Size(1363, 557);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.kHO_ttGridControl);

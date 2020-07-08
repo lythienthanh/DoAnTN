@@ -139,6 +139,9 @@
   <data name="Treetog-Junior-User-group" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Treetog-Junior-User-group.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Designbolts-Free-Multimedia-Mobile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Designbolts-Free-Multimedia-Mobile.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Pay-Per-Click-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pay-Per-Click-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -147,6 +150,9 @@
   </data>
   <data name="Aha-Soft-Software-Options" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Aha-Soft-Software-Options.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Custom-Icon-Design-Mono-General-1-Add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Custom-Icon-Design-Mono-General-1-Add.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sync-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sync-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,8 +178,14 @@
   <data name="Oxygen-Icons.org-Oxygen-Actions-document-save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Oxygen-Icons.org-Oxygen-Actions-document-save.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icons-Land-Vista-People-Person-Male-Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons-Land-Vista-People-Person-Male-Light.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="control-skip-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\control-skip-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Designcontest-Ecommerce-Business-Euro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Designcontest-Ecommerce-Business-Euro.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Oxygen-Icons.org-Oxygen-Actions-edit-delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Oxygen-Icons.org-Oxygen-Actions-edit-delete.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,17 +196,29 @@
   <data name="Artdesigner-Urban-Stories-House" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Artdesigner-Urban-Stories-House.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Iconsmind-Outline-Euro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconsmind-Outline-Euro.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Rockettheme-Ecommerce-Sale" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rockettheme-Ecommerce-Sale.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Custom-Icon-Design-Mono-General-1-Add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Custom-Icon-Design-Mono-General-1-Add.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Oxygen-Icons.org-Oxygen-Places-user-identity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Oxygen-Icons.org-Oxygen-Places-user-identity.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pay-Per-Click-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pay-Per-Click-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Double-J-Design-Ravenna-3d-Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Double-J-Design-Ravenna-3d-Home.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Iconsmind-Outline-Filter-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconsmind-Outline-Filter-2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Designcontest-Ecommerce-Business-Yen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Designcontest-Ecommerce-Business-Yen.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hopstarter-Soft-Scraps-Button-Refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hopstarter-Soft-Scraps-Button-Refresh.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logohoadon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logohoadon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,6 +229,12 @@
   <data name="Double-J-Design-Origami-Colored-Pencil-Blue-home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Double-J-Design-Origami-Colored-Pencil-Blue-home.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Ampeross-Qetto-2-Headphones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ampeross-Qetto-2-Headphones.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Awicons-Vista-Artistic-Chart-search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Awicons-Vista-Artistic-Chart-search.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Lock-Unlock-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lock-Unlock-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -214,7 +244,7 @@
   <data name="Oxygen-Icons.org-Oxygen-Actions-document-edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Oxygen-Icons.org-Oxygen-Actions-document-edit.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Designbolts-Free-Multimedia-Mobile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Designbolts-Free-Multimedia-Mobile.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Google-Noto-Emoji-Objects-62894-package" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Google-Noto-Emoji-Objects-62894-package.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

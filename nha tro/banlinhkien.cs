@@ -197,7 +197,7 @@ namespace nha_tro
                 //=========================================================================================
 
                 //cap lai sl trong kho
-                kHO_ttTableAdapter.Update_SL_LK(int.Parse(textBox5.Text), lINHKIENDataGridView.CurrentRow.Cells[0].Value.ToString());
+                kHO_ttTableAdapter.Update_SL_LK(int.Parse(textBox5.Text), lINHKIENDataGridView.CurrentRow.Cells[0].Value.ToString(),"KHO1");
                 //===================================================================================================================
 
                 

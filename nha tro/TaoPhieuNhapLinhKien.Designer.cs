@@ -196,7 +196,7 @@
             this.groupBox2.Controls.Add(this.cT_NHAP_LK_theoMaNhapDataGridView);
             this.groupBox2.Location = new System.Drawing.Point(12, 225);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1180, 322);
+            this.groupBox2.Size = new System.Drawing.Size(1286, 279);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi Tiết Phiếu Nhập Linh Kiện";
@@ -342,7 +342,7 @@
             this.cT_NHAP_LK_theoMaNhapDataGridView.DataSource = this.cT_NHAP_LK_theoMaNhapBindingSource;
             this.cT_NHAP_LK_theoMaNhapDataGridView.Location = new System.Drawing.Point(300, 19);
             this.cT_NHAP_LK_theoMaNhapDataGridView.Name = "cT_NHAP_LK_theoMaNhapDataGridView";
-            this.cT_NHAP_LK_theoMaNhapDataGridView.Size = new System.Drawing.Size(874, 283);
+            this.cT_NHAP_LK_theoMaNhapDataGridView.Size = new System.Drawing.Size(980, 232);
             this.cT_NHAP_LK_theoMaNhapDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn3
@@ -480,7 +480,7 @@
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Location = new System.Drawing.Point(12, 44);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1186, 143);
+            this.groupBox1.Size = new System.Drawing.Size(1292, 143);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phiếu Nhập";
@@ -498,7 +498,7 @@
             this.nHAPHANG1DataGridView.DataSource = this.nHAPHANG1BindingSource;
             this.nHAPHANG1DataGridView.Location = new System.Drawing.Point(300, 19);
             this.nHAPHANG1DataGridView.Name = "nHAPHANG1DataGridView";
-            this.nHAPHANG1DataGridView.Size = new System.Drawing.Size(880, 118);
+            this.nHAPHANG1DataGridView.Size = new System.Drawing.Size(986, 118);
             this.nHAPHANG1DataGridView.TabIndex = 11;
             this.nHAPHANG1DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.nHAPHANG1DataGridView_CellClick);
             // 
@@ -623,10 +623,11 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.Transparent;
+            this.button9.Image = global::nha_tro.Properties.Resources.Awicons_Vista_Artistic_Add;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button9.Location = new System.Drawing.Point(0, 0);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(1222, 42);
+            this.button9.Size = new System.Drawing.Size(1366, 42);
             this.button9.TabIndex = 31;
             this.button9.Text = "TẠO PHIỂU NHẬP LINH KIỆN";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -636,7 +637,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1222, 547);
+            this.ClientSize = new System.Drawing.Size(1366, 547);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);

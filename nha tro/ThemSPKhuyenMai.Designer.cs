@@ -429,9 +429,9 @@
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
             this.kHUYENMAI2DataGridView.DataSource = this.kHUYENMAI2BindingSource;
-            this.kHUYENMAI2DataGridView.Location = new System.Drawing.Point(708, 43);
+            this.kHUYENMAI2DataGridView.Location = new System.Drawing.Point(808, 44);
             this.kHUYENMAI2DataGridView.Name = "kHUYENMAI2DataGridView";
-            this.kHUYENMAI2DataGridView.Size = new System.Drawing.Size(449, 272);
+            this.kHUYENMAI2DataGridView.Size = new System.Drawing.Size(492, 272);
             this.kHUYENMAI2DataGridView.TabIndex = 33;
             // 
             // dataGridViewTextBoxColumn11
@@ -471,7 +471,7 @@
             this.kHUYENMAIDataGridView.DataSource = this.kHUYENMAIBindingSource;
             this.kHUYENMAIDataGridView.Location = new System.Drawing.Point(227, 81);
             this.kHUYENMAIDataGridView.Name = "kHUYENMAIDataGridView";
-            this.kHUYENMAIDataGridView.Size = new System.Drawing.Size(475, 234);
+            this.kHUYENMAIDataGridView.Size = new System.Drawing.Size(553, 234);
             this.kHUYENMAIDataGridView.TabIndex = 32;
             this.kHUYENMAIDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kHUYENMAIDataGridView_CellClick_1);
             // 
@@ -509,7 +509,7 @@
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button9.Location = new System.Drawing.Point(0, 0);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(1224, 42);
+            this.button9.Size = new System.Drawing.Size(1345, 42);
             this.button9.TabIndex = 34;
             this.button9.Text = "QUẢN LÝ CÁC ĐỢT KHUYẾN MÃI";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -540,7 +540,7 @@
             this.groupBox1.Controls.Add(this.nGAYKTDateEdit);
             this.groupBox1.Location = new System.Drawing.Point(27, 48);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1177, 337);
+            this.groupBox1.Size = new System.Drawing.Size(1306, 337);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khuyến mãi";
@@ -575,7 +575,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(705, 27);
+            this.label2.Location = new System.Drawing.Point(805, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 13);
             this.label2.TabIndex = 34;
@@ -589,7 +589,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1224, 397);
+            this.ClientSize = new System.Drawing.Size(1345, 397);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button9);
             this.Name = "ThemSPKhuyenMai";

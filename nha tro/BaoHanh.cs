@@ -331,10 +331,14 @@ namespace nha_tro
 
         private void sANPHAMComboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            int dongiacu = int.Parse(thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(selectSPDaMuaTheoMaHDComboBox.SelectedValue.ToString()).ToString());
-            int dongiamoi = int.Parse(thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(sANPHAMComboBox1.SelectedValue.ToString()).ToString());
-            chenhlechaa = (dongiamoi - (dongiacu * 80) / 100);
-            textBox2.Text = chenhlechaa.ToString();
+            try
+            {
+                int dongiacu = int.Parse(thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(selectSPDaMuaTheoMaHDComboBox.SelectedValue.ToString()).ToString());
+                int dongiamoi = int.Parse(thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(sANPHAMComboBox1.SelectedValue.ToString()).ToString());
+                chenhlechaa = (dongiamoi - (dongiacu * 80) / 100);
+                textBox2.Text = chenhlechaa.ToString();
+            }
+            catch { }
 
 
         }
@@ -373,7 +377,8 @@ namespace nha_tro
             {
                 //System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-            madoitra = hOADON_ttTableAdapter.select_madoitra(int.Parse(sELECT_DATA_HDComboBox.Text));
+            try { madoitra = hOADON_ttTableAdapter.select_madoitra(int.Parse(sELECT_DATA_HDComboBox.Text)); }
+            catch { }
         }
 
         private void fill_TIMMANVToolStripButton_Click(object sender, EventArgs e)

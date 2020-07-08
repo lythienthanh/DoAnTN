@@ -34,15 +34,13 @@ namespace nha_tro
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ThemNguoiDungVaoNhom ThemNguoiDungVaoNhom = new ThemNguoiDungVaoNhom();
-            ThemNguoiDungVaoNhom.MdiParent = this;
-            ThemNguoiDungVaoNhom.Show();
+            ThemNguoiDungVaoNhom.ShowDialog();
         }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             PhanQuyen PhanQuyen = new PhanQuyen();
-            PhanQuyen.MdiParent = this;
-            PhanQuyen.Show();
+            PhanQuyen.ShowDialog();
         }
         CauHinh CauHinh = new CauHinh();
 
@@ -133,8 +131,7 @@ namespace nha_tro
         private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form1 quanlyhang = new Form1();
-            quanlyhang.MdiParent = this;
-            quanlyhang.Show();
+            quanlyhang.ShowDialog();
         }
 
         private void barButtonItem19_ItemClick(object sender, ItemClickEventArgs e)
@@ -148,15 +145,13 @@ namespace nha_tro
         private void barButtonItem2_ItemClick_1(object sender, ItemClickEventArgs e)
         {
             NhaCungCap nhaCC = new NhaCungCap();
-            nhaCC.MdiParent = this;
-            nhaCC.Show();
+            nhaCC.ShowDialog();
         }
 
         private void barButtonItem3_ItemClick_1(object sender, ItemClickEventArgs e)
         {
             QuanLyKhachHang QuanLyKhachHang = new QuanLyKhachHang();
-            QuanLyKhachHang.MdiParent = this;
-            QuanLyKhachHang.Show();
+            QuanLyKhachHang.ShowDialog();
         }
 
         private void barButtonItem7_ItemClick_1(object sender, ItemClickEventArgs e)
@@ -183,8 +178,7 @@ namespace nha_tro
         private void barButtonItem21_ItemClick(object sender, ItemClickEventArgs e)
         {
             QuanLyLinhKien QuanLyLinhKien = new QuanLyLinhKien();
-            QuanLyLinhKien.MdiParent = this;
-            QuanLyLinhKien.Show();
+            QuanLyLinhKien.ShowDialog();
 
         }
 
@@ -280,8 +274,7 @@ namespace nha_tro
         private void MH000000000000000004_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form2 Form2 = new Form2();
-            Form2.MdiParent = this;
-            Form2.Show();
+            Form2.ShowDialog();
         }
 
         private void barButtonItem3_ItemClick_2(object sender, ItemClickEventArgs e)
@@ -295,8 +288,7 @@ namespace nha_tro
         private void barButtonItem7_ItemClick_2(object sender, ItemClickEventArgs e)
         {
             MH000000000000000024 TaoPhieuNhap = new MH000000000000000024(tendn);
-            TaoPhieuNhap.MdiParent = this;
-            TaoPhieuNhap.Show();
+            TaoPhieuNhap.ShowDialog();
         }
 
         private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
@@ -316,8 +308,7 @@ namespace nha_tro
         private void barButtonItem12_ItemClick_1(object sender, ItemClickEventArgs e)
         {
             ThongKeLoaiSP ThongKeLoaiSP = new ThongKeLoaiSP();
-            ThongKeLoaiSP.MdiParent = this;
-            ThongKeLoaiSP.Show();
+            ThongKeLoaiSP.ShowDialog();
         }
 
         private void barButtonItem14_ItemClick_1(object sender, ItemClickEventArgs e)

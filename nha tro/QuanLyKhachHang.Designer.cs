@@ -366,7 +366,7 @@
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button9.Location = new System.Drawing.Point(0, 0);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(1075, 50);
+            this.button9.Size = new System.Drawing.Size(1036, 50);
             this.button9.TabIndex = 32;
             this.button9.Text = "QUẢN LÝ KHÁCH HÀNG";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -409,7 +409,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 729);
+            this.ClientSize = new System.Drawing.Size(1036, 634);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);

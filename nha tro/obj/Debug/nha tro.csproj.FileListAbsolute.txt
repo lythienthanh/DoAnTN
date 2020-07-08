@@ -4438,3 +4438,4 @@ C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.hd_thongke_Sp.r
 C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.loinhuan.resources
 C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.thongkesltrongkho.resources
 C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.report_banhang.resources
+C:\Users\lythi\OneDrive\Desktop\DoAnTN\nha tro\obj\Debug\nha_tro.hoadon_tragop.resources

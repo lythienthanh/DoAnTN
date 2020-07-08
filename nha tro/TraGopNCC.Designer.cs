@@ -134,11 +134,11 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::nha_tro.Properties.Resources.Iconsmind_Outline_Filter_2;
             this.button1.Location = new System.Drawing.Point(237, 98);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 48);
             this.button1.TabIndex = 45;
-            this.button1.Text = "Lọc";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -279,6 +279,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.Transparent;
+            this.button9.Image = global::nha_tro.Properties.Resources.Double_J_Design_Ravenna_3d_Home;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button9.Location = new System.Drawing.Point(0, 0);
             this.button9.Name = "button9";

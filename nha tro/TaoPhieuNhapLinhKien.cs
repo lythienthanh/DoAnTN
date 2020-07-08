@@ -122,7 +122,7 @@ namespace nha_tro
             }
             catch (System.Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show(ex.Message);
             }
         }
 
@@ -137,7 +137,7 @@ namespace nha_tro
             }
             catch (System.Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show(ex.Message);
             }
         }
 
@@ -152,7 +152,7 @@ namespace nha_tro
             }
             catch (System.Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show(ex.Message);
             }
         }
 
@@ -165,7 +165,7 @@ namespace nha_tro
             }
             catch (System.Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show(ex.Message);
             }
         }
 
@@ -181,7 +181,7 @@ namespace nha_tro
                 }
                 catch (System.Exception ex)
                 {
-                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                   // System.Windows.Forms.MessageBox.Show(ex.Message);
                 }
             }
             catch

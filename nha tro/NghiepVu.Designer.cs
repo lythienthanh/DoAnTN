@@ -244,6 +244,8 @@ namespace nha_tro {
         
         private global::System.Data.DataRelation relationFK_KHUYENMA_CT_KM_LK_LINHKIEN7;
         
+        private global::System.Data.DataRelation relationFK_KHO_LINHKIEN2;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1403,6 +1405,7 @@ namespace nha_tro {
             this.relationFK_CT_HOADO_CT_HOADON_LINHKIEN1 = this.Relations["FK_CT_HOADO_CT_HOADON_LINHKIEN1"];
             this.relationFK_KHO_LINHKIEN1 = this.Relations["FK_KHO_LINHKIEN1"];
             this.relationFK_KHUYENMA_CT_KM_LK_LINHKIEN7 = this.Relations["FK_KHUYENMA_CT_KM_LK_LINHKIEN7"];
+            this.relationFK_KHO_LINHKIEN2 = this.Relations["FK_KHO_LINHKIEN2"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1767,6 +1770,10 @@ namespace nha_tro {
                         this.tablect_mua_sp_lk.MALINHKIENColumn}, new global::System.Data.DataColumn[] {
                         this.tableKHUYENMAI_lk_malk.MALINHKIENColumn}, false);
             this.Relations.Add(this.relationFK_KHUYENMA_CT_KM_LK_LINHKIEN7);
+            this.relationFK_KHO_LINHKIEN2 = new global::System.Data.DataRelation("FK_KHO_LINHKIEN2", new global::System.Data.DataColumn[] {
+                        this.tableLINHKIEN.MALINHKIENColumn}, new global::System.Data.DataColumn[] {
+                        this.tableKHO.MALINHKIENColumn}, false);
+            this.Relations.Add(this.relationFK_KHO_LINHKIEN2);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5297,6 +5304,8 @@ namespace nha_tro {
             
             private global::System.Data.DataColumn columnSDT;
             
+            private global::System.Data.DataColumn columnMALINHKIEN;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public KHODataTable() {
@@ -5372,6 +5381,14 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MALINHKIENColumn {
+                get {
+                    return this.columnMALINHKIEN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5407,14 +5424,18 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KHORow AddKHORow(string MAKHO, int SL, string MASP, string DiaChi, int SDT) {
+            public KHORow AddKHORow(string MAKHO, int SL, string MASP, string DiaChi, int SDT, LINHKIENRow parentLINHKIENRowByFK_KHO_LINHKIEN2) {
                 KHORow rowKHORow = ((KHORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MAKHO,
                         SL,
                         MASP,
                         DiaChi,
-                        SDT};
+                        SDT,
+                        null};
+                if ((parentLINHKIENRowByFK_KHO_LINHKIEN2 != null)) {
+                    columnValuesArray[5] = parentLINHKIENRowByFK_KHO_LINHKIEN2[0];
+                }
                 rowKHORow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowKHORow);
                 return rowKHORow;
@@ -5422,8 +5443,9 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KHORow FindByMASPMAKHO(string MASP, string MAKHO) {
+            public KHORow FindByMALINHKIENMASPMAKHO(string MALINHKIEN, string MASP, string MAKHO) {
                 return ((KHORow)(this.Rows.Find(new object[] {
+                            MALINHKIEN,
                             MASP,
                             MAKHO})));
             }
@@ -5450,6 +5472,7 @@ namespace nha_tro {
                 this.columnMASP = base.Columns["MASP"];
                 this.columnDiaChi = base.Columns["DiaChi"];
                 this.columnSDT = base.Columns["SDT"];
+                this.columnMALINHKIEN = base.Columns["MALINHKIEN"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5465,7 +5488,10 @@ namespace nha_tro {
                 base.Columns.Add(this.columnDiaChi);
                 this.columnSDT = new global::System.Data.DataColumn("SDT", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSDT);
+                this.columnMALINHKIEN = new global::System.Data.DataColumn("MALINHKIEN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMALINHKIEN);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnMALINHKIEN,
                                 this.columnMASP,
                                 this.columnMAKHO}, true));
                 this.columnMAKHO.AllowDBNull = false;
@@ -5473,6 +5499,8 @@ namespace nha_tro {
                 this.columnMASP.AllowDBNull = false;
                 this.columnMASP.MaxLength = 20;
                 this.columnDiaChi.MaxLength = 50;
+                this.columnMALINHKIEN.AllowDBNull = false;
+                this.columnMALINHKIEN.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13276,10 +13304,11 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KHO1Row FindByMAKHOMASP(string MAKHO, string MASP) {
+            public KHO1Row FindByMALINHKIENMASPMAKHO(string MALINHKIEN, string MASP, string MAKHO) {
                 return ((KHO1Row)(this.Rows.Find(new object[] {
-                            MAKHO,
-                            MASP})));
+                            MALINHKIEN,
+                            MASP,
+                            MAKHO})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13323,8 +13352,9 @@ namespace nha_tro {
                 this.columnMALINHKIEN = new global::System.Data.DataColumn("MALINHKIEN", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMALINHKIEN);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnMAKHO,
-                                this.columnMASP}, true));
+                                this.columnMALINHKIEN,
+                                this.columnMASP,
+                                this.columnMAKHO}, true));
                 this.columnMAKHO.AllowDBNull = false;
                 this.columnMAKHO.MaxLength = 20;
                 this.columnMASP.AllowDBNull = false;
@@ -18147,6 +18177,28 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string MALINHKIEN {
+                get {
+                    return ((string)(this[this.tableKHO.MALINHKIENColumn]));
+                }
+                set {
+                    this[this.tableKHO.MALINHKIENColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public LINHKIENRow LINHKIENRow {
+                get {
+                    return ((LINHKIENRow)(this.GetParentRow(this.Table.ParentRelations["FK_KHO_LINHKIEN2"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_KHO_LINHKIEN2"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsSLNull() {
                 return this.IsNull(this.tableKHO.SLColumn);
             }
@@ -19829,6 +19881,17 @@ namespace nha_tro {
                 }
                 else {
                     return ((KM_TENSPRow[])(base.GetChildRows(this.Table.ChildRelations["FK_KHUYENMA_CT_KM_LK_LINHKIEN4"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public KHORow[] GetKHORows() {
+                if ((this.Table.ChildRelations["FK_KHO_LINHKIEN2"] == null)) {
+                    return new KHORow[0];
+                }
+                else {
+                    return ((KHORow[])(base.GetChildRows(this.Table.ChildRelations["FK_KHO_LINHKIEN2"])));
                 }
             }
         }
@@ -29980,50 +30043,52 @@ WHERE        (CT_NHAP_SP.MANHAP = @MaNhap)";
             tableMapping.ColumnMappings.Add("MASP", "MASP");
             tableMapping.ColumnMappings.Add("DiaChi", "DiaChi");
             tableMapping.ColumnMappings.Add("SDT", "SDT");
+            tableMapping.ColumnMappings.Add("MALINHKIEN", "MALINHKIEN");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[KHO] WHERE (([MAKHO] = @Original_MAKHO) AND ((@IsNull_SL = 1 AND [SL] IS NULL) OR ([SL] = @Original_SL)) AND ((@IsNull_MASP = 1 AND [MASP] IS NULL) OR ([MASP] = @Original_MASP)) AND ((@IsNull_DiaChi = 1 AND [DiaChi] IS NULL) OR ([DiaChi] = @Original_DiaChi)) AND ((@IsNull_SDT = 1 AND [SDT] IS NULL) OR ([SDT] = @Original_SDT)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [KHO] WHERE (([MAKHO] = @Original_MAKHO) AND ((@IsNull_SL = 1 AND [SL] IS NULL) OR ([SL] = @Original_SL)) AND ([MASP] = @Original_MASP) AND ((@IsNull_DiaChi = 1 AND [DiaChi] IS NULL) OR ([DiaChi] = @Original_DiaChi)) AND ((@IsNull_SDT = 1 AND [SDT] IS NULL) OR ([SDT] = @Original_SDT)) AND ([MALINHKIEN] = @Original_MALINHKIEN))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MAKHO", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAKHO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MASP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MASP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MASP", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MASP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DiaChi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DiaChi", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DiaChi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DiaChi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SDT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SDT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SDT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SDT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MALINHKIEN", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MALINHKIEN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[KHO] ([MAKHO], [SL], [MASP], [DiaChi], [SDT]) VALUES (@MAKHO, " +
-                "@SL, @MASP, @DiaChi, @SDT);\r\nSELECT MAKHO, SL, MASP, DiaChi, SDT FROM KHO WHERE " +
-                "(MAKHO = @MAKHO)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [KHO] ([MAKHO], [SL], [MASP], [DiaChi], [SDT], [MALINHKIEN]) VALUES (@MAKHO, @SL, @MASP, @DiaChi, @SDT, @MALINHKIEN);
+SELECT MAKHO, SL, MASP, DiaChi, SDT, MALINHKIEN FROM KHO WHERE (MAKHO = @MAKHO) AND (MALINHKIEN = @MALINHKIEN) AND (MASP = @MASP)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MAKHO", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAKHO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MASP", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MASP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DiaChi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DiaChi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SDT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SDT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MALINHKIEN", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MALINHKIEN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[KHO] SET [MAKHO] = @MAKHO, [SL] = @SL, [MASP] = @MASP, [DiaChi] = @DiaChi, [SDT] = @SDT WHERE (([MAKHO] = @Original_MAKHO) AND ((@IsNull_SL = 1 AND [SL] IS NULL) OR ([SL] = @Original_SL)) AND ((@IsNull_MASP = 1 AND [MASP] IS NULL) OR ([MASP] = @Original_MASP)) AND ((@IsNull_DiaChi = 1 AND [DiaChi] IS NULL) OR ([DiaChi] = @Original_DiaChi)) AND ((@IsNull_SDT = 1 AND [SDT] IS NULL) OR ([SDT] = @Original_SDT)));
-SELECT MAKHO, SL, MASP, DiaChi, SDT FROM KHO WHERE (MAKHO = @MAKHO)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [KHO] SET [MAKHO] = @MAKHO, [SL] = @SL, [MASP] = @MASP, [DiaChi] = @DiaChi, [SDT] = @SDT, [MALINHKIEN] = @MALINHKIEN WHERE (([MAKHO] = @Original_MAKHO) AND ((@IsNull_SL = 1 AND [SL] IS NULL) OR ([SL] = @Original_SL)) AND ([MASP] = @Original_MASP) AND ((@IsNull_DiaChi = 1 AND [DiaChi] IS NULL) OR ([DiaChi] = @Original_DiaChi)) AND ((@IsNull_SDT = 1 AND [SDT] IS NULL) OR ([SDT] = @Original_SDT)) AND ([MALINHKIEN] = @Original_MALINHKIEN));
+SELECT MAKHO, SL, MASP, DiaChi, SDT, MALINHKIEN FROM KHO WHERE (MAKHO = @MAKHO) AND (MALINHKIEN = @MALINHKIEN) AND (MASP = @MASP)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MAKHO", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAKHO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MASP", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MASP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DiaChi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DiaChi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SDT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SDT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MALINHKIEN", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MALINHKIEN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MAKHO", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAKHO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MASP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MASP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MASP", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MASP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DiaChi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DiaChi", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DiaChi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DiaChi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SDT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SDT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SDT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SDT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MALINHKIEN", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MALINHKIEN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -30039,12 +30104,11 @@ SELECT MAKHO, SL, MASP, DiaChi, SDT FROM KHO WHERE (MAKHO = @MAKHO)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT MAKHO, SL, MASP, DiaChi, SDT FROM dbo.KHO";
+            this._commandCollection[0].CommandText = "SELECT        MAKHO, SL, MASP, DiaChi, SDT, MALINHKIEN\r\nFROM            KHO";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        MAKHO, SL, MASP, DiaChi, SDT\r\nFROM            KHO\r\nWHERE        (MA" +
-                "SP = @MASP)";
+            this._commandCollection[1].CommandText = "SELECT DiaChi, MAKHO, MALINHKIEN, MASP, SDT, SL FROM KHO WHERE (MASP = @MASP)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MASP", global::System.Data.SqlDbType.Char, 20, global::System.Data.ParameterDirection.Input, 0, 0, "MASP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
@@ -30145,211 +30209,6 @@ SELECT MAKHO, SL, MASP, DiaChi, SDT FROM KHO WHERE (MAKHO = @MAKHO)";
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_MAKHO, global::System.Nullable<int> Original_SL, string Original_MASP, string Original_DiaChi, global::System.Nullable<int> Original_SDT) {
-            if ((Original_MAKHO == null)) {
-                throw new global::System.ArgumentNullException("Original_MAKHO");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_MAKHO));
-            }
-            if ((Original_SL.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_SL.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((Original_MASP == null)) {
-                throw new global::System.ArgumentNullException("Original_MASP");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_MASP));
-            }
-            if ((Original_DiaChi == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_DiaChi));
-            }
-            if ((Original_SDT.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_SDT.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string MAKHO, global::System.Nullable<int> SL, string MASP, string DiaChi, global::System.Nullable<int> SDT) {
-            if ((MAKHO == null)) {
-                throw new global::System.ArgumentNullException("MAKHO");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(MAKHO));
-            }
-            if ((SL.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(SL.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((MASP == null)) {
-                throw new global::System.ArgumentNullException("MASP");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(MASP));
-            }
-            if ((DiaChi == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(DiaChi));
-            }
-            if ((SDT.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(SDT.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string MAKHO, global::System.Nullable<int> SL, string MASP, string DiaChi, global::System.Nullable<int> SDT, string Original_MAKHO, global::System.Nullable<int> Original_SL, string Original_MASP, string Original_DiaChi, global::System.Nullable<int> Original_SDT) {
-            if ((MAKHO == null)) {
-                throw new global::System.ArgumentNullException("MAKHO");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(MAKHO));
-            }
-            if ((SL.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(SL.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((MASP == null)) {
-                throw new global::System.ArgumentNullException("MASP");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(MASP));
-            }
-            if ((DiaChi == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(DiaChi));
-            }
-            if ((SDT.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(SDT.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Original_MAKHO == null)) {
-                throw new global::System.ArgumentNullException("Original_MAKHO");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_MAKHO));
-            }
-            if ((Original_SL.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_SL.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_MASP == null)) {
-                throw new global::System.ArgumentNullException("Original_MASP");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_MASP));
-            }
-            if ((Original_DiaChi == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_DiaChi));
-            }
-            if ((Original_SDT.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_SDT.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> SL, string DiaChi, global::System.Nullable<int> SDT, string Original_MAKHO, global::System.Nullable<int> Original_SL, string Original_MASP, string Original_DiaChi, global::System.Nullable<int> Original_SDT) {
-            return this.Update(Original_MAKHO, SL, Original_MASP, DiaChi, SDT, Original_MAKHO, Original_SL, Original_MASP, Original_DiaChi, Original_SDT);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

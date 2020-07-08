@@ -19,6 +19,11 @@ namespace nha_tro
         }
         //====nhan data tu form bAO HANH
         private string mahd, matragop, ngay;
+
+        private void fillToolStripButton_Click(object sender, EventArgs e)
+        {
+        }
+
         public hd_tragop(string mahd, string matragop, string ngay)
             : this()
         {
@@ -30,6 +35,7 @@ namespace nha_tro
         {
             // TODO: This line of code loads data into the 'tt.TraGop1' table. You can move, or remove it, as needed.
             this.TraGop1TableAdapter.Fill_dk(this.tt.TraGop1,matragop);
+            this.ct_mua_sp_lkTableAdapter.Fill(this.nghiepVu.ct_mua_sp_lk, ((int)(System.Convert.ChangeType(mahd, typeof(int)))));
 
             ReportParameterCollection reportParameter = new ReportParameterCollection();
             reportParameter.Add(new ReportParameter("mahd", mahd.ToString()));

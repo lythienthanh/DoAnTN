@@ -230,7 +230,7 @@
             this.groupBox2.Controls.Add(this.cT_NHAP_SP_DK_LUUKHODataGridView);
             this.groupBox2.Location = new System.Drawing.Point(630, 77);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(598, 490);
+            this.groupBox2.Size = new System.Drawing.Size(710, 430);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết nhập";
@@ -360,7 +360,7 @@
             this.cT_NHAP_SP_DK_LUUKHODataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cT_NHAP_SP_DK_LUUKHODataGridView.Location = new System.Drawing.Point(3, 16);
             this.cT_NHAP_SP_DK_LUUKHODataGridView.Name = "cT_NHAP_SP_DK_LUUKHODataGridView";
-            this.cT_NHAP_SP_DK_LUUKHODataGridView.Size = new System.Drawing.Size(592, 471);
+            this.cT_NHAP_SP_DK_LUUKHODataGridView.Size = new System.Drawing.Size(704, 411);
             this.cT_NHAP_SP_DK_LUUKHODataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn4
@@ -409,7 +409,7 @@
             this.groupBox3.Controls.Add(this.kHOComboBox);
             this.groupBox3.Location = new System.Drawing.Point(18, 300);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(592, 308);
+            this.groupBox3.Size = new System.Drawing.Size(592, 204);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Kho";
@@ -420,7 +420,7 @@
             this.kHO1GridControl.Location = new System.Drawing.Point(12, 43);
             this.kHO1GridControl.MainView = this.gridView1;
             this.kHO1GridControl.Name = "kHO1GridControl";
-            this.kHO1GridControl.Size = new System.Drawing.Size(580, 220);
+            this.kHO1GridControl.Size = new System.Drawing.Size(580, 155);
             this.kHO1GridControl.TabIndex = 1;
             this.kHO1GridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -472,22 +472,24 @@
             this.thanhToánToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1262, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // lưuKhoToolStripMenuItem
             // 
             this.lưuKhoToolStripMenuItem.Enabled = false;
+            this.lưuKhoToolStripMenuItem.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_document_save;
             this.lưuKhoToolStripMenuItem.Name = "lưuKhoToolStripMenuItem";
-            this.lưuKhoToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.lưuKhoToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.lưuKhoToolStripMenuItem.Text = "Lưu kho";
             this.lưuKhoToolStripMenuItem.Click += new System.EventHandler(this.lưuKhoToolStripMenuItem_Click);
             // 
             // thanhToánToolStripMenuItem
             // 
+            this.thanhToánToolStripMenuItem.Image = global::nha_tro.Properties.Resources.Designcontest_Ecommerce_Business_Dollar;
             this.thanhToánToolStripMenuItem.Name = "thanhToánToolStripMenuItem";
-            this.thanhToánToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
+            this.thanhToánToolStripMenuItem.Size = new System.Drawing.Size(135, 20);
             this.thanhToánToolStripMenuItem.Text = "Thanh toán theo %";
             this.thanhToánToolStripMenuItem.Click += new System.EventHandler(this.thanhToánToolStripMenuItem_Click_1);
             // 
@@ -581,7 +583,7 @@
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button9.Location = new System.Drawing.Point(0, 24);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(1262, 42);
+            this.button9.Size = new System.Drawing.Size(1370, 42);
             this.button9.TabIndex = 31;
             this.button9.Text = "LƯU NHẬP HÀNG";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -595,7 +597,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 628);
+            this.ClientSize = new System.Drawing.Size(1370, 628);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);

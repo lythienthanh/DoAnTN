@@ -40,10 +40,10 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mALOINDTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.tENLOINDTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             mALOINDLabel = new System.Windows.Forms.Label();
             tENLOINDLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).BeginInit();
@@ -159,27 +159,22 @@
             this.tENLOINDTextEdit.Size = new System.Drawing.Size(163, 20);
             this.tENLOINDTextEdit.TabIndex = 4;
             // 
-            // button1
+            // button9
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::nha_tro.Properties.Resources.Awicons_Vista_Artistic_Add;
-            this.button1.Location = new System.Drawing.Point(33, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(73, 56);
-            this.button1.TabIndex = 6;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_edit_delete;
-            this.button2.Location = new System.Drawing.Point(128, 114);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(73, 56);
-            this.button2.TabIndex = 6;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Transparent;
+            this.button9.Image = global::nha_tro.Properties.Resources.Icons_Land_Vista_People_Person_Male_Light;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button9.Location = new System.Drawing.Point(0, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(303, 45);
+            this.button9.TabIndex = 31;
+            this.button9.Text = "LỖI NGƯỜI DÙNG";
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -192,21 +187,27 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button9
+            // button2
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.Transparent;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.Location = new System.Drawing.Point(0, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(303, 42);
-            this.button9.TabIndex = 31;
-            this.button9.Text = "LỖI NGƯỜI DÙNG";
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button9.UseVisualStyleBackColor = false;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::nha_tro.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_edit_delete;
+            this.button2.Location = new System.Drawing.Point(128, 114);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(73, 56);
+            this.button2.TabIndex = 6;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::nha_tro.Properties.Resources.Awicons_Vista_Artistic_Add;
+            this.button1.Location = new System.Drawing.Point(33, 114);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(73, 56);
+            this.button1.TabIndex = 6;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // LoiND
             // 

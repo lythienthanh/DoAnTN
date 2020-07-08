@@ -79,7 +79,7 @@ namespace nha_tro
                     }
 
                     /*ThongKe.xuatfile_HD_TraGop(traGop1DataGridView, traGopComboBox.SelectedValue.ToString(), textBox1.Text, ngay, "HD_TraGop_TT");*/
-                    hd_tragop hD_Tragop = new hd_tragop(dataTable1DataGridView.CurrentRow.Cells[0].Value.ToString(), textBox3.Text, DateTime.Today.ToString("dd/MM/yyyy"));
+                    hoadon_tragop hD_Tragop = new hoadon_tragop(dataTable1DataGridView.CurrentRow.Cells[0].Value.ToString(), textBox3.Text, DateTime.Today.ToString("dd/MM/yyyy"));
                     hD_Tragop.ShowDialog();
 
 
@@ -123,7 +123,7 @@ namespace nha_tro
             {
                 dataTable1TableAdapter.Fill_sdt(tt.DataTable1, textBox2.Text);
 
-                if (dataTable1DataGridView.Rows.Count <= 2)
+                if (dataTable1DataGridView.Rows.Count - 1 < 2)
                     MessageBox.Show("không có dữ liệu !!!");
             }
             else

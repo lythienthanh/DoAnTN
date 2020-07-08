@@ -246,7 +246,7 @@ namespace nha_tro
                 }
                 else//tinh tien sp
                 {
-                    kHO_ttTableAdapter.Update_SL_LK(int.Parse(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[6].Value.ToString()), ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[4].Value.ToString());
+                    kHO_ttTableAdapter.Update_SL_LK(int.Parse(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[6].Value.ToString()), ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[4].Value.ToString(),"KHO1");
                     try //(cT_KM_SPTableAdapter.SELECT_GIATRI(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[2].Value.ToString(), DateTime.Today).ToString() != null)
                     {//co km
                      //lay don gia lk
@@ -637,41 +637,65 @@ namespace nha_tro
             //cap nhat lai kho
             for (int i = 0; i < ct_mua_SP_TIMKIEMDataGridView.Rows.Count - 1; i++)
             {
-                kHO_ttTableAdapter.Update_sl_kho(int.Parse(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[3].Value.ToString()), ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[2].Value.ToString(), "KHO1");
+                if (string.Compare(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[2].Value.ToString().Trim(), "khong") != 0)
+                {//tinh sp
+                    kHO_ttTableAdapter.Update_sl_kho(int.Parse(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[6].Value.ToString()), ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[2].Value.ToString(), "KHO1");
 
-                //xu ly khuyen mai
-                //kt co khuyen mai hay k
-                if (int.Parse(kHUYENMAITableAdapter1.kt_CoKMkhong(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[2].Value.ToString(), DateTime.Today).ToString()) != 0)
-                {
-                    int giatri = int.Parse(kHUYENMAITableAdapter1.SELECT_GIATRI(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[2].Value.ToString(), DateTime.Today).ToString());
-                    //sreach gia
-                    try
+                    //xu ly khuyen mai
+                    //kt co khuyen mai hay k
+                    if (int.Parse(kHUYENMAITableAdapter1.kt_CoKMkhong(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[2].Value.ToString(), DateTime.Today).ToString()) != 0)
                     {
-                        this.sANPHAM__sreach_giaTableAdapter.Fill_sreach_gia(this.tt.SANPHAM__sreach_gia, ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[2].Value.ToString());
+                        int giatri = int.Parse(kHUYENMAITableAdapter1.SELECT_GIATRI(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[2].Value.ToString(), DateTime.Today).ToString());
+                        //sreach gia
+                        try
+                        {
+                            this.sANPHAM__sreach_giaTableAdapter.Fill_sreach_gia(this.tt.SANPHAM__sreach_gia, ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[2].Value.ToString());
+                        }
+                        catch (System.Exception ex)
+                        {
+                            System.Windows.Forms.MessageBox.Show(ex.Message);
+                        }
+                        int sl = int.Parse(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[6].Value.ToString());
+                        int dongia = int.Parse(sANPHAM__sreach_giaDataGridView.Rows[0].Cells[0].Value.ToString());
+                        int giatrisaukm = (sl * dongia * giatri) / 100;
+                        tongtien += giatrisaukm;
                     }
-                    catch (System.Exception ex)
+                    else
                     {
-                        System.Windows.Forms.MessageBox.Show(ex.Message);
+                        //sreach gia
+                        try
+                        {
+                            this.sANPHAM__sreach_giaTableAdapter.Fill_sreach_gia(this.tt.SANPHAM__sreach_gia, ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[2].Value.ToString());
+                        }
+                        catch (System.Exception ex)
+                        {
+                            System.Windows.Forms.MessageBox.Show(ex.Message);
+                        }
+                        int sl = int.Parse(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[6].Value.ToString());
+                        int dongia = int.Parse(sANPHAM__sreach_giaDataGridView.Rows[0].Cells[0].Value.ToString());
+                        tongtien += (sl * dongia);
                     }
-                    int sl = int.Parse(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[3].Value.ToString());
-                    int dongia = int.Parse(sANPHAM__sreach_giaDataGridView.Rows[0].Cells[0].Value.ToString());
-                    int giatrisaukm = (sl * dongia * giatri) / 100;
-                    tongtien += giatrisaukm;
                 }
-                else
+                else//tinh lk
                 {
-                    //sreach gia
-                    try
+                    kHO_ttTableAdapter.Update_SL_LK(int.Parse(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[6].Value.ToString()), ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[4].Value.ToString(), "KHO1");
+
+                    //xu ly khuyen mai
+                    //kt co khuyen mai hay k
+                    if (int.Parse(kHUYENMAITableAdapter1.kt_CoKMkhong(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[2].Value.ToString(), DateTime.Today).ToString()) != 0)
                     {
-                        this.sANPHAM__sreach_giaTableAdapter.Fill_sreach_gia(this.tt.SANPHAM__sreach_gia, ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[2].Value.ToString());
+                        int giatri = int.Parse(kHUYENMAITableAdapter1.GIATRI_LINHKIEN(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[4].Value.ToString(), DateTime.Today).ToString());
+                        int sl = int.Parse(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[6].Value.ToString());
+                        int dongia = int.Parse(kHUYENMAITableAdapter1.DONGIA_LK(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[4].Value.ToString()).ToString());
+                        int giatrisaukm = (sl * dongia * giatri) / 100;
+                        tongtien += giatrisaukm;
                     }
-                    catch (System.Exception ex)
+                    else
                     {
-                        System.Windows.Forms.MessageBox.Show(ex.Message);
+                        int sl = int.Parse(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[6].Value.ToString());
+                        int dongia = int.Parse(kHUYENMAITableAdapter1.DONGIA_LK(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[4].Value.ToString()).ToString());
+                        tongtien += (sl * dongia);
                     }
-                    int sl = int.Parse(ct_mua_SP_TIMKIEMDataGridView.Rows[i].Cells[3].Value.ToString());
-                    int dongia = int.Parse(sANPHAM__sreach_giaDataGridView.Rows[0].Cells[0].Value.ToString());
-                    tongtien += (sl * dongia);
                 }
             }
             //XU LY XUAT xuathd
@@ -681,7 +705,7 @@ namespace nha_tro
 
             //==========================================
             //ThongKe.xuatfile_HD_TraGop(ct_hoa_donDataGridView, maTraGopTextEdit.Text, label7.Text, NamNgayThangStar, "Hoa_Don_traGop");
-            hd_tragop hd_Tragop = new hd_tragop(ct_mua_SP_TIMKIEMDataGridView.Rows[0].Cells[0].Value.ToString(), maTraGopTextEdit.Text, DateTime.Today.ToString("dd/MM/yyyy"));
+            hoadon_tragop hd_Tragop = new hoadon_tragop(ct_mua_SP_TIMKIEMDataGridView.Rows[0].Cells[0].Value.ToString(), maTraGopTextEdit.Text, DateTime.Today.ToString("dd/MM/yyyy"));
             hd_Tragop.ShowDialog();
             //========================
 
@@ -776,6 +800,17 @@ namespace nha_tro
         {
             ct_mua_sp_lkTableAdapter.Update_CT_MUA_SP_LK(textBox5.Text, int.Parse(textBox2.Text), textBox3.Text, textBox4.Text, textBox6.Text);
             ct_mua_sp_lkTableAdapter.Fill(this.nghiepVu.ct_mua_sp_lk, int.Parse(textBox2.Text));
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            TimKiemTheoSanPham frm = new TimKiemTheoSanPham();
+            frm.ShowDialog();
         }
     }
 }

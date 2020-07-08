@@ -333,7 +333,7 @@
             this.traGop_tinhtienDataGridView.DataSource = this.traGop_tinhtienBindingSource;
             this.traGop_tinhtienDataGridView.Location = new System.Drawing.Point(26, 171);
             this.traGop_tinhtienDataGridView.Name = "traGop_tinhtienDataGridView";
-            this.traGop_tinhtienDataGridView.Size = new System.Drawing.Size(422, 127);
+            this.traGop_tinhtienDataGridView.Size = new System.Drawing.Size(481, 127);
             this.traGop_tinhtienDataGridView.TabIndex = 33;
             // 
             // dataGridViewTextBoxColumn8
@@ -376,7 +376,7 @@
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Location = new System.Drawing.Point(786, 62);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(459, 319);
+            this.groupBox1.Size = new System.Drawing.Size(513, 319);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin thanh toán trả góp";

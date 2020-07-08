@@ -245,6 +245,12 @@
     <Compile Include="HoaDon.Designer.cs">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="hoadon_tragop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hoadon_tragop.Designer.cs">
+      <DependentUpon>hoadon_tragop.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoiND.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -547,6 +553,9 @@
     <EmbeddedResource Include="HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="hoadon_tragop.resx">
+      <DependentUpon>hoadon_tragop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoiND.resx">
       <DependentUpon>LoiND.cs</DependentUpon>
     </EmbeddedResource>
@@ -597,6 +606,7 @@
     <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Report4.rdlc" />
     <EmbeddedResource Include="Report5_banhang.rdlc" />
+    <EmbeddedResource Include="Report5_hd_tragop.rdlc" />
     <EmbeddedResource Include="Reporttklsp.rdlc" />
     <EmbeddedResource Include="Report_banhang.rdlc" />
     <EmbeddedResource Include="report_banhang.resx">
@@ -784,6 +794,16 @@
     <None Include="Resources\Iconleak-Cerulean-Database.ico" />
     <None Include="Resources\Treetog-Junior-User-group.ico" />
     <None Include="Resources\Designbolts-Free-Multimedia-Mobile.ico" />
+    <None Include="Resources\Double-J-Design-Ravenna-3d-Home.ico" />
+    <None Include="Resources\Ampeross-Qetto-2-Headphones.ico" />
+    <None Include="Resources\Hopstarter-Soft-Scraps-Button-Refresh.ico" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Places-user-identity.ico" />
+    <None Include="Resources\Icons-Land-Vista-People-Person-Male-Light.ico" />
+    <None Include="Resources\Designcontest-Ecommerce-Business-Euro.ico" />
+    <None Include="Resources\Iconsmind-Outline-Euro.ico" />
+    <None Include="Resources\Designcontest-Ecommerce-Business-Yen.ico" />
+    <None Include="Resources\Awicons-Vista-Artistic-Chart-search.ico" />
+    <None Include="Resources\Google-Noto-Emoji-Objects-62894-package.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

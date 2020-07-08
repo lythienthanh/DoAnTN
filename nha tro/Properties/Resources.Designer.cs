@@ -73,6 +73,16 @@ namespace nha_tro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ampeross_Qetto_2_Headphones {
+            get {
+                object obj = ResourceManager.GetObject("Ampeross-Qetto-2-Headphones", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Artdesigner_Urban_Stories_House {
             get {
                 object obj = ResourceManager.GetObject("Artdesigner-Urban-Stories-House", resourceCulture);
@@ -96,6 +106,16 @@ namespace nha_tro.Properties {
         internal static System.Drawing.Bitmap Awicons_Vista_Artistic_Add {
             get {
                 object obj = ResourceManager.GetObject("Awicons-Vista-Artistic-Add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Awicons_Vista_Artistic_Chart_search {
+            get {
+                object obj = ResourceManager.GetObject("Awicons-Vista-Artistic-Chart-search", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,6 +213,26 @@ namespace nha_tro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Designcontest_Ecommerce_Business_Euro {
+            get {
+                object obj = ResourceManager.GetObject("Designcontest-Ecommerce-Business-Euro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Designcontest_Ecommerce_Business_Yen {
+            get {
+                object obj = ResourceManager.GetObject("Designcontest-Ecommerce-Business-Yen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Double_J_Design_Origami_Colored_Pencil_Blue_home {
             get {
                 object obj = ResourceManager.GetObject("Double-J-Design-Origami-Colored-Pencil-Blue-home", resourceCulture);
@@ -206,6 +246,16 @@ namespace nha_tro.Properties {
         internal static System.Drawing.Bitmap Double_J_Design_Origami_Colored_Pencil_Red_home {
             get {
                 object obj = ResourceManager.GetObject("Double-J-Design-Origami-Colored-Pencil-Red-home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Double_J_Design_Ravenna_3d_Home {
+            get {
+                object obj = ResourceManager.GetObject("Double-J-Design-Ravenna-3d-Home", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +293,49 @@ namespace nha_tro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Google_Noto_Emoji_Objects_62894_package {
+            get {
+                object obj = ResourceManager.GetObject("Google-Noto-Emoji-Objects-62894-package", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hopstarter_Soft_Scraps_Button_Refresh {
+            get {
+                object obj = ResourceManager.GetObject("Hopstarter-Soft-Scraps-Button-Refresh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Iconleak_Cerulean_Database {
             get {
                 object obj = ResourceManager.GetObject("Iconleak-Cerulean-Database", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icons_Land_Vista_People_Person_Male_Light {
+            get {
+                object obj = ResourceManager.GetObject("Icons-Land-Vista-People-Person-Male-Light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Iconsmind_Outline_Euro {
+            get {
+                object obj = ResourceManager.GetObject("Iconsmind-Outline-Euro", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -316,6 +406,16 @@ namespace nha_tro.Properties {
         internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Actions_edit_delete {
             get {
                 object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Actions-edit-delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Places_user_identity {
+            get {
+                object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Places-user-identity", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
