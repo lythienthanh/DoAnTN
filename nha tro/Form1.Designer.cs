@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label mALOAILabel;
-            System.Windows.Forms.Label mAKHOLabel;
             System.Windows.Forms.Label mASPLabel;
             System.Windows.Forms.Label tENSPLabel;
             System.Windows.Forms.Label tINHTRANGLabel;
@@ -54,16 +53,14 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMASP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENLOAI = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMAKHO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENSP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTINHTRANG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDonGia = new DevExpress.XtraGrid.Columns.GridColumn();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.kHOComboBox = new System.Windows.Forms.ComboBox();
-            this.kHO1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sANPHAMComboBox = new System.Windows.Forms.ComboBox();
             this.lOAISANPHAMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kHO1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kHOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.mALOAITextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -110,7 +107,6 @@
             this.tongSLspTableAdapter = new nha_tro.NghiepVuTableAdapters.tongSLspTableAdapter();
             this.makho_cboTableAdapter = new nha_tro.NghiepVuTableAdapters.makho_cboTableAdapter();
             mALOAILabel = new System.Windows.Forms.Label();
-            mAKHOLabel = new System.Windows.Forms.Label();
             mASPLabel = new System.Windows.Forms.Label();
             tENSPLabel = new System.Windows.Forms.Label();
             tINHTRANGLabel = new System.Windows.Forms.Label();
@@ -132,8 +128,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sP_NEWBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOAISANPHAMBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHOBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mALOAITextEdit.Properties)).BeginInit();
@@ -163,15 +159,6 @@
             mALOAILabel.TabIndex = 2;
             mALOAILabel.Text = "Mã loại";
             // 
-            // mAKHOLabel
-            // 
-            mAKHOLabel.AutoSize = true;
-            mAKHOLabel.Location = new System.Drawing.Point(178, 68);
-            mAKHOLabel.Name = "mAKHOLabel";
-            mAKHOLabel.Size = new System.Drawing.Size(44, 13);
-            mAKHOLabel.TabIndex = 4;
-            mAKHOLabel.Text = "Mã Kho";
-            // 
             // mASPLabel
             // 
             mASPLabel.AutoSize = true;
@@ -184,7 +171,7 @@
             // tENSPLabel
             // 
             tENSPLabel.AutoSize = true;
-            tENSPLabel.Location = new System.Drawing.Point(178, 94);
+            tENSPLabel.Location = new System.Drawing.Point(178, 70);
             tENSPLabel.Name = "tENSPLabel";
             tENSPLabel.Size = new System.Drawing.Size(75, 13);
             tENSPLabel.TabIndex = 19;
@@ -193,7 +180,7 @@
             // tINHTRANGLabel
             // 
             tINHTRANGLabel.AutoSize = true;
-            tINHTRANGLabel.Location = new System.Drawing.Point(178, 120);
+            tINHTRANGLabel.Location = new System.Drawing.Point(178, 96);
             tINHTRANGLabel.Name = "tINHTRANGLabel";
             tINHTRANGLabel.Size = new System.Drawing.Size(55, 13);
             tINHTRANGLabel.TabIndex = 21;
@@ -202,7 +189,7 @@
             // donGiaLabel
             // 
             donGiaLabel.AutoSize = true;
-            donGiaLabel.Location = new System.Drawing.Point(178, 146);
+            donGiaLabel.Location = new System.Drawing.Point(178, 122);
             donGiaLabel.Name = "donGiaLabel";
             donGiaLabel.Size = new System.Drawing.Size(44, 13);
             donGiaLabel.TabIndex = 23;
@@ -284,10 +271,8 @@
             this.groupBox1.Controls.Add(this.sANPHAMGridControl);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.kHOComboBox);
             this.groupBox1.Controls.Add(this.sANPHAMComboBox);
             this.groupBox1.Controls.Add(mALOAILabel);
-            this.groupBox1.Controls.Add(mAKHOLabel);
             this.groupBox1.Location = new System.Drawing.Point(12, 48);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1022, 173);
@@ -316,7 +301,7 @@
             // tENSPTextEdit
             // 
             this.tENSPTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sANPHAMBindingSource, "TENSP", true));
-            this.tENSPTextEdit.Location = new System.Drawing.Point(271, 91);
+            this.tENSPTextEdit.Location = new System.Drawing.Point(271, 67);
             this.tENSPTextEdit.Name = "tENSPTextEdit";
             this.tENSPTextEdit.Size = new System.Drawing.Size(100, 20);
             this.tENSPTextEdit.TabIndex = 20;
@@ -324,7 +309,7 @@
             // tINHTRANGTextEdit
             // 
             this.tINHTRANGTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sANPHAMBindingSource, "TINHTRANG", true));
-            this.tINHTRANGTextEdit.Location = new System.Drawing.Point(271, 117);
+            this.tINHTRANGTextEdit.Location = new System.Drawing.Point(271, 93);
             this.tINHTRANGTextEdit.Name = "tINHTRANGTextEdit";
             this.tINHTRANGTextEdit.Size = new System.Drawing.Size(100, 20);
             this.tINHTRANGTextEdit.TabIndex = 22;
@@ -337,7 +322,7 @@
             0,
             0,
             0});
-            this.donGiaSpinEdit.Location = new System.Drawing.Point(271, 143);
+            this.donGiaSpinEdit.Location = new System.Drawing.Point(271, 119);
             this.donGiaSpinEdit.Name = "donGiaSpinEdit";
             this.donGiaSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -365,7 +350,6 @@
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMASP,
             this.colTENLOAI,
-            this.colMAKHO,
             this.colTENSP,
             this.colTINHTRANG,
             this.colDonGia});
@@ -388,21 +372,13 @@
             this.colTENLOAI.Visible = true;
             this.colTENLOAI.VisibleIndex = 1;
             // 
-            // colMAKHO
-            // 
-            this.colMAKHO.Caption = "Mã kho";
-            this.colMAKHO.FieldName = "MAKHO";
-            this.colMAKHO.Name = "colMAKHO";
-            this.colMAKHO.Visible = true;
-            this.colMAKHO.VisibleIndex = 2;
-            // 
             // colTENSP
             // 
             this.colTENSP.Caption = "Tên sãn phẩm";
             this.colTENSP.FieldName = "TENSP";
             this.colTENSP.Name = "colTENSP";
             this.colTENSP.Visible = true;
-            this.colTENSP.VisibleIndex = 3;
+            this.colTENSP.VisibleIndex = 2;
             // 
             // colTINHTRANG
             // 
@@ -410,7 +386,7 @@
             this.colTINHTRANG.FieldName = "TINHTRANG";
             this.colTINHTRANG.Name = "colTINHTRANG";
             this.colTINHTRANG.Visible = true;
-            this.colTINHTRANG.VisibleIndex = 4;
+            this.colTINHTRANG.VisibleIndex = 3;
             // 
             // colDonGia
             // 
@@ -418,7 +394,7 @@
             this.colDonGia.FieldName = "DonGia";
             this.colDonGia.Name = "colDonGia";
             this.colDonGia.Visible = true;
-            this.colDonGia.VisibleIndex = 5;
+            this.colDonGia.VisibleIndex = 4;
             // 
             // button3
             // 
@@ -442,22 +418,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // kHOComboBox
-            // 
-            this.kHOComboBox.DataSource = this.kHO1BindingSource;
-            this.kHOComboBox.DisplayMember = "MAKHO";
-            this.kHOComboBox.FormattingEnabled = true;
-            this.kHOComboBox.Location = new System.Drawing.Point(271, 66);
-            this.kHOComboBox.Name = "kHOComboBox";
-            this.kHOComboBox.Size = new System.Drawing.Size(100, 21);
-            this.kHOComboBox.TabIndex = 10;
-            this.kHOComboBox.ValueMember = "MAKHO";
-            // 
-            // kHO1BindingSource
-            // 
-            this.kHO1BindingSource.DataMember = "KHO1";
-            this.kHO1BindingSource.DataSource = this.nghiepVu;
-            // 
             // sANPHAMComboBox
             // 
             this.sANPHAMComboBox.DataSource = this.lOAISANPHAMBindingSource;
@@ -468,11 +428,17 @@
             this.sANPHAMComboBox.Size = new System.Drawing.Size(100, 21);
             this.sANPHAMComboBox.TabIndex = 10;
             this.sANPHAMComboBox.ValueMember = "MALOAI";
+            this.sANPHAMComboBox.SelectedIndexChanged += new System.EventHandler(this.sANPHAMComboBox_SelectedIndexChanged);
             // 
             // lOAISANPHAMBindingSource
             // 
             this.lOAISANPHAMBindingSource.DataMember = "LOAISANPHAM";
             this.lOAISANPHAMBindingSource.DataSource = this.nghiepVu;
+            // 
+            // kHO1BindingSource
+            // 
+            this.kHO1BindingSource.DataMember = "KHO1";
+            this.kHO1BindingSource.DataSource = this.nghiepVu;
             // 
             // kHOBindingSource
             // 
@@ -825,7 +791,6 @@
             this.tableAdapterManager.CT_HOADON_LINHKIENTableAdapter = null;
             this.tableAdapterManager.Ct_mua_SPTableAdapter = null;
             this.tableAdapterManager.CT_NHAP_LK_sreach_lk_manhapTableAdapter = null;
-            this.tableAdapterManager.CT_NHAP_SP_DK_LUUKHOTableAdapter = null;
             this.tableAdapterManager.CT_NHAP_SPTableAdapter = null;
             this.tableAdapterManager.HOADON1TableAdapter = null;
             this.tableAdapterManager.HOADONTableAdapter = null;
@@ -915,8 +880,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sP_NEWBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOAISANPHAMBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kHO1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHOBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -946,7 +911,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox sANPHAMComboBox;
-        private System.Windows.Forms.ComboBox kHOComboBox;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
@@ -984,7 +948,6 @@
         private NghiepVuTableAdapters.SP_NEWTableAdapter sP_NEWTableAdapter;
         private DevExpress.XtraGrid.Columns.GridColumn colMASP;
         private DevExpress.XtraGrid.Columns.GridColumn colTENLOAI;
-        private DevExpress.XtraGrid.Columns.GridColumn colMAKHO;
         private DevExpress.XtraGrid.Columns.GridColumn colTENSP;
         private DevExpress.XtraGrid.Columns.GridColumn colTINHTRANG;
         private DevExpress.XtraGrid.Columns.GridColumn colDonGia;

@@ -166,17 +166,19 @@ namespace nha_tro
                     sol += int.Parse(cT_NHAP_SP_DK_LUUKHODataGridView.Rows[i].Cells[3].Value.ToString());
                     tongtien += (int.Parse(cT_NHAP_SP_DK_LUUKHODataGridView.Rows[i].Cells[3].Value.ToString()) * int.Parse(cT_NHAP_SP_DK_LUUKHODataGridView.Rows[i].Cells[4].Value.ToString()));
                 }
-                ThongKe.xuatfile_HD_NhapHang(cT_NHAP_SP_DK_LUUKHODataGridView, cT_NHAP_SP_DK_LUUKHODataGridView.Rows[0].Cells[0].Value.ToString(), tongtien.ToString(), sol.ToString(), DateTime.Now.ToString("dd/MM/yyyy"), "HoaDon_NhapHang");
-
+            //ThongKe.xuatfile_HD_NhapHang(cT_NHAP_SP_DK_LUUKHODataGridView, cT_NHAP_SP_DK_LUUKHODataGridView.Rows[0].Cells[0].Value.ToString(), tongtien.ToString(), sol.ToString(), DateTime.Now.ToString("dd/MM/yyyy"), "HoaDon_NhapHang");
+                string mahd = hOADON1TableAdapter.mahd_moithem().ToString();
+            Form4_HD_NHAPHANG hd_Nhaphang = new Form4_HD_NHAPHANG(mahd, DateTime.Today.ToString("dd/MM/yyyy"), nHAPHANGDataGridView.CurrentRow.Cells[0].Value.ToString(), tongtien.ToString(), tAIKHOANTableAdapter.tennv(tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString()).ToString());
+            hd_Nhaphang.ShowDialog();
                 //====================================
                 this.nHAPHANG1TableAdapter.Fill(this.nghiepVu.NHAPHANG1);
                 this.kHO1TableAdapter.Fill(this.nghiepVu.KHO1);
                 
-            //XU LY HOA DON
+                //XU LY HOA DON
 
-            //            hOADONTableAdapter.Insert_my("NCC001", "MLHD01              ", Convert.ToDateTime("2000/01/01"), "temp", "NV01");
-            ////hOADON1TableAdapter.Insert("khong               ", cT_NHAP_SP_DK_LUUKHODataGridView.CurrentRow.Cells[2].Value.ToString(), "khong               ", "MLHD01              ", DateTime.Today, null,null, tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString());
-                MessageBox.Show("Thành Công");
+                //            hOADONTableAdapter.Insert_my("NCC001", "MLHD01              ", Convert.ToDateTime("2000/01/01"), "temp", "NV01");
+                ////hOADON1TableAdapter.Insert("khong               ", cT_NHAP_SP_DK_LUUKHODataGridView.CurrentRow.Cells[2].Value.ToString(), "khong               ", "MLHD01              ", DateTime.Today, null,null, tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString());
+                
 
 
         }

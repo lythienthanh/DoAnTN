@@ -62,7 +62,7 @@ namespace nha_tro
         private void button1_Click(object sender, EventArgs e)
         {
 
-                sANPHAMTableAdapter.Insert(("SP"+(sANPHAMTableAdapter.select_sodong()+1)),sANPHAMComboBox.SelectedValue.ToString(), kHOComboBox.SelectedValue.ToString(), tENSPTextEdit.Text, tINHTRANGTextEdit.Text,int.Parse(donGiaSpinEdit.Text));
+                sANPHAMTableAdapter.Insert(("SP"+(sANPHAMTableAdapter.select_sodong()+1)),sANPHAMComboBox.SelectedValue.ToString(), "KHO1", tENSPTextEdit.Text, tINHTRANGTextEdit.Text,int.Parse(donGiaSpinEdit.Text));
                 MessageBox.Show("Thành Công");
                 //load girdview
                 this.sANPHAMTableAdapter.Fill(this.nghiepVu.SANPHAM);
@@ -108,7 +108,7 @@ namespace nha_tro
         {
             if (sANPHAMTableAdapter.kt_trung_sp(mASPTextEdit.Text) != 0)
             {
-                sANPHAMTableAdapter.Delete(mASPTextEdit.Text, sANPHAMComboBox.SelectedValue.ToString(), kHOComboBox.SelectedValue.ToString(), tENSPTextEdit.Text, tINHTRANGTextEdit.Text, int.Parse(donGiaSpinEdit.Text));
+                sANPHAMTableAdapter.Delete(mASPTextEdit.Text, sANPHAMComboBox.SelectedValue.ToString(), "KHO1", tENSPTextEdit.Text, tINHTRANGTextEdit.Text, int.Parse(donGiaSpinEdit.Text));
                 MessageBox.Show("Thành Công");
                 //load girdview
                 this.sANPHAMTableAdapter.Fill(this.nghiepVu.SANPHAM);
@@ -123,7 +123,7 @@ namespace nha_tro
             ////this.Validate();
             //this.sANPHAMBindingSource.EndEdit();
             //this.tableAdapterManager.UpdateAll(this.nghiepVu);
-            sANPHAMTableAdapter.UpdateQuery(tENSPTextEdit.Text, mALOAITextEdit.Text, kHOComboBox.SelectedValue.ToString(), tINHTRANGTextEdit.Text, int.Parse(donGiaSpinEdit.Text), mASPTextEdit.Text);
+            sANPHAMTableAdapter.UpdateQuery(tENSPTextEdit.Text, mALOAITextEdit.Text, "KHO1", tINHTRANGTextEdit.Text, int.Parse(donGiaSpinEdit.Text), mASPTextEdit.Text);
             MessageBox.Show("Sữa thành công!!!");
             getdata();
             
@@ -153,7 +153,7 @@ namespace nha_tro
         private void button5_Click(object sender, EventArgs e)
         {
 
-            kHO1TableAdapter.THEM("KHO" + kHO1TableAdapter.so_dong(), int.Parse(sLSpinEdit.Text), sANPHAMComboBox1.SelectedValue.ToString(), diaChiTextEdit.Text, int.Parse(textBox1.Text),"LK00");
+            kHO1TableAdapter.THEM("KHO" + kHO1TableAdapter.so_dong(), int.Parse(sLSpinEdit.Text), sANPHAMComboBox1.SelectedValue.ToString(), diaChiTextEdit.Text, int.Parse(textBox1.Text),"TEMP");
             MessageBox.Show("Thành Công");
             //load girdview
             this.kHO1TableAdapter.Fill(this.nghiepVu.KHO1);
@@ -183,6 +183,11 @@ namespace nha_tro
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void sANPHAMComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            sP_NEWTableAdapter.FillBy_MALOAI(this.nghiepVu.SP_NEW, sANPHAMComboBox.SelectedValue.ToString());
         }
     }
 }

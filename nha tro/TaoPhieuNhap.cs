@@ -43,6 +43,18 @@ namespace nha_tro
             this.cT_NHAP_SPTableAdapter.Fill(this.nghiepVu.CT_NHAP_SP);
             mANVTextEdit.ReadOnly = true;
             mANVTextEdit.Text = tendn;
+
+            xUAT_HD_NHAPHANG_SPDataGridView.BorderStyle = BorderStyle.None;
+            xUAT_HD_NHAPHANG_SPDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            xUAT_HD_NHAPHANG_SPDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            xUAT_HD_NHAPHANG_SPDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            xUAT_HD_NHAPHANG_SPDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            xUAT_HD_NHAPHANG_SPDataGridView.BackgroundColor = Color.White;
+
+            xUAT_HD_NHAPHANG_SPDataGridView.EnableHeadersVisualStyles = false;
+            xUAT_HD_NHAPHANG_SPDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            xUAT_HD_NHAPHANG_SPDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            xUAT_HD_NHAPHANG_SPDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
@@ -102,6 +114,14 @@ namespace nha_tro
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+            try
+            {
+                this.xUAT_HD_NHAPHANG_SPTableAdapter.Fill(this.nghiepVu.XUAT_HD_NHAPHANG_SP, nHAPHANGComboBox.SelectedValue.ToString());
+            }
+            catch (System.Exception ex)
+            {
+                //System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -110,6 +130,14 @@ namespace nha_tro
             MessageBox.Show("Them Thanh Cong");
             //load
             this.cT_Nhap_dkTableAdapter.Fill_dk(this.nghiepVu.CT_Nhap_dk, nHAPHANGComboBox.SelectedValue.ToString());
+            try
+            {
+                this.xUAT_HD_NHAPHANG_SPTableAdapter.Fill(this.nghiepVu.XUAT_HD_NHAPHANG_SP, nHAPHANGComboBox.SelectedValue.ToString());
+            }
+            catch (System.Exception ex)
+            {
+                //System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -118,6 +146,14 @@ namespace nha_tro
             MessageBox.Show("Them Thanh Cong");
             //load
             this.nHAPHANGTableAdapter.Fill(this.nghiepVu.NHAPHANG);
+            try
+            {
+                this.xUAT_HD_NHAPHANG_SPTableAdapter.Fill(this.nghiepVu.XUAT_HD_NHAPHANG_SP, nHAPHANGComboBox.SelectedValue.ToString());
+            }
+            catch (System.Exception ex)
+            {
+                //System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -126,6 +162,14 @@ namespace nha_tro
             MessageBox.Show("Xoa Thanh Cong");
             //load
             this.cT_Nhap_dkTableAdapter.Fill_dk(this.nghiepVu.CT_Nhap_dk, nHAPHANGComboBox.SelectedValue.ToString());
+            try
+            {
+                this.xUAT_HD_NHAPHANG_SPTableAdapter.Fill(this.nghiepVu.XUAT_HD_NHAPHANG_SP, nHAPHANGComboBox.SelectedValue.ToString());
+            }
+            catch (System.Exception ex)
+            {
+                //System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -134,6 +178,12 @@ namespace nha_tro
             MessageBox.Show("Thành công");
             //load
             this.cT_Nhap_dkTableAdapter.Fill_dk(this.nghiepVu.CT_Nhap_dk, nHAPHANGComboBox.SelectedValue.ToString());
+        }
+
+        private void fillToolStripButton_Click(object sender, EventArgs e)
+        {
+
+
         }
     }
 }

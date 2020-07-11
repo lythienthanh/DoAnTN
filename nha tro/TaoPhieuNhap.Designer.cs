@@ -79,6 +79,15 @@
             this.donGiaSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.cT_Nhap_dkTableAdapter = new nha_tro.NghiepVuTableAdapters.CT_Nhap_dkTableAdapter();
             this.button9 = new System.Windows.Forms.Button();
+            this.xUAT_HD_NHAPHANG_SPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.xUAT_HD_NHAPHANG_SPTableAdapter = new nha_tro.NghiepVuTableAdapters.XUAT_HD_NHAPHANG_SPTableAdapter();
+            this.xUAT_HD_NHAPHANG_SPDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             mANVLabel = new System.Windows.Forms.Label();
             nGAYNHAPLabel = new System.Windows.Forms.Label();
             mANHAPLabel = new System.Windows.Forms.Label();
@@ -107,6 +116,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sLSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.donGiaSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xUAT_HD_NHAPHANG_SPBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xUAT_HD_NHAPHANG_SPDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // mANVLabel
@@ -192,7 +203,6 @@
             this.tableAdapterManager.CT_HOADON_LINHKIENTableAdapter = null;
             this.tableAdapterManager.Ct_mua_SPTableAdapter = null;
             this.tableAdapterManager.CT_NHAP_LK_sreach_lk_manhapTableAdapter = null;
-            this.tableAdapterManager.CT_NHAP_SP_DK_LUUKHOTableAdapter = null;
             this.tableAdapterManager.CT_NHAP_SPTableAdapter = this.cT_NHAP_SPTableAdapter;
             this.tableAdapterManager.HOADON1TableAdapter = null;
             this.tableAdapterManager.HOADONTableAdapter = null;
@@ -255,7 +265,7 @@
             this.groupBox2.Controls.Add(this.button6);
             this.groupBox2.Location = new System.Drawing.Point(12, 52);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(865, 161);
+            this.groupBox2.Size = new System.Drawing.Size(960, 161);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Phiếu Nhập";
@@ -266,7 +276,7 @@
             this.nHAPHANGGridControl.Location = new System.Drawing.Point(288, 19);
             this.nHAPHANGGridControl.MainView = this.gridView1;
             this.nHAPHANGGridControl.Name = "nHAPHANGGridControl";
-            this.nHAPHANGGridControl.Size = new System.Drawing.Size(571, 131);
+            this.nHAPHANGGridControl.Size = new System.Drawing.Size(666, 131);
             this.nHAPHANGGridControl.TabIndex = 11;
             this.nHAPHANGGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -345,6 +355,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.xUAT_HD_NHAPHANG_SPDataGridView);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.nHACUNGCAPComboBox);
             this.groupBox1.Controls.Add(this.sANPHAMComboBox);
@@ -361,7 +372,7 @@
             this.groupBox1.Controls.Add(this.donGiaSpinEdit);
             this.groupBox1.Location = new System.Drawing.Point(12, 239);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(865, 258);
+            this.groupBox1.Size = new System.Drawing.Size(960, 286);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết phiếu nhập";
@@ -429,13 +440,14 @@
             // cT_Nhap_dkGridControl
             // 
             this.cT_Nhap_dkGridControl.DataSource = this.cT_Nhap_dkBindingSource;
-            this.cT_Nhap_dkGridControl.Location = new System.Drawing.Point(288, 44);
+            this.cT_Nhap_dkGridControl.Location = new System.Drawing.Point(294, 6);
             this.cT_Nhap_dkGridControl.MainView = this.gridView2;
             this.cT_Nhap_dkGridControl.Name = "cT_Nhap_dkGridControl";
             this.cT_Nhap_dkGridControl.Size = new System.Drawing.Size(571, 138);
             this.cT_Nhap_dkGridControl.TabIndex = 10;
             this.cT_Nhap_dkGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
+            this.cT_Nhap_dkGridControl.Visible = false;
             // 
             // cT_Nhap_dkBindingSource
             // 
@@ -547,17 +559,80 @@
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button9.Location = new System.Drawing.Point(0, 0);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(932, 42);
+            this.button9.Size = new System.Drawing.Size(1001, 42);
             this.button9.TabIndex = 31;
             this.button9.Text = "TẠO PHIẾU NHẬP SẢN PHẨM";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
+            // xUAT_HD_NHAPHANG_SPBindingSource
+            // 
+            this.xUAT_HD_NHAPHANG_SPBindingSource.DataMember = "XUAT_HD_NHAPHANG_SP";
+            this.xUAT_HD_NHAPHANG_SPBindingSource.DataSource = this.nghiepVu;
+            // 
+            // xUAT_HD_NHAPHANG_SPTableAdapter
+            // 
+            this.xUAT_HD_NHAPHANG_SPTableAdapter.ClearBeforeFill = true;
+            // 
+            // xUAT_HD_NHAPHANG_SPDataGridView
+            // 
+            this.xUAT_HD_NHAPHANG_SPDataGridView.AutoGenerateColumns = false;
+            this.xUAT_HD_NHAPHANG_SPDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.xUAT_HD_NHAPHANG_SPDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.xUAT_HD_NHAPHANG_SPDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.xUAT_HD_NHAPHANG_SPDataGridView.DataSource = this.xUAT_HD_NHAPHANG_SPBindingSource;
+            this.xUAT_HD_NHAPHANG_SPDataGridView.Location = new System.Drawing.Point(294, 45);
+            this.xUAT_HD_NHAPHANG_SPDataGridView.Name = "xUAT_HD_NHAPHANG_SPDataGridView";
+            this.xUAT_HD_NHAPHANG_SPDataGridView.Size = new System.Drawing.Size(666, 220);
+            this.xUAT_HD_NHAPHANG_SPDataGridView.TabIndex = 15;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "MANHAP";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Mã Nhập Hàng";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "MASP";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Mã SP";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "TENSP";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Tên SP";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "MANCC";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Mã NCC";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "SL";
+            this.dataGridViewTextBoxColumn7.HeaderText = "SL";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "DonGia";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Đơn giá";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
             // MH000000000000000024
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 513);
+            this.ClientSize = new System.Drawing.Size(1001, 552);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -587,6 +662,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sLSpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.donGiaSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xUAT_HD_NHAPHANG_SPBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xUAT_HD_NHAPHANG_SPDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -636,5 +713,14 @@
         private DevExpress.XtraGrid.Columns.GridColumn colThanhTien;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.BindingSource xUAT_HD_NHAPHANG_SPBindingSource;
+        private NghiepVuTableAdapters.XUAT_HD_NHAPHANG_SPTableAdapter xUAT_HD_NHAPHANG_SPTableAdapter;
+        private System.Windows.Forms.DataGridView xUAT_HD_NHAPHANG_SPDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }
