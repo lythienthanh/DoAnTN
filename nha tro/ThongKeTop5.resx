@@ -117,20 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAT9JREFUWEftlklKA1EYBhtxHm7hThARFRFEXbkT1CNk6VFyj6xCREQRBBEv4MZL
+        OOG00JVaJXTQxqHT6ddEeAW1yPfePxBCd5JIrzCPtYp1ZpsGvuEz3gXWGc5yZpsJPMNLnDIIhL2d4Sxn
+        fmEMT/EKpw1Kxp72doazvmUUT9CLMwYlYa9rtLczfmUEj/EGZw26xB72sqe9czGMR3iLcwYFsdYe9so9
+        PMUlDtBf7oJBh1hj7SHaqxBDuI/3uGiQE+9aY609umIQ9/ABlwz+wDvetcbaUhjAFj7issEPeOadXbSm
+        VPqxiU+4apBhBT3zjneDkC7hV5zFLOjwlG30WZ7FzLPgxAXiAnGBnlvAB88Omm0ahObzAut4gS9Yx47f
+        +UVIF/C/wiv64pnEythCFzjHNYOqGccN7Pv4FPnfJMk79zpyj6i5808AAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="Expr1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="MALINHKIEN.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="tOP_5BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>77, 17</value>
   </metadata>
   <metadata name="tt.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAT9JREFUWEftlklKA1EYBhtxHm7hThARFRFEXbkT1CNk6VFyj6xCREQRBBEv4MZL
+        OOG00JVaJXTQxqHT6ddEeAW1yPfePxBCd5JIrzCPtYp1ZpsGvuEz3gXWGc5yZpsJPMNLnDIIhL2d4Sxn
+        fmEMT/EKpw1Kxp72doazvmUUT9CLMwYlYa9rtLczfmUEj/EGZw26xB72sqe9czGMR3iLcwYFsdYe9so9
+        PMUlDtBf7oJBh1hj7SHaqxBDuI/3uGiQE+9aY609umIQ9/ABlwz+wDvetcbaUhjAFj7issEPeOadXbSm
+        VPqxiU+4apBhBT3zjneDkC7hV5zFLOjwlG30WZ7FzLPgxAXiAnGBnlvAB88Omm0ahObzAut4gS9Yx47f
+        +UVIF/C/wiv64pnEythCFzjHNYOqGccN7Pv4FPnfJMk79zpyj6i5808AAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="tOP_10BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>568, 17</value>
+  </metadata>
   <metadata name="tOP_5TableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>240, 17</value>
   </metadata>
   <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>397, 17</value>
-  </metadata>
-  <metadata name="tOP_10BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>568, 17</value>
   </metadata>
   <metadata name="tOP_10TableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>737, 17</value>

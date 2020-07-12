@@ -4,6 +4,10 @@
 
     public partial class tt
     {
+        partial class ThongKe_TinhDoanhThuDataTable
+        {
+        }
+
         partial class HOADON_timmahd_vuathemDataTable
         {
         }

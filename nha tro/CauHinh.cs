@@ -36,7 +36,7 @@ namespace nha_tro
             daUser.Fill(dt);
             if (dt.Rows.Count == 0)
                 return 0;// User không tồn tại
-            else if (dt.Rows[0][2] == null || dt.Rows[0][2].ToString() == "False")
+            else if (dt.Rows[0][3] == null || dt.Rows[0][3].ToString() == "False")
             {
                 return 1;// Không hoạt động
             }

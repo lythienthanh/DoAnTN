@@ -53,19 +53,38 @@ namespace nha_tro
 
                 for (int i = 0; i < thongKe_TinhDoanhThuDataGridView.RowCount - 1; i++)
                 {
-                    if (thongKe_SPTableAdapter.kt_cokm_k(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString())) != null) //co km
+                    if (string.Compare(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString(), "khong") != 0)//tinh tien sp
                     {
-                        sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
-                        string dongiatheomasp = (thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString())).ToString();
-                        tongtien += (int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString())) - ((int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString()))*int.Parse(thongKe_SPTableAdapter.kt_cokm_k(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString())).ToString()) /100);
+                        if (thongKe_SPTableAdapter.kt_cokm_k(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString())) != null) //co km
+                        {
+                            sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
+                            string dongiatheomasp = (thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString())).ToString();
+                            tongtien += (int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString())) - ((int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString())) * int.Parse(thongKe_SPTableAdapter.kt_cokm_k(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString())).ToString()) / 100);
+                        }
+                        else
+                        {
+                            sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
+                            string dongiatheomasp = (thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString())).ToString();
+                            tongtien += (int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString()));
+                        }
                     }
-                    else
+                    else//tinh tien lk
                     {
-                        sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
-                        string dongiatheomasp = (thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString())).ToString();
-                        tongtien += (int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString()));
+                        if (thongKe_SPTableAdapter.kt_km_lk(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString()), thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[4].Value.ToString()) != null)
+                        {
+                            sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
+                            string dongiatheolk = (thongKe_TinhDoanhThuTableAdapter.dongia_linhkien(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[4].Value.ToString())).ToString();
+                            tongtien += (int.Parse(dongiatheolk) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString())) - ((int.Parse(dongiatheolk) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString())) * int.Parse(thongKe_SPTableAdapter.kt_km_lk(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString()), thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[4].Value.ToString()).ToString()) / 100);
+                        }
+                        else
+                        {
+                            sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
+                            string dongiatheolk = (thongKe_TinhDoanhThuTableAdapter.dongia_linhkien(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[4].Value.ToString())).ToString();
+                            tongtien += (int.Parse(dongiatheolk) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString()));
+                        }
                     }
                 }
+
                 textBox4.Text = sl.ToString();
                 textBox3.Text = tongtien.ToString();
                 sl = 0;
@@ -88,17 +107,35 @@ namespace nha_tro
                 int tongtien = 0;
                 for (int i = 0; i < thongKe_TinhDoanhThuDataGridView.RowCount - 1; i++)
                 {
-                    if (thongKe_SPTableAdapter.kt_cokm_k(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString())) != null) //co km
+                    if (string.Compare(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString(), "khong") != 0)//tinh tien sp
                     {
-                        sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
-                        string dongiatheomasp = (thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString())).ToString();
-                        tongtien += (int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString())) - ((int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString())) * int.Parse(thongKe_SPTableAdapter.kt_cokm_k(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString())).ToString()) / 100);
+                        if (thongKe_SPTableAdapter.kt_cokm_k(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString())) != null) //co km
+                        {
+                            sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
+                            string dongiatheomasp = (thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString())).ToString();
+                            tongtien += (int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString())) - ((int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString())) * int.Parse(thongKe_SPTableAdapter.kt_cokm_k(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString())).ToString()) / 100);
+                        }
+                        else
+                        {
+                            sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
+                            string dongiatheomasp = (thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString())).ToString();
+                            tongtien += (int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString()));
+                        }
                     }
-                    else
+                    else//tinh tien lk
                     {
-                        sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
-                        string dongiatheomasp = (thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString())).ToString();
-                        tongtien += (int.Parse(dongiatheomasp) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString()));
+                        if (thongKe_SPTableAdapter.kt_km_lk(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString()), thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[4].Value.ToString()) != null)
+                        {
+                            sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
+                            string dongiatheolk = (thongKe_TinhDoanhThuTableAdapter.dongia_linhkien(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[4].Value.ToString())).ToString();
+                            tongtien += (int.Parse(dongiatheolk) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString())) - ((int.Parse(dongiatheolk) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString())) * int.Parse(thongKe_SPTableAdapter.kt_km_lk(int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[0].Value.ToString()), thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[4].Value.ToString()).ToString()) / 100);
+                        }
+                        else
+                        {
+                            sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString());
+                            string dongiatheolk = (thongKe_TinhDoanhThuTableAdapter.dongia_linhkien(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[4].Value.ToString())).ToString();
+                            tongtien += (int.Parse(dongiatheolk) * int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[3].Value.ToString()));
+                        }
                     }
                 }
                 textBox4.Text = sl.ToString();
@@ -253,7 +290,7 @@ namespace nha_tro
                 }
                 else
                 {
-                    tongtienhientai = sl * int.Parse(dongia);
+                    tongtienhientai = int.Parse(thongKe_SPDataGridView.Rows[i].Cells[2].Value.ToString()) * int.Parse(dongia);
                     tongtienbanduoc += tongtienhientai;
                 }    
             }

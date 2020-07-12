@@ -40607,12 +40607,12 @@ WHERE        (SANPHAM.TENSP LIKE '%' + @tensp + '%')";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"select KHACHHANG.MAKH,KHACHHANG.TENKH,SDT,DIACHI,CMND,count(Ct_mua_SP.MaKH) as 'Số lần mua'  
-from Ct_mua_SP,KHACHHANG,HOADON 
-where Ct_mua_SP.MaHD=HOADON.MAHD 
-and Ct_mua_SP.MaKH=KHACHHANG.MaKH 
+            this._commandCollection[0].CommandText = @"select KHACHHANG.MAKH,KHACHHANG.TENKH,SDT,DIACHI,CMND,count(ct_mua_sp_lk.MaKH) as 'Số lần mua'  
+from ct_mua_sp_lk,KHACHHANG,HOADON 
+where ct_mua_sp_lk.MaHD=HOADON.MAHD 
+and ct_mua_sp_lk.MaKH=KHACHHANG.MaKH 
 group by KHACHHANG.MAKH,KHACHHANG.TENKH,SDT,DIACHI,CMND
-having count(Ct_mua_SP.MaKH) > 4";
+having count(ct_mua_sp_lk.MaKH) > 4";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
