@@ -40,15 +40,15 @@ namespace nha_tro
             int sltheosp = 0;
             int sl = 0;
             int tongtien = 0;
-            for (int i = 0; i < thongKe_tragop_theongayDataGridView.Rows.Count -1 ; i++)
+            for (int i = 0; i < thongKe_tragop_theongayDataGridView.Rows.Count - 1; i++)
             {
                 sl += int.Parse(thongKe_tragop_theongayDataGridView.Rows[i].Cells[3].Value.ToString());
-                sltheosp = int.Parse(thongKe_tragop_theongayDataGridView.Rows[i].Cells[3].Value.ToString());
+/*                sltheosp = int.Parse(thongKe_tragop_theongayDataGridView.Rows[i].Cells[3].Value.ToString());
                 int dongia = int.Parse(thongKe_TinhDoanhThuTableAdapter.select_dongia_masp(thongKe_tragop_theongayDataGridView.Rows[i].Cells[1].Value.ToString()).ToString());
-                tongtien += sltheosp * dongia;
+                tongtien += sltheosp * dongia;*/
             }
             textBox1.Text = sl.ToString();
-            textBox2.Text = tongtien.ToString();
+            
 
             try
             {
@@ -68,6 +68,7 @@ namespace nha_tro
             }
             textBox3.Text = (tongtienphaitra + (tongtienphaitra - tongtienconlai)).ToString();
             textBox4.Text = tongtienconlai.ToString();
+            textBox2.Text = ((tongtienphaitra + (tongtienphaitra - tongtienconlai)) + tongtienconlai).ToString();
             tongtienphaitra = 0;
             tongtienconlai = 0;
 

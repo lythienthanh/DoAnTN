@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.thongKe_tragop_theongayDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thongKe_tragop_theongayBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tt = new nha_tro.tt();
             this.label3 = new System.Windows.Forms.Label();
@@ -78,6 +74,12 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MALINHKIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENLINHKIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.thongKe_tragop_theongayDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thongKe_tragop_theongayBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tt)).BeginInit();
@@ -103,38 +105,15 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
+            this.dataGridViewTextBoxColumn4,
+            this.MALINHKIEN,
+            this.TENLINHKIEN});
             this.thongKe_tragop_theongayDataGridView.DataSource = this.thongKe_tragop_theongayBindingSource;
             this.thongKe_tragop_theongayDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.thongKe_tragop_theongayDataGridView.Location = new System.Drawing.Point(3, 16);
             this.thongKe_tragop_theongayDataGridView.Name = "thongKe_tragop_theongayDataGridView";
             this.thongKe_tragop_theongayDataGridView.Size = new System.Drawing.Size(441, 201);
             this.thongKe_tragop_theongayDataGridView.TabIndex = 2;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "MAHD";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã hóa đơn";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "MaSP";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Mã sản phẩm";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "NGAYLAP";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Ngày lập";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "SL";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Số lượng";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // thongKe_tragop_theongayBindingSource
             // 
@@ -528,6 +507,43 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thống kê theo Mã Hóa Đơn hoặc Mã Trả Góp";
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MAHD";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã hóa đơn";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "MaSP";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Mã sản phẩm";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "NGAYLAP";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Ngày lập";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "SL";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Số lượng";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // MALINHKIEN
+            // 
+            this.MALINHKIEN.DataPropertyName = "MALINHKIEN";
+            this.MALINHKIEN.HeaderText = "Mã linh kiện";
+            this.MALINHKIEN.Name = "MALINHKIEN";
+            // 
+            // TENLINHKIEN
+            // 
+            this.TENLINHKIEN.DataPropertyName = "TENLINHKIEN";
+            this.TENLINHKIEN.HeaderText = "Tên linh kiện";
+            this.TENLINHKIEN.Name = "TENLINHKIEN";
+            // 
             // TraGop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -592,10 +608,6 @@
         private System.Windows.Forms.BindingSource traGop2_select_theo_ngayBindingSource;
         private ttTableAdapters.TraGop2_select_theo_ngayTableAdapter traGop2_select_theo_ngayTableAdapter;
         private System.Windows.Forms.DataGridView traGop2_select_theo_ngayDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -615,5 +627,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MALINHKIEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENLINHKIEN;
     }
 }

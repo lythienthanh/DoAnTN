@@ -134,6 +134,8 @@ namespace nha_tro {
         
         private sl_linhkien_trongkhoDataTable tablesl_linhkien_trongkho;
         
+        private HD_NCC_LKDataTable tableHD_NCC_LK;
+        
         private global::System.Data.DataRelation relationFK_Ct_mua_SP_HOADON;
         
         private global::System.Data.DataRelation relationFK_Ct_mua_SP_HOADON1;
@@ -293,6 +295,10 @@ namespace nha_tro {
         private global::System.Data.DataRelation relationFK_Ct_mua_SP_HOADON51;
         
         private global::System.Data.DataRelation relationFK_CT_HOADO_CT_HOADON_HOADON11;
+        
+        private global::System.Data.DataRelation relationFK_Ct_mua_SP_HOADON52;
+        
+        private global::System.Data.DataRelation relationFK_CT_HOADO_CT_HOADON_HOADON12;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -486,6 +492,9 @@ namespace nha_tro {
                 }
                 if ((ds.Tables["sl_linhkien_trongkho"] != null)) {
                     base.Tables.Add(new sl_linhkien_trongkhoDataTable(ds.Tables["sl_linhkien_trongkho"]));
+                }
+                if ((ds.Tables["HD_NCC_LK"] != null)) {
+                    base.Tables.Add(new HD_NCC_LKDataTable(ds.Tables["HD_NCC_LK"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -1057,6 +1066,16 @@ namespace nha_tro {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public HD_NCC_LKDataTable HD_NCC_LK {
+            get {
+                return this.tableHD_NCC_LK;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -1286,6 +1305,9 @@ namespace nha_tro {
                 }
                 if ((ds.Tables["sl_linhkien_trongkho"] != null)) {
                     base.Tables.Add(new sl_linhkien_trongkhoDataTable(ds.Tables["sl_linhkien_trongkho"]));
+                }
+                if ((ds.Tables["HD_NCC_LK"] != null)) {
+                    base.Tables.Add(new HD_NCC_LKDataTable(ds.Tables["HD_NCC_LK"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -1650,6 +1672,12 @@ namespace nha_tro {
                     this.tablesl_linhkien_trongkho.InitVars();
                 }
             }
+            this.tableHD_NCC_LK = ((HD_NCC_LKDataTable)(base.Tables["HD_NCC_LK"]));
+            if ((initTable == true)) {
+                if ((this.tableHD_NCC_LK != null)) {
+                    this.tableHD_NCC_LK.InitVars();
+                }
+            }
             this.relationFK_Ct_mua_SP_HOADON = this.Relations["FK_Ct_mua_SP_HOADON"];
             this.relationFK_Ct_mua_SP_HOADON1 = this.Relations["FK_Ct_mua_SP_HOADON1"];
             this.relationFK_Ct_mua_SP_HOADON2 = this.Relations["FK_Ct_mua_SP_HOADON2"];
@@ -1730,6 +1758,8 @@ namespace nha_tro {
             this.relationFK_CT_HOADO_CT_HOADON_HOADON10 = this.Relations["FK_CT_HOADO_CT_HOADON_HOADON10"];
             this.relationFK_Ct_mua_SP_HOADON51 = this.Relations["FK_Ct_mua_SP_HOADON51"];
             this.relationFK_CT_HOADO_CT_HOADON_HOADON11 = this.Relations["FK_CT_HOADO_CT_HOADON_HOADON11"];
+            this.relationFK_Ct_mua_SP_HOADON52 = this.Relations["FK_Ct_mua_SP_HOADON52"];
+            this.relationFK_CT_HOADO_CT_HOADON_HOADON12 = this.Relations["FK_CT_HOADO_CT_HOADON_HOADON12"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1850,6 +1880,8 @@ namespace nha_tro {
             base.Tables.Add(this.tablethongke_kho);
             this.tablesl_linhkien_trongkho = new sl_linhkien_trongkhoDataTable();
             base.Tables.Add(this.tablesl_linhkien_trongkho);
+            this.tableHD_NCC_LK = new HD_NCC_LKDataTable();
+            base.Tables.Add(this.tableHD_NCC_LK);
             this.relationFK_Ct_mua_SP_HOADON = new global::System.Data.DataRelation("FK_Ct_mua_SP_HOADON", new global::System.Data.DataColumn[] {
                         this.tableHOADON_tt.MAHDColumn}, new global::System.Data.DataColumn[] {
                         this.tableCt_mua_SP_TIMKIEM.MaHDColumn}, false);
@@ -2172,6 +2204,14 @@ namespace nha_tro {
                         this.tableThongKe_SP.MAHDColumn}, new global::System.Data.DataColumn[] {
                         this.tableCT_HOADON_LINHKIEN.MAHDColumn}, false);
             this.Relations.Add(this.relationFK_CT_HOADO_CT_HOADON_HOADON11);
+            this.relationFK_Ct_mua_SP_HOADON52 = new global::System.Data.DataRelation("FK_Ct_mua_SP_HOADON52", new global::System.Data.DataColumn[] {
+                        this.tablethongKe_tragop_theongay.MAHDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCt_mua_SP_TIMKIEM.MaHDColumn}, false);
+            this.Relations.Add(this.relationFK_Ct_mua_SP_HOADON52);
+            this.relationFK_CT_HOADO_CT_HOADON_HOADON12 = new global::System.Data.DataRelation("FK_CT_HOADO_CT_HOADON_HOADON12", new global::System.Data.DataColumn[] {
+                        this.tablethongKe_tragop_theongay.MAHDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCT_HOADON_LINHKIEN.MAHDColumn}, false);
+            this.Relations.Add(this.relationFK_CT_HOADO_CT_HOADON_HOADON12);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2506,6 +2546,12 @@ namespace nha_tro {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeHD_NCC_LK() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -2723,6 +2769,9 @@ namespace nha_tro {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void sl_linhkien_trongkhoRowChangeEventHandler(object sender, sl_linhkien_trongkhoRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void HD_NCC_LKRowChangeEventHandler(object sender, HD_NCC_LKRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -7103,6 +7152,10 @@ namespace nha_tro {
             
             private global::System.Data.DataColumn columnSL;
             
+            private global::System.Data.DataColumn columnMALINHKIEN;
+            
+            private global::System.Data.DataColumn columnTENLINHKIEN;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public thongKe_tragop_theongayDataTable() {
@@ -7170,6 +7223,22 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MALINHKIENColumn {
+                get {
+                    return this.columnMALINHKIEN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TENLINHKIENColumn {
+                get {
+                    return this.columnTENLINHKIEN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -7205,13 +7274,15 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public thongKe_tragop_theongayRow AddthongKe_tragop_theongayRow(string MaSP, System.DateTime NGAYLAP, int SL) {
+            public thongKe_tragop_theongayRow AddthongKe_tragop_theongayRow(string MaSP, System.DateTime NGAYLAP, int SL, string MALINHKIEN, string TENLINHKIEN) {
                 thongKe_tragop_theongayRow rowthongKe_tragop_theongayRow = ((thongKe_tragop_theongayRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         MaSP,
                         NGAYLAP,
-                        SL};
+                        SL,
+                        MALINHKIEN,
+                        TENLINHKIEN};
                 rowthongKe_tragop_theongayRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowthongKe_tragop_theongayRow);
                 return rowthongKe_tragop_theongayRow;
@@ -7238,6 +7309,8 @@ namespace nha_tro {
                 this.columnMaSP = base.Columns["MaSP"];
                 this.columnNGAYLAP = base.Columns["NGAYLAP"];
                 this.columnSL = base.Columns["SL"];
+                this.columnMALINHKIEN = base.Columns["MALINHKIEN"];
+                this.columnTENLINHKIEN = base.Columns["TENLINHKIEN"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7251,6 +7324,10 @@ namespace nha_tro {
                 base.Columns.Add(this.columnNGAYLAP);
                 this.columnSL = new global::System.Data.DataColumn("SL", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSL);
+                this.columnMALINHKIEN = new global::System.Data.DataColumn("MALINHKIEN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMALINHKIEN);
+                this.columnTENLINHKIEN = new global::System.Data.DataColumn("TENLINHKIEN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTENLINHKIEN);
                 this.columnMAHD.AutoIncrement = true;
                 this.columnMAHD.AutoIncrementSeed = -1;
                 this.columnMAHD.AutoIncrementStep = -1;
@@ -7258,6 +7335,9 @@ namespace nha_tro {
                 this.columnMAHD.ReadOnly = true;
                 this.columnMaSP.AllowDBNull = false;
                 this.columnMaSP.MaxLength = 10;
+                this.columnMALINHKIEN.AllowDBNull = false;
+                this.columnMALINHKIEN.MaxLength = 20;
+                this.columnTENLINHKIEN.MaxLength = 51;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20041,6 +20121,327 @@ namespace nha_tro {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class HD_NCC_LKDataTable : global::System.Data.TypedTableBase<HD_NCC_LKRow> {
+            
+            private global::System.Data.DataColumn columnMALINHKIEN;
+            
+            private global::System.Data.DataColumn columnTENLINHKIEN;
+            
+            private global::System.Data.DataColumn columnMANHAP;
+            
+            private global::System.Data.DataColumn columnMANCC;
+            
+            private global::System.Data.DataColumn columnSL;
+            
+            private global::System.Data.DataColumn columnDONGIA;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public HD_NCC_LKDataTable() {
+                this.TableName = "HD_NCC_LK";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal HD_NCC_LKDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected HD_NCC_LKDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MALINHKIENColumn {
+                get {
+                    return this.columnMALINHKIEN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TENLINHKIENColumn {
+                get {
+                    return this.columnTENLINHKIEN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MANHAPColumn {
+                get {
+                    return this.columnMANHAP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MANCCColumn {
+                get {
+                    return this.columnMANCC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SLColumn {
+                get {
+                    return this.columnSL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DONGIAColumn {
+                get {
+                    return this.columnDONGIA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public HD_NCC_LKRow this[int index] {
+                get {
+                    return ((HD_NCC_LKRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event HD_NCC_LKRowChangeEventHandler HD_NCC_LKRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event HD_NCC_LKRowChangeEventHandler HD_NCC_LKRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event HD_NCC_LKRowChangeEventHandler HD_NCC_LKRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event HD_NCC_LKRowChangeEventHandler HD_NCC_LKRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddHD_NCC_LKRow(HD_NCC_LKRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public HD_NCC_LKRow AddHD_NCC_LKRow(string MALINHKIEN, string TENLINHKIEN, string MANHAP, string MANCC, int SL, int DONGIA) {
+                HD_NCC_LKRow rowHD_NCC_LKRow = ((HD_NCC_LKRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        MALINHKIEN,
+                        TENLINHKIEN,
+                        MANHAP,
+                        MANCC,
+                        SL,
+                        DONGIA};
+                rowHD_NCC_LKRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowHD_NCC_LKRow);
+                return rowHD_NCC_LKRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                HD_NCC_LKDataTable cln = ((HD_NCC_LKDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new HD_NCC_LKDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnMALINHKIEN = base.Columns["MALINHKIEN"];
+                this.columnTENLINHKIEN = base.Columns["TENLINHKIEN"];
+                this.columnMANHAP = base.Columns["MANHAP"];
+                this.columnMANCC = base.Columns["MANCC"];
+                this.columnSL = base.Columns["SL"];
+                this.columnDONGIA = base.Columns["DONGIA"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnMALINHKIEN = new global::System.Data.DataColumn("MALINHKIEN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMALINHKIEN);
+                this.columnTENLINHKIEN = new global::System.Data.DataColumn("TENLINHKIEN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTENLINHKIEN);
+                this.columnMANHAP = new global::System.Data.DataColumn("MANHAP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMANHAP);
+                this.columnMANCC = new global::System.Data.DataColumn("MANCC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMANCC);
+                this.columnSL = new global::System.Data.DataColumn("SL", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSL);
+                this.columnDONGIA = new global::System.Data.DataColumn("DONGIA", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDONGIA);
+                this.columnMALINHKIEN.MaxLength = 20;
+                this.columnTENLINHKIEN.MaxLength = 51;
+                this.columnMANHAP.MaxLength = 20;
+                this.columnMANCC.MaxLength = 20;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public HD_NCC_LKRow NewHD_NCC_LKRow() {
+                return ((HD_NCC_LKRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new HD_NCC_LKRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(HD_NCC_LKRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.HD_NCC_LKRowChanged != null)) {
+                    this.HD_NCC_LKRowChanged(this, new HD_NCC_LKRowChangeEvent(((HD_NCC_LKRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.HD_NCC_LKRowChanging != null)) {
+                    this.HD_NCC_LKRowChanging(this, new HD_NCC_LKRowChangeEvent(((HD_NCC_LKRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.HD_NCC_LKRowDeleted != null)) {
+                    this.HD_NCC_LKRowDeleted(this, new HD_NCC_LKRowChangeEvent(((HD_NCC_LKRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.HD_NCC_LKRowDeleting != null)) {
+                    this.HD_NCC_LKRowDeleting(this, new HD_NCC_LKRowChangeEvent(((HD_NCC_LKRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveHD_NCC_LKRow(HD_NCC_LKRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                tt ds = new tt();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "HD_NCC_LKDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class HOADON_ttRow : global::System.Data.DataRow {
@@ -20870,6 +21271,17 @@ namespace nha_tro {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Ct_mua_SP_HOADON51"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public thongKe_tragop_theongayRow thongKe_tragop_theongayRow {
+                get {
+                    return ((thongKe_tragop_theongayRow)(this.GetParentRow(this.Table.ParentRelations["FK_Ct_mua_SP_HOADON52"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Ct_mua_SP_HOADON52"]);
                 }
             }
             
@@ -22491,6 +22903,33 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string MALINHKIEN {
+                get {
+                    return ((string)(this[this.tablethongKe_tragop_theongay.MALINHKIENColumn]));
+                }
+                set {
+                    this[this.tablethongKe_tragop_theongay.MALINHKIENColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TENLINHKIEN {
+                get {
+                    try {
+                        return ((string)(this[this.tablethongKe_tragop_theongay.TENLINHKIENColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TENLINHKIEN\' in table \'thongKe_tragop_theongay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablethongKe_tragop_theongay.TENLINHKIENColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public HOADON_ttRow HOADON_ttRow {
                 get {
                     return ((HOADON_ttRow)(this.GetParentRow(this.Table.ParentRelations["FK_Ct_mua_SP_HOADON13"])));
@@ -22544,6 +22983,40 @@ namespace nha_tro {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSLNull() {
                 this[this.tablethongKe_tragop_theongay.SLColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTENLINHKIENNull() {
+                return this.IsNull(this.tablethongKe_tragop_theongay.TENLINHKIENColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTENLINHKIENNull() {
+                this[this.tablethongKe_tragop_theongay.TENLINHKIENColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public Ct_mua_SP_TIMKIEMRow[] GetCt_mua_SP_TIMKIEMRows() {
+                if ((this.Table.ChildRelations["FK_Ct_mua_SP_HOADON52"] == null)) {
+                    return new Ct_mua_SP_TIMKIEMRow[0];
+                }
+                else {
+                    return ((Ct_mua_SP_TIMKIEMRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Ct_mua_SP_HOADON52"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CT_HOADON_LINHKIENRow[] GetCT_HOADON_LINHKIENRows() {
+                if ((this.Table.ChildRelations["FK_CT_HOADO_CT_HOADON_HOADON12"] == null)) {
+                    return new CT_HOADON_LINHKIENRow[0];
+                }
+                else {
+                    return ((CT_HOADON_LINHKIENRow[])(base.GetChildRows(this.Table.ChildRelations["FK_CT_HOADO_CT_HOADON_HOADON12"])));
+                }
             }
         }
         
@@ -26287,6 +26760,17 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public thongKe_tragop_theongayRow thongKe_tragop_theongayRow {
+                get {
+                    return ((thongKe_tragop_theongayRow)(this.GetParentRow(this.Table.ParentRelations["FK_CT_HOADO_CT_HOADON_HOADON12"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_CT_HOADO_CT_HOADON_HOADON12"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsSLNull() {
                 return this.IsNull(this.tableCT_HOADON_LINHKIEN.SLColumn);
             }
@@ -28030,6 +28514,189 @@ namespace nha_tro {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSDTNull() {
                 this[this.tablesl_linhkien_trongkho.SDTColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class HD_NCC_LKRow : global::System.Data.DataRow {
+            
+            private HD_NCC_LKDataTable tableHD_NCC_LK;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal HD_NCC_LKRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableHD_NCC_LK = ((HD_NCC_LKDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string MALINHKIEN {
+                get {
+                    try {
+                        return ((string)(this[this.tableHD_NCC_LK.MALINHKIENColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MALINHKIEN\' in table \'HD_NCC_LK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHD_NCC_LK.MALINHKIENColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TENLINHKIEN {
+                get {
+                    try {
+                        return ((string)(this[this.tableHD_NCC_LK.TENLINHKIENColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TENLINHKIEN\' in table \'HD_NCC_LK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHD_NCC_LK.TENLINHKIENColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string MANHAP {
+                get {
+                    try {
+                        return ((string)(this[this.tableHD_NCC_LK.MANHAPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MANHAP\' in table \'HD_NCC_LK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHD_NCC_LK.MANHAPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string MANCC {
+                get {
+                    try {
+                        return ((string)(this[this.tableHD_NCC_LK.MANCCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MANCC\' in table \'HD_NCC_LK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHD_NCC_LK.MANCCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SL {
+                get {
+                    try {
+                        return ((int)(this[this.tableHD_NCC_LK.SLColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SL\' in table \'HD_NCC_LK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHD_NCC_LK.SLColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int DONGIA {
+                get {
+                    try {
+                        return ((int)(this[this.tableHD_NCC_LK.DONGIAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DONGIA\' in table \'HD_NCC_LK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHD_NCC_LK.DONGIAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMALINHKIENNull() {
+                return this.IsNull(this.tableHD_NCC_LK.MALINHKIENColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMALINHKIENNull() {
+                this[this.tableHD_NCC_LK.MALINHKIENColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTENLINHKIENNull() {
+                return this.IsNull(this.tableHD_NCC_LK.TENLINHKIENColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTENLINHKIENNull() {
+                this[this.tableHD_NCC_LK.TENLINHKIENColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMANHAPNull() {
+                return this.IsNull(this.tableHD_NCC_LK.MANHAPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMANHAPNull() {
+                this[this.tableHD_NCC_LK.MANHAPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMANCCNull() {
+                return this.IsNull(this.tableHD_NCC_LK.MANCCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMANCCNull() {
+                this[this.tableHD_NCC_LK.MANCCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSLNull() {
+                return this.IsNull(this.tableHD_NCC_LK.SLColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSLNull() {
+                this[this.tableHD_NCC_LK.SLColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDONGIANull() {
+                return this.IsNull(this.tableHD_NCC_LK.DONGIAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDONGIANull() {
+                this[this.tableHD_NCC_LK.DONGIAColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -29889,6 +30556,40 @@ namespace nha_tro {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public sl_linhkien_trongkhoRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class HD_NCC_LKRowChangeEvent : global::System.EventArgs {
+            
+            private HD_NCC_LKRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public HD_NCC_LKRowChangeEvent(HD_NCC_LKRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public HD_NCC_LKRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -35935,6 +36636,8 @@ WHERE        (HOADON.NGAYLAP >= @NgayBD) AND (HOADON.NGAYLAP <= @NgayKT) AND (HO
             tableMapping.ColumnMappings.Add("MAHD", "MAHD");
             tableMapping.ColumnMappings.Add("MaSP", "MaSP");
             tableMapping.ColumnMappings.Add("NGAYLAP", "NGAYLAP");
+            tableMapping.ColumnMappings.Add("MALINHKIEN", "MALINHKIEN");
+            tableMapping.ColumnMappings.Add("TENLINHKIEN", "TENLINHKIEN");
             tableMapping.ColumnMappings.Add("SL", "SL");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -35952,17 +36655,20 @@ WHERE        (HOADON.NGAYLAP >= @NgayBD) AND (HOADON.NGAYLAP <= @NgayKT) AND (HO
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "select HOADON.MAHD,MaSP,NGAYLAP,SL from HOADON,Ct_mua_SP \r\nwhere @NGAYBD  <= NGAY" +
-                "LAP \r\nand  NGAYLAP <=@NGAYKT\r\nand MALOAIHD = \'MLHD04\'\r\nand HOADON.MAHD = Ct_mua_" +
-                "SP.MaHD";
+            this._commandCollection[0].CommandText = @"SELECT        HOADON.MAHD, ct_mua_sp_lk.MaSP, HOADON.NGAYLAP, ct_mua_sp_lk.SL, ct_mua_sp_lk.MALINHKIEN, LINHKIEN.TENLINHKIEN
+FROM            HOADON INNER JOIN
+                         ct_mua_sp_lk ON HOADON.MAHD = ct_mua_sp_lk.MaHD INNER JOIN
+                         SANPHAM ON ct_mua_sp_lk.MaSP = SANPHAM.MASP INNER JOIN
+                         LINHKIEN ON ct_mua_sp_lk.MALINHKIEN = LINHKIEN.MALINHKIEN
+WHERE        (HOADON.NGAYLAP >= @NGAYBD) AND (HOADON.NGAYLAP <= @NGAYKT) AND (HOADON.MALOAIHD = 'MLHD04')";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NGAYBD", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "NGAYLAP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NGAYKT", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "NGAYLAP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        HOADON.MAHD, Ct_mua_SP.MaSP, HOADON.NGAYLAP, Ct_mua_SP.SL\r\nFROM    " +
-                "        HOADON INNER JOIN\r\n                         Ct_mua_SP ON HOADON.MAHD = C" +
-                "t_mua_SP.MaHD\r\nWHERE        (HOADON.MAHD = @mahd)";
+            this._commandCollection[1].CommandText = "SELECT        HOADON.MAHD, ct_mua_sp_lk.MaSP, HOADON.NGAYLAP, ct_mua_sp_lk.SL\r\nFR" +
+                "OM            HOADON INNER JOIN\r\n                         ct_mua_sp_lk ON HOADON" +
+                ".MAHD = ct_mua_sp_lk.MaHD\r\nWHERE        (HOADON.MAHD = @mahd)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mahd", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MAHD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
@@ -48370,6 +49076,194 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class HD_NCC_LKTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public HD_NCC_LKTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "HD_NCC_LK";
+            tableMapping.ColumnMappings.Add("MALINHKIEN", "MALINHKIEN");
+            tableMapping.ColumnMappings.Add("TENLINHKIEN", "TENLINHKIEN");
+            tableMapping.ColumnMappings.Add("MANHAP", "MANHAP");
+            tableMapping.ColumnMappings.Add("MANCC", "MANCC");
+            tableMapping.ColumnMappings.Add("SL", "SL");
+            tableMapping.ColumnMappings.Add("DONGIA", "DONGIA");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::nha_tro.Properties.Settings.Default.DTDDConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        CT_NHAP_LK.MALINHKIEN, LINHKIEN.TENLINHKIEN, CT_NHAP_LK.MANHAP, CT_NHAP_LK.MANCC, CT_NHAP_LK.SL, CT_NHAP_LK.DONGIA
+FROM            CT_NHAP_LK INNER JOIN
+                         LINHKIEN ON CT_NHAP_LK.MALINHKIEN = LINHKIEN.MALINHKIEN
+WHERE        (CT_NHAP_LK.MANHAP = @MANHAP)";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MANHAP", global::System.Data.SqlDbType.Char, 20, global::System.Data.ParameterDirection.Input, 0, 0, "MANHAP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(tt.HD_NCC_LKDataTable dataTable, string MANHAP) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((MANHAP == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(MANHAP));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual tt.HD_NCC_LKDataTable GetData(string MANHAP) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((MANHAP == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(MANHAP));
+            }
+            tt.HD_NCC_LKDataTable dataTable = new tt.HD_NCC_LKDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -49060,15 +49954,6 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(tt dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._traGop1TableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.TraGop1.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._traGop1TableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._traGopTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.TraGop.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -49078,12 +49963,12 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._hOADON_baohanhTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.HOADON_baohanh.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._traGop1TableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TraGop1.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._hOADON_baohanhTableAdapter.Update(updatedRows));
+                    result = (result + this._traGop1TableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -49105,21 +49990,21 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._hOADON_baohanhTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.HOADON_baohanh.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._hOADON_baohanhTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._hOADON_kttontaiTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.HOADON_kttontai.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._hOADON_kttontaiTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._sANPHAM__sreach_giaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.SANPHAM__sreach_gia.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._sANPHAM__sreach_giaTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -49132,21 +50017,30 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._sANPHAM__sreach_giaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.SANPHAM__sreach_gia.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._sANPHAM__sreach_giaTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._kHUYENMAI1TableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.KHUYENMAI1.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._kHUYENMAI1TableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._kHUYENMAI2TableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.KHUYENMAI2.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._kHUYENMAI2TableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._cT_HOADON_LINHKIENTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CT_HOADON_LINHKIEN.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._cT_HOADON_LINHKIENTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -49168,21 +50062,12 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._kHUYENMAI1TableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.KHUYENMAI1.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._cT_HOADON_LINHKIENTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CT_HOADON_LINHKIEN.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._kHUYENMAI1TableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._ct_bHTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.ct_bH.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._ct_bHTableAdapter.Update(updatedRows));
+                    result = (result + this._cT_HOADON_LINHKIENTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -49192,6 +50077,15 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._lOAISANPHAMTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._nDBaoHanhTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.NDBaoHanh.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._nDBaoHanhTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -49294,12 +50188,12 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._nDBaoHanhTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.NDBaoHanh.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._ct_bHTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.ct_bH.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._nDBaoHanhTableAdapter.Update(updatedRows));
+                    result = (result + this._ct_bHTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -49313,14 +50207,6 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(tt dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._traGop1TableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.TraGop1.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._traGop1TableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._traGopTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.TraGop.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -49329,11 +50215,11 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._hOADON_baohanhTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.HOADON_baohanh.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._traGop1TableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TraGop1.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._hOADON_baohanhTableAdapter.Update(addedRows));
+                    result = (result + this._traGop1TableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -49353,19 +50239,19 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._hOADON_baohanhTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.HOADON_baohanh.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._hOADON_baohanhTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._hOADON_kttontaiTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.HOADON_kttontai.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._hOADON_kttontaiTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._sANPHAM__sreach_giaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.SANPHAM__sreach_gia.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._sANPHAM__sreach_giaTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -49377,19 +50263,27 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._sANPHAM__sreach_giaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.SANPHAM__sreach_gia.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._sANPHAM__sreach_giaTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._kHUYENMAI1TableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.KHUYENMAI1.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._kHUYENMAI1TableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._kHUYENMAI2TableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.KHUYENMAI2.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._kHUYENMAI2TableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._cT_HOADON_LINHKIENTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CT_HOADON_LINHKIEN.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._cT_HOADON_LINHKIENTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -49409,19 +50303,11 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._kHUYENMAI1TableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.KHUYENMAI1.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._cT_HOADON_LINHKIENTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CT_HOADON_LINHKIEN.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._kHUYENMAI1TableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._ct_bHTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.ct_bH.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._ct_bHTableAdapter.Update(addedRows));
+                    result = (result + this._cT_HOADON_LINHKIENTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -49430,6 +50316,14 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._lOAISANPHAMTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._nDBaoHanhTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.NDBaoHanh.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._nDBaoHanhTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -49521,11 +50415,11 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._nDBaoHanhTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.NDBaoHanh.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._ct_bHTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.ct_bH.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._nDBaoHanhTableAdapter.Update(addedRows));
+                    result = (result + this._ct_bHTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -49539,11 +50433,11 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(tt dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._nDBaoHanhTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.NDBaoHanh.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._ct_bHTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ct_bH.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._nDBaoHanhTableAdapter.Update(deletedRows));
+                    result = (result + this._ct_bHTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -49635,6 +50529,14 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._nDBaoHanhTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.NDBaoHanh.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._nDBaoHanhTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._lOAISANPHAMTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.LOAISANPHAM.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -49643,19 +50545,11 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._ct_bHTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.ct_bH.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._cT_HOADON_LINHKIENTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CT_HOADON_LINHKIEN.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._ct_bHTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._kHUYENMAI1TableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.KHUYENMAI1.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._kHUYENMAI1TableAdapter.Update(deletedRows));
+                    result = (result + this._cT_HOADON_LINHKIENTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -49675,14 +50569,6 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._cT_HOADON_LINHKIENTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CT_HOADON_LINHKIEN.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._cT_HOADON_LINHKIENTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._kHUYENMAI2TableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.KHUYENMAI2.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -49691,11 +50577,11 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._dOITRATableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.DOITRA.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._kHUYENMAI1TableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.KHUYENMAI1.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._dOITRATableAdapter.Update(deletedRows));
+                    result = (result + this._kHUYENMAI1TableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -49707,11 +50593,27 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._dOITRATableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.DOITRA.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._dOITRATableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._hOADON_kttontaiTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.HOADON_kttontai.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._hOADON_kttontaiTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._hOADON_baohanhTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.HOADON_baohanh.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._hOADON_baohanhTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -49731,11 +50633,11 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._hOADON_baohanhTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.HOADON_baohanh.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._traGop1TableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TraGop1.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._hOADON_baohanhTableAdapter.Update(deletedRows));
+                    result = (result + this._traGop1TableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -49744,14 +50646,6 @@ WHERE        (LINHKIEN.TENLINHKIEN NOT LIKE 'TEMP') AND (LINHKIEN.TENLINHKIEN LI
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._traGopTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._traGop1TableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TraGop1.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._traGop1TableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

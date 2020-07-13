@@ -113,9 +113,11 @@ namespace nha_tro
                 sol += int.Parse(cT_NHAP_SP_DK_LUUKHODataGridView.Rows[i].Cells[3].Value.ToString());
                 tongtien += (int.Parse(cT_NHAP_SP_DK_LUUKHODataGridView.Rows[i].Cells[3].Value.ToString()) * int.Parse(cT_NHAP_SP_DK_LUUKHODataGridView.Rows[i].Cells[4].Value.ToString()));
             }
-            ThongKe.xuatfile_HD_NhapHang(cT_NHAP_SP_DK_LUUKHODataGridView, cT_NHAP_SP_DK_LUUKHODataGridView.Rows[0].Cells[0].Value.ToString(), tongtien.ToString(), sol.ToString(), DateTime.Now.ToString("dd/MM/yyyy"), "HoaDon_NhapLK");
-
+            //ThongKe.xuatfile_HD_NhapHang(cT_NHAP_SP_DK_LUUKHODataGridView, cT_NHAP_SP_DK_LUUKHODataGridView.Rows[0].Cells[0].Value.ToString(), tongtien.ToString(), sol.ToString(), DateTime.Now.ToString("dd/MM/yyyy"), "HoaDon_NhapLK");
+            Form4_hd_ncc_lk form4_Hd_Ncc_Lk = new Form4_hd_ncc_lk(hOADON_ttTableAdapter.select_MAHD().ToString(),DateTime.Today.ToString("dd/MM/yyyy"), nHAPHANGDataGridView.CurrentRow.Cells[0].Value.ToString(),tongtien.ToString(), tAIKHOANTableAdapter.tennv(hOADON_kttontaiDataGridView.Rows[0].Cells[1].Value.ToString()).ToString());
+            form4_Hd_Ncc_Lk.ShowDialog();
             //====================================
+
 
             this.nHAPHANG1TableAdapter.Fill(this.nghiepVu.NHAPHANG1);
             //this.kHOTableAdapter.Fill(this.nghiepVu.KHO);
