@@ -43,6 +43,8 @@ namespace nha_tro
                     tongtiendathanhtoan += tongtien - int.Parse(tHONGKE_TRAGOP_NCCDataGridView.Rows[i].Cells[7].Value.ToString());
             }
 
+
+
             textBox1.Text = sl.ToString();
             textBox3.Text = tongtiendathanhtoan.ToString();
             textBox4.Text = (tongtien - tongtiendathanhtoan).ToString();
@@ -52,6 +54,10 @@ namespace nha_tro
             textBox3.ReadOnly = true;
             textBox2.ReadOnly = true;
 
+            sl = 0;
+            tongtiendathanhtoan = 0;
+            tongtien = 0;
+
 
         }
         int sl = 0;
@@ -59,32 +65,63 @@ namespace nha_tro
         int tongtien = 0;
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
-            decimal value = decimal.Parse(textBox3.Text, System.Globalization.NumberStyles.AllowThousands);
-            textBox3.Text = String.Format(culture, "{0:N0}", value);
-            textBox3.Select(textBox3.Text.Length, 0);
+            try
+            {
+                System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+                decimal value = decimal.Parse(textBox3.Text, System.Globalization.NumberStyles.AllowThousands);
+                textBox3.Text = String.Format(culture, "{0:N0}", value);
+                textBox3.Select(textBox3.Text.Length, 0);
+            }
+            catch { }
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
-            decimal value = decimal.Parse(textBox4.Text, System.Globalization.NumberStyles.AllowThousands);
-            textBox4.Text = String.Format(culture, "{0:N0}", value);
-            textBox4.Select(textBox4.Text.Length, 0);
+            try
+            {
+                System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+                decimal value = decimal.Parse(textBox4.Text, System.Globalization.NumberStyles.AllowThousands);
+                textBox4.Text = String.Format(culture, "{0:N0}", value);
+                textBox4.Select(textBox4.Text.Length, 0);
+            }
+            catch
+            {
+
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
-            decimal value = decimal.Parse(textBox2.Text, System.Globalization.NumberStyles.AllowThousands);
-            textBox2.Text = String.Format(culture, "{0:N0}", value);
-            textBox2.Select(textBox2.Text.Length, 0);
+            try
+            {
+                System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+                decimal value = decimal.Parse(textBox2.Text, System.Globalization.NumberStyles.AllowThousands);
+                textBox2.Text = String.Format(culture, "{0:N0}", value);
+                textBox2.Select(textBox2.Text.Length, 0);
+            }
+            catch { }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             hd_tragop_ncc hd_Tragop_Ncc = new hd_tragop_ncc(dateTimePicker1.Value.ToString(), dateTimePicker2.Value.ToString(), DateTime.Today.ToString("dd/MM/yyyy"), sl.ToString(), tongtiendathanhtoan.ToString(), tongtien.ToString(), (tongtien - tongtiendathanhtoan).ToString());
             hd_Tragop_Ncc.ShowDialog();
+        }
+
+        private void TraGopNCC_Load(object sender, EventArgs e)
+        {
+
+            tHONGKE_TRAGOP_NCCDataGridView.BorderStyle = BorderStyle.None;
+            tHONGKE_TRAGOP_NCCDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            tHONGKE_TRAGOP_NCCDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            tHONGKE_TRAGOP_NCCDataGridView.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            tHONGKE_TRAGOP_NCCDataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            tHONGKE_TRAGOP_NCCDataGridView.BackgroundColor = Color.White;
+
+            tHONGKE_TRAGOP_NCCDataGridView.EnableHeadersVisualStyles = false;
+            tHONGKE_TRAGOP_NCCDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            tHONGKE_TRAGOP_NCCDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            tHONGKE_TRAGOP_NCCDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
     }
 }

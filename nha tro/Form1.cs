@@ -153,7 +153,7 @@ namespace nha_tro
         private void button5_Click(object sender, EventArgs e)
         {
 
-            kHO1TableAdapter.THEM("KHO" + kHO1TableAdapter.so_dong(), int.Parse(sLSpinEdit.Text), sANPHAMComboBox1.SelectedValue.ToString(), diaChiTextEdit.Text, int.Parse(textBox1.Text),"TEMP");
+            kHO1TableAdapter.THEM("KHO" + (int.Parse(kHO1TableAdapter.so_dong().ToString()) + 1), int.Parse(sLSpinEdit.Text), sANPHAMComboBox1.SelectedValue.ToString(), diaChiTextEdit.Text, int.Parse(textBox1.Text),"TEMP");
             MessageBox.Show("Thành Công");
             //load girdview
             this.kHO1TableAdapter.Fill(this.nghiepVu.KHO1);

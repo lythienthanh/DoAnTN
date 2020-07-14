@@ -45,6 +45,7 @@
             this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nGAYLAPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MALINHKIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thongke_loinhuanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tt = new nha_tro.tt();
             this.button1 = new System.Windows.Forms.Button();
@@ -177,7 +178,8 @@
             this.maSPDataGridViewTextBoxColumn,
             this.tENSPDataGridViewTextBoxColumn,
             this.nGAYLAPDataGridViewTextBoxColumn,
-            this.sLDataGridViewTextBoxColumn});
+            this.sLDataGridViewTextBoxColumn,
+            this.MALINHKIEN});
             this.thongKe_TinhDoanhThuDataGridView.DataSource = this.thongke_loinhuanBindingSource;
             this.thongKe_TinhDoanhThuDataGridView.Location = new System.Drawing.Point(6, 19);
             this.thongKe_TinhDoanhThuDataGridView.Name = "thongKe_TinhDoanhThuDataGridView";
@@ -215,6 +217,12 @@
             this.sLDataGridViewTextBoxColumn.HeaderText = "SL";
             this.sLDataGridViewTextBoxColumn.Name = "sLDataGridViewTextBoxColumn";
             // 
+            // MALINHKIEN
+            // 
+            this.MALINHKIEN.DataPropertyName = "MALINHKIEN";
+            this.MALINHKIEN.HeaderText = "Mã linh kiện";
+            this.MALINHKIEN.Name = "MALINHKIEN";
+            // 
             // thongke_loinhuanBindingSource
             // 
             this.thongke_loinhuanBindingSource.DataMember = "thongke_loinhuan";
@@ -234,6 +242,7 @@
             this.button1.Size = new System.Drawing.Size(72, 48);
             this.button1.TabIndex = 34;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox3
             // 
@@ -371,5 +380,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tENSPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nGAYLAPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sLDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MALINHKIEN;
     }
 }

@@ -39262,7 +39262,7 @@ SELECT MAKHO, SL, MASP, DiaChi, SDT, MALINHKIEN FROM KHO WHERE (MAKHO = @MAKHO) 
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@teNSP", global::System.Data.SqlDbType.NVarChar, 51, global::System.Data.ParameterDirection.Input, 0, 0, "TENSP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "SELECT COUNT(*) FROM KHO";
+            this._commandCollection[4].CommandText = "SELECT        COUNT(DISTINCT MAKHO) AS Expr1\r\nFROM            KHO";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
@@ -39403,7 +39403,7 @@ SELECT MAKHO, SL, MASP, DiaChi, SDT, MALINHKIEN FROM KHO WHERE (MAKHO = @MAKHO) 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> so_dong() {
+        public virtual object so_dong() {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -39421,10 +39421,10 @@ SELECT MAKHO, SL, MASP, DiaChi, SDT, MALINHKIEN FROM KHO WHERE (MAKHO = @MAKHO) 
             }
             if (((returnValue == null) 
                         || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return new global::System.Nullable<int>();
+                return null;
             }
             else {
-                return new global::System.Nullable<int>(((int)(returnValue)));
+                return ((object)(returnValue));
             }
         }
         

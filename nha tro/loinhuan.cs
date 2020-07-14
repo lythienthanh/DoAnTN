@@ -38,14 +38,30 @@ namespace nha_tro
             int tongtienban = 0;
             for (int i = 0; i < thongKe_TinhDoanhThuDataGridView.RowCount - 1; i++)
             {
-                sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[4].Value.ToString());
-                tongtiennhap += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[4].Value.ToString()) * int.Parse(thongke_loinhuanTableAdapter.dongianhap(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString(), DateTime.Today.ToString("MM/dd/yyyy")).ToString());
-                tongtienban += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[4].Value.ToString()) * int.Parse(thongke_loinhuanTableAdapter.dongia_ban(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString()).ToString());
+                if (string.Compare(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString().Trim(), "khong") != 0)//tinh tien sp
+                {
+                    sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[4].Value.ToString());
+                    tongtiennhap += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[4].Value.ToString()) * int.Parse(thongke_loinhuanTableAdapter.dongianhap(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString(), DateTime.Today.ToString("MM/dd/yyyy")).ToString());
+                    tongtienban += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[4].Value.ToString()) * int.Parse(thongke_loinhuanTableAdapter.dongia_ban(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[1].Value.ToString()).ToString());
+                }
+                else//tinh tien lk
+                {
+                    sl += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[4].Value.ToString());
+                    tongtiennhap += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[4].Value.ToString()) * int.Parse(thongke_loinhuanTableAdapter.FillBy_DONGIANHAP_LK(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[5].Value.ToString(), DateTime.Today.ToString("MM/dd/yyyy")).ToString());
+                    tongtienban += int.Parse(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[4].Value.ToString()) * int.Parse(thongke_loinhuanTableAdapter.FillBy_DONGIA_ban_lk(thongKe_TinhDoanhThuDataGridView.Rows[i].Cells[5].Value.ToString()).ToString());
+                }
             }
+            
+            
+            
             textBox4.Text = sl.ToString();
             textBox2.Text = tongtiennhap.ToString();
             textBox1.Text = tongtienban.ToString();
             textBox3.Text = (tongtienban - tongtiennhap).ToString();
+
+            sl = 0;
+            tongtiennhap = 0;
+            tongtienban = 0;
 
         }
 
@@ -62,6 +78,11 @@ namespace nha_tro
             thongKe_TinhDoanhThuDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             thongKe_TinhDoanhThuDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
             thongKe_TinhDoanhThuDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

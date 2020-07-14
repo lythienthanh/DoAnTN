@@ -363,6 +363,7 @@
             this.Controls.Add(this.label4);
             this.Name = "TraGopNCC";
             this.Text = "THỐNG KÊ TRẢ GÓP CỦA NHÀ CUNG CẤP";
+            this.Load += new System.EventHandler(this.TraGopNCC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tHONGKE_TRAGOP_NCCDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHONGKE_TRAGOP_NCCBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tt)).EndInit();
