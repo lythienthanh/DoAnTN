@@ -82,7 +82,8 @@ namespace nha_tro
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            xuat_tk_loinhuan xuat_Tk_Loinhuan = new xuat_tk_loinhuan(DateTime.Today.Date.ToString("dd/MM/yyyy"), dateTimePicker2.Value.ToString(), textBox4.Text, textBox2.Text, dateTimePicker1.Value.ToString("dd/MM/yyyy"), textBox1.Text, textBox3.Text);
+            xuat_Tk_Loinhuan.ShowDialog();
         }
     }
 }

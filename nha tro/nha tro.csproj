@@ -510,6 +510,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>tt.xsd</DependentUpon>
     </Compile>
+    <Compile Include="xuat_tk_loinhuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xuat_tk_loinhuan.Designer.cs">
+      <DependentUpon>xuat_tk_loinhuan.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BanHang.resx">
       <DependentUpon>BanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -646,6 +652,7 @@
     <EmbeddedResource Include="Report_doitra.rdlc" />
     <EmbeddedResource Include="Report_hd_tragop_kh.rdlc" />
     <EmbeddedResource Include="Report_TinhDT_TheoNgay.rdlc" />
+    <EmbeddedResource Include="Report_tk_loinhuan.rdlc" />
     <EmbeddedResource Include="Report_tragop_ncc.rdlc" />
     <EmbeddedResource Include="TaoPhieuNhap.resx">
       <DependentUpon>TaoPhieuNhap.cs</DependentUpon>
@@ -701,6 +708,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TraGopNCC.resx">
       <DependentUpon>TraGopNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xuat_tk_loinhuan.resx">
+      <DependentUpon>xuat_tk_loinhuan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="TimKiemSanPham.dbml.layout">
