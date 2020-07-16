@@ -306,6 +306,10 @@ namespace nha_tro {
         
         private global::System.Data.DataRelation relationFK_CT_HOADO_CT_HOADON_HOADON13;
         
+        private global::System.Data.DataRelation relationFK_Ct_mua_SP_HOADON54;
+        
+        private global::System.Data.DataRelation relationFK_CT_HOADO_CT_HOADON_HOADON14;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1790,6 +1794,8 @@ namespace nha_tro {
             this.relationFK_CT_HOADO_CT_HOADON_HOADON12 = this.Relations["FK_CT_HOADO_CT_HOADON_HOADON12"];
             this.relationFK_Ct_mua_SP_HOADON53 = this.Relations["FK_Ct_mua_SP_HOADON53"];
             this.relationFK_CT_HOADO_CT_HOADON_HOADON13 = this.Relations["FK_CT_HOADO_CT_HOADON_HOADON13"];
+            this.relationFK_Ct_mua_SP_HOADON54 = this.Relations["FK_Ct_mua_SP_HOADON54"];
+            this.relationFK_CT_HOADO_CT_HOADON_HOADON14 = this.Relations["FK_CT_HOADO_CT_HOADON_HOADON14"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2252,6 +2258,14 @@ namespace nha_tro {
                         this.tablethongke_loinhuan.MAHDColumn}, new global::System.Data.DataColumn[] {
                         this.tableCT_HOADON_LINHKIEN.MAHDColumn}, false);
             this.Relations.Add(this.relationFK_CT_HOADO_CT_HOADON_HOADON13);
+            this.relationFK_Ct_mua_SP_HOADON54 = new global::System.Data.DataRelation("FK_Ct_mua_SP_HOADON54", new global::System.Data.DataColumn[] {
+                        this.tableTHONGKE_LOAISP.MAHDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCt_mua_SP_TIMKIEM.MaHDColumn}, false);
+            this.Relations.Add(this.relationFK_Ct_mua_SP_HOADON54);
+            this.relationFK_CT_HOADO_CT_HOADON_HOADON14 = new global::System.Data.DataRelation("FK_CT_HOADO_CT_HOADON_HOADON14", new global::System.Data.DataColumn[] {
+                        this.tableTHONGKE_LOAISP.MAHDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCT_HOADON_LINHKIEN.MAHDColumn}, false);
+            this.Relations.Add(this.relationFK_CT_HOADO_CT_HOADON_HOADON14);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11635,6 +11649,10 @@ namespace nha_tro {
             
             private global::System.Data.DataColumn columnDonGia;
             
+            private global::System.Data.DataColumn columnTENLINHKIEN;
+            
+            private global::System.Data.DataColumn columndongia1;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public THONGKE_LOAISPDataTable() {
@@ -11718,6 +11736,22 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TENLINHKIENColumn {
+                get {
+                    return this.columnTENLINHKIEN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn dongia1Column {
+                get {
+                    return this.columndongia1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -11753,7 +11787,7 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public THONGKE_LOAISPRow AddTHONGKE_LOAISPRow(System.DateTime NGAYLAP, int SL, string MASP, string TENSP, int DonGia) {
+            public THONGKE_LOAISPRow AddTHONGKE_LOAISPRow(System.DateTime NGAYLAP, int SL, string MASP, string TENSP, int DonGia, string TENLINHKIEN, int dongia1) {
                 THONGKE_LOAISPRow rowTHONGKE_LOAISPRow = ((THONGKE_LOAISPRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -11761,7 +11795,9 @@ namespace nha_tro {
                         SL,
                         MASP,
                         TENSP,
-                        DonGia};
+                        DonGia,
+                        TENLINHKIEN,
+                        dongia1};
                 rowTHONGKE_LOAISPRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTHONGKE_LOAISPRow);
                 return rowTHONGKE_LOAISPRow;
@@ -11769,10 +11805,11 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public THONGKE_LOAISPRow FindByMAHDMASP(int MAHD, string MASP) {
+            public THONGKE_LOAISPRow FindByTENLINHKIENMASPMAHD(string TENLINHKIEN, string MASP, int MAHD) {
                 return ((THONGKE_LOAISPRow)(this.Rows.Find(new object[] {
-                            MAHD,
-                            MASP})));
+                            TENLINHKIEN,
+                            MASP,
+                            MAHD})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11798,6 +11835,8 @@ namespace nha_tro {
                 this.columnMASP = base.Columns["MASP"];
                 this.columnTENSP = base.Columns["TENSP"];
                 this.columnDonGia = base.Columns["DonGia"];
+                this.columnTENLINHKIEN = base.Columns["TENLINHKIEN"];
+                this.columndongia1 = base.Columns["dongia1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11815,9 +11854,14 @@ namespace nha_tro {
                 base.Columns.Add(this.columnTENSP);
                 this.columnDonGia = new global::System.Data.DataColumn("DonGia", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDonGia);
+                this.columnTENLINHKIEN = new global::System.Data.DataColumn("TENLINHKIEN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTENLINHKIEN);
+                this.columndongia1 = new global::System.Data.DataColumn("dongia1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndongia1);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnMAHD,
-                                this.columnMASP}, true));
+                                this.columnTENLINHKIEN,
+                                this.columnMASP,
+                                this.columnMAHD}, true));
                 this.columnMAHD.AutoIncrement = true;
                 this.columnMAHD.AutoIncrementSeed = -1;
                 this.columnMAHD.AutoIncrementStep = -1;
@@ -11826,6 +11870,8 @@ namespace nha_tro {
                 this.columnMASP.AllowDBNull = false;
                 this.columnMASP.MaxLength = 20;
                 this.columnTENSP.MaxLength = 51;
+                this.columnTENLINHKIEN.AllowDBNull = false;
+                this.columnTENLINHKIEN.MaxLength = 51;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -21717,6 +21763,17 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public THONGKE_LOAISPRow THONGKE_LOAISPRow {
+                get {
+                    return ((THONGKE_LOAISPRow)(this.GetParentRow(this.Table.ParentRelations["FK_Ct_mua_SP_HOADON54"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Ct_mua_SP_HOADON54"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsSLNull() {
                 return this.IsNull(this.tableCt_mua_SP_TIMKIEM.SLColumn);
             }
@@ -25178,6 +25235,33 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TENLINHKIEN {
+                get {
+                    return ((string)(this[this.tableTHONGKE_LOAISP.TENLINHKIENColumn]));
+                }
+                set {
+                    this[this.tableTHONGKE_LOAISP.TENLINHKIENColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int dongia1 {
+                get {
+                    try {
+                        return ((int)(this[this.tableTHONGKE_LOAISP.dongia1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'dongia1\' in table \'THONGKE_LOAISP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTHONGKE_LOAISP.dongia1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public HOADON_ttRow HOADON_ttRow {
                 get {
                     return ((HOADON_ttRow)(this.GetParentRow(this.Table.ParentRelations["FK_Ct_mua_SP_HOADON20"])));
@@ -25255,6 +25339,40 @@ namespace nha_tro {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDonGiaNull() {
                 this[this.tableTHONGKE_LOAISP.DonGiaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isdongia1Null() {
+                return this.IsNull(this.tableTHONGKE_LOAISP.dongia1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setdongia1Null() {
+                this[this.tableTHONGKE_LOAISP.dongia1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public Ct_mua_SP_TIMKIEMRow[] GetCt_mua_SP_TIMKIEMRows() {
+                if ((this.Table.ChildRelations["FK_Ct_mua_SP_HOADON54"] == null)) {
+                    return new Ct_mua_SP_TIMKIEMRow[0];
+                }
+                else {
+                    return ((Ct_mua_SP_TIMKIEMRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Ct_mua_SP_HOADON54"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CT_HOADON_LINHKIENRow[] GetCT_HOADON_LINHKIENRows() {
+                if ((this.Table.ChildRelations["FK_CT_HOADO_CT_HOADON_HOADON14"] == null)) {
+                    return new CT_HOADON_LINHKIENRow[0];
+                }
+                else {
+                    return ((CT_HOADON_LINHKIENRow[])(base.GetChildRows(this.Table.ChildRelations["FK_CT_HOADO_CT_HOADON_HOADON14"])));
+                }
             }
         }
         
@@ -27207,6 +27325,17 @@ namespace nha_tro {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_CT_HOADO_CT_HOADON_HOADON13"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public THONGKE_LOAISPRow THONGKE_LOAISPRow {
+                get {
+                    return ((THONGKE_LOAISPRow)(this.GetParentRow(this.Table.ParentRelations["FK_CT_HOADO_CT_HOADON_HOADON14"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_CT_HOADO_CT_HOADON_HOADON14"]);
                 }
             }
             
@@ -42567,10 +42696,11 @@ order by HOADON.MAHD asc";
             tableMapping.DataSetTable = "THONGKE_LOAISP";
             tableMapping.ColumnMappings.Add("MAHD", "MAHD");
             tableMapping.ColumnMappings.Add("NGAYLAP", "NGAYLAP");
-            tableMapping.ColumnMappings.Add("SL", "SL");
             tableMapping.ColumnMappings.Add("MASP", "MASP");
             tableMapping.ColumnMappings.Add("TENSP", "TENSP");
             tableMapping.ColumnMappings.Add("DonGia", "DonGia");
+            tableMapping.ColumnMappings.Add("TENLINHKIEN", "TENLINHKIEN");
+            tableMapping.ColumnMappings.Add("dongia1", "dongia1");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -42587,10 +42717,11 @@ order by HOADON.MAHD asc";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT DISTINCT HOADON.MAHD,SANPHAM.MASP,SANPHAM.TENSP,SL,SANPHAM.DonGia,NGAYLAP
+            this._commandCollection[0].CommandText = @"SELECT DISTINCT HOADON.MAHD, SANPHAM.MASP, SANPHAM.TENSP, ct_mua_sp_lk.SL, SANPHAM.DonGia, HOADON.NGAYLAP, LINHKIEN.TENLINHKIEN,linhkien.dongia
 FROM            HOADON INNER JOIN
-                         Ct_mua_SP ON HOADON.MAHD = Ct_mua_SP.MaHD INNER JOIN
-                         SANPHAM ON Ct_mua_SP.MaSP = SANPHAM.MASP
+                         ct_mua_sp_lk ON HOADON.MAHD = ct_mua_sp_lk.MaHD INNER JOIN
+                         SANPHAM ON ct_mua_sp_lk.MaSP = SANPHAM.MASP INNER JOIN
+                         LINHKIEN ON ct_mua_sp_lk.MALINHKIEN = LINHKIEN.MALINHKIEN
 WHERE        (HOADON.NGAYLAP > @NGAYBD) AND (HOADON.NGAYLAP < @NGAYKT) AND (HOADON.MALOAIHD = 'MLHD02') AND (SANPHAM.MALOAI = @MALOAISP)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NGAYBD", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "NGAYLAP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -50944,6 +51075,15 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._hOADON_kttontaiTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.HOADON_kttontai.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._hOADON_kttontaiTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._hOADON_timmahd_vuathemTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.HOADON_timmahd_vuathem.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -50962,15 +51102,6 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._hOADON_kttontaiTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.HOADON_kttontai.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._hOADON_kttontaiTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._dOITRATableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.DOITRA.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -50986,6 +51117,24 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._sANPHAM__sreach_giaTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._dATHANG_SPTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.DATHANG_SP.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._dATHANG_SPTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._kHO_ttTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.KHO_tt.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._kHO_ttTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -51016,39 +51165,12 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._sP_LOITableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.SP_LOI.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._sP_LOITableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._traGop_tinhtienTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.TraGop_tinhtien.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._traGop_tinhtienTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._ct_bHTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.ct_bH.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._ct_bHTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._ct_mua_SP_TIMKIEMTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Ct_mua_SP_TIMKIEM.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._ct_mua_SP_TIMKIEMTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -51061,48 +51183,21 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._kHO_ttTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.KHO_tt.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._ct_mua_SP_TIMKIEMTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Ct_mua_SP_TIMKIEM.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._kHO_ttTableAdapter.Update(updatedRows));
+                    result = (result + this._ct_mua_SP_TIMKIEMTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tinhTrangTTTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.TinhTrangTT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._sP_LOITableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.SP_LOI.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tinhTrangTTTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._kHUYENMAITableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.KHUYENMAI.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._kHUYENMAITableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._cT_NHAP_LK_theoMaNhapTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CT_NHAP_LK_theoMaNhap.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._cT_NHAP_LK_theoMaNhapTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._dATHANG_SPTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.DATHANG_SP.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._dATHANG_SPTableAdapter.Update(updatedRows));
+                    result = (result + this._sP_LOITableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -51112,6 +51207,15 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._bAOHANHTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._cT_NHAP_LK_theoMaNhapTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CT_NHAP_LK_theoMaNhap.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._cT_NHAP_LK_theoMaNhapTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -51142,6 +51246,15 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._kHUYENMAITableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.KHUYENMAI.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._kHUYENMAITableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._lOAISANPHAMTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.LOAISANPHAM.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -51157,6 +51270,24 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._nDBaoHanhTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._ct_bHTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.ct_bH.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._ct_bHTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tinhTrangTTTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TinhTrangTT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tinhTrangTTTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -51194,6 +51325,14 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._hOADON_kttontaiTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.HOADON_kttontai.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._hOADON_kttontaiTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._hOADON_timmahd_vuathemTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.HOADON_timmahd_vuathem.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -51210,14 +51349,6 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._hOADON_kttontaiTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.HOADON_kttontai.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._hOADON_kttontaiTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._dOITRATableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.DOITRA.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -51231,6 +51362,22 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._sANPHAM__sreach_giaTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._dATHANG_SPTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.DATHANG_SP.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._dATHANG_SPTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._kHO_ttTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.KHO_tt.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._kHO_ttTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -51258,35 +51405,11 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._sP_LOITableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.SP_LOI.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._sP_LOITableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._traGop_tinhtienTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.TraGop_tinhtien.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._traGop_tinhtienTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._ct_bHTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.ct_bH.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._ct_bHTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._ct_mua_SP_TIMKIEMTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Ct_mua_SP_TIMKIEM.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._ct_mua_SP_TIMKIEMTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -51298,43 +51421,19 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._kHO_ttTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.KHO_tt.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._ct_mua_SP_TIMKIEMTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Ct_mua_SP_TIMKIEM.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._kHO_ttTableAdapter.Update(addedRows));
+                    result = (result + this._ct_mua_SP_TIMKIEMTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tinhTrangTTTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.TinhTrangTT.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._sP_LOITableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.SP_LOI.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tinhTrangTTTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._kHUYENMAITableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.KHUYENMAI.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._kHUYENMAITableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._cT_NHAP_LK_theoMaNhapTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CT_NHAP_LK_theoMaNhap.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._cT_NHAP_LK_theoMaNhapTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._dATHANG_SPTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.DATHANG_SP.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._dATHANG_SPTableAdapter.Update(addedRows));
+                    result = (result + this._sP_LOITableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -51343,6 +51442,14 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._bAOHANHTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._cT_NHAP_LK_theoMaNhapTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CT_NHAP_LK_theoMaNhap.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._cT_NHAP_LK_theoMaNhapTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -51370,6 +51477,14 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._kHUYENMAITableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.KHUYENMAI.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._kHUYENMAITableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._lOAISANPHAMTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.LOAISANPHAM.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -51386,6 +51501,22 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._ct_bHTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.ct_bH.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._ct_bHTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tinhTrangTTTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TinhTrangTT.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tinhTrangTTTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -51396,6 +51527,22 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(tt dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._tinhTrangTTTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TinhTrangTT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tinhTrangTTTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._ct_bHTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ct_bH.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._ct_bHTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._nDBaoHanhTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.NDBaoHanh.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -51409,6 +51556,14 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._lOAISANPHAMTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._kHUYENMAITableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.KHUYENMAI.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._kHUYENMAITableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -51436,22 +51591,6 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._bAOHANHTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.BAOHANH.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._bAOHANHTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._dATHANG_SPTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.DATHANG_SP.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._dATHANG_SPTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._cT_NHAP_LK_theoMaNhapTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.CT_NHAP_LK_theoMaNhap.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -51460,35 +51599,19 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._kHUYENMAITableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.KHUYENMAI.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._bAOHANHTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.BAOHANH.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._kHUYENMAITableAdapter.Update(deletedRows));
+                    result = (result + this._bAOHANHTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tinhTrangTTTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TinhTrangTT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._sP_LOITableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.SP_LOI.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tinhTrangTTTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._kHO_ttTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.KHO_tt.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._kHO_ttTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tAIKHOAN_TIMMANVTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TAIKHOAN_TIMMANV.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tAIKHOAN_TIMMANVTableAdapter.Update(deletedRows));
+                    result = (result + this._sP_LOITableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -51500,11 +51623,11 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._ct_bHTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.ct_bH.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tAIKHOAN_TIMMANVTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TAIKHOAN_TIMMANV.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._ct_bHTableAdapter.Update(deletedRows));
+                    result = (result + this._tAIKHOAN_TIMMANVTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -51513,14 +51636,6 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._traGop_tinhtienTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._sP_LOITableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.SP_LOI.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._sP_LOITableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -51548,6 +51663,22 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._kHO_ttTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.KHO_tt.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._kHO_ttTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._dATHANG_SPTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.DATHANG_SP.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._dATHANG_SPTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._sANPHAM__sreach_giaTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.SANPHAM__sreach_gia.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -51564,14 +51695,6 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._hOADON_kttontaiTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.HOADON_kttontai.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._hOADON_kttontaiTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._hOADON_baohanhTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.HOADON_baohanh.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -51585,6 +51708,14 @@ WHERE        (HOADON.NGAYLAP >= @ngaybd) AND (HOADON.NGAYLAP <= @ngaykt) AND (HO
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._hOADON_timmahd_vuathemTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._hOADON_kttontaiTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.HOADON_kttontai.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._hOADON_kttontaiTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

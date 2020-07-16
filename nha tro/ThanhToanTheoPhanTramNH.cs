@@ -43,6 +43,16 @@ namespace nha_tro
             // TODO: This line of code loads data into the 'nghiepVu.NHAPHANG1' table. You can move, or remove it, as needed.
             this.nHAPHANG1TableAdapter.FillBy1_sp(this.nghiepVu.NHAPHANG1);
 
+            //tim ma nv
+            try
+            {
+                this.tAIKHOANTableAdapter.Fill_DK(this.nghiepVu.TAIKHOAN, tendn);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
             textBox3.ReadOnly = true;
 
 
@@ -139,15 +149,7 @@ namespace nha_tro
         private void button1_Click(object sender, EventArgs e)
         {
             //insert hoa don
-            //tim ma nv
-            try
-            {
-                this.tAIKHOANTableAdapter.Fill_DK(this.nghiepVu.TAIKHOAN, tendn);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+
             //==============================
             if (cT_NHAP_SP_DK_LUUKHODataGridView.RowCount != 1 /*&& cT_NHAP_LK_sreach_lk_manhapDataGridView.RowCount != 1*/)
             {
@@ -439,8 +441,11 @@ namespace nha_tro
                         int phantramconlai = 100 - phantramdatra;
                         int tontienconlaiphaitra = tongtien * phantramconlai / 100;
 
-                        ThongKe thongKe = new ThongKe();
+                        /*ThongKe thongKe = new ThongKe();
                         thongKe.xuatfileHD_TragopNCC(tinhTrangTTDataGridView, (int.Parse(textBox4.Text) * tongtien / 100).ToString(), tontienconlaiphaitra.ToString(), DateTime.Today.ToString(), "hdTG_NCC");
+                        */
+                        Form_xuat_hd_TTTGNCC form_Xuat_Hd_TTTGNCC = new Form_xuat_hd_TTTGNCC(textBox3.Text, DateTime.Today.Date.ToString("dd/MM/yyyy"), nHAPHANG1DataGridView.CurrentRow.Cells[0].Value.ToString(), (int.Parse(textBox4.Text) * tongtien / 100).ToString(), tontienconlaiphaitra.ToString(), tAIKHOANTableAdapter.tennv(tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString()).ToString());
+                        form_Xuat_Hd_TTTGNCC.ShowDialog();
                     }
                     else
                         MessageBox.Show("vượt quá số tiền phải trả !!!");
@@ -455,10 +460,11 @@ namespace nha_tro
                         MessageBox.Show("Thành Công");
                         int sotiendatra = int.Parse(textBox6.Text) + int.Parse(tinhTrangTTDataGridView.Rows[0].Cells[1].Value.ToString());
                         int sotienconlai = tongtien - sotiendatra;
-                        ThongKe thongKe = new ThongKe();
+                       /* ThongKe thongKe = new ThongKe();
                         thongKe.xuatfileHD_TragopNCC(tinhTrangTTDataGridView, textBox6.ToString(), sotienconlai.ToString(), DateTime.Today.ToString(), "hdTG_NCC");
-
-
+                      */  
+                        Form_xuat_hd_TTTGNCC form_Xuat_Hd_TTTGNCC = new Form_xuat_hd_TTTGNCC(textBox3.Text, DateTime.Today.Date.ToString("dd/MM/yyyy"), nHAPHANG1DataGridView.CurrentRow.Cells[0].Value.ToString(), sotiendatra.ToString(), (tongtien - sotiendatra).ToString(), tAIKHOANTableAdapter.tennv(tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString()).ToString());
+                        form_Xuat_Hd_TTTGNCC.ShowDialog();
                     }
                     else
                     {

@@ -51,8 +51,16 @@ namespace nha_tro
             int tongtien = 0;
             for (int i = 0; i < thongKe_SPDataGridView.RowCount - 1; i++)
             {
-                sl += int.Parse(thongKe_SPDataGridView.Rows[i].Cells[2].Value.ToString());
-                tongtien += (int.Parse(thongKe_SPDataGridView.Rows[i].Cells[2].Value.ToString()) * int.Parse(thongKe_SPDataGridView.Rows[i].Cells[5].Value.ToString()));
+                if(string.Compare(thongKe_SPDataGridView.Rows[i].Cells[3].Value.ToString().Trim(),"khong") != 0) //tinh tien sp
+                {
+                    sl += int.Parse(thongKe_SPDataGridView.Rows[i].Cells[2].Value.ToString());
+                    tongtien += (int.Parse(thongKe_SPDataGridView.Rows[i].Cells[2].Value.ToString()) * int.Parse(thongKe_SPDataGridView.Rows[i].Cells[5].Value.ToString()));
+                }
+                else
+                {
+                    sl += int.Parse(thongKe_SPDataGridView.Rows[i].Cells[2].Value.ToString());
+                    tongtien += (int.Parse(thongKe_SPDataGridView.Rows[i].Cells[2].Value.ToString()) * int.Parse(thongKe_SPDataGridView.Rows[i].Cells[7].Value.ToString()));
+                }
             }
             textBox1.Text = sl.ToString();
             textBox2.Text = tongtien.ToString();

@@ -92,9 +92,9 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.nHAPHANG1TableAdapter = new nha_tro.NghiepVuTableAdapters.NHAPHANG1TableAdapter();
             this.tableAdapterManager = new nha_tro.NghiepVuTableAdapters.TableAdapterManager();
-            this.cT_NHAP_SP_DK_LUUKHOTableAdapter = new nha_tro.NghiepVuTableAdapters.CT_NHAP_SP_DK_LUUKHOTableAdapter();
             this.cT_NHAP_SPTableAdapter = new nha_tro.NghiepVuTableAdapters.CT_NHAP_SPTableAdapter();
             this.tAIKHOANTableAdapter = new nha_tro.NghiepVuTableAdapters.TAIKHOANTableAdapter();
+            this.cT_NHAP_SP_DK_LUUKHOTableAdapter = new nha_tro.NghiepVuTableAdapters.CT_NHAP_SP_DK_LUUKHOTableAdapter();
             this.nHAPHANG1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cT_NHAP_SPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cT_Nhap_dkBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -302,9 +302,8 @@
             this.tAIKHOANDataGridView.DataSource = this.tAIKHOANBindingSource;
             this.tAIKHOANDataGridView.Location = new System.Drawing.Point(1071, 237);
             this.tAIKHOANDataGridView.Name = "tAIKHOANDataGridView";
-            this.tAIKHOANDataGridView.Size = new System.Drawing.Size(144, 84);
+            this.tAIKHOANDataGridView.Size = new System.Drawing.Size(244, 84);
             this.tAIKHOANDataGridView.TabIndex = 11;
-            this.tAIKHOANDataGridView.Visible = false;
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -684,7 +683,6 @@
             this.tableAdapterManager.CT_HOADON_LINHKIENTableAdapter = null;
             this.tableAdapterManager.Ct_mua_SPTableAdapter = null;
             this.tableAdapterManager.CT_NHAP_LK_sreach_lk_manhapTableAdapter = null;
-            this.tableAdapterManager.CT_NHAP_SP_DK_LUUKHOTableAdapter = this.cT_NHAP_SP_DK_LUUKHOTableAdapter;
             this.tableAdapterManager.CT_NHAP_SPTableAdapter = this.cT_NHAP_SPTableAdapter;
             this.tableAdapterManager.HOADON1TableAdapter = null;
             this.tableAdapterManager.HOADONTableAdapter = null;
@@ -709,10 +707,6 @@
             this.tableAdapterManager.TAIKHOANTableAdapter = this.tAIKHOANTableAdapter;
             this.tableAdapterManager.UpdateOrder = nha_tro.NghiepVuTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // cT_NHAP_SP_DK_LUUKHOTableAdapter
-            // 
-            this.cT_NHAP_SP_DK_LUUKHOTableAdapter.ClearBeforeFill = true;
-            // 
             // cT_NHAP_SPTableAdapter
             // 
             this.cT_NHAP_SPTableAdapter.ClearBeforeFill = true;
@@ -720,6 +714,10 @@
             // tAIKHOANTableAdapter
             // 
             this.tAIKHOANTableAdapter.ClearBeforeFill = true;
+            // 
+            // cT_NHAP_SP_DK_LUUKHOTableAdapter
+            // 
+            this.cT_NHAP_SP_DK_LUUKHOTableAdapter.ClearBeforeFill = true;
             // 
             // nHAPHANG1BindingSource1
             // 
