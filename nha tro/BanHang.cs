@@ -705,8 +705,12 @@ namespace nha_tro
 
             //==========================================
             //ThongKe.xuatfile_HD_TraGop(ct_hoa_donDataGridView, maTraGopTextEdit.Text, label7.Text, NamNgayThangStar, "Hoa_Don_traGop");
-            hoadon_tragop hd_Tragop = new hoadon_tragop(ct_mua_SP_TIMKIEMDataGridView.Rows[0].Cells[0].Value.ToString(), maTraGopTextEdit.Text, DateTime.Today.ToString("dd/MM/yyyy"));
-            hd_Tragop.ShowDialog();
+/*            hoadon_tragop hd_Tragop = new hoadon_tragop(ct_mua_SP_TIMKIEMDataGridView.Rows[0].Cells[0].Value.ToString(), maTraGopTextEdit.Text, DateTime.Today.ToString("dd/MM/yyyy"));
+            hd_Tragop.ShowDialog();*/
+
+            Form4_hd_tragop_landau form4_Hd_Tragop_Landau = new Form4_hd_tragop_landau(ct_mua_SP_TIMKIEMDataGridView.Rows[0].Cells[0].Value.ToString(), maTraGopTextEdit.Text, DateTime.Today.ToString("dd/MM/yyyy"), soTienPhaiTraSpinEdit.Text.ToString(), soTienPhaiTraSpinEdit.Text.ToString(), label7.Text.ToString());
+            form4_Hd_Tragop_Landau.ShowDialog();
+
             //========================
 
             //Restart==============================

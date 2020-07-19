@@ -191,6 +191,12 @@
     <Compile Include="Form4_HD_NHAPHANG.Designer.cs">
       <DependentUpon>Form4_HD_NHAPHANG.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form4_hd_tragop_landau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4_hd_tragop_landau.Designer.cs">
+      <DependentUpon>Form4_hd_tragop_landau.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_xuat_hd_TTTGNCC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -555,6 +561,9 @@
     <EmbeddedResource Include="Form4_HD_NHAPHANG.resx">
       <DependentUpon>Form4_HD_NHAPHANG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form4_hd_tragop_landau.resx">
+      <DependentUpon>Form4_hd_tragop_landau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_xuat_hd_TTTGNCC.resx">
       <DependentUpon>Form_xuat_hd_TTTGNCC.cs</DependentUpon>
     </EmbeddedResource>
@@ -660,6 +669,7 @@
     <EmbeddedResource Include="Report_banLK.rdlc" />
     <EmbeddedResource Include="Report_doitra.rdlc" />
     <EmbeddedResource Include="Report_hd_tragop_kh.rdlc" />
+    <EmbeddedResource Include="Report_hd_tragop_landau.rdlc" />
     <EmbeddedResource Include="Report_TinhDT_TheoNgay.rdlc" />
     <EmbeddedResource Include="Report_tk_loinhuan.rdlc" />
     <EmbeddedResource Include="Report_tragop_ncc.rdlc" />

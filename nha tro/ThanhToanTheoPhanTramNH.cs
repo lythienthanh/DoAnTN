@@ -416,64 +416,23 @@ namespace nha_tro
         private void button3_Click_1(object sender, EventArgs e)
         {
             int tongtien = 0;
-            for (int i = 0; i < cT_NHAP_SP_DK_LUUKHODataGridView.Rows.Count - 1; i++)
+            int tongtienthanhtoan = 0;
+            for (int i = 0; i < cT_NHAP_SP_DK_LUUKHODataGridView.RowCount - 1; i++)
             {
                 tongtien += (int.Parse(cT_NHAP_SP_DK_LUUKHODataGridView.Rows[i].Cells[3].Value.ToString()) * int.Parse(cT_NHAP_SP_DK_LUUKHODataGridView.Rows[i].Cells[4].Value.ToString()));
             }
-            if ((textBox4.Text.Length == 0 && textBox6.Text.Length == 0) || (textBox4.Text.Length != 0 && textBox6.Text.Length != 0))
+
+            if (textBox4.Text.Length == 0 && textBox6.Text.Length == 0 && int.Parse(tinhTrangTTDataGridView.Rows[0].Cells[1].Value.ToString()) <= 100)
             {
-                MessageBox.Show("Vui lòng lựa chọn một trong hai hình thức thanh toán");
+                int phantram = int.Parse(tinhTrangTTDataGridView.Rows[0].Cells[1].Value.ToString());
+                tongtienthanhtoan = (tongtien * phantram) ;
+                Form_xuat_hd_TTTGNCC form_Xuat_Hd_TTTGNCC = new Form_xuat_hd_TTTGNCC(textBox3.Text, DateTime.Today.Date.ToString("dd/MM/yyyy"), nHAPHANG1DataGridView.CurrentRow.Cells[0].Value.ToString(), tongtienthanhtoan.ToString(), (tongtien - tongtienthanhtoan).ToString(), tAIKHOANTableAdapter.tennv(tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString()).ToString());
+                form_Xuat_Hd_TTTGNCC.ShowDialog();
             }
             else
             {
-                //kiem tra tinh trang <= 100
-                if (textBox6.Text.Length == 0)
-                {
-                    if (int.Parse(textBox4.Text) + int.Parse(tinhTrangTTDataGridView.Rows[0].Cells[1].Value.ToString()) <= 100)
-                    {
-                        //update tinh trang trong bang tinhtrangTT
-                        tinhTrangTTTableAdapter.UpdateQuery(int.Parse(textBox4.Text), int.Parse(textBox3.Text));
-                        //update trang thai trong bang phieu nhap
-                        tinhTrangTTTableAdapter.updatetinhtrang(nHAPHANG1DataGridView.CurrentRow.Cells[0].Value.ToString());
-                        MessageBox.Show("Thành Công");
-
-                        int phantramdatra = int.Parse(textBox4.Text) + int.Parse(tinhTrangTTDataGridView.Rows[0].Cells[1].Value.ToString());
-                        int phantramconlai = 100 - phantramdatra;
-                        int tontienconlaiphaitra = tongtien * phantramconlai / 100;
-
-                        /*ThongKe thongKe = new ThongKe();
-                        thongKe.xuatfileHD_TragopNCC(tinhTrangTTDataGridView, (int.Parse(textBox4.Text) * tongtien / 100).ToString(), tontienconlaiphaitra.ToString(), DateTime.Today.ToString(), "hdTG_NCC");
-                        */
-                        Form_xuat_hd_TTTGNCC form_Xuat_Hd_TTTGNCC = new Form_xuat_hd_TTTGNCC(textBox3.Text, DateTime.Today.Date.ToString("dd/MM/yyyy"), nHAPHANG1DataGridView.CurrentRow.Cells[0].Value.ToString(), (int.Parse(textBox4.Text) * tongtien / 100).ToString(), tontienconlaiphaitra.ToString(), tAIKHOANTableAdapter.tennv(tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString()).ToString());
-                        form_Xuat_Hd_TTTGNCC.ShowDialog();
-                    }
-                    else
-                        MessageBox.Show("vượt quá số tiền phải trả !!!");
-                }
-                else
-                {
-                    if (int.Parse(textBox6.Text) + int.Parse(tinhTrangTTDataGridView.Rows[0].Cells[1].Value.ToString()) <= tongtien)
-                    {
-                        tinhTrangTTTableAdapter.UpdateQuery(int.Parse(textBox6.Text), int.Parse(textBox3.Text));
-                        //update trang thai trong bang phieu nhap
-                        tinhTrangTTTableAdapter.updatetinhtrang(nHAPHANG1DataGridView.CurrentRow.Cells[0].Value.ToString());
-                        MessageBox.Show("Thành Công");
-                        int sotiendatra = int.Parse(textBox6.Text) + int.Parse(tinhTrangTTDataGridView.Rows[0].Cells[1].Value.ToString());
-                        int sotienconlai = tongtien - sotiendatra;
-                       /* ThongKe thongKe = new ThongKe();
-                        thongKe.xuatfileHD_TragopNCC(tinhTrangTTDataGridView, textBox6.ToString(), sotienconlai.ToString(), DateTime.Today.ToString(), "hdTG_NCC");
-                      */  
-                        Form_xuat_hd_TTTGNCC form_Xuat_Hd_TTTGNCC = new Form_xuat_hd_TTTGNCC(textBox3.Text, DateTime.Today.Date.ToString("dd/MM/yyyy"), nHAPHANG1DataGridView.CurrentRow.Cells[0].Value.ToString(), sotiendatra.ToString(), (tongtien - sotiendatra).ToString(), tAIKHOANTableAdapter.tennv(tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString()).ToString());
-                        form_Xuat_Hd_TTTGNCC.ShowDialog();
-                    }
-                    else
-                    {
-                        MessageBox.Show("vượt quá số tiền phải trả !!!");
-
-                    }
-
-
-                }
+                Form_xuat_hd_TTTGNCC form_Xuat_Hd_TTTGNCC = new Form_xuat_hd_TTTGNCC(textBox3.Text, DateTime.Today.Date.ToString("dd/MM/yyyy"), nHAPHANG1DataGridView.CurrentRow.Cells[0].Value.ToString(), tinhTrangTTDataGridView.Rows[0].Cells[1].Value.ToString(), (tongtien - int.Parse(tinhTrangTTDataGridView.Rows[0].Cells[1].Value.ToString())).ToString(), tAIKHOANTableAdapter.tennv(tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString()).ToString());
+                form_Xuat_Hd_TTTGNCC.ShowDialog();
             }
             //load data
             this.tinhTrangTTTableAdapter.Fill(this.tt.TinhTrangTT);
