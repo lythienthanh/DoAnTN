@@ -127,6 +127,8 @@ namespace nha_tro
         private void button3_Click(object sender, EventArgs e)
         {
             cT_NHAP_SPTableAdapter.Insert(nHAPHANGComboBox.SelectedValue.ToString(), sANPHAMComboBox.SelectedValue.ToString(), nHACUNGCAPComboBox.SelectedValue.ToString(), int.Parse(sLSpinEdit.Text), int.Parse(donGiaSpinEdit.Text));
+            int dongia = int.Parse(donGiaSpinEdit.Text) + ((int.Parse(donGiaSpinEdit.Text) * 10) / 100);
+            cT_NHAP_SPTableAdapter.update_dongia(dongia, sANPHAMComboBox.SelectedValue.ToString());
             MessageBox.Show("Them Thanh Cong");
             //load
             this.cT_Nhap_dkTableAdapter.Fill_dk(this.nghiepVu.CT_Nhap_dk, nHAPHANGComboBox.SelectedValue.ToString());

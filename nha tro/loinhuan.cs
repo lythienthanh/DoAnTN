@@ -63,6 +63,38 @@ namespace nha_tro
             tongtiennhap = 0;
             tongtienban = 0;
 
+
+            try
+            {
+                this.hOADON_chenhlechTableAdapter.Fill(this.tt.HOADON_chenhlech, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateTimePicker1.Value.ToString(), typeof(System.DateTime))))), new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateTimePicker2.Value.ToString(), typeof(System.DateTime))))));
+            }
+            catch (System.Exception ex)
+            {
+                //System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+            int tienbaohanh = 0;
+
+            for(int i = 0; i < hOADON_chenhlechDataGridView.RowCount - 1; i++)
+            {
+                if(int.Parse(hOADON_chenhlechDataGridView.Rows[i].Cells[0].Value.ToString()) >= 0)
+                {
+                    tienbaohanh += int.Parse(hOADON_chenhlechDataGridView.Rows[i].Cells[0].Value.ToString());
+                }
+                else
+                {
+                    string temp = hOADON_chenhlechDataGridView.Rows[i].Cells[0].Value.ToString();
+                    string temp1 = temp.Substring(1, temp.Length - 1);
+                    tienbaohanh += int.Parse(temp1);
+                }
+            }
+
+            textBox5.ReadOnly = true;
+            textBox5.Text = tienbaohanh.ToString();
+
+            textBox6.ReadOnly = true;
+            textBox6.Text = hOADON_chenhlechTableAdapter.tien_suachua(Convert.ToDateTime(dateTimePicker1.Value.ToString()), Convert.ToDateTime(dateTimePicker2.Value.ToString())).ToString();
+
         }
 
         private void loinhuan_Load(object sender, EventArgs e)
@@ -84,6 +116,12 @@ namespace nha_tro
         {
             xuat_tk_loinhuan xuat_Tk_Loinhuan = new xuat_tk_loinhuan(DateTime.Today.Date.ToString("dd/MM/yyyy"), dateTimePicker2.Value.ToString(), textBox4.Text, textBox2.Text, dateTimePicker1.Value.ToString("dd/MM/yyyy"), textBox1.Text, textBox3.Text);
             xuat_Tk_Loinhuan.ShowDialog();
+        }
+
+        private void fillToolStripButton_Click_1(object sender, EventArgs e)
+        {
+
+
         }
     }
 }

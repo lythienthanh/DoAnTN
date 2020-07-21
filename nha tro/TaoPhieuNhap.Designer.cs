@@ -59,6 +59,14 @@
             this.button6 = new System.Windows.Forms.Button();
             this.lAY_MANVbangTENDNTableAdapter = new nha_tro.NghiepVuTableAdapters.LAY_MANVbangTENDNTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.xUAT_HD_NHAPHANG_SPDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xUAT_HD_NHAPHANG_SPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.nHACUNGCAPComboBox = new System.Windows.Forms.ComboBox();
             this.nHACUNGCAPBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -79,15 +87,7 @@
             this.donGiaSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.cT_Nhap_dkTableAdapter = new nha_tro.NghiepVuTableAdapters.CT_Nhap_dkTableAdapter();
             this.button9 = new System.Windows.Forms.Button();
-            this.xUAT_HD_NHAPHANG_SPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.xUAT_HD_NHAPHANG_SPTableAdapter = new nha_tro.NghiepVuTableAdapters.XUAT_HD_NHAPHANG_SPTableAdapter();
-            this.xUAT_HD_NHAPHANG_SPDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             mANVLabel = new System.Windows.Forms.Label();
             nGAYNHAPLabel = new System.Windows.Forms.Label();
             mANHAPLabel = new System.Windows.Forms.Label();
@@ -108,6 +108,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lAY_MANVbangTENDNBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mANVTextEdit.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xUAT_HD_NHAPHANG_SPDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xUAT_HD_NHAPHANG_SPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHACUNGCAPBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHAPHANGBindingSource1)).BeginInit();
@@ -116,8 +118,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sLSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.donGiaSpinEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xUAT_HD_NHAPHANG_SPBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xUAT_HD_NHAPHANG_SPDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // mANVLabel
@@ -377,6 +377,65 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết phiếu nhập";
             // 
+            // xUAT_HD_NHAPHANG_SPDataGridView
+            // 
+            this.xUAT_HD_NHAPHANG_SPDataGridView.AutoGenerateColumns = false;
+            this.xUAT_HD_NHAPHANG_SPDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.xUAT_HD_NHAPHANG_SPDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.xUAT_HD_NHAPHANG_SPDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.xUAT_HD_NHAPHANG_SPDataGridView.DataSource = this.xUAT_HD_NHAPHANG_SPBindingSource;
+            this.xUAT_HD_NHAPHANG_SPDataGridView.Location = new System.Drawing.Point(294, 45);
+            this.xUAT_HD_NHAPHANG_SPDataGridView.Name = "xUAT_HD_NHAPHANG_SPDataGridView";
+            this.xUAT_HD_NHAPHANG_SPDataGridView.Size = new System.Drawing.Size(666, 220);
+            this.xUAT_HD_NHAPHANG_SPDataGridView.TabIndex = 15;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "MANHAP";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Mã Nhập Hàng";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "MASP";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Mã SP";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "TENSP";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Tên SP";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "MANCC";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Mã NCC";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "SL";
+            this.dataGridViewTextBoxColumn7.HeaderText = "SL";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "DonGia";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Đơn giá";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // xUAT_HD_NHAPHANG_SPBindingSource
+            // 
+            this.xUAT_HD_NHAPHANG_SPBindingSource.DataMember = "XUAT_HD_NHAPHANG_SP";
+            this.xUAT_HD_NHAPHANG_SPBindingSource.DataSource = this.nghiepVu;
+            // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -565,68 +624,9 @@
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
-            // xUAT_HD_NHAPHANG_SPBindingSource
-            // 
-            this.xUAT_HD_NHAPHANG_SPBindingSource.DataMember = "XUAT_HD_NHAPHANG_SP";
-            this.xUAT_HD_NHAPHANG_SPBindingSource.DataSource = this.nghiepVu;
-            // 
             // xUAT_HD_NHAPHANG_SPTableAdapter
             // 
             this.xUAT_HD_NHAPHANG_SPTableAdapter.ClearBeforeFill = true;
-            // 
-            // xUAT_HD_NHAPHANG_SPDataGridView
-            // 
-            this.xUAT_HD_NHAPHANG_SPDataGridView.AutoGenerateColumns = false;
-            this.xUAT_HD_NHAPHANG_SPDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.xUAT_HD_NHAPHANG_SPDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.xUAT_HD_NHAPHANG_SPDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.xUAT_HD_NHAPHANG_SPDataGridView.DataSource = this.xUAT_HD_NHAPHANG_SPBindingSource;
-            this.xUAT_HD_NHAPHANG_SPDataGridView.Location = new System.Drawing.Point(294, 45);
-            this.xUAT_HD_NHAPHANG_SPDataGridView.Name = "xUAT_HD_NHAPHANG_SPDataGridView";
-            this.xUAT_HD_NHAPHANG_SPDataGridView.Size = new System.Drawing.Size(666, 220);
-            this.xUAT_HD_NHAPHANG_SPDataGridView.TabIndex = 15;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "MANHAP";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Mã Nhập Hàng";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "MASP";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Mã SP";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "TENSP";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Tên SP";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "MANCC";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Mã NCC";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "SL";
-            this.dataGridViewTextBoxColumn7.HeaderText = "SL";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "DonGia";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Đơn giá";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // MH000000000000000024
             // 
@@ -654,6 +654,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.mANVTextEdit.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xUAT_HD_NHAPHANG_SPDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xUAT_HD_NHAPHANG_SPBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHACUNGCAPBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHAPHANGBindingSource1)).EndInit();
@@ -662,8 +664,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sLSpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.donGiaSpinEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xUAT_HD_NHAPHANG_SPBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xUAT_HD_NHAPHANG_SPDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -129,6 +129,10 @@ namespace nha_tro
         private void button1_Click(object sender, EventArgs e)
         {
             cT_NHAP_LK_theoMaNhapTableAdapter.Insert(lINHKIENComboBox.SelectedValue.ToString(),nHAPHANG1ComboBox.SelectedValue.ToString(),nHACUNGCAPComboBox.SelectedValue.ToString(),int.Parse(slSpinEdit.Text),int.Parse(donGiaSpinEdit.Text));
+            int dongia = int.Parse(donGiaSpinEdit.Text) + ((int.Parse(donGiaSpinEdit.Text) * 10) / 100);
+
+
+            cT_NHAP_LK_theoMaNhapTableAdapter.update_dongia_lk(dongia, lINHKIENComboBox.SelectedValue.ToString());
             MessageBox.Show("Thêm Thành Công!!!");
             //load dl
             try

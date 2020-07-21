@@ -97,18 +97,25 @@ namespace nha_tro
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            try
+            if ( int.Parse(gIATRISpinEdit.Text ) < 10 )
             {
-                this.kHUYENMAITableAdapter.Insert(mAKHUYENMAITextEdit.Text, tENKHUYENMAITextEdit.Text, Convert.ToDateTime(nGAYBDDateEdit.Text), Convert.ToDateTime(nGAYKTDateEdit.Text), lINHKIENComboBox.SelectedValue.ToString(), sANPHAMComboBox.SelectedValue.ToString(), double.Parse(gIATRISpinEdit.Text));
+                try
+                {
+                    this.kHUYENMAITableAdapter.Insert(mAKHUYENMAITextEdit.Text, tENKHUYENMAITextEdit.Text, Convert.ToDateTime(nGAYBDDateEdit.Text), Convert.ToDateTime(nGAYKTDateEdit.Text), lINHKIENComboBox.SelectedValue.ToString(), sANPHAMComboBox.SelectedValue.ToString(), double.Parse(gIATRISpinEdit.Text));
 
 
-                this.kHUYENMAITableAdapter.Fill(this.tt.KHUYENMAI);
+                    this.kHUYENMAITableAdapter.Fill(this.tt.KHUYENMAI);
+                }
+
+                catch
+                {
+                    MessageBox.Show("Thông tin cần thêm không hợp lệ");
+
+                }
             }
-
-            catch
+            else
             {
-                MessageBox.Show("Thông tin cần thêm không hợp lệ");
-
+                MessageBox.Show("khuyến mãi vượt quá 10%");
             }
         }
 
