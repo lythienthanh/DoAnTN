@@ -179,6 +179,38 @@ namespace nha_tro
                 tongtien = 0;*/
             }
 
+
+            try
+            {
+                this.hOADON_chenhlechTableAdapter.Fill(this.tt.HOADON_chenhlech, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateTimePicker1.Value.ToString(), typeof(System.DateTime))))), new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateTimePicker2.Value.ToString(), typeof(System.DateTime))))));
+            }
+            catch (System.Exception ex)
+            {
+                //System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+            int tienbaohanh = 0;
+
+            for (int i = 0; i < hOADON_chenhlechDataGridView.RowCount - 1; i++)
+            {
+                if (int.Parse(hOADON_chenhlechDataGridView.Rows[i].Cells[0].Value.ToString()) >= 0)
+                {
+                    tienbaohanh += int.Parse(hOADON_chenhlechDataGridView.Rows[i].Cells[0].Value.ToString());
+                }
+                else
+                {
+                    string temp = hOADON_chenhlechDataGridView.Rows[i].Cells[0].Value.ToString();
+                    string temp1 = temp.Substring(1, temp.Length - 1);
+                    tienbaohanh += int.Parse(temp1);
+                }
+            }
+
+            textBox2.ReadOnly = true;
+            textBox2.Text = tienbaohanh.ToString();
+
+            textBox1.ReadOnly = true;
+            textBox1.Text = hOADON_chenhlechTableAdapter.tien_suachua(Convert.ToDateTime(dateTimePicker1.Value.ToString()), Convert.ToDateTime(dateTimePicker2.Value.ToString())).ToString();
+
         }
 
         private void TinhDoanhThu_Load(object sender, EventArgs e)
@@ -311,6 +343,19 @@ namespace nha_tro
             decimal value = decimal.Parse(textBox5.Text, System.Globalization.NumberStyles.AllowThousands);
             textBox5.Text = String.Format(culture, "{0:N0}", value);
             textBox5.Select(textBox5.Text.Length, 0);
+        }
+
+        private void fillToolStripButton_Click_2(object sender, EventArgs e)
+        {
+/*            try
+            {
+                this.hOADON_chenhlechTableAdapter.Fill(this.tt.HOADON_chenhlech, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(ngaybdToolStripTextBox.Text, typeof(System.DateTime))))), new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(ngayktToolStripTextBox.Text, typeof(System.DateTime))))));
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }*/
+
         }
     }
 }

@@ -4,6 +4,10 @@
 
     public partial class tt
     {
+        partial class malk_bhDataTable
+        {
+        }
+
         partial class ThongKe_TinhDoanhThuDataTable
         {
         }

@@ -177,9 +177,10 @@ namespace nha_tro
         private void button1_Click(object sender, EventArgs e)
         {
             cT_NHAP_SPTableAdapter.UpdateQuery(int.Parse(sLSpinEdit.Text), int.Parse(donGiaSpinEdit.Text), nHAPHANGComboBox.SelectedValue.ToString(),sANPHAMComboBox.SelectedValue.ToString());
-            MessageBox.Show("Thành công");
             //load
             this.cT_Nhap_dkTableAdapter.Fill_dk(this.nghiepVu.CT_Nhap_dk, nHAPHANGComboBox.SelectedValue.ToString());
+            MessageBox.Show("Thành công");
+            
         }
 
         private void fillToolStripButton_Click(object sender, EventArgs e)

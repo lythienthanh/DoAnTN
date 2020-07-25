@@ -47,9 +47,16 @@ namespace nha_tro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string s = mAKHOComboBox.Text;
-            lINHKIENTableAdapter.Insert(mALINHKIENTextEdit.Text, tENLINHKIENTextEdit.Text, int.Parse(dONGIASpinEdit.Text),s);
-            this.lINHKIENTableAdapter.Fill(this.nghiepVu.LINHKIEN);
+            try
+            {
+                string s = mAKHOComboBox.Text;
+                lINHKIENTableAdapter.Insert(mALINHKIENTextEdit.Text, tENLINHKIENTextEdit.Text, int.Parse(dONGIASpinEdit.Text), s);
+                this.lINHKIENTableAdapter.Fill(this.nghiepVu.LINHKIEN);
+            }
+            catch
+            {
+                MessageBox.Show("trùng mã");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

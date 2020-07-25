@@ -601,6 +601,7 @@
             this.tableAdapterManager1.BAOHANH1TableAdapter = null;
             this.tableAdapterManager1.BAOHANHTableAdapter = null;
             this.tableAdapterManager1.ct_bHTableAdapter = null;
+            this.tableAdapterManager1.CT_HOADON_LINHKIENTableAdapter = null;
             this.tableAdapterManager1.Ct_KM_LKTableAdapter = null;
             this.tableAdapterManager1.CT_KM_SPTableAdapter = null;
             this.tableAdapterManager1.Ct_mua_SP_TIMKIEMTableAdapter = null;
@@ -608,6 +609,7 @@
             this.tableAdapterManager1.DATHANG_SPTableAdapter = null;
             this.tableAdapterManager1.DOITRATableAdapter = null;
             this.tableAdapterManager1.HOADON_baohanhTableAdapter = null;
+            this.tableAdapterManager1.HOADON_chenhlechTableAdapter = null;
             this.tableAdapterManager1.HOADON_kttontaiTableAdapter = null;
             this.tableAdapterManager1.HOADON_timmahd_vuathemTableAdapter = null;
             this.tableAdapterManager1.HOADON_ttTableAdapter = null;
@@ -618,8 +620,10 @@
             this.tableAdapterManager1.LOAISANPHAMTableAdapter = null;
             this.tableAdapterManager1.NDBaoHanhTableAdapter = null;
             this.tableAdapterManager1.SANPHAM__sreach_giaTableAdapter = null;
+            this.tableAdapterManager1.SP_LOITableAdapter = null;
             this.tableAdapterManager1.TAIKHOAN_TIMMANVTableAdapter = null;
             this.tableAdapterManager1.TinhTrangTTTableAdapter = null;
+            this.tableAdapterManager1.TraGop_tinhtienTableAdapter = null;
             this.tableAdapterManager1.TraGop1TableAdapter = null;
             this.tableAdapterManager1.TraGopTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = nha_tro.ttTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -772,7 +776,7 @@
             this.tAIKHOANDataGridView.Enabled = false;
             this.tAIKHOANDataGridView.Location = new System.Drawing.Point(1072, 233);
             this.tAIKHOANDataGridView.Name = "tAIKHOANDataGridView";
-            this.tAIKHOANDataGridView.Size = new System.Drawing.Size(146, 106);
+            this.tAIKHOANDataGridView.Size = new System.Drawing.Size(232, 106);
             this.tAIKHOANDataGridView.TabIndex = 29;
             this.tAIKHOANDataGridView.Visible = false;
             // 
@@ -810,7 +814,6 @@
             this.tableAdapterManager.CT_HOADON_LINHKIENTableAdapter = null;
             this.tableAdapterManager.Ct_mua_SPTableAdapter = null;
             this.tableAdapterManager.CT_NHAP_LK_sreach_lk_manhapTableAdapter = null;
-            this.tableAdapterManager.CT_NHAP_SP_DK_LUUKHOTableAdapter = null;
             this.tableAdapterManager.CT_NHAP_SPTableAdapter = null;
             this.tableAdapterManager.HOADON1TableAdapter = null;
             this.tableAdapterManager.HOADONTableAdapter = null;
@@ -819,6 +822,7 @@
             this.tableAdapterManager.KHO1TableAdapter = null;
             this.tableAdapterManager.KHOTableAdapter = null;
             this.tableAdapterManager.KHUYENMAI_DKTableAdapter = null;
+            this.tableAdapterManager.KHUYENMAI_lk_malkTableAdapter = null;
             this.tableAdapterManager.KHUYENMAITableAdapter = null;
             this.tableAdapterManager.LAY_MANVbangTENDNTableAdapter = null;
             this.tableAdapterManager.LINHKIENTableAdapter = null;

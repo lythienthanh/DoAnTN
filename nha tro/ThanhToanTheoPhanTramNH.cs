@@ -148,95 +148,102 @@ namespace nha_tro
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            //insert hoa don
-
-            //==============================
-            if (cT_NHAP_SP_DK_LUUKHODataGridView.RowCount != 1 /*&& cT_NHAP_LK_sreach_lk_manhapDataGridView.RowCount != 1*/)
+            try
             {
-                hOADON_ttTableAdapter.Insert(label5.Text, "MLHD01", DateTime.Today, "temp", tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString());
-                //lay ma hd vua moi them
-                this.hOADON_timmahd_vuathemTableAdapter.Fill_timmahd_vuathem(this.tt.HOADON_timmahd_vuathem);
-                string mahdvuathem = hOADON_timmahd_vuathemDataGridView.Rows[0].Cells[0].Value.ToString();
-                //insert tinh trang thanh toan
-                if (textBox5.Text.Length == 0)
+                //insert hoa don
+
+                //==============================
+                if (cT_NHAP_SP_DK_LUUKHODataGridView.RowCount != 1 /*&& cT_NHAP_LK_sreach_lk_manhapDataGridView.RowCount != 1*/)
                 {
+                    hOADON_ttTableAdapter.Insert(label5.Text, "MLHD01", DateTime.Today, "temp", tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString());
+                    //lay ma hd vua moi them
+                    this.hOADON_timmahd_vuathemTableAdapter.Fill_timmahd_vuathem(this.tt.HOADON_timmahd_vuathem);
+                    string mahdvuathem = hOADON_timmahd_vuathemDataGridView.Rows[0].Cells[0].Value.ToString();
+                    //insert tinh trang thanh toan
+                    if (textBox5.Text.Length == 0)
+                    {
+                        tinhTrangTTTableAdapter.Insert(int.Parse(mahdvuathem), int.Parse(textBox1.Text), DateTime.Today, Convert.ToDateTime(textBox2.Text));
+                        this.tinhTrangTTTableAdapter.Fill(this.tt.TinhTrangTT);
+                    }
+                    else
+                    {
+                        tinhTrangTTTableAdapter.Insert(int.Parse(mahdvuathem), int.Parse(textBox5.Text), DateTime.Today, Convert.ToDateTime(textBox2.Text));
+                        this.tinhTrangTTTableAdapter.Fill(this.tt.TinhTrangTT);
+
+                    }
+                    hOADON_ttTableAdapter.Insert(label5.Text, "MLHD03", DateTime.Today, "temp", tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString());
+                    //lay ma hd vua moi them
+                    this.hOADON_timmahd_vuathemTableAdapter.Fill_timmahd_vuathem(this.tt.HOADON_timmahd_vuathem);
+                    mahdvuathem = hOADON_timmahd_vuathemDataGridView.Rows[0].Cells[0].Value.ToString();
+                    //insert tinh trang thanh toan
+                    if (textBox5.Text.Length == 0)
+                    {
+                        tinhTrangTTTableAdapter.Insert(int.Parse(mahdvuathem), int.Parse(textBox1.Text), DateTime.Today, Convert.ToDateTime(textBox2.Text));
+                    }
+                    else
+                    {
+                        tinhTrangTTTableAdapter.Insert(int.Parse(mahdvuathem), int.Parse(textBox5.Text), DateTime.Today, Convert.ToDateTime(textBox2.Text));
+                    }
+                    //Thong bao
+                    MessageBox.Show("Thành công");
+                    this.tinhTrangTTTableAdapter.Fill(this.tt.TinhTrangTT);
+                }
+                else if (cT_NHAP_SP_DK_LUUKHODataGridView.RowCount != 0)
+                {
+                    hOADON_ttTableAdapter.Insert(label5.Text, "MLHD01", DateTime.Today, "temp", tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString());
+                    //lay ma hd vua moi them
+                    this.hOADON_timmahd_vuathemTableAdapter.Fill_timmahd_vuathem(this.tt.HOADON_timmahd_vuathem);
+                    string mahdvuathem = hOADON_timmahd_vuathemDataGridView.Rows[0].Cells[0].Value.ToString();
+                    //insert tinh trang thanh toan
                     tinhTrangTTTableAdapter.Insert(int.Parse(mahdvuathem), int.Parse(textBox1.Text), DateTime.Today, Convert.ToDateTime(textBox2.Text));
+                    //Thong bao
+                    MessageBox.Show("Thành công");
                     this.tinhTrangTTTableAdapter.Fill(this.tt.TinhTrangTT);
                 }
                 else
                 {
-                    tinhTrangTTTableAdapter.Insert(int.Parse(mahdvuathem), int.Parse(textBox5.Text), DateTime.Today, Convert.ToDateTime(textBox2.Text));
+                    hOADON_ttTableAdapter.Insert(label5.Text, "MLHD03", DateTime.Today, "temp", tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString());
+                    //lay ma hd vua moi them
+                    this.hOADON_timmahd_vuathemTableAdapter.Fill_timmahd_vuathem(this.tt.HOADON_timmahd_vuathem);
+                    string mahdvuathem = hOADON_timmahd_vuathemDataGridView.Rows[0].Cells[0].Value.ToString();
+                    //insert tinh trang thanh toan
+                    tinhTrangTTTableAdapter.Insert(int.Parse(mahdvuathem), int.Parse(textBox1.Text), DateTime.Today, Convert.ToDateTime(textBox2.Text));
+                    //Thong bao
+                    MessageBox.Show("Thành công");
                     this.tinhTrangTTTableAdapter.Fill(this.tt.TinhTrangTT);
-
                 }
-                hOADON_ttTableAdapter.Insert(label5.Text, "MLHD03", DateTime.Today, "temp", tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString());
-                //lay ma hd vua moi them
-                this.hOADON_timmahd_vuathemTableAdapter.Fill_timmahd_vuathem(this.tt.HOADON_timmahd_vuathem);
-                mahdvuathem = hOADON_timmahd_vuathemDataGridView.Rows[0].Cells[0].Value.ToString();
-                //insert tinh trang thanh toan
+
+                //set trang thai
+
                 if (textBox5.Text.Length == 0)
                 {
-                    tinhTrangTTTableAdapter.Insert(int.Parse(mahdvuathem), int.Parse(textBox1.Text), DateTime.Today, Convert.ToDateTime(textBox2.Text));
+                    nHAPHANG1TableAdapter.UpdateQuery(textBox1.Text + "%", nHAPHANG1DataGridView.CurrentRow.Cells[0].Value.ToString());
                 }
                 else
                 {
-                    tinhTrangTTTableAdapter.Insert(int.Parse(mahdvuathem), int.Parse(textBox5.Text), DateTime.Today, Convert.ToDateTime(textBox2.Text));
+
+                    nHAPHANG1TableAdapter.UpdateQuery(textBox5.Text, nHAPHANG1DataGridView.CurrentRow.Cells[0].Value.ToString());
                 }
-                //Thong bao
-                MessageBox.Show("Thành công");
-                this.tinhTrangTTTableAdapter.Fill(this.tt.TinhTrangTT);
+
+                //update manhap cho bang tinhtrangtt
+                string mahd = hOADON_timmahd_vuathemDataGridView.Rows[0].Cells[0].Value.ToString();
+                tinhTrangTTTableAdapter.updateMaNHAP(nHAPHANG1DataGridView.CurrentRow.Cells[0].Value.ToString(), int.Parse(mahd));
+
+
+
+                // TODO: This line of code loads data into the 'nghiepVu.NHAPHANG1' table. You can move, or remove it, as needed.
+                this.nHAPHANG1TableAdapter.Fill(this.nghiepVu.NHAPHANG1);
+                button1.Enabled = true;
+
+                //cap nhat so luong trong kho
+                for (int i = 0; i < cT_NHAP_SP_DK_LUUKHODataGridView.RowCount - 1; i++)
+                {
+                    kHOTableAdapter.UpdateQuery_sl(int.Parse(cT_NHAP_SP_DK_LUUKHODataGridView.Rows[i].Cells[3].Value.ToString()), cT_NHAP_SP_DK_LUUKHODataGridView.Rows[i].Cells[1].Value.ToString(), makho_cboComboBox.SelectedValue.ToString());
+                }
             }
-            else if (cT_NHAP_SP_DK_LUUKHODataGridView.RowCount != 0)
+            catch
             {
-                hOADON_ttTableAdapter.Insert(label5.Text, "MLHD01", DateTime.Today, "temp", tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString());
-                //lay ma hd vua moi them
-                this.hOADON_timmahd_vuathemTableAdapter.Fill_timmahd_vuathem(this.tt.HOADON_timmahd_vuathem);
-                string mahdvuathem = hOADON_timmahd_vuathemDataGridView.Rows[0].Cells[0].Value.ToString();
-                //insert tinh trang thanh toan
-                tinhTrangTTTableAdapter.Insert(int.Parse(mahdvuathem), int.Parse(textBox1.Text), DateTime.Today, Convert.ToDateTime(textBox2.Text));
-                //Thong bao
-                MessageBox.Show("Thành công");
-                this.tinhTrangTTTableAdapter.Fill(this.tt.TinhTrangTT);
-            }
-            else 
-            {
-                hOADON_ttTableAdapter.Insert(label5.Text, "MLHD03", DateTime.Today, "temp", tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString());
-                //lay ma hd vua moi them
-                this.hOADON_timmahd_vuathemTableAdapter.Fill_timmahd_vuathem(this.tt.HOADON_timmahd_vuathem);
-                string mahdvuathem = hOADON_timmahd_vuathemDataGridView.Rows[0].Cells[0].Value.ToString();
-                //insert tinh trang thanh toan
-                tinhTrangTTTableAdapter.Insert(int.Parse(mahdvuathem), int.Parse(textBox1.Text), DateTime.Today, Convert.ToDateTime(textBox2.Text));
-                //Thong bao
-                MessageBox.Show("Thành công");
-                this.tinhTrangTTTableAdapter.Fill(this.tt.TinhTrangTT);
-            }
-
-            //set trang thai
-
-            if (textBox5.Text.Length == 0)
-            {
-                nHAPHANG1TableAdapter.UpdateQuery(textBox1.Text + "%", nHAPHANG1DataGridView.CurrentRow.Cells[0].Value.ToString());
-            }
-            else
-            {
-
-                nHAPHANG1TableAdapter.UpdateQuery(textBox5.Text, nHAPHANG1DataGridView.CurrentRow.Cells[0].Value.ToString());
-            }
-
-            //update manhap cho bang tinhtrangtt
-            string mahd = hOADON_timmahd_vuathemDataGridView.Rows[0].Cells[0].Value.ToString();
-            tinhTrangTTTableAdapter.updateMaNHAP(nHAPHANG1DataGridView.CurrentRow.Cells[0].Value.ToString(), int.Parse(mahd));
-
-
-
-            // TODO: This line of code loads data into the 'nghiepVu.NHAPHANG1' table. You can move, or remove it, as needed.
-            this.nHAPHANG1TableAdapter.Fill(this.nghiepVu.NHAPHANG1);
-            button1.Enabled = true;
-
-            //cap nhat so luong trong kho
-            for(int i = 0; i < cT_NHAP_SP_DK_LUUKHODataGridView.RowCount - 1; i++)
-            {
-                kHOTableAdapter.UpdateQuery_sl(int.Parse(cT_NHAP_SP_DK_LUUKHODataGridView.Rows[i].Cells[3].Value.ToString()), cT_NHAP_SP_DK_LUUKHODataGridView.Rows[i].Cells[1].Value.ToString(), makho_cboComboBox.SelectedValue.ToString());
+                MessageBox.Show("Thiếu thông tin thanh toán");
             }
         }
 
@@ -416,7 +423,7 @@ namespace nha_tro
         private void button3_Click_1(object sender, EventArgs e)
         {
             int tongtien = 0;
-            int tongtienthanhtoan = 0;
+            double tongtienthanhtoan = 0;
             for (int i = 0; i < cT_NHAP_SP_DK_LUUKHODataGridView.RowCount - 1; i++)
             {
                 tongtien += (int.Parse(cT_NHAP_SP_DK_LUUKHODataGridView.Rows[i].Cells[3].Value.ToString()) * int.Parse(cT_NHAP_SP_DK_LUUKHODataGridView.Rows[i].Cells[4].Value.ToString()));
@@ -424,8 +431,8 @@ namespace nha_tro
 
             if (textBox4.Text.Length == 0 && textBox6.Text.Length == 0 && int.Parse(tinhTrangTTDataGridView.Rows[0].Cells[1].Value.ToString()) <= 100)
             {
-                int phantram = int.Parse(tinhTrangTTDataGridView.Rows[0].Cells[1].Value.ToString());
-                tongtienthanhtoan = (tongtien * phantram) ;
+                double temptongphantram = double.Parse(tongtien.ToString()) * int.Parse(tinhTrangTTDataGridView.Rows[0].Cells[1].Value.ToString());
+                tongtienthanhtoan = temptongphantram / 100;
                 Form_xuat_hd_TTTGNCC form_Xuat_Hd_TTTGNCC = new Form_xuat_hd_TTTGNCC(textBox3.Text, DateTime.Today.Date.ToString("dd/MM/yyyy"), nHAPHANG1DataGridView.CurrentRow.Cells[0].Value.ToString(), tongtienthanhtoan.ToString(), (tongtien - tongtienthanhtoan).ToString(), tAIKHOANTableAdapter.tennv(tAIKHOANDataGridView.Rows[0].Cells[1].Value.ToString()).ToString());
                 form_Xuat_Hd_TTTGNCC.ShowDialog();
             }
@@ -441,21 +448,27 @@ namespace nha_tro
 
         private void tinhTrangTTDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox3.Text = tinhTrangTTDataGridView.CurrentRow.Cells[0].Value.ToString();
-            string x = tinhTrangTTDataGridView.CurrentRow.Cells[1].Value.ToString();
-            if (int.Parse(x) > 100)
+            try
             {
-                textBox4.Enabled = false;
-                label8.Enabled = false;
+                textBox3.Text = tinhTrangTTDataGridView.CurrentRow.Cells[0].Value.ToString();
+                string x = tinhTrangTTDataGridView.CurrentRow.Cells[1].Value.ToString();
+                if (int.Parse(x) > 100)
+                {
+                    textBox4.Enabled = false;
+                    label8.Enabled = false;
+
+                }
+                else
+                {
+                    textBox4.Enabled = true;
+                    label8.Enabled = true;
+
+                }
+            }
+            catch
+            {
 
             }
-            else
-            {
-                textBox4.Enabled = true;
-                label8.Enabled = true;
-            
-            }
-
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)

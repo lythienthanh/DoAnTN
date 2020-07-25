@@ -88,12 +88,33 @@ namespace nha_tro
                     tienbaohanh += int.Parse(temp1);
                 }
             }
+            int gianhaplk = 0;
+
+            try
+            {
+                this.malk_bhTableAdapter.Fill(this.tt.malk_bh, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateTimePicker1.Value.ToString(), typeof(System.DateTime))))), new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateTimePicker2.Value.ToString(), typeof(System.DateTime))))));
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+
+            }
+            int giaban = 0;
+            for (int i= 0; i< malk_bhDataGridView.RowCount - 1; i++)
+            {
+                if (string.Compare(malk_bhDataGridView.Rows[i].Cells[0].Value.ToString().Trim(), "TEMP") != 0 && malk_bhDataGridView.Rows[i].Cells[0].Value.ToString().Length != 0)
+                {
+                    gianhaplk += int.Parse(hOADON_chenhlechTableAdapter.GIANHAP_LK(malk_bhDataGridView.Rows[i].Cells[0].Value.ToString(), DateTime.Today.ToString("MM/dd/yyyy")).ToString());
+                    giaban += int.Parse(hOADON_chenhlechTableAdapter.giaban_lk(malk_bhDataGridView.Rows[i].Cells[0].Value.ToString()).ToString());
+                }
+            }
 
             textBox5.ReadOnly = true;
-            textBox5.Text = tienbaohanh.ToString();
+            textBox5.Text = (tienbaohanh ).ToString();
 
             textBox6.ReadOnly = true;
             textBox6.Text = hOADON_chenhlechTableAdapter.tien_suachua(Convert.ToDateTime(dateTimePicker1.Value.ToString()), Convert.ToDateTime(dateTimePicker2.Value.ToString())).ToString();
+            textBox6.Text = (giaban - gianhaplk).ToString();
 
         }
 
@@ -123,5 +144,13 @@ namespace nha_tro
 
 
         }
+
+        private void fillToolStripButton_Click_2(object sender, EventArgs e)
+        {
+
+            }
+
+        }
     }
-}
+
+

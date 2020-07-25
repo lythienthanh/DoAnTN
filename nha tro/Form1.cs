@@ -50,7 +50,7 @@ namespace nha_tro
             // TODO: This line of code loads data into the 'nghiepVu.tongSLsp' table. You can move, or remove it, as needed.
             this.tongSLspTableAdapter.Fill(this.nghiepVu.tongSLsp);
             getdata();
-            
+            mALOAITextEdit.ReadOnly = true;
 
         }
 
@@ -86,11 +86,17 @@ namespace nha_tro
         private void button9_Click(object sender, EventArgs e)
         {
 
-            kHO1TableAdapter.THEM(kHO1ComboBox.SelectedValue.ToString(), int.Parse(sLSpinEdit.Text), sANPHAMComboBox1.SelectedValue.ToString(), diaChiTextEdit.Text, int.Parse(textBox1.Text),"TEMP");
-            MessageBox.Show("Thành Công");
-            //load girdview
-            this.kHO1TableAdapter.Fill(this.nghiepVu.KHO1);
-
+            try
+            {
+                kHO1TableAdapter.THEM(kHO1ComboBox.SelectedValue.ToString(), int.Parse(sLSpinEdit.Text), sANPHAMComboBox1.SelectedValue.ToString(), diaChiTextEdit.Text, int.Parse(textBox1.Text), "TEMP");
+                MessageBox.Show("Thành Công");
+                //load girdview
+                this.kHO1TableAdapter.Fill(this.nghiepVu.KHO1);
+            }
+            catch
+            {
+                MessageBox.Show("sp đã tồn tại");
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -131,10 +137,19 @@ namespace nha_tro
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.lOAISANPHAMBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.nghiepVu);
-            MessageBox.Show("Sữa thành công!!!");
+            /*            this.Validate();
+                        this.lOAISANPHAMBindingSource.EndEdit();
+                        this.tableAdapterManager.UpdateAll(this.nghiepVu);
+                        MessageBox.Show("Sữa thành công!!!");*/
+            try
+            {
+                lOAISANPHAMTableAdapter.UPDATE_TEN_LOAI(tENLOAITextEdit.Text, mALOAITextEdit.Text);
+                this.lOAISANPHAMTableAdapter.Fill(this.nghiepVu.LOAISANPHAM);
+            }
+            catch
+            {
+                MessageBox.Show("Sữa THất Bại");
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
