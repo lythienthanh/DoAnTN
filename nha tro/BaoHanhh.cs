@@ -205,12 +205,19 @@ namespace nha_tro
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
-            
-            ct_bHTableAdapter.Insert(int.Parse(bAOHANHComboBox.SelectedValue.ToString()), int.Parse(nDBaoHanhComboBox.SelectedValue.ToString()), lINHKIENComboBox.SelectedValue.ToString());
-            //load data
-            this.dataTable2TableAdapter.Fill(tt.DataTable2, int.Parse(bAOHANHComboBox.SelectedValue.ToString()));
-            /*this.select_ctBhTableAdapter.Fill(this.tt.select_ctBh, ((int)(System.Convert.ChangeType(bAOHANHComboBox.SelectedValue.ToString(), typeof(int)))));*/
+            try
+            {
+                ct_bHTableAdapter.Insert(int.Parse(bAOHANHComboBox.SelectedValue.ToString()), int.Parse(nDBaoHanhComboBox.SelectedValue.ToString()), lINHKIENComboBox.SelectedValue.ToString());
+                //load data
+                this.dataTable2TableAdapter.Fill(tt.DataTable2, int.Parse(bAOHANHComboBox.SelectedValue.ToString()));
+                /*this.select_ctBhTableAdapter.Fill(this.tt.select_ctBh, ((int)(System.Convert.ChangeType(bAOHANHComboBox.SelectedValue.ToString(), typeof(int)))));*/
+            }
+            catch
+            {
+
+            }
+
+
 
         }
 
@@ -256,11 +263,13 @@ namespace nha_tro
             {
                 this.dataTable2TableAdapter.Fill(this.tt.DataTable2, ((int)(System.Convert.ChangeType(bAOHANHComboBox.SelectedValue.ToString(), typeof(int)))));
                 textBox2.Text = bAOHANHComboBox.SelectedValue.ToString();
+                sELECT_DATA_HDTableAdapter.FillBy(this.tt.SELECT_DATA_HD, int.Parse(bAOHANHComboBox.SelectedValue.ToString()));
             }
             catch (System.Exception ex)
             {
                 //System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+            
             
         }
 
@@ -297,32 +306,40 @@ namespace nha_tro
             }
             else
             {
-                string ngayban = sELECT_DATA_HDDataGridView.CurrentRow.Cells[6].Value.ToString();
+                /*                string ngayban = sELECT_DATA_HDDataGridView.CurrentRow.Cells[6].Value.ToString();
 
-                DateTime ngayb = Convert.ToDateTime(ngayban).AddMonths(6);
-                if (ngayb < DateTime.Today)
+                                DateTime ngayb = Convert.ToDateTime(ngayban).AddMonths(6);
+                                if (ngayb < DateTime.Today)
+                                {
+                                    int tongtien = 0;
+                                    for (int i = 0; i < dataTable2DataGridView.Rows.Count - 1; i++)
+                                    {
+                                        tongtien += int.Parse(dataTable2DataGridView.Rows[i].Cells[4].Value.ToString()) + int.Parse(dataTable2DataGridView.Rows[i].Cells[5].Value.ToString());
+                                    }
+                                    int? mahd = hOADON_baohanhTableAdapter.selecet_mahdhientai();
+                                    HD_BAOHANH hd_Baohanh = new HD_BAOHANH(mahd.ToString(), bAOHANHComboBox.SelectedValue.ToString(), tongtien.ToString(), bAOHANHDataGridView.Rows[0].Cells[2].Value.ToString(), "khong");
+                                    hd_Baohanh.ShowDialog();
+                                }
+                                else
+                                {
+                                    int tongtien = 0;
+                                    for (int i = 0; i < dataTable2DataGridView.Rows.Count - 1; i++)
+                                    {
+                                        tongtien += int.Parse(dataTable2DataGridView.Rows[i].Cells[4].Value.ToString()) + int.Parse(dataTable2DataGridView.Rows[i].Cells[5].Value.ToString());
+                                        tongtien = tongtien - (tongtien * 10 / 100);
+                                    }
+                                    int? mahd = hOADON_baohanhTableAdapter.selecet_mahdhientai();
+                                    HD_BAOHANH hd_Baohanh = new HD_BAOHANH(mahd.ToString(), bAOHANHComboBox.SelectedValue.ToString(), tongtien.ToString(), bAOHANHDataGridView.Rows[0].Cells[2].Value.ToString(), "khong");
+                                    hd_Baohanh.ShowDialog();
+                                }*/
+                int tongtien = 0;
+                for (int i = 0; i < dataTable2DataGridView.Rows.Count - 1; i++)
                 {
-                    int tongtien = 0;
-                    for (int i = 0; i < dataTable2DataGridView.Rows.Count - 1; i++)
-                    {
-                        tongtien += int.Parse(dataTable2DataGridView.Rows[i].Cells[4].Value.ToString()) + int.Parse(dataTable2DataGridView.Rows[i].Cells[5].Value.ToString());
-                    }
-                    int? mahd = hOADON_baohanhTableAdapter.selecet_mahdhientai();
-                    HD_BAOHANH hd_Baohanh = new HD_BAOHANH(mahd.ToString(), bAOHANHComboBox.SelectedValue.ToString(), tongtien.ToString(), bAOHANHDataGridView.Rows[0].Cells[2].Value.ToString(), "khong");
-                    hd_Baohanh.ShowDialog();
+                    tongtien += int.Parse(dataTable2DataGridView.Rows[i].Cells[4].Value.ToString()) + int.Parse(dataTable2DataGridView.Rows[i].Cells[5].Value.ToString());
                 }
-                else
-                {
-                    int tongtien = 0;
-                    for (int i = 0; i < dataTable2DataGridView.Rows.Count - 1; i++)
-                    {
-                        tongtien += int.Parse(dataTable2DataGridView.Rows[i].Cells[4].Value.ToString()) + int.Parse(dataTable2DataGridView.Rows[i].Cells[5].Value.ToString());
-                        tongtien = tongtien - (tongtien * 10 / 100);
-                    }
-                    int? mahd = hOADON_baohanhTableAdapter.selecet_mahdhientai();
-                    HD_BAOHANH hd_Baohanh = new HD_BAOHANH(mahd.ToString(), bAOHANHComboBox.SelectedValue.ToString(), tongtien.ToString(), bAOHANHDataGridView.Rows[0].Cells[2].Value.ToString(), "khong");
-                    hd_Baohanh.ShowDialog();
-                }
+                int? mahd = hOADON_baohanhTableAdapter.selecet_mahdhientai();
+                HD_BAOHANH hd_Baohanh = new HD_BAOHANH(mahd.ToString(), bAOHANHComboBox.SelectedValue.ToString(), tongtien.ToString(), bAOHANHDataGridView.Rows[0].Cells[2].Value.ToString(), "khong");
+                hd_Baohanh.ShowDialog();
             }
             
         }
@@ -444,6 +461,11 @@ namespace nha_tro
         {
             QuanLyKhachHang QuanLyKhachHang = new QuanLyKhachHang();
             QuanLyKhachHang.ShowDialog();
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

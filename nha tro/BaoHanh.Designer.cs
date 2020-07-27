@@ -373,7 +373,7 @@
             this.groupBox2.Controls.Add(tENLOISXLabel);
             this.groupBox2.Location = new System.Drawing.Point(581, 160);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(793, 337);
+            this.groupBox2.Size = new System.Drawing.Size(793, 277);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thêm chi tiết đổi trả";

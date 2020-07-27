@@ -11173,11 +11173,11 @@ namespace nha_tro {
             
             private global::System.Data.DataColumn columnTENSP;
             
-            private global::System.Data.DataColumn columnCHENHLECH;
-            
             private global::System.Data.DataColumn columnMaNV;
             
             private global::System.Data.DataColumn columnSPLay;
+            
+            private global::System.Data.DataColumn columnChenhLech;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -11230,14 +11230,6 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn CHENHLECHColumn {
-                get {
-                    return this.columnCHENHLECH;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn MaNVColumn {
                 get {
                     return this.columnMaNV;
@@ -11249,6 +11241,14 @@ namespace nha_tro {
             public global::System.Data.DataColumn SPLayColumn {
                 get {
                     return this.columnSPLay;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ChenhLechColumn {
+                get {
+                    return this.columnChenhLech;
                 }
             }
             
@@ -11289,14 +11289,14 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public xuat_hd_chenhlechRow Addxuat_hd_chenhlechRow(string TENSP, string CHENHLECH, string MaNV, string SPLay) {
+            public xuat_hd_chenhlechRow Addxuat_hd_chenhlechRow(string TENSP, string MaNV, string SPLay, string ChenhLech) {
                 xuat_hd_chenhlechRow rowxuat_hd_chenhlechRow = ((xuat_hd_chenhlechRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         TENSP,
-                        CHENHLECH,
                         MaNV,
-                        SPLay};
+                        SPLay,
+                        ChenhLech};
                 rowxuat_hd_chenhlechRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowxuat_hd_chenhlechRow);
                 return rowxuat_hd_chenhlechRow;
@@ -11328,9 +11328,9 @@ namespace nha_tro {
             internal void InitVars() {
                 this.columnMAHD = base.Columns["MAHD"];
                 this.columnTENSP = base.Columns["TENSP"];
-                this.columnCHENHLECH = base.Columns["CHENHLECH"];
                 this.columnMaNV = base.Columns["MaNV"];
                 this.columnSPLay = base.Columns["SPLay"];
+                this.columnChenhLech = base.Columns["ChenhLech"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11340,12 +11340,12 @@ namespace nha_tro {
                 base.Columns.Add(this.columnMAHD);
                 this.columnTENSP = new global::System.Data.DataColumn("TENSP", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTENSP);
-                this.columnCHENHLECH = new global::System.Data.DataColumn("CHENHLECH", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCHENHLECH);
                 this.columnMaNV = new global::System.Data.DataColumn("MaNV", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMaNV);
                 this.columnSPLay = new global::System.Data.DataColumn("SPLay", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSPLay);
+                this.columnChenhLech = new global::System.Data.DataColumn("ChenhLech", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnChenhLech);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnMAHD}, true));
                 this.columnMAHD.AutoIncrement = true;
@@ -11355,9 +11355,9 @@ namespace nha_tro {
                 this.columnMAHD.ReadOnly = true;
                 this.columnMAHD.Unique = true;
                 this.columnTENSP.MaxLength = 51;
-                this.columnCHENHLECH.MaxLength = 20;
                 this.columnMaNV.MaxLength = 20;
                 this.columnSPLay.MaxLength = 20;
+                this.columnChenhLech.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -25718,22 +25718,6 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string CHENHLECH {
-                get {
-                    try {
-                        return ((string)(this[this.tablexuat_hd_chenhlech.CHENHLECHColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CHENHLECH\' in table \'xuat_hd_chenhlech\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablexuat_hd_chenhlech.CHENHLECHColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string MaNV {
                 get {
                     try {
@@ -25766,6 +25750,22 @@ namespace nha_tro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ChenhLech {
+                get {
+                    try {
+                        return ((string)(this[this.tablexuat_hd_chenhlech.ChenhLechColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ChenhLech\' in table \'xuat_hd_chenhlech\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablexuat_hd_chenhlech.ChenhLechColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTENSPNull() {
                 return this.IsNull(this.tablexuat_hd_chenhlech.TENSPColumn);
             }
@@ -25774,18 +25774,6 @@ namespace nha_tro {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTENSPNull() {
                 this[this.tablexuat_hd_chenhlech.TENSPColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCHENHLECHNull() {
-                return this.IsNull(this.tablexuat_hd_chenhlech.CHENHLECHColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCHENHLECHNull() {
-                this[this.tablexuat_hd_chenhlech.CHENHLECHColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -25810,6 +25798,18 @@ namespace nha_tro {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSPLayNull() {
                 this[this.tablexuat_hd_chenhlech.SPLayColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsChenhLechNull() {
+                return this.IsNull(this.tablexuat_hd_chenhlech.ChenhLechColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetChenhLechNull() {
+                this[this.tablexuat_hd_chenhlech.ChenhLechColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -43034,7 +43034,7 @@ SELECT MABAOHANH, MALINHKIEN, MAKH, TENBAOHANH, NGAYBAOHANH, NGAYBAOHANHXONG, SL
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        HOADON.MAHD, KHACHHANG.MAKH, KHACHHANG.TENKH, SANPHAM.TENSP, ct_mua_sp_lk.SL, SANPHAM.DonGia, HOADON.NGAYLAP AS 'Ngày Bán'
@@ -43046,6 +43046,16 @@ WHERE        (ct_mua_sp_lk.MaKH = @MAKH)
 ORDER BY HOADON.MAHD";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MAKH", global::System.Data.SqlDbType.Char, 20, global::System.Data.ParameterDirection.Input, 0, 0, "MaKH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT DISTINCT HOADON.MAHD, KHACHHANG.MAKH, KHACHHANG.TENKH, SANPHAM.TENSP, ct_mua_sp_lk.SL, SANPHAM.DonGia, HOADON.NGAYLAP AS 'Ngày Bán'
+FROM            ct_mua_sp_lk INNER JOIN
+                         HOADON ON ct_mua_sp_lk.MaHD = HOADON.MAHD INNER JOIN
+                         KHACHHANG ON ct_mua_sp_lk.MaKH = KHACHHANG.MAKH INNER JOIN
+                         SANPHAM ON ct_mua_sp_lk.MaSP = SANPHAM.MASP
+WHERE        (HOADON.MaBaoHanh = @mabaohanh)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mabaohanh", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MaBaoHanh", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -43078,6 +43088,42 @@ ORDER BY HOADON.MAHD";
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(MAKH));
+            }
+            tt.SELECT_DATA_HDDataTable dataTable = new tt.SELECT_DATA_HDDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(tt.SELECT_DATA_HDDataTable dataTable, global::System.Nullable<int> mabaohanh) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((mabaohanh.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(mabaohanh.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual tt.SELECT_DATA_HDDataTable GetDataBy(global::System.Nullable<int> mabaohanh) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((mabaohanh.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(mabaohanh.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             tt.SELECT_DATA_HDDataTable dataTable = new tt.SELECT_DATA_HDDataTable();
             this.Adapter.Fill(dataTable);
@@ -43208,9 +43254,9 @@ ORDER BY HOADON.MAHD";
             tableMapping.DataSetTable = "xuat_hd_chenhlech";
             tableMapping.ColumnMappings.Add("MAHD", "MAHD");
             tableMapping.ColumnMappings.Add("TENSP", "TENSP");
-            tableMapping.ColumnMappings.Add("CHENHLECH", "CHENHLECH");
             tableMapping.ColumnMappings.Add("MaNV", "MaNV");
             tableMapping.ColumnMappings.Add("SPLay", "SPLay");
+            tableMapping.ColumnMappings.Add("ChenhLech", "ChenhLech");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -43227,9 +43273,12 @@ ORDER BY HOADON.MAHD";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "select HOADON.MAHD,SANPHAM.TENSP,CHENHLECH,MaNV,DOITRA.SPLay \r\nfrom HOADON,SANPHA" +
-                "M ,Ct_mua_SP,DOITRA\r\nwhere HOADON.MAHD = @MAHD\r\nand HOADON.MAHD = Ct_mua_SP.MaHD" +
-                "\r\nand SANPHAM.MASP = Ct_mua_SP.MaSP\r\nand HOADON.MaDoiTra = DOITRA.MADOITRA";
+            this._commandCollection[0].CommandText = @"SELECT DISTINCT HOADON.MAHD, SANPHAM.TENSP, HOADON.ChenhLech, HOADON.MaNV, DOITRA.SPLay
+FROM            HOADON INNER JOIN
+                         ct_mua_sp_lk ON HOADON.MAHD = ct_mua_sp_lk.MaHD INNER JOIN
+                         SANPHAM ON ct_mua_sp_lk.MaSP = SANPHAM.MASP INNER JOIN
+                         DOITRA ON HOADON.MaDoiTra = DOITRA.MADOITRA
+WHERE        (HOADON.MAHD = @MAHD)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MAHD", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MAHD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

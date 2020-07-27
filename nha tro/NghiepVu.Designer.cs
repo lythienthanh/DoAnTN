@@ -41020,8 +41020,11 @@ SELECT MALOIND, TENLOIND FROM LOIDONGUOIDUNG WHERE (MALOIND = @MALOIND)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "select Ct_mua_SP.MaSP,TENSP from Ct_mua_SP,HOADON,SANPHAM where Ct_mua_SP.MaHD = " +
-                "HOADON.MAHD and Ct_mua_SP.MaSP = SANPHAM.MASP and HOADON.MAHD = @MAHD";
+            this._commandCollection[0].CommandText = @"SELECT DISTINCT ct_mua_sp_lk.MaSP, SANPHAM.TENSP
+FROM            ct_mua_sp_lk INNER JOIN
+                         HOADON ON ct_mua_sp_lk.MaHD = HOADON.MAHD INNER JOIN
+                         SANPHAM ON ct_mua_sp_lk.MaSP = SANPHAM.MASP
+WHERE        (HOADON.MAHD = @MAHD)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MAHD", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MAHD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

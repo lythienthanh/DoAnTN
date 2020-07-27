@@ -47,6 +47,7 @@
             this.sELECT_DATA_HDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tt = new nha_tro.tt();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button10 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.kHACHHANG_dkDataGridView = new System.Windows.Forms.DataGridView();
@@ -60,6 +61,8 @@
             this.kHACHHANG_dkTableAdapter = new nha_tro.NghiepVuTableAdapters.KHACHHANG_dkTableAdapter();
             this.tableAdapterManager = new nha_tro.NghiepVuTableAdapters.TableAdapterManager();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.lOIDONGUOIDUNGComboBox = new System.Windows.Forms.ComboBox();
@@ -68,7 +71,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
-            this.bAOHANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bAOHANHDataGridView = new System.Windows.Forms.DataGridView();
             this.mABAOHANHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mAKHDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,6 +79,7 @@
             this.mALOINDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tENLOINDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.select_baohanhBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bAOHANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nDBaoHanhComboBox = new System.Windows.Forms.ComboBox();
             this.nDBaoHanhBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -127,9 +130,6 @@
             this.hOADON_baohanhTableAdapter = new nha_tro.ttTableAdapters.HOADON_baohanhTableAdapter();
             this.tAIKHOANTableAdapter = new nha_tro.NghiepVuTableAdapters.TAIKHOANTableAdapter();
             this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             mAKHLabel = new System.Windows.Forms.Label();
             nGAYBAOHANHLabel = new System.Windows.Forms.Label();
             nGAYBAOHANHXONGLabel = new System.Windows.Forms.Label();
@@ -146,9 +146,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nghiepVu)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lOIDONGUOIDUNGBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bAOHANHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bAOHANHDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.select_baohanhBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bAOHANHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nDBaoHanhBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANDataGridView)).BeginInit();
@@ -211,6 +211,15 @@
             label4.Size = new System.Drawing.Size(58, 13);
             label4.TabIndex = 37;
             label4.Text = "Mã Lỗi ND";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new System.Drawing.Point(256, 77);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(93, 13);
+            label6.TabIndex = 40;
+            label6.Text = "Bảo hành cho HD";
             // 
             // groupBox5
             // 
@@ -309,6 +318,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Khách Hàng";
             // 
+            // button10
+            // 
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Image = global::nha_tro.Properties.Resources.Awicons_Vista_Artistic_Add;
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(293, 14);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(157, 33);
+            this.button10.TabIndex = 5;
+            this.button10.Text = "Thêm KH";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(9, 24);
@@ -397,7 +419,6 @@
             this.tableAdapterManager.CT_HOADON_LINHKIENTableAdapter = null;
             this.tableAdapterManager.Ct_mua_SPTableAdapter = null;
             this.tableAdapterManager.CT_NHAP_LK_sreach_lk_manhapTableAdapter = null;
-            this.tableAdapterManager.CT_NHAP_SP_DK_LUUKHOTableAdapter = null;
             this.tableAdapterManager.CT_NHAP_SPTableAdapter = null;
             this.tableAdapterManager.HOADON1TableAdapter = null;
             this.tableAdapterManager.HOADONTableAdapter = null;
@@ -446,6 +467,20 @@
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin bảo hành";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(382, 71);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(107, 20);
+            this.textBox4.TabIndex = 42;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(92, 24);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 41;
             // 
             // textBox2
             // 
@@ -520,11 +555,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // bAOHANHBindingSource
-            // 
-            this.bAOHANHBindingSource.DataMember = "BAOHANH";
-            this.bAOHANHBindingSource.DataSource = this.tt;
-            // 
             // bAOHANHDataGridView
             // 
             this.bAOHANHDataGridView.AutoGenerateColumns = false;
@@ -585,6 +615,11 @@
             this.select_baohanhBindingSource.DataMember = "select_baohanh";
             this.select_baohanhBindingSource.DataSource = this.tt;
             // 
+            // bAOHANHBindingSource
+            // 
+            this.bAOHANHBindingSource.DataMember = "BAOHANH";
+            this.bAOHANHBindingSource.DataSource = this.tt;
+            // 
             // nDBaoHanhComboBox
             // 
             this.nDBaoHanhComboBox.DataSource = this.nDBaoHanhBindingSource;
@@ -631,6 +666,7 @@
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chi tiết bảo hành";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // label5
             // 
@@ -871,6 +907,7 @@
             this.tableAdapterManager1.DATHANG_SPTableAdapter = null;
             this.tableAdapterManager1.DOITRATableAdapter = null;
             this.tableAdapterManager1.HOADON_baohanhTableAdapter = null;
+            this.tableAdapterManager1.HOADON_chenhlechTableAdapter = null;
             this.tableAdapterManager1.HOADON_kttontaiTableAdapter = null;
             this.tableAdapterManager1.HOADON_timmahd_vuathemTableAdapter = null;
             this.tableAdapterManager1.HOADON_ttTableAdapter = null;
@@ -978,42 +1015,6 @@
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(256, 77);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(93, 13);
-            label6.TabIndex = 40;
-            label6.Text = "Bảo hành cho HD";
-            // 
-            // button10
-            // 
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Image = global::nha_tro.Properties.Resources.Awicons_Vista_Artistic_Add;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(293, 14);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(157, 33);
-            this.button10.TabIndex = 5;
-            this.button10.Text = "Thêm KH";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(92, 24);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 41;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(382, 71);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(107, 20);
-            this.textBox4.TabIndex = 42;
-            // 
             // BaoHanhh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1040,9 +1041,9 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lOIDONGUOIDUNGBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bAOHANHBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bAOHANHDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.select_baohanhBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bAOHANHBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nDBaoHanhBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

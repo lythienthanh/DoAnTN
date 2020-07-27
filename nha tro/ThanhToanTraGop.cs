@@ -123,7 +123,7 @@ namespace nha_tro
             {
                 dataTable1TableAdapter.Fill_sdt(tt.DataTable1, textBox2.Text);
 
-                if (dataTable1DataGridView.Rows.Count - 1 < 2)
+                if (dataTable1DataGridView.Rows.Count - 1 < 1)
                     MessageBox.Show("không có dữ liệu !!!");
             }
             else
